@@ -1,0 +1,2784 @@
+
+去除段落标记
+在已打开的Word2007文档中，单击“Office”按钮，选择“Word”选项命令。
+弹出“Word选项”对话框，切换到“显示”选项卡，在右侧的“始终在屏幕上显示这些格式标记”栏下取消选中“段落标记”复选框。
+ 单击“确定”按钮。
+
+VIM 安装配置插件
+git clone https://github.com/ericzhang-cn/vim-conf.git
+cd vim-conf && ./init.sh
+cd ~/.vim/bundle
+git clone git://github.com/altercation/vim-colors-solarized.git
+
+web 更新
+1.把require目录复制到Web根目录的上一级目录内;
+2.数据库连接配置：
+/home/www/require/app/etc/game/local.xml
+/home/www/require/app/code/core/Game/Ice/etc/config.xml
+3.htdocs目录（Web根目录）如与现有Web程序冲突，可以将“htdocs”目录内创建一个子目录
+  然后把“htdocs”目录的程序复制到子目录即可！
+4.ice配置
+/home/www/require/app/code/core/Game/Snapshot/etc/config.xml
+5,从备份中拷贝require/app/code/core/Game/Adminhtml/Controller/Action.php（前台）
+6,清web缓存
+/home/www/require/var/cache/:
+7,media和require目录权限必须是：0777
+同时media及其子目录都是：0777
+require和var（及var的子目录都是0777）
+8.记得备份从DB上的index.php文件，此文件与前台的index.php文件不一样
+配置完成！
+控制http转https的配置文件
+require/app/code/core/Game/Core/Model/Url.php
+
+
+Linux部分：
+linux for fun
+
+yes "$(seq 232 255;seq 254 -1 233)" |
+while read i; do printf "\x1b[48;5;${i}m\n"; sleep .01; done 屏幕黑白
+
+tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock |
+GREP_COLOR="1;32" grep --color "[^ ]"  屏幕动画
+
+Esc+. 热建alt+. 或 esc+. 可以把上次命令行的参数给重复出来
+
+!$ 代表了上一个命令的最后一个字符串 
+
+^old^new 替换前一条命令里的部分字符串。也可以使用 !!:gs/old/new
+
+date -d@1234567890 时间截转时间
+
+mtr www.example.com 追踪路由
+
+echo “ls -l” | at midnight 在某个时间运行某个命令
+
+curl -u user:pass -d status=”Tweeting from the shell” http://twitter.com/statuses/update.xml  命令行的方式更新twitter。
+
+curl -u username –silent “https://mail.google.com/mail/feed/atom” | perl -ne ‘print “\t” if /<name>/; print “$2\n” if /<(title|name)>(.*)<\/\1>/;’ 检查你的gmail未读邮件
+
+ps aux | sort -nk +4 | tail 列出头十个最耗内存的进程
+ps aux | sort -nk +3 | tail
+
+tail -f /path/to/file.log | sed '/^Finished: SUCCESS$/ q'  实时监控并过滤log是否出现了某条记录。
+
+ssh user@server bash < /path/to/local/script.sh  在远程机器上运行一段脚本。这条命令最大的好处就是不用把脚本拷到远程机器上
+
+ssh user@host cat /path/to/remotefile | diff /path/to/localfile - 比较一个远程文件和一个本地文件
+
+screen -d -m -S some_name ping my_router  后台运行一段不终止的程序，并可以随时查看它的状态
+
+wget --random-wait -r -p -e robots=off -U mozilla http://www.example.com 下载整个www.example.com网站
+
+curl ifconfig.me 查看外网IP
+
+python -m SimpleHTTPServer 当前目录设为HTTP服务目录，可以通过http://localhost:8000访问
+
+history | awk '{CMD[$2]++;count++;} END { for (a in CMD )print CMD[a] " " CMD[a]/count*100 "% " a }' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl | head -n10 
+
+
+possibly_hanging_job & { sleep ${TIMEOUT}; eval 'kill -9 $!' &>/dev/null; } 杀掉出问题的程序
+
+curl --head -s "http://www.068.com/customer/validate/username/?ajax=true&username=dsfafa" |awk '/HTTP/{print $2}'
+
+正则表达式入门：
+\\匹配\，第一个\为转义字符
+\b用法：
+精确地查找hi这个单词的话，我们应该使用\bhi\b
+\b 只匹配一个位置 代表着单词的开头或结尾，也就是单词的分界处。
+hi后面不远处跟着一个Lucy，你应该用\bhi\b.*\bLucy\b
+. 匹配除了换行符的任意字符，* 前边内容可以连续重复使用任意次。.*代表任意数量的不包含换行的字符
++用法：
++则匹配重复1次或更多次 比*要多一次，*可能为0次 
+\d+ 匹配1个或更多连续的数字
+\d用法：
+\d是个新的元字符，匹配一位数字(0，或1，或2，或……)
+0\d\d-\d\d\d\d\d\d\d\d匹配这样的字符串：以0开头，然后是两个数字，然后是一个连字号“-”，最后是8个数字(也就是中国的电话号码。当然，这个例子只能匹配区号为3位的情形)
+避免麻烦可以写成：0\d{2}-\d{8}
+\s用法：
+\s匹配任意的空白符，包括空格，制表符(Tab)，换行符，中文全角空格等
+\w用法：
+\w匹配字母或数字或下划线或汉字等。
+^，$ 匹配位置和\b相试。^匹配开始，$匹配结尾
+\1代表分组1匹配的文本
+(?=exp)也叫零宽度正预测先行断言，它断言自身出现的位置的后面能匹配表达式exp
+(?<=exp)也叫零宽度正回顾后发断言，它断言自身出现的位置的前面能匹配表达式exp
+(?!exp)，断言此位置的后面不能匹配表达式exp
+
+例子：
+\ba\w*\b匹配以字母a开头的单词——先是某个单词开始处(\b)，然后是字母a,然后是任意数量的字母或数字(\w*)，最后是单词结束处(\b)
+\b\w{6}\b 匹配刚好6个字符的单词
+^\d{5,12}$ 匹配5位到12位的数字，比如说QQ号
+
+deerchao\.net 匹配deerchao.net c:\\Windows匹配c:\windows
+
+[aeiou]就匹配任何一个英文元音字母,[.?!]匹配标点符号(.或?或!)，[0-9]代表的含意与\d就是完全一致的：一位数字；同理[a-z0-9A-Z_]也完全等同于\w（如果只考虑英文的话）。
+
+\(?0\d{2}[) -]?\d{8} 分析：首先是一个转义字符\(,它能出现0次或1次(?),然后是一个0，后面跟着2个数字(\d{2})，然后是)或-或空格中的一个，它出现1次或不出现(?)，最后是8个数字(\d{8})。(010)88886666，或022-22334455，或02912345678等 010)12345678或(022-87654321“不正确” 格式
+\(?0\d{2}\)?[- ]?\d{8}|0\d{2}[- ]?\d{8}匹配3位区号的电话号码，其中区号可以用小括号括起来，也可以不用，区号与本地号间可以用连字号或空格间隔，也可以没有间隔
+((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?) IP地址匹配 2[0-4]\d|25[0-5] 表示200-249|250-255 [01]?\d\d?匹配000-199
+\S+匹配不包含空白符的字符串。
+<a[^>]+>匹配用尖括号括起来的以a开头的字符串。
+
+\b(\w+)\b\s+\1\b可以用来匹配重复的单词，像go go, 或者kitty kitty。这个表达式首先是一个单词，也就是单词开始处和结束处之间的多于一个的字母或数字(\b(\w+)\b)，这个单词会被捕获到编号为1的分组中，然后是1个或几个空白符(\s+)，最后是分组1中捕获的内容（也就是前面匹配的那个单词）(\1)。
+\b(?<Word>\w+)\b\s+\k<Word>\b (?<Word>\w+)(或者把尖括号换成'也行：(?'Word'\w+)),这样就把\w+的组名指定为Word。引用时，可以使用\k<Word>
+
+\b\w+(?=ing\b)，匹配以ing结尾的单词的前面部分(除了ing以外的部分)，如查找I'm singing while you're dancing.时，它会匹配sing和danc。
+
+(?<=\s)\d+(?=\s)匹配以空白符间隔的数字(再次强调，不包括这些空白符)
+
+\b\w*q[^u]\w*\b匹配包含后面不是字母u的字母q的单词。但是如果多做测试(或者你思维足够敏锐，直接就观察出来了)，你会发现，如果q出现在单词的结尾的话，像Iraq,Benq，这个表达式就会出错。这是因为[^u]总要匹配一个字符，所以如果q是单词的最后一个字符的话，后面的[^u]将会匹配q后面的单词分隔符(可能是空格，或者是句号或其它的什么)，后面的\w*\b将会匹配下一个单词，于是\b\w*q[^u]\w*\b就能匹配整个Iraq fighting。负向零宽断言能解决这样的问题，因为它只匹配一个位置，并不消费任何字符。现在，我们可以这样来解决这个问题：\b\w*q(?!u)\w*\b
+
+\d{3}(?!\d)匹配三位数字，而且这三位数字的后面不能是数字
+\b((?!abc)\w)+\b匹配不包含连续字符串abc的单词
+(?<![a-z])\d{7}匹配前面不是小写字母的七位数字
+一个更复杂的例子：(?<=<(\w+)>).*(?=<\/\1>)匹配不包含属性的简单HTML标签内里的内容。(?<=<(\w+)>)指定了这样的前缀：被尖括号括起来的单词(比如可能是<b>)，然后是.*(任意的字符串),最后是一个后缀(?=<\/\1>)。注意后缀里的\/，它用到了前面提过的字符转义；\1则是一个反向引用，引用的正是捕获的第一组，前面的(\w+)匹配的内容，这样如果前缀实际上是<b>的话，后缀就是</b>了。整个表达式匹配的是<b>和</b>之间的内容(再次提醒，不包括前缀和后缀本身)
+
+小括号的另一种用途是通过语法(?#comment)来包含注释。例如：2[0-4]\d(?#200-249)|25[0-5](?#250-255)|[01]?\d\d?(?#0-199)
+
+(?<=    # 断言要匹配的文本的前缀
+<(\w+)> # 查找尖括号括起来的字母或数字(即HTML/XML标签)
+)       # 前缀结束
+.*      # 匹配任意文本
+(?=     # 断言要匹配的文本的后缀
+<\/\1>  # 查找尖括号括起来的内容：前面是一个"/"，后面是先前捕获的标签
+)       # 后缀结束
+
+
+<                         #最外层的左括号
+    [^<>]*                #最外层的左括号后面的不是括号的内容
+    (
+        (
+            (?'Open'<)    #碰到了左括号，在黑板上写一个"Open"
+            [^<>]*       #匹配左括号后面的不是括号的内容
+        )+
+        (
+            (?'-Open'>)   #碰到了右括号，擦掉一个"Open"
+            [^<>]*        #匹配右括号后面不是括号的内容
+        )+
+    )*
+    (?(Open)(?!))         #在遇到最外层的右括号前面，判断黑板上还有没有没擦掉的"Open"；如果还有，则匹配失败
+
+>                         #最外层的右括号
+
+<div[^>]*>[^<>]*(((?'Open'<div[^>]*>)[^<>]*)+((?'-Open'</div>)[^<>]*)+)*(?(Open)(?!))</div 匹配嵌套的<div>标签
+
+代码/语法	说明
+.			匹配除换行符以外的任意字符
+\w			匹配字母或数字或下划线或汉字
+\s			匹配任意的空白符
+\d			匹配数字
+\b			匹配单词的开始或结束
+^			匹配字符串的开始
+$			匹配字符串的结束
+*			重复零次或更多次
++			重复一次或更多次
+?			重复零次或一次
+{n}			重复n次
+{n,}		重复n次或更多次
+{n,m}		重复n到m次
+\W			匹配任意不是字母，数字，下划线，汉字的字符
+\S			匹配任意不是空白符的字符
+\D			匹配任意非数字的字符
+\B			匹配不是单词开头或结束的位置
+[^x]		匹配除了x以外的任意字符
+[^aeiou]	匹配除了aeiou这几个字母以外的任意字符
+(exp)		匹配exp,并捕获文本到自动命名的组里
+(?<name>exp)匹配exp,并捕获文本到名称为name的组里，也可以写成(?'name'exp)
+(?:exp)		匹配exp,不捕获匹配的文本，也不给此分组分配组号
+(?=exp)		匹配exp前面的位置
+(?<=exp)	匹配exp后面的位置
+(?!exp)		匹配后面跟的不是exp的位置
+(?<!exp)	匹配前面不是exp的位置
+(?#comment)	这种类型的分组不对正则表达式的处理产生任何影响，用于提供注释让人阅读
+*?			重复任意次，但尽可能少重复
++?			重复1次或更多次，但尽可能少重复
+??			重复0次或1次，但尽可能少重复
+{n,m}?		重复n到m次，但尽可能少重复
+{n,}?		重复n次以上，但尽可能少重复
+\a			报警字符(打印它的效果是电脑嘀一声)
+\b			通常是单词分界位置，但如果在字符类里使用代表退格
+\t			制表符，Tab
+\r			回车
+\v			竖向制表符
+\f			换页符
+\n			换行符
+\e			Escape
+\0nn		ASCII代码中八进制代码为nn的字符
+\xnn		ASCII代码中十六进制代码为nn的字符
+\unnnn		Unicode代码中十六进制代码为nnnn的字符
+\cN			ASCII控制字符。比如\cC代表Ctrl+C
+\A			字符串开头(类似^，但不受处理多行选项的影响)
+\Z			字符串结尾或行尾(不受处理多行选项的影响)
+\z			字符串结尾(类似$，但不受处理多行选项的影响)
+\G			当前搜索的开头
+\p{name}	Unicode中命名为name的字符类，例如\p{IsGreek}
+(?>exp)		贪婪子表达式
+(?<x>-<y>exp)	平衡组
+(?im-nsx:exp)	在子表达式exp中改变处理选项
+(?im-nsx)		为表达式后面的部分改变处理选项
+(?(exp)yes|no)	把exp当作零宽正向先行断言，如果在这个位置能匹配，使用yes作为此组的表达式；否则使用no
+(?(exp)yes)		同上，只是使用空表达式作为no
+(?(name)yes|no)	如果命名为name的组捕获到了内容，使用yes作为表达式；否则使用no
+(?(name)yes)	同上，只是使用空表达式作为no
+
+
+1. Sed简介  
+sed 是一种在线编辑器，它一次处理一行内容。处理时，把当前处理的行存储在临时缓冲区中，称为“模式空间”（pattern space），接着用sed命令处理缓冲区中的内容，处理完成后，把缓冲区的内容送往屏幕。接着处理下一行，这样不断重复，直到文件末尾。文件内容并没有 改变，除非你使用重定向存储输出。Sed主要用来自动编辑一个或多个文件；简化对文件的反复操作；编写转换程序等。以下介绍的是Gnu版本的Sed 3.02。  
+2. 定址  
+可以通过定址来定位你所希望编辑的行，该地址用数字构成，用逗号分隔的两个行数表示以这两行为起止的行的范围（包括行数表示的那两行）。如1，3表示1，2，3行，美元符号($)表示最后一行。范围可以通过数据，正则表达式或者二者结合的方式确定 。  
+  
+3. Sed命令  
+调用sed命令有两种形式：  
+*  
+sed [options] 'command' file(s)  
+*  
+sed [options] -f scriptfile file(s)  
+a\  
+在当前行后面加入一行文本。  
+b lable  
+分支到脚本中带有标记的地方，如果分支不存在则分支到脚本的末尾。  
+c\  
+用新的文本改变本行的文本。  
+d  
+从模板块（Pattern space）位置删除行。  
+D  
+删除模板块的第一行。  
+i\  
+在当前行上面插入文本。  
+h  
+拷贝模板块的内容到内存中的缓冲区。  
+H  
+追加模板块的内容到内存中的缓冲区  
+g  
+获得内存缓冲区的内容，并替代当前模板块中的文本。  
+G  
+获得内存缓冲区的内容，并追加到当前模板块文本的后面。  
+l  
+列表不能打印字符的清单。  
+n  
+读取下一个输入行，用下一个命令处理新的行而不是用第一个命令。  
+N  
+追加下一个输入行到模板块后面并在二者间嵌入一个新行，改变当前行号码。  
+p  
+打印模板块的行。  
+P（大写）  
+打印模板块的第一行。  
+q  
+退出Sed。  
+r file  
+从file中读行。  
+t label  
+if分支，从最后一行开始，条件一旦满足或者T，t命令，将导致分支到带有标号的命令处，或者到脚本的末尾。  
+T label  
+错误分支，从最后一行开始，一旦发生错误或者T，t命令，将导致分支到带有标号的命令处，或者到脚本的末尾。  
+w file  
+写并追加模板块到file末尾。  
+W file  
+写并追加模板块的第一行到file末尾。  
+!  
+表示后面的命令对所有没有被选定的行发生作用。  
+s/re/string  
+用string替换正则表达式re。  
+=  
+打印当前行号码。  
+#  
+把注释扩展到下一个换行符以前。  
+以下的是替换标记  
+*  
+g表示行内全面替换。  
+*  
+p表示打印行。  
+*  
+w表示把行写入一个文件。  
+*  
+x表示互换模板块中的文本和缓冲区中的文本。  
+*  
+y表示把一个字符翻译为另外的字符（但是不用于正则表达式）  
+  
+4. 选项  
+-e command, --expression=command  
+允许多台编辑。  
+-h, --help  
+打印帮助，并显示bug列表的地址。  
+-n, --quiet, --silent  
+  
+取消默认输出。  
+-f, --filer=script-file  
+引导sed脚本文件名。  
+-V, --version  
+打印版本和版权信息。  
+  
+5. 元字符集^  
+锚定行的开始 如：/^sed/匹配所有以sed开头的行。   
+$  
+锚定行的结束 如：/sed$/匹配所有以sed结尾的行。   
+.  
+匹配一个非换行符的字符 如：/s.d/匹配s后接一个任意字符，然后是d。   
+*  
+匹配零或多个字符 如：/*sed/匹配所有模板是一个或多个空格后紧跟sed的行。  
+[] 
+匹配一个指定范围内的字符，如/[Ss]ed/匹配sed和Sed。  
+[^] 
+匹配一个不在指定范围内的字符，如：/[^A-RT-Z]ed/匹配不包含A-R和T-Z的一个字母开头，紧跟ed的行。  
+\(..\) 
+保存匹配的字符，如s/\(love\)able/\1rs，loveable被替换成lovers。  
+& 
+保存搜索字符用来替换其他字符，如s/love/**&**/，love这成**love**。   
+\<  
+锚定单词的开始，如:/\<love/匹配包含以love开头的单词的行。   
+\>  
+锚定单词的结束，如/love\>/匹配包含以love结尾的单词的行。   
+x\{m\}  
+重复字符x，m次，如：/0\{5\}/匹配包含5个o的行。   
+x\{m,\}  
+重复字符x,至少m次，如：/o\{5,\}/匹配至少有5个o的行。   
+x\{m,n\}  
+重复字符x，至少m次，不多于n次，如：/o\{5,10\}/匹配5--10个o的行。  
+6. 实例  
+删除：d命令  
+*  
+$ sed '2d' example-----删除example文件的第二行。  
+*  
+$ sed '2,$d' example-----删除example文件的第二行到末尾所有行。  
+*  
+$ sed '$d' example-----删除example文件的最后一行。  
+*  
+$ sed '/test/'d example-----删除example文件所有包含test的行。  
+替换：s命令  
+*  
+$ sed 's/test/mytest/g' example-----在整行范围内把test替换为mytest。如果没有g标记，则只有每行第一个匹配的test被替换成mytest。  
+*  
+$ sed -n 's/^test/mytest/p' example-----(-n)选项和p标志一起使用表示只打印那些发生替换的行。也就是说，如果某一行开头的test被替换成mytest，就打印它。  
+*  
+$ sed 's/^192.168.0.1/&localhost/' example-----&符号表示替换换字符串中被找到的部份。所有以192.168.0.1开头的行都会被替换成它自已加 localhost，变成192.168.0.1localhost。  
+*  
+$ sed -n 's/\(love\)able/\1rs/p' example-----love被标记为1，所有loveable会被替换成lovers，而且替换的行会被打印出来。  
+*  
+$ sed 's#10#100#g' example-----不论什么字符，紧跟着s命令的都被认为是新的分隔符，所以，“#”在这里是分隔符，代替了默认的“/”分隔符。表示把所有10替换成100。  
+选定行的范围：逗号  
+*  
+$ sed -n '/test/,/check/p' example-----所有在模板test和check所确定的范围内的行都被打印。  
+*  
+$ sed -n '5,/^test/p' example-----打印从第五行开始到第一个包含以test开始的行之间的所有行。  
+*  
+$ sed '/test/,/check/s/$/sed test/' example-----对于模板test和west之间的行，每行的末尾用字符串sed test替换。  
+多点编辑：e命令  
+*  
+$ sed -e '1,5d' -e 's/test/check/' example-----(-e)选项允许在同一行里执行多条命令。如例子所示，第一条命令删除1至5行，第二条命令用check替换test。命令的执 行顺序对结果有影响。如果两个命令都是替换命令，那么第一个替换命令将影响第二个替换命令的结果。  
+*  
+$ sed --expression='s/test/check/' --expression='/love/d' example-----一个比-e更好的命令是--expression。它能给sed表达式赋值。  
+从文件读入：r命令  
+*  
+$ sed '/test/r file' example-----file里的内容被读进来，显示在与test匹配的行后面，如果匹配多行，则file的内容将显示在所有匹配行的下面。  
+写入文件：w命令  
+*  
+$ sed -n '/test/w file' example-----在example中所有包含test的行都被写入file里。  
+追加命令：a命令  
+*  
+$ sed '/^test/a\\--->this is a example' example<-----'this is a example'被追加到以test开头的行后面，sed要求命令a后面有一个反斜杠。  
+插入：i命令  
+$ sed '/test/i\\  
+new line  
+-------------------------' example  
+如果test被匹配，则把反斜杠后面的文本插入到匹配行的前面。  
+下一个：n命令  
+*  
+$ sed '/test/{ n; s/aa/bb/; }' example-----如果test被匹配，则移动到匹配行的下一行，替换这一行的aa，变为bb，并打印该行，然后继续。  
+变形：y命令  
+*  
+$ sed '1,10y/abcde/ABCDE/' example-----把1--10行内所有abcde转变为大写，注意，正则表达式元字符不能使用这个命令。  
+退出：q命令  
+*  
+$ sed '10q' example-----打印完第10行后，退出sed。  
+保持和获取：h命令和G命令  
+*  
+$ sed -e '/test/h' -e '$G example-----在sed处理文件的时候，每一行都被保存在一个叫模式空间的临时缓冲区中，除非行被删除或者输出被取消，否则所有被处理的行都将 打印在屏幕上。接着模式空间被清空，并存入新的一行等待处理。在这个例子里，匹配test的行被找到后，将存入模式空间，h命令将其复制并存入一个称为保 持缓存区的特殊缓冲区内。第二条语句的意思是，当到达最后一行后，G命令取出保持缓冲区的行，然后把它放回模式空间中，且追加到现在已经存在于模式空间中 的行的末尾。在这个例子中就是追加到最后一行。简单来说，任何包含test的行都被复制并追加到该文件的末尾。  
+保持和互换：h命令和x命令  
+*  
+$ sed -e '/test/h' -e '/check/x' example -----互换模式空间和保持缓冲区的内容。也就是把包含test与check的行互换。  
+7. 脚本  
+Sed脚本是一个sed的命令清单，启动Sed时以-f选项引导脚本文件名。Sed对于脚本中输入的命令非常挑剔，在命令的末尾不能有任何空白或文本，如果在一行中有多个命令，要用分号分隔。以#开头的行为注释行，且不能跨行。  
+
+sed -n "/2014-05-04 10:00:00/,/2014-05-04 11:00:00/p" 2014-05-04.log
+
+
+LNMP环境部分
+
+
+
+nginx配置详细讲解篇。
+fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;#脚本文件请求的路径
+fastcgi_param  QUERY_STRING       $query_string; #请求的参数;如?app=123
+fastcgi_param  REQUEST_METHOD     $request_method; #请求的动作(GET,POST)
+fastcgi_param  CONTENT_TYPE       $content_type; #请求头中的Content-Type字段
+fastcgi_param  CONTENT_LENGTH     $content_length; #请求头中的Content-length字段。
+
+fastcgi_param  SCRIPT_NAME        $fastcgi_script_name; #脚本名称 
+fastcgi_param  REQUEST_URI        $request_uri; #请求的地址不带参数
+fastcgi_param  DOCUMENT_URI       $document_uri; #与$uri相同。 
+fastcgi_param  DOCUMENT_ROOT      $document_root; #网站的根目录。在server配置中root指令中指定的值 
+fastcgi_param  SERVER_PROTOCOL    $server_protocol; #请求使用的协议，通常是HTTP/1.0或HTTP/1.1。  
+
+fastcgi_param  GATEWAY_INTERFACE  CGI/1.1;#cgi 版本
+fastcgi_param  SERVER_SOFTWARE    nginx/$nginx_version;#nginx 版本号，可修改、隐藏
+
+fastcgi_param  REMOTE_ADDR        $remote_addr; #客户端IP
+fastcgi_param  REMOTE_PORT        $remote_port; #客户端端口
+fastcgi_param  SERVER_ADDR        $server_addr; #服务器IP地址
+fastcgi_param  SERVER_PORT        $server_port; #服务器端口
+fastcgi_param  SERVER_NAME        $server_name; #服务器名，域名在server配置中指定的server_name
+
+#fastcgi_param  PATH_INFO           $path_info;#可自定义变量
+
+# PHP only, required if PHP was built with --enable-force-cgi-redirect
+#fastcgi_param  REDIRECT_STATUS    200;
+
+在php可打印出上面的服务环境变量
+如：echo $_SERVER['REMOTE_ADDR']
+
+$args 此变量与请求行中的参数相等
+$content_length 等于请求行的“Content_Length”的值。
+$content_type 等同与请求头部的”Content_Type”的值
+$document_root 等同于当前请求的root指令指定的值
+$document_uri 与$uri一样
+$host 与请求头部中“Host”行指定的值或是request到达的server的名字（没有Host行）一样
+$limit_rate 允许限制的连接速率
+$request_method 等同于request的method，通常是“GET”或“POST”
+$remote_addr 客户端ip
+$remote_port 客户端port
+$remote_user 等同于用户名，由ngx_http_auth_basic_module认证
+$request_filename 当前请求的文件的路径名，由root或alias和URI request组合而成
+$request_body_file
+$request_uri 含有参数的完整的初始URI
+$query_string 与$args一样
+$server_protocol 等同于request的协议，使用“HTTP/1.0”或“HTTP/1.1”
+$server_addr request到达的server的ip，一般获得此变量的值的目的是进行系统调用。为了避免系统调用，有必要在listen指令中指明ip，并使用bind参数。
+$server_name 请求到达的服务器名
+$server_port 请求到达的服务器的端口号
+$uri 等同于当前request中的URI，可不同于初始值，例如内部重定向时或使用index
+
+1.启动 Nginx
+poechant@ubuntu:sudo ./sbin/nginx
+2. 停止 Nginx
+poechant@ubuntu:sudo ./sbin/nginx -s stop
+poechant@ubuntu:sudo ./sbin/nginx -s quit
+-s都是采用向 Nginx 发送信号的方式。
+3. Nginx 重载配置
+poechant@ubuntu:sudo ./sbin/nginx -s reload
+上述是采用向 Nginx 发送信号的方式，或者使用：
+poechant@ubuntu:service nginx reload
+4. 指定配置文件
+poechant@ubuntu:sudo ./sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+-c表示configuration，指定配置文件。
+
+今天配置一个nginx的rewrite，简直是被搞死了。其实我就是想把/xxx/0.mp4?key=123456abcde转换为/xxx.mp4?segno=0&key=123456abcde这种形式经过不断的尝试，也分析了一下原因，发现niginx的内容设置中必须注意的一些问题:
+1.nginx在进行rewrite的正则表达式中只会将url中?前面的部分拿出来匹配
+2.匹配完成后，?后面的内容将自动追加到url中（包含?），如果不让后面的内容追加上去，请在最后加上?即可
+3.如果想要?后面的内容时请使用$query_string
+
+在这里提醒一点，调试的时候在rewrite的最后一个配置项中不要使用break last这些，使用redirect可以看到转换后的地址。综合以上几点，使用的配置项为
+
+rewrite ^/(.+)/(\d+)\.mp4$ /$1.mp4?segno=$2&$query_string? last;  
+
+实现 http://a.com/abc 到 http://b.com/abc
+在 Nginx 的默认配置文件中的 http 模块的子模块 server 中添加一段代码：
+location ^~ /hd
+{
+   rewrite  ^/hd/(.*)$  http://www.google.com/$1  permanent;
+}
+实现 http://a.com/msg?url=www.b.com 到 http://www.b.com
+location ^~ /img_proxy
+{
+   set $img_proxy_url "";
+   set $suffix "";
+   if ($query_string ~ "url=(.*)")
+   {
+      set $img_proxy_url $1;
+      set $suffix "";
+   }
+   resolver 208.67.222.222;
+   proxy_pass http://$img_proxy_url/$suffix;
+   proxy_set_header referer "http://$img_proxy_url";
+}
+建立一个/home/michael/test_space目录，用来存储我们的测试用例。再直接在 Nginx 的默认配置文件/usr/loca/nginx/conf/nginx.conf中修改，在http中增加一个server模块，如下：
+server {
+    listen      8011;
+    server_name localhost;
+    charset     utf-8;
+    location / {
+        alias   /home/michael/test_space/;
+    }
+}
+其中listen表示监听的端口号，sever_name则是web服务器的名称（可以是域名、host 或 IP 地址），charset指定编码字符集，这里的location则通过alias指定了web服务的文件目录。
+一个简单的 PHP 站点的 Nginx 配置
+server {
+    listen        80;
+    server_name   nginx.org  www.nginx.org;
+    root          /data/www;
+
+    location / {
+        index     index.html  index.php;
+    }
+
+    location ~* \.(gif|jpg|png)$ {
+        expires   30d;
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass   localhost:9000;
+        fastcgi_param  SCRIPT_FILENAME
+                       $document_root$fastcgi_script_name;
+        include        fastcgi_params;
+    }
+}
+Nginx 在匹配location的时候，不是按照配置代码给出的顺序进行匹配的，而是先按照匹配表达式中的文字字符串（literal string）的明确程度，从最明确的开始匹配。这么说可能有点含混不清，简单说，没有正则规则的匹配表达式，是最明确的。比如如果这个匹配表达式就是一个“/”或者“/abc”，那么这就是最明确的。上例中的"/"就是这个最明确的蚊子字符串（the most specific literal string），其实也是该例中唯一的。所以先从这个location开始，然后再按照location的列出顺序，依次匹配，直到出现第一个匹配的location后停止。如果所有的location都不匹配，就用第一个找到的最明确的文字字符串来匹配（the most specific literal string）。
+待查询的 HTTP 请求
+Nginx只处理无查询的HTTP请求，因为查询请求的查询字段的顺序不确定，比如：
+/index.php?user=john&page=1
+/index.php?page=1&user=john
+再比如：
+/index.php?page=1&something+else&user=john
+几个location的例子
+例1：
+/logo.gif
+“/”先被找到，然后匹配"\.(gif|jpg|png)$"，再根据 redirective 找到root是/data/www，然后这个请求就被映射到"/data/www/logo.gif"了，最后文件就被发送给到了客户端。
+例2：
+/index.php
+"/"先被找到，然后匹配"\.(php)$"，然后 request 就被传递给在 9000 端口上监听的 FastCGI 服务器，"fastcgi_param" directive 设置 FastCGI 的参数SCRIPT_FILENAME为"/data/www/index.php"，然后FastCGI服务器就执行这个文件。（注意其中document_root是/data/www，fastcgi_script_name是/index.php。）
+例3：
+/
+"/"是很复杂的，先找到"/"这个location，然后根据root值/data/www，看/data/www/index.php是否存在，如果存在 directive 就在内部重定向到/index.php，然后 Nginx 根据这个再次搜索location，重复上面第二个例子
+
+核心模块之主模块的测试常用指令
+1. daemon
+含义：设置是否以守护进程模式运行
+语法：daemon on|off
+缺省：on
+示例：daemon off;
+注意：生产环境（production mode）中不要使用daemon指令，这些选项仅用于开发测试（development mode）。
+
+2. debug_points
+含义：断点调试
+语法：debug_points [stop|abort]
+缺省：none
+示例：debug_points stop;
+注意：在Nginx内有一些assert断言，这些断言允许Nginx，配合调试器中断程序运行、停止或创建core文件。
+
+3. master_process
+含义：设置是否启用主进程
+语法：master_process on|off
+缺省：on
+示例：master_process off;
+注意：不要在生产环境（production mode）中使用master_process指令，这些选项仅用于开发测试（development mode）。
+
+4. error_log
+含义：指定错误日志文件
+语法：error_log file [debug|info|notice|warn|error|crit]
+缺省：${prefix}/logs/error.log
+示例：error_log /data/nginx/logs/error.log debug
+注意：该命令并非只有在测试（或称为开发）模式下才可以使用，而是在编译时添加了--with-debug参数时，则可以使用error_log指令的额外参数，即：
+error_log file [debug_core|debug_alloc|debug_mutex|debug_event|debug_http|debug_imap];
+
+核心模块之主模块的非测试常用指令
+2. include
+含义：指定所要包含的Nginx配置文件
+语法：include <file|*>
+缺省：none
+示例：include vhosts/*.conf 或 include /home/michael/nginx/conf/nginx-main.conf
+注意：
+（1）include命令可以指定包含一个文件，比如第二个示例。也可以指定包含一个目录下的所有文件，比如第一个示例。
+（2）指定的文件路径的基路径，由编译选项--prefix决定，如果编译时没有指定，则默认的路径是/usr/local/nginx。
+
+3. lock_file
+含义：
+语法：lock_file <file>
+缺省：compile-time option
+示例：lock_file /var/log/lock_file;
+注意：Nginx使用accept mutex来序列化accept()系统调用（syscalls）。如果是在i386，sparc64，ppc64或amd64平台上用GCC，Intel C++，SunPro C++编译器编译的，则Nginx使用CPU原指令实现mutex。其他情况下，则使用lock_file。
+
+4. pid
+含义：指定存储进程ID（即PID）的文件。
+语法：pid <file>
+缺省：compile-time option Example
+示例：pid /var/log/nginx.pid;
+注意：可以使用命令kill -HUP cat /var/log/nginx.pid\ 对Nginx进行进程ID文件的重新加载。
+
+5. ssl_engine
+含义：指定使用的openssl引擎。
+语法：ssl_engine engine;
+缺省：视系统而定
+示例：
+注意：你可以使用openssl engine -t命令来查看系统目前支持的openssl引擎。
+
+6. timer_resolution
+略
+
+7. user
+含义：指定可以使用Nginx的用户
+语法：user <user> [group]
+缺省：nobody nobody（第一个nobody是user，第二个nobody是group）
+示例：user www users;
+
+8. worker_processes
+含义：指定worker进程数
+语法：worker_processes <number>
+缺省：1
+示例：worker_processes 4;
+注意：最大用户连接数=worker进程数×worker连接数，即max_clients=worker_processes*worker_connections。
+
+9. worker_cpu_affinity
+含义：为worker进程绑定CPU。
+语法：worker_cpu_affinity cpumask [cpumask...]
+缺省：none
+示例：
+（1）如果有4个CPU，并且指定4个worker进程，则：
+worker_processes 4;
+worker_cpu_affinity 0001 0010 0100 1000;
+（2）如果有4个CPU，并且指定2个worker进程，则：
+worker_processes 2;
+worker_cpu_affinity 0101 1010;
+注意：只有Linux平台上才可以使用该指令。
+
+10. worker_priority
+含义：指定各worker进程的优先级
+语法：worker_priority [-] <number>;
+缺省：on
+示例：
+注意：使用该指令可以给woker进程分配优先值。
+
+11. worker_rlimit_core
+含义：指定每个worker进程的core文件最大size。
+语法：worker_rlimit_core <max_size>;
+
+12. worker_rlimit_nofile
+含义：worker进程的file descriptor可以打开的最大文件数。
+语法：worker_rlimit_nofile <number>;
+
+13. worker_rlimit_sigpending
+略
+
+
+14. working_directory
+含义：指定worker进程的core文件目录。
+语法：working_directory <path>
+缺省：编译Nginx时的--prefix选项指定的目录
+示例：working_directory /data/nginx/data;
+注意：如果是相对路径，则以编译Nginx时的--prefix选项为基路径。
+
+核心模块之事件模块
+一、事件模块的作用是什么？
+
+用来设置Nginx处理链接请求。
+
+二、相关指令
+
+1. accept_mutex
+含义：设置是否使用连接互斥锁进行顺序的accept()系统调用。
+语法：accept_mutex <on|off>;
+缺省：on
+示例：accept_mutex off;
+
+2. accept_mutex_delay
+含义：设置获得互斥锁的最少延迟时间。
+语法：accpet_mutex_delay <number of millisecs>
+缺省：500ms
+示例：accpet_mutex_delay 1000ms;
+
+3. debug_connection
+含义：设置指定的clients产生debug日志。
+语法：debug_connection [ip|CIDR];
+缺省：none
+示例：debug_connection 172.16.44.96;
+一段较完整的事件模块代码如下：
+error_log /data/nginx/log/error.log;
+events {
+debug_connection172.16.44.96;
+}
+
+4. multi_accept
+含义：设置是否允许，Nginx在已经得到一个新连接的通知时，接收尽可能更多的连接。
+语法：multi_accept <on|off>;
+缺省：off
+示例：multi_accept on;
+
+5. rtsig_signo
+略
+
+6. rtsig_overflow_threshold
+
+7. use
+语法：use [kqueue | rtsig | epoll | /dev/poll | select | poll | eventport];
+注意：如果在./configure的时候指定了不止一种事件模型，那么可以设置其中一个，告诉Nginx使用哪种事件模型。默认情况下，Nginx会在./configure时找出最适合系统的事件模型。
+
+8. worker_connections
+语法：worker_connection <number>;
+注意：
+最大连接数的计算公式如下：
+max_clients = worker_processes * worker_connections;
+如果作为反向代理，因为浏览器默认会开启2个连接到server，而且Nginx还会使用fds（file descriptor）从同一个连接池建立连接到upstream后端。则最大连接数的计算公式如下：
+max_clients = worker_processes * worker_connections / 4;
+
+核心模块之HTTP模块基本常用指令
+
+一、HTTP模块的作用是什么？
+
+Nginx的HTTP模块用于控制Nginx的HTTP进程。
+
+
+二、指令
+
+1. alias
+含义：指定location使用的路径，与root类似，但不改变文件的跟路径，仅适用文件系统的路径。
+语法：alias <file-path | directory-path>
+缺省：N/A
+作用域：http.server.location
+示例：
+location /i/ {
+alias /home/michael/web/i/;
+}
+则请求 /i/logo.png 则返回 /home/michael/web/i/logo.png。
+注意：
+（1）替换路径时，可以使用变量。
+（2）alias无法在正则的location中使用。如果有这种需求，则必须使用rewrite和root。
+
+2. client_body_in_file_only
+含义：指定是否将用户请求体存储到一个文件里。
+语法：client_body_in_file_only <on | off>
+缺省：off
+作用域：http.server.location
+示例：client_body_in_file_only on;
+注意：
+（1）该指令为on时，用户的请求体会被存储到一个文件中，但是请求结束后，该文件也不会被删除；
+（2）该指令一般在调试的时候使用。
+
+3. client_body_buffer_size
+含义：指定用户请求体所使用的buffer的最大值
+语法：client_body_buffer_size <size>
+缺省：两个page的大小，一般为8k或16k
+作用域：http.server.location
+示例：client_body_buffer_size 512k;
+注意：如果用户请求体超过了buffer的大小，则将全部内容或部分内容存储到一个临时文件中。
+
+4. client_body_temp_path
+含义：设置存储用户请求体的文件的目录路径
+语法：client_body_temp_path <directory path> [level1 | level2 | level3]
+作用域：http.server.location
+示例：client_body_temp_path /spool/nginx/client_temp 1 2;
+
+5. client_body_timeout
+含义：设置用户请求体的超时时间。
+语法：client_body_timeout <time>
+作用域：http.server.location
+示例：client_body_timeout 120s;
+注意：只有请求体需要被1次以上读取时，该超时时间才会被设置。且如果这个时间后用户什么都没发，nginx会返回requests time out 408.
+
+6. client_header_buffer_size
+含义：设置用户请求头所使用的buffer大小
+语法：client_header_buffer_size <size>
+缺省：1k
+作用域：http.server
+示例：client_header_buffer_size 2k;
+注意：
+（1）对绝大多数请求来说，1k足以满足请求头所需的buffer；
+（2）对于携带有较大cookie或来自于wap用户的请求头来说，1k的buffer一般不够，这时可以使用指令large_client_header_buffers。
+
+7. client_header_timeout
+含义：设置用户请求头的超时时间。
+语法：client_header_timeout <time>
+缺省：1m
+作用域：http.server.location
+示例：client_header_timeout 3m;
+注意：只有请求头需要被1次以上读取时，该超时时间才会被设置。且如果这个时间后用户什么都没发，nginx会返回requests time out 408.
+
+8. client_max_body_size
+含义：设置所能接收的最大请求体的大小
+语法：client_max_body_size <size>
+缺省：1m
+作用域：http.server.location
+示例：client_max_body_size 2m;
+注意：根据请求头中的Content-Length来判断请求体大小是否允许。如果大于设定值，则返回“ Request Entity Too Large”(413)错误。不过要注意的是，浏览器一般并不对这个错误进行特殊显示。
+
+核心模块之HTTP模块Location相关指令
+一、基本语法
+语法：location [= | ~ | ~* | ^~] </uri/> {...}
+缺省：N/A
+作用域：server
+
+二、匹配规则
+1. 四种匹配方式
+= 精确匹配
+~ 大小写敏感正则匹配
+~* 大小写不敏感正则匹配
+^~ 前缀匹配
+
+2. location匹配指令的执行顺序
+首先：= 精确匹配；
+其次：^~ 前缀匹配；
+再次：~* 和 ~ 正则匹配，顺序依据出现顺序；
+最后：如果出现正则匹配成功，则采用该正则匹配；如果无可匹配正则，则采用前缀匹配结果。
+
+三、常用指令
+1. internal
+含义：表示请求必须来自内部，外部请求会丢给404页面。
+语法：internal;
+作用域：location
+
+
+Memcached模块的两大应用场景
+现在有这样一种应用场景：
+客户端Client通过Nginx反向代理，访问服务器Server。每次访问的内容就是将文件File传到Server上，然后可以访问到File的URL被广播到所有Client上，每个Client再加载File。
+
+Analysis：
+这么多Client同时加载File，对Server的压力一定很大吧？读者朋友肯定会说，有了Nginx反向代理，Client访问Server的时候，相应访问的资源就可以被Nginx缓存，减轻了Server的压力。但有一点要注意，如果这样的话，Nginx反向代理配置的缓存是在有Client访问到Nginx时才会从Server拿来缓存到Nginx上。可是广播后，所有Client加载File是同时的，如果等地一个访问请求到来并使得Nginx产生缓存后，其他Client接收到广播后的加载响应，恐怕早已经发起并且接近尾声了。负载压力还是落到Server上。怎么办呢？
+
+Solution Overview：
+某个Client上传File到Server的同时，将File内容写入到Nginx的缓存中，然后广播后，Client加载File的请求在到达Nginx时去缓存中查找，那么基本是100%命中。
+
+Deployment Solution：（1）Reverse-Server（192.168.0.1）：反向代理服务器，用Nginx实现。对外提供11000端口，接收到HTTP请求后到Cache-Server的14000端口的缓存服务中查找，如果有则返回，如果没有则将请求传递给Store-Server的12000端口。
+（2）Store-Server（192.168.0.2）：文件存储服务器，用FastDFS实现。对外提供12000端口用于下载，接收来自Reverse-Sever的HTTP请求。对外还提供12500端口用于上传。
+（3）Process-Server（192.168.0.3）：业务处理服务器，对外提供13000端口，接收Client传递来的File，并将File通过Store-Server的12500端口转储到Store-Server中。
+（4）Cache-Server（192.168.0.4）：文件缓存服务器，用Memcached实现，对外提供14000端口。接收来自Reverse-Server的读操作，和Process-Server的写操作。
+Configuration Solution：
+（1）FastDFS的配置与部署，请参见GoogleCode上的FastDFS相关wiki。
+（2）Memcached部署很简单，wget，tar，./configure，make，make install就OK了。
+（3）Process-Server是由我自己实现的，不具有通用性就不说了。
+（4）Reverse-Server的Nginx配置文件中http模块中，建立一个用户解决该问题的server，配置方式如下：
+1.	server {  
+2.	    listen 11000;  
+3.	    server_name localhost;  
+4.	  
+5.	    default_type text/html;  
+6.	      
+7.	    location / {  
+8.	        proxy_set_headerX-Real-IP $remote_addr;  
+9.	        proxy_set_headerHost $http_host;  
+10.	        proxy_set_headerX-Forwarded-For $proxy_add_x_forwarded_for;  
+11.	          
+12.	        if ($request_method = POST) {  
+13.	            proxy_pass http://192.168.0.2:12000;  
+14.	            break;  
+15.	        }  
+16.	  
+17.	        set $memcached_key  "$uri";  
+18.	        memcached_pass      192.168.0.4:14000;  
+19.	  
+20.	        error_page  501 404 502 = /fallback$uri;  
+21.	    }  
+22.	  
+23.	    location /fallback/ {  
+24.	        internal;  
+25.	  
+26.	        proxy_set_header    X-Real-IP   $remote_addr;  
+27.	        proxy_set_header    Host        $http_host;  
+28.	        proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;  
+29.	  
+30.	        proxy_redirect      off;  
+31.	  
+32.	        proxy_pass      http://192.168.0.2:12000  
+33.	    }  
+34.	}  
+
+
+Details
+Nginx的Memcached模块只提供对Memcached的读操作，不提供写操作。如果Memcached中没有相应的键值，即未命中，则返回404。如果请求未能找到Memcached Server，则返回502错误。因此，我们可以采用这样一种方式：当返回这类错误时，将请求交给Store-Server。这样只有在不命中时才访问Store-Server，缓存服务器由此可以为存储服务器分担很多负载。
+
+
+二、应用场景2
+
+在应用场景1中，将不命中时的逻辑换作向Memcached的写操作。这种场景的服务器系统部署方案如下：
+
+（1）Reverse-Server：Client访问该服务器的11000端口，请求被转至Cache-Server的14000端口，如果Cache-Server命中则response；否则交给Process-Server的13000端口，进行进一步的处理。
+（2）Data-Server：对外提供12000端口，用于读取数据。
+（3）Process-Server：提供13000端口，用于接收Reverse-Server转发来的HTTP请求，到Store-Server的12000端口查询，并将得到的Value与从Reverse-Server发来的Key值共同构成K-V对，通过Cache-Server的14000端口写入Cache-Server。
+（4）Cache-Server：提供14000端口，用于对外提供读写操作。
+
+这是的Nginx的Memcached模块配置，要将request的方法为post和error_log，不再是如“应用场景1”中那样转至Store-Server，而是都转至Process-Server去。因为应用场景1中，向Cache写的操作，是预先完成的。而应用场景2中向Cache写的操作，是在读Cache失败后发生的。注意这两者适用的业务需求。
+
+当以字节数组方式缓存较大的文件时，缓存数据会被压缩，从而在读取的时候出现问题。
+
+解决方法很简单，就是在MemcachedClient端设置压缩的阈值。如果你使用的是net.spy.memcached的API，则可以如下设置：
+1.	int EXPIRE_SECONDS = 18000;  
+2.	SerializingTranscoder transcoder = new SerializingTranscoder();  
+3.	transcoder.setCompressionThreshold(5242880);  
+4.	fileCache.set(key, EXPIRE_SECONDS, value, transcoder);  
+如果你使用的是net.rubyeye.xmemcached的API，则可以如下设置：
+1.	int EXPIRE_SECONDS = 18000;  
+2.	BaseSerializingTranscoder transcoder = new BaseSerializingTranscoder();  
+3.	transcoder.setCompressionThreshold(5242880);  
+4.	client = set(key, EXPIRE_SECONDS, value, transcoder);  
+如果你使用的是danga.MemCached的API，则可以如下设置：
+1.	int EXPIRE_SECONDS = 18000;  
+2.	MemCachedClient.setCompressThreshold(5242880);  
+3.	MemCachedClient.set(key, value, new Date(System.currentTimeMillis() + EXPIRE_SECONDS * 1000L));  	
+1我们知道Nginx从Memcached读取数据的方式，如果命中，那么效率是相当高的. 如果不命中呢？
+
+我们可以到相应的数据服务器上读取数据，然后将它缓存到Nginx服务器上，然后再将该数据返回给客户端。这样，对于该资源，只有穿透Memcached的第一次请求是需要到数据服务器读取的，之后在缓存过期时间之内的所有请求，都是读取Nginx本地的。不过Nginx的proxy_cache是本地硬盘缓存，效率要远低于Memcached。
+
+2. 应该如何安装和配置呢？
+（1）HttpMemcModule模块
+如果使用Nginx的非核心模块——HttpMemcModule模块，则可以下载模块：
+http://github.com/agentzh/memc-nginx-module/tags
+1.	michael@dev-machine:~$ tar -zxvf agentzh-memc-nginx-module-a0bc33a.tar.gz  
+2.	michael@dev-machine:~$ tar -zxvf nginx-1.1.12.tar.gz  
+3.	michael@dev-machine:~$ cd nginx-1.1.12  
+4.	michael@dev-machine:~$ ./configure --add-module=/home/michael/agentzh-memc-nginx-module-a0bc33a  
+5.	michael@dev-machine:~$ sudo make  
+6.	michael@dev-machine:~$ sudo make install  
+
+目前验证发现Nginx 1.0.10版本 Nginx的1.1.3及其之前的版本，需要额外通过--add-module来加载upstream-keepalive模块，请自行google之。其他版本还不确定，猜测是在1.1  从nginx的1.1.4及其之后的版本开始，自动携带upstream-keeplive模块的。 
+1.	http {  
+2.	    ...  
+3.	    upstream data_server {  
+4.	        server  192.168.0.133:1234;  
+5.	        server  192.168.0.134:1234;  
+6.	        server  192.168.0.135:1234;  
+7.	        ip_hash;  
+8.	    }  
+9.	  
+10.	    upstream memc_backend {  
+11.	        server  127.0.0.1:11211;  
+12.	    }  
+13.	    ...  
+14.	    server {  
+15.	  
+16.	        listen      8080;  
+17.	        server_name localhost;  
+18.	  
+19.	        default_type    text/html;  
+20.	  
+21.	        location / {  
+22.	            set     $memc_cmd   get;  
+23.	            set     $memc_key   $uri;  
+24.	            memc_pass   memc_backend;  
+25.	  
+26.	            error_page  404 @fallback;  
+27.	        }  
+28.	  
+29.	        location @fallback {  
+30.	  
+31.	            internal;  
+32.	
+33.	            proxy_pass      http://data_server;  
+34.	  
+35.	            proxy_cache     cache_one;  
+36.	            proxy_cache_valid   200 302 1h;  
+37.	            proxy_cache_valid   301 1d;  
+38.	            proxy_cache_valid   any 1m;  
+39.	            expires         30d;  
+40.	        }  
+41.	    }  
+42.	    ...  
+43.	}  
+
+从上面的配置文件我们可以看出，一个请求到达后，会其uri作为key去Memcached服务器127.0.0.1:11211上查找value，如果没有命中，则返回404。这时通过error_page将404接收转到@fallback，然后去data_server中取文件，取完后将该文件在本地磁盘缓存，同时用户的浏览器也通过expires设置缓存时间。
+
+这样绝大多数请求如果被第一层Memcached的内存缓存拦截的话，剩余的请求可以通过访问第二层Nginx服务器的硬盘缓存文件，来减少穿透。
+
+按照上面的方式，客户端得到的请求响应中虽然包含了正确的文件内容，但状态码都是404（可以通过Fiddler来观察）。这似乎会引起问题。什么问题呢？绝大多数浏览器，即使在404的情况下，也会尝试去读取内容，如果有正确的内容，是可以正确显示的。但是比较常见的可能引起问题的两种情况是：
+（a）、搜索引擎的spider爬到的404时，一般不会收录该URL，我想这不是你所希望看到的；
+（b）、Flash等方式加载时，如果头是404，可能不予显示，我想着也不是你所希望看到的。
+
+那我们把它改成都是200，是不是很好呢？
+1.	error_page  404 =200 @fallback;  
+
+非也，这样404传递到fallback处理请求后的状态如果不是200，就很不一致了，会引起更多问题。所以应该如下配置：
+1.	error_page  404 = @fallback;  
+
+这样fallback的处理结果状态是什么，就用什么替换404。
+
+平滑升级你的Nginx
+1、概述（可以直接跳过看第2部分）
+Nginx方便地帮助我们实现了平滑升级。其原理简单概括，就是：
+
+（1）在不停掉老进程的情况下，启动新进程。
+（2）老进程负责处理仍然没有处理完的请求，但不再接受处理请求。
+（3）新进程接受新请求。
+（4）老进程处理完所有请求，关闭所有连接后，停止。
+
+这样就很方便地实现了平滑升级。一般有两种情况下需要升级Nginx，一种是确实要升级Nginx的版本，另一种是要为Nginx添加新的模块。
+
+2. 升级过程
+具体的操作也很简单，如下：
+
+（0）查看当前版本
+在存放Nginx的可执行文件的目录下输入：
+1.	./nginx -V  
+
+（1）下载新的Nginx版本并编译。
+1.	wget nginx-1.0.11.tar.gz  
+2.	tar zxvf nginx-1.0.11.tar.gz  
+3.	cd nginx-1.0.11  
+4.	./configure --add-module=/customized_module_0 --add-module=/customized_module_1  
+5.	make  
+注意不要进行make install
+
+（2）备份老版本的可执行文件
+1.	cd /usr/local/nginx/sbin  
+2.	sudo cp nginx nginx.old  
+（3）修改配置文件
+如果有必要的话，进行配置文件的修改。
+
+（4）拷贝新的可执行文件
+1.	sudo cp /home/michael/tmp/nginx-1.0.11/objs/nginx /usr/local/nginx/sbin/  
+（5）升级
+1.	cd /home/michael/tmp/nginx-1.0.11  
+2.	make upgrade  
+（6）清理多余文件
+1.	rm -rf /home/michael/tmp/nginx-1.0.11  
+（7）查看Nginx版本
+1.	cd /usr/local/nginx/sbin  
+2.	./nginx -V  
+
+
+Upstream负载均衡模块
+Nginx 的 HttpUpstreamModule 提供对后端（backend）服务器的简单负载均衡。一个最简单的 upstream 写法如下：
+
+upstream backend {
+    server backend1.example.com;
+    server backend2.example.com;
+    server.backend3.example.com;
+}
+
+server {
+    location / {
+        proxy_pass http://backend;
+    }
+}
+
+1、后端服务器
+
+通过 upstream 可以设定后端服务器，指定的方式可以是 IP 地址与端口、域名、UNIX 套接字（socket）。其中如果域名可以被解析为多个地址，则这些地址都作为 backend。下面举例说明：
+
+upstream backend {
+    server blog.csdn.net/poechant;
+    server 145.223.156.89:8090;
+    server unix:/tmp/backend3;
+}
+
+第一个 backend 是用域名指定的。第二个 backend 是用 IP 和端口号指定的。第三个 backend 是用 UNIX 套接字指定的。
+
+2、负载均衡策略
+
+Nginx 提供轮询（round robin）、用户 IP 哈希（client IP）和指定权重 3 种方式。
+
+默认情况下，Nginx 会为你提供轮询作为负载均衡策略。但是这并不一定能够让你满意。比如，某一时段内的一连串访问都是由同一个用户 Michael 发起的，那么第一次 Michael 的请求可能是 backend2，而下一次是 backend3，然后是 backend1、backend2、backend3…… 在大多数应用场景中，这样并不高效。当然，也正因如此，Nginx 为你提供了一个按照 Michael、Jason、David 等等这些乱七八糟的用户的 IP 来 hash 的方式，这样每个 client 的访问请求都会被甩给同一个后端服务器
+upstream backend {
+    ip_hash;
+    server backend1.example.com;
+    server backend2.example.com;
+    server.backend3.example.com;
+}
+这种策略中，用于进行 hash 运算的 key，是 client 的 C 类 IP 地址（C 类 IP 地址就是范围在 192.0.0.0 到 223.255.255.255 之间，前三段号码表示子网，第四段号码为本地主机的 IP 地址类别）。这样的方式保证一个 client 每次请求都将到达同一个 backend。当然，如果所 hash 到的 backend 当前不可用，则请求会被转移到其他 backend。
+
+再介绍一个和 ip_hash 配合使用的关键字：down。当某个一个 server 暂时性的宕机（down）时，你可以使用“down”来标示出来，并且这样被标示的 server 就不会接受请求去处理。具体如下：
+
+upstream backend {
+    server blog.csdn.net/poechant down;
+    server 145.223.156.89:8090;
+    server unix:/tmp/backend3;
+}
+
+还可以使用指定权重（weight）的方式，如下：
+
+upstream backend {
+    server backend1.example.com;
+    server 123.321.123.321:456 weight=4;
+}
+默认情况下 weight 为 1，对于上面的例子，第一个 server 的权重取默认值 1，第二个是 4，所以相当于第一个 server 接收 20% 的请求，第二接收 80% 的。要注意的是 weight 与 ip_hash 是不能同时使用的，原因很简单，他们是不同且彼此冲突的策略。
+
+3、重试策略
+可以为每个 backend 指定最大的重试次数，和重试时间间隔。所使用的关键字是 max_fails 和 fail_timeout。如下所示：
+
+upstream backend {
+    server backend1.example.com weight=5;
+    server 54.244.56.3:8081 max_fails=3 fail_timeout=30s;
+}
+
+在上例中，最大失败次数为 3，也就是最多进行 3 次尝试，且超时时间为 30秒。max_fails 的默认值为 1，fail_timeout 的默认值是 10s。传输失败的情形，由 proxy_next_upstream 或 fastcgi_next_upstream 指定。而且可以使用 proxy_connect_timeout 和 proxy_read_timeout 控制 upstream 响应时间。
+
+有一种情况需要注意，就是 upstream 中只有一个 server 时，max_fails 和 fail_timeout 参数可能不会起作用。导致的问题就是 nginx 只会尝试一次 upstream 请求，如果失败这个请求就被抛弃了 : ( ……解决的方法，比较取巧，就是在 upstream 中将你这个可怜的唯一 server 多写几次，如下：
+
+upstream backend {
+    server backend.example.com max_fails fail_timeout=30s;
+    server backend.example.com max_fails fail_timeout=30s;
+    server backend.example.com max_fails fail_timeout=30s;
+}
+
+4、备机策略
+
+从 Nginx 的 0.6.7 版本开始，可以使用“backup”关键字。当所有的非备机（non-backup）都宕机（down）或者繁忙（busy）的时候，就只使用由 backup 标注的备机。必须要注意的是，backup 不能和 ip_hash 关键字一起使用。举例如下：
+
+upstream backend {
+    server backend1.example.com;
+    server backend2.example.com backup;
+    server backend3.example.com;
+}
+
+
+
+Nginx Redirect 
+
+将所有linuxtone.org与netseek.linuxtone.org域名全部自跳转到http://www.linuxtone.org 
+server 
+{ 
+listen 80; 
+server_name linuxtone.org netseek.linuxtone.org; 
+index index.html index.php; 
+root /data/www/wwwroot; 
+if ($host !~ "^www\.linxtone\.org$") { 
+rewrite ^(.*) http://www.linuxtone.org$1 redirect; 
+} 
+........................ 
+} 
+Nginx 目录自动加斜线: 
+
+if (-d $request_filename){ 
+rewrite ^/(.*)([^/])$ http://$host/$1$2/ permanent; }
+
+
+
+同实现防盗链和expires的方法
+
+#Preventing hot linking of images and other file types 
+location ~* ^.+\.(gif|jpg|png|swf|flv|rar|zip)$ { 
+valid_referers none blocked server_names *.linuxtone.org linuxtone.org http://localhost ; 
+if ($invalid_referer) { 
+rewrite ^/ http://www.linuxtone.org/images/default/logo.gif; 
+} 
+access_log off; 
+root /data/www/wwwroot/bbs; 
+expires 1d; 
+break; 
+}
+正则表达式匹配，其中：
+1.	* ~ 为区分大小写匹配
+2.	* ~* 为不区分大小写匹配
+3.	* !~和!~*分别为区分大小写不匹配及不区分大小写不匹配
+文件及目录匹配，其中：
+1.	* -f和!-f用来判断是否存在文件
+2.	* -d和!-d用来判断是否存在目录
+3.	* -e和!-e用来判断是否存在文件或目录
+4.	* -x和!-x用来判断文件是否可执行
+flag标记有：
+1.	* last 相当于Apache里的[L]标记，表示完成rewrite
+2.	* break 终止匹配, 不再匹配后面的规则
+3.	* redirect 返回302临时重定向 地址栏会显示跳转后的地址
+4.	* permanent 返回301永久重定向 地址栏会显示跳转后的地址
+一些可用的全局变量有，可以用做条件判断(待补全)
+1.	$args
+2.	$content_length
+3.	$content_type
+4.	$document_root
+5.	$document_uri
+6.	$host
+7.	$http_user_agent
+8.	$http_cookie
+9.	$limit_rate
+10.	$request_body_file
+11.	$request_method
+12.	$remote_addr
+13.	$remote_port
+14.	$remote_user
+15.	$request_filename
+16.	$request_uri
+17.	$query_string
+18.	$scheme
+19.	$server_protocol
+20.	$server_addr
+21.	$server_name
+22.	$server_port
+23.	$uri
+结合QeePHP的例子
+1.	if (!-d $request_filename) {
+2.	rewrite ^/([a-z-A-Z]+)/([a-z-A-Z]+)/?(.*)$ /index.php?namespace=user&amp;controller=$1&amp;action=$2&amp;$3 last;
+3.	rewrite ^/([a-z-A-Z]+)/?$ /index.php?namespace=user&amp;controller=$1 last;
+4.	break;
+多目录转成参数
+abc.domian.com/sort/2 => abc.domian.com/index.php?act=sort&name=abc&id=2
+1.	if ($host ~* (.*)\.domain\.com) {
+2.	set $sub_name $1;   
+3.	rewrite ^/sort\/(\d+)\/?$ /index.php?act=sort&cid=$sub_name&id=$1 last;
+4.	}
+目录对换
+/123456/xxxx -> /xxxx?id=123456
+1.	rewrite ^/(\d+)/(.+)/ /$2?id=$1 last;
+例如下面设定nginx在用户使用ie的使用重定向到/nginx-ie目录下：
+1.	if ($http_user_agent ~ MSIE) {
+2.	rewrite ^(.*)$ /nginx-ie/$1 break;
+3.	}
+目录自动加“/”
+1.	if (-d $request_filename){
+2.	rewrite ^/(.*)([^/])$ http://$host/$1$2/ permanent;
+3.	}
+禁止htaccess
+1.	location ~/\.ht {
+2.	         deny all;
+3.	     }
+禁止多个目录
+1.	location ~ ^/(cron|templates)/ {
+2.	         deny all;
+3.	break;
+4.	     }
+禁止以/data开头的文件
+可以禁止/data/下多级目录下.log.txt等请求;
+1.	location ~ ^/data {
+2.	         deny all;
+3.	     }
+禁止单个目录
+不能禁止.log.txt能请求
+1.	location /searchword/cron/ {
+2.	         deny all;
+3.	     }
+禁止单个文件
+1.	location ~ /data/sql/data.sql {
+2.	         deny all;
+3.	     }
+给favicon.ico和robots.txt设置过期时间;
+这里为favicon.ico为99天,robots.txt为7天并不记录404错误日志
+1.	location ~(favicon.ico) {
+2.	                 log_not_found off;
+3.	expires 99d;
+4.	break;
+5.	     }
+6.	 
+7.	     location ~(robots.txt) {
+8.	                 log_not_found off;
+9.	expires 7d;
+10.	break;
+11.	     }
+设定某个文件的过期时间;这里为600秒，并不记录访问日志
+1.	location ^~ /html/scripts/loadhead_1.js {
+2.	                 access_log   off;
+3.	                 root /opt/lampp/htdocs/web;
+4.	expires 600;
+5.	break;
+6.	       }
+文件反盗链并设置过期时间
+这里的return 412 为自定义的http状态码，默认为403，方便找出正确的盗链的请求
+“rewrite ^/ http://leech.c1gstudio.com/leech.gif;”显示一张防盗链图片
+“access_log off;”不记录访问日志，减轻压力
+“expires 3d”所有文件3天的浏览器缓存
+1.	location ~* ^.+\.(jpg|jpeg|gif|png|swf|rar|zip|css|js)$ {
+2.	valid_referers none blocked *.c1gstudio.com *.c1gstudio.net localhost 208.97.167.194;
+3.	if ($invalid_referer) {
+4.	    rewrite ^/ http://leech.c1gstudio.com/leech.gif;
+5.	    return 412;
+6.	    break;
+7.	}
+8.	                 access_log   off;
+9.	                 root /opt/lampp/htdocs/web;
+10.	expires 3d;
+11.	break;
+12.	     }
+只充许固定ip访问网站，并加上密码
+1.	root  /opt/htdocs/www;
+2.	allow   208.97.167.194;
+3.	allow   222.33.1.2;
+4.	allow   231.152.49.4;
+5.	deny    all;
+6.	auth_basic "C1G_ADMIN";
+7.	auth_basic_user_file htpasswd;
+将多级目录下的文件转成一个文件，增强seo效果
+/job-123-456-789.html 指向/job/123/456/789.html
+1.	rewrite ^/job-([0-9]+)-([0-9]+)-([0-9]+)\.html$ /job/$1/$2/jobshow_$3.html last;
+将根目录下某个文件夹指向2级目录
+如/shanghaijob/ 指向 /area/shanghai/
+如果你将last改成permanent，那么浏览器地址栏显是/location/shanghai/
+1.	rewrite ^/([0-9a-z]+)job/(.*)$ /area/$1/$2 last;
+上面例子有个问题是访问/shanghai 时将不会匹配
+1.	rewrite ^/([0-9a-z]+)job$ /area/$1/ last;
+2.	rewrite ^/([0-9a-z]+)job/(.*)$ /area/$1/$2 last;
+这样/shanghai 也可以访问了，但页面中的相对链接无法使用，
+如./list_1.html真实地址是/area/shanghia/list_1.html会变成/list_1.html,导至无法访问。
+那我加上自动跳转也是不行咯
+(-d $request_filename)它有个条件是必需为真实目录，而我的rewrite不是的，所以没有效果
+1.	if (-d $request_filename){
+2.	rewrite ^/(.*)([^/])$ http://$host/$1$2/ permanent;
+3.	}
+知道原因后就好办了，让我手动跳转吧
+1.	rewrite ^/([0-9a-z]+)job$ /$1job/ permanent;
+2.	rewrite ^/([0-9a-z]+)job/(.*)$ /area/$1/$2 last;
+文件和目录不存在的时候重定向：
+1.	if (!-e $request_filename) {
+2.	proxy_pass http://127.0.0.1;
+3.	}
+域名跳转
+1.	server
+2.	     {
+3.	             listen       80;
+4.	             server_name  jump.c1gstudio.com;
+5.	             index index.html index.htm index.php;
+6.	             root  /opt/lampp/htdocs/www;
+7.	             rewrite ^/ http://www.c1gstudio.com/;
+8.	             access_log  off;
+9.	     }
+多域名转向
+1.	server_name  www.c1gstudio.com www.c1gstudio.net;
+2.	             index index.html index.htm index.php;
+3.	             root  /opt/lampp/htdocs;
+4.	if ($host ~ "c1gstudio\.net") {
+5.	rewrite ^(.*) http://www.c1gstudio.com$1 permanent;
+6.	}
+三级域名跳转
+1.	if ($http_host ~* "^(.*)\.i\.c1gstudio\.com$") {
+2.	rewrite ^(.*) http://top.c1gstudio.com$1;
+3.	break;
+4.	}
+域名镜向
+1.	server
+2.	     {
+3.	             listen       80;
+4.	             server_name  mirror.c1gstudio.com;
+5.	             index index.html index.htm index.php;
+6.	             root  /opt/lampp/htdocs/www;
+7.	             rewrite ^/(.*) http://www.c1gstudio.com/$1 last;
+8.	             access_log  off;
+9.	     }
+某个子目录作镜向
+1.	location ^~ /zhaopinhui {
+2.	  rewrite ^.+ http://zph.c1gstudio.com/ last;
+3.	  break;
+4.	     }
+discuz ucenter home (uchome) rewrite
+1.	rewrite ^/(space|network)-(.+)\.html$ /$1.php?rewrite=$2 last;
+2.	rewrite ^/(space|network)\.html$ /$1.php last;
+3.	rewrite ^/([0-9]+)$ /space.php?uid=$1 last;
+discuz 7 rewrite
+1.	rewrite ^(.*)/archiver/((fid|tid)-[\w\-]+\.html)$ $1/archiver/index.php?$2 last;
+2.	rewrite ^(.*)/forum-([0-9]+)-([0-9]+)\.html$ $1/forumdisplay.php?fid=$2&page=$3 last;
+3.	rewrite ^(.*)/thread-([0-9]+)-([0-9]+)-([0-9]+)\.html$ $1/viewthread.php?tid=$2&extra=page\%3D$4&page=$3 last;
+4.	rewrite ^(.*)/profile-(username|uid)-(.+)\.html$ $1/viewpro.php?$2=$3 last;
+5.	rewrite ^(.*)/space-(username|uid)-(.+)\.html$ $1/space.php?$2=$3 last;
+6.	rewrite ^(.*)/tag-(.+)\.html$ $1/tag.php?name=$2 last;
+给discuz某版块单独配置域名
+1.	server_name  bbs.c1gstudio.com news.c1gstudio.com;
+2.	 
+3.	     location = / {
+4.	        if ($http_host ~ news\.c1gstudio.com$) {
+5.	  rewrite ^.+ http://news.c1gstudio.com/forum-831-1.html last;
+6.	  break;
+7.	}
+8.	     }
+discuz ucenter 头像 rewrite 优化
+1.	location ^~ /ucenter {
+2.	     location ~ .*\.php?$
+3.	     {
+4.	  #fastcgi_pass  unix:/tmp/php-cgi.sock;
+5.	  fastcgi_pass  127.0.0.1:9000;
+6.	  fastcgi_index index.php;
+7.	  include fcgi.conf;     
+8.	     }
+9.	 
+10.	     location /ucenter/data/avatar {
+11.	log_not_found off;
+12.	access_log   off;
+13.	location ~ /(.*)_big\.jpg$ {
+14.	    error_page 404 /ucenter/images/noavatar_big.gif;
+15.	}
+16.	location ~ /(.*)_middle\.jpg$ {
+17.	    error_page 404 /ucenter/images/noavatar_middle.gif;
+18.	}
+19.	location ~ /(.*)_small\.jpg$ {
+20.	    error_page 404 /ucenter/images/noavatar_small.gif;
+21.	}
+22.	expires 300;
+23.	break;
+24.	     }
+25.	                       }
+jspace rewrite
+1.	location ~ .*\.php?$
+2.	             {
+3.	                  #fastcgi_pass  unix:/tmp/php-cgi.sock;
+4.	                  fastcgi_pass  127.0.0.1:9000;
+5.	                  fastcgi_index index.php;
+6.	                  include fcgi.conf;     
+7.	             }
+8.	 
+9.	             location ~* ^/index.php/
+10.	             {
+11.	    rewrite ^/index.php/(.*) /index.php?$1 break;
+12.	                  fastcgi_pass  127.0.0.1:9000;
+13.	                  fastcgi_index index.php;
+14.	                  include fcgi.conf;
+15.	             }
+wordpress rewrite
+1.	location / {
+2.	        index index.html index.php;
+3.	        if (-f $request_filename/index.html){
+4.	            rewrite (.*) $1/index.html break;
+5.	        }
+6.	        if (-f $request_filename/index.php){
+7.	            rewrite (.*) $1/index.php;
+8.	        }
+9.	if  (!-e $request_filename)
+10.	{
+11.	    rewrite (.*) /index.php;
+12.	}
+13.	}
+discuzx 1.5 rewrite
+1.	rewrite ^([^\.]*)/topic-(.+)\.html$ $1/portal.php?mod=topic&topic=$2 last;
+2.	rewrite ^([^\.]*)/article-([0-9]+)-([0-9]+)\.html$ $1/portal.php?mod=view&aid=$2&page=$3 last;
+3.	rewrite ^([^\.]*)/forum-(\w+)-([0-9]+)\.html$ $1/forum.php?mod=forumdisplay&fid=$2&page=$3 last;
+4.	rewrite ^([^\.]*)/thread-([0-9]+)-([0-9]+)-([0-9]+)\.html$ $1/forum.php?mod=viewthread&tid=$2&extra=page%3D$4&page=$3 last;
+5.	rewrite ^([^\.]*)/group-([0-9]+)-([0-9]+)\.html$ $1/forum.php?mod=group&fid=$2&page=$3 last;
+6.	rewrite ^([^\.]*)/space-(username|uid)-(.+)\.html$ $1/home.php?mod=space&$2=$3 last;
+7.	rewrite ^([^\.]*)/([a-z]+)-(.+)\.html$ $1/$2.php?rewrite=$3 last;
+8.	if (!-e $request_filename) {
+9.	return 404;
+10.	}
+动态参数rewrite
+以discuz7.2到discuzx1.5为例
+1.	if ($query_string ~* tid=([0-9]+)) {
+2.	    set $id $1;
+3.	    rewrite "^(.*)/viewthread.php$" $1/forum.php?mod=viewthread&tid=$id&extra=page%3D&page=1 last;
+4.	}
+5.	if ($query_string ~* gid=([0-9]+)) {
+6.	    set $id $1;
+7.	    rewrite "^(.*)/index.php$" $1/forum.php?gid=$id last;
+8.	}
+9.	rewrite ^([^\.]*)/archiver/$ $1/forum.php?archiver=1 last;
+
+nginx 嵌套if
+nginx不支持if and和多层嵌套if,让我头痛很久,需要通过其它方法实现.
+下面是把访问镜像网站cnc.c1gstudio.com的爬虫转到www站.
+1.	set $needrewrite '';
+2.	if ($http_user_agent ~* (baiduspider|googlebot|soso|bing|sogou|yahoo|sohu-search|yodao|YoudaoBot|robozilla|msnbot|MJ12bot|NHN|Twiceler)) {
+3.	set $needrewrite 'o';
+4.	}
+5.	if ($host ~ cnc\.c1gstudio\.com) {
+6.	set $needrewrite "${needrewrite}k";
+7.	}
+8.	if ($needrewrite = ok) {
+9.	#return 403;
+10.	rewrite ^(.*) http://www.c1gstudio.com$1 permanent;
+11.	}
+reload nginx后可以用curl来做测试
+curl -I -A “soso” cnc.c1gstudio.com
+完整的nginx proxy配置实例
+proxy_redirect off; 
+proxy_set_header Host $host; 
+proxy_set_header X-Real-IP $remote_addr; 
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; 
+client_max_body_size 50m; 
+client_body_buffer_size 256k; 
+proxy_connect_timeout 30; 
+proxy_send_timeout 30; 
+proxy_read_timeout 60; 
+proxy_buffer_size 4k; 
+proxy_buffers 4 32k; 
+proxy_busy_buffers_size 64k; 
+proxy_temp_file_write_size 64k; 
+proxy_next_upstream error timeout invalid_header http_500 http_503 http_404; 
+proxy_max_temp_file_size 128m; 
+proxy_store on; 
+proxy_store_access user:rw group:rw all:r; 
+#nginx cache 
+#client_body_temp_path /data/nginx_cache/client_body 1 2; 
+proxy_temp_path /data/nginx_cache/proxy_temp 1 2;
+
+mysql 学习记录
+
+mysql存储过程：
+Q：什么是存储过程？（stored procedure）
+A：是一段写好的SQL代码，特别的就是它是存在数据库的目录里。所以外部程序可以直接调用数据库里面定义好的存储过程，另外数据库内部的触发器(trigger)、或者其他存储过程也可以调用它。
+Q：存储过程有什么好处？有什么坏处？
+好处：1、首先在性能上的提高，比起通过应用程序发送sql语句给数据库执行，让数据库自己内部执行存储过程效率更高、速度更快(存储过程将sql编译好后存在数据库目录下)；
+2、存储过程还减少了应用程序同服务器自己的信息交互频率，可以想象在不是使用存储过程的情况，应用程序需要发送多条sql指令给服务器，而使用存储过程则只要一条调用存储过程的语句，然后获取需要的数据就ok了。
+3、存储过程重用性比较高，并且是透明的，因为保存在数据库里面所以对任何应用来说都可以使用。新的应用只需要调用相应的存储过程就可以得到相应的数据服务。
+4、存储过程也是种安全的做法，数据库管理员可以对那些没有权限访问数据库中的表格的应用，给他们使用存储过程的权限来获得数据服务，可以看到这个时候这些存储过程好像我们编程里面的”接口“这个概念。对于安全性要求很高的系统，例如银行，基本上常用的操作都是通过存储过程或者函数来进行的，这样完全对应用”隐藏“了表格。
+坏处：1、存储过程会使得数据库占用的系统资源加大(cpu、memory)，数据库毕竟主要用来做数据存取的，并不进行复杂的业务逻辑操作。
+2、因为存储过程依旧是sql，所以没办法像编程语言那样写出复杂业务逻辑对应的存储过程。
+3、存储过程不容易进行调试。
+4、存储过程书写及维护难度都比较大。
+
+函数库
+mysql存储过程基本函数包括：字符串类型，数值类型，日期类型
+字符串类
+CHARSET(str) //返回字串字符集
+CONCAT (string2 [,… ]) //连接字串
+INSTR (string ,substring ) //返回substring首次在string中出现的位置,不存在返回0
+LCASE (string2 ) //转换成小写
+LEFT (string2 ,length ) //从string2中的左边起取length个字符
+LENGTH (string ) //string长度
+LOAD_FILE (file_name ) //从文件读取内容
+LOCATE (substring , string [,start_position ] ) 同INSTR,但可指定开始位置
+LPAD (string2 ,length ,pad ) //重复用pad加在string开头,直到字串长度为length
+LTRIM (string2 ) //去除前端空格
+REPEAT (string2 ,count ) //重复count次
+REPLACE (str ,search_str ,replace_str ) //在str中用replace_str替换search_str
+RPAD (string2 ,length ,pad) //在str后用pad补充,直到长度为length
+RTRIM (string2 ) //去除后端空格
+STRCMP (string1 ,string2 ) //逐字符比较两字串大小,
+SUBSTRING (str , position [,length ]) //从str的position开始,取length个字符,
+注：mysql中处理字符串时，默认第一个字符下标为1，即参数position必须大于等于1
+TRIM([[BOTH|LEADING|TRAILING] [padding] FROM]string2)去除指定位置的指定字符
+UCASE (string2 ) //转换成大写
+RIGHT(string2,length) //取string2最后length个字符
+SPACE(count) //生成count个空格
+数学类
+ABS (number2 ) //绝对值 
+BIN (decimal_number ) //十进制转二进制 
+CEILING (number2 ) //向上取整 
+CONV(number2,from_base,to_base) //进制转换 
+FLOOR (number2 ) //向下取整 
+FORMAT (number,decimal_places ) //保留小数位数 
+HEX (DecimalNumber ) //转十六进制 
+注：HEX()中可传入字符串，则返回其ASC-11码，如HEX('DEF')返回4142143 
+也可以传入十进制整数，返回其十六进制编码，如HEX(25)返回19 
+LEAST (number , number2 [,..]) //求最小值 
+MOD (numerator ,denominator ) //求余 
+POWER (number ,power ) //求指数 
+RAND([seed]) //随机数 
+ROUND (number [,decimals ]) //四舍五入,decimals为小数位数] 
+注：返回类型并非均为整数
+时间类型
+ADDTIME (date2 ,time_interval ) //将time_interval加到date2 
+CONVERT_TZ (datetime2 ,fromTZ ,toTZ ) //转换时区 
+CURRENT_DATE ( ) //当前日期 
+CURRENT_TIME ( ) //当前时间 
+CURRENT_TIMESTAMP ( ) //当前时间戳 
+DATE (datetime ) //返回datetime的日期部分 
+DATE_ADD (date2 , INTERVAL d_value d_type ) //在date2中加上日期或时间 
+DATE_FORMAT (datetime ,FormatCodes ) //使用formatcodes格式显示datetime 
+DATE_SUB (date2 , INTERVAL d_value d_type ) //在date2上减去一个时间 
+DATEDIFF (date1 ,date2 ) //两个日期差 
+DAY (date ) //返回日期的天 
+DAYNAME (date ) //英文星期 
+DAYOFWEEK (date ) //星期(1-7) ,1为星期天 
+DAYOFYEAR (date ) //一年中的第几天 
+EXTRACT (interval_name FROM date ) //从date中提取日期的指定部分 
+MAKEDATE (year ,day ) //给出年及年中的第几天,生成日期串 
+MAKETIME (hour ,minute ,second ) //生成时间串 
+MONTHNAME (date ) //英文月份名 
+NOW ( ) //当前时间 
+SEC_TO_TIME (seconds ) //秒数转成时间 
+STR_TO_DATE (string ,format ) //字串转成时间,以format格式显示 
+TIMEDIFF (datetime1 ,datetime2 ) //两个时间差 
+TIME_TO_SEC (time ) //时间转秒数] 
+WEEK (date_time [,start_of_week ]) //第几周 
+YEAR (datetime ) //年份 
+DAYOFMONTH(datetime) //月的第几天 
+HOUR(datetime) //小时 
+LAST_DAY(date) //date的月的最后日期 
+MICROSECOND(datetime) //微秒 
+MONTH(datetime) //月 
+MINUTE(datetime) //分返回符号,正负或0 
+SQRT(number2) //开平方 
+
+--------------------基本语法--------------------
+
+update mysql.event set definer='GaMe@%' where db='game';
+update mysql.proc set definer='GaMe@%' where db='game';
+
+一.创建存储过程
+create procedure sp_name()
+begin
+.........
+end
+二.调用存储过程
+1.基本语法：call sp_name()
+注意：存储过程名称后面必须加括号，哪怕该存储过程没有参数传递
+三.删除存储过程
+1.基本语法：
+drop procedure sp_name//
+2.注意事项
+(1)不能在一个存储过程中删除另一个存储过程，只能调用另一个存储过程
+四.其他常用命令
+1.show procedure status
+显示数据库中所有存储的存储过程基本信息，包括所属数据库，存储过程名称，创建时间等
+2.show create procedure sp_name || show create function sp_name
+显示某一个mysql存储过程的详细信息
+变量：
+自定义变量：DECLARE   a INT ; SET a=100;    可用以下语句代替：DECLARE a INT DEFAULT 100;
+变量分为用户变量和系统变量，系统变量又分为会话和全局级变量
+用户变量：用户变量名一般以@开头，滥用用户变量会导致程序难以理解及管理
+1、 在mysql客户端使用用户变量
+mysql> SELECT 'Hello World' into @x;
+mysql> SELECT @x;
+mysql> SET @y='Goodbye Cruel World';
+mysql> select @y;
+mysql> SET @z=1+2+3;
+mysql> select @z;
+
+2、 在存储过程中使用用户变量
+mysql> CREATE PROCEDURE GreetWorld( ) SELECT CONCAT(@greeting,' World');
+mysql> SET @greeting='Hello';
+mysql> CALL GreetWorld( );
+
+3、 在存储过程间传递全局范围的用户变量
+mysql> CREATE PROCEDURE p1( )   SET @last_procedure='p1';
+mysql> CREATE PROCEDURE p2( ) SELECT CONCAT('Last procedure was ',@last_procedure);
+mysql> CALL p1( );
+mysql> CALL p2( );
+ 
+三、运算符：
+1.算术运算符
++     加   SET var1=2+2;       4
+-     减   SET var2=3-2;       1
+*      乘   SET var3=3*2;       6
+/     除   SET var4=10/3;      3.3333
+DIV   整除 SET var5=10 DIV 3; 3
+%     取模 SET var6=10%3 ;     1
+2.比较运算符
+>            大于 1>2 False
+<            小于 2<1 False
+<=           小于等于 2<=2 True
+>=           大于等于 3>=2 True
+BETWEEN      在两值之间 5 BETWEEN 1 AND 10 True
+NOT BETWEEN 不在两值之间 5 NOT BETWEEN 1 AND 10 False
+IN           在集合中 5 IN (1,2,3,4) False
+NOT IN       不在集合中 5 NOT IN (1,2,3,4) True
+=             等于 2=3 False
+<>, !=       不等于 2<>3 False
+<=>          严格比较两个NULL值是否相等 NULL<=>NULL True
+LIKE          简单模式匹配 "Guy Harrison" LIKE "Guy%" True
+REGEXP       正则式匹配 "Guy Harrison" REGEXP "[Gg]reg" False
+IS NULL      为空 0 IS NULL False
+IS NOT NULL 不为空 0 IS NOT NULL True
+3.逻辑运算符
+4.位运算符
+|   或
+&   与
+<< 左移位
+>> 右移位
+~   非(单目运算，按位取反)
+注释：
+mysql存储过程可使用两种风格的注释
+双横杠：--
+该风格一般用于单行注释
+c风格：/* 注释内容 */ 一般用于多行注释-------------------流程控制--------------------一、顺序结构
+二、分支结构
+1.	IF 语法
+IF expression THEN commands  
+2.	   [ELSEIF expression THEN commands]  
+3.	   [ELSE commands]  
+4.	   END IF
+5.	CASE 语法
+6.	CASE  case_expression  
+7.	   WHEN when_expression THEN commands  
+8.	   WHEN when_expression THEN commands  
+9.	   ...  
+10.	   ELSE commands  
+11.	END CASE;  
+1.	三、循环结构
+for循环
+while循环 
+1.WHILE expression DO  
+2.Statements  
+3.END WHILE  
+loop循环
+LOOP用来标记循环；而LEAVE表示离开循环，好比编程里面的break一样；ITERATE则继续循环，类型与编程里面的continue。
+repeat循环
+1.	REPEAT  
+2.	Statements;  
+3.	UNTIL expression  
+4.	END REPEAT  
+
+注：
+区块定义，常用
+begin
+......
+end;
+也可以给区块起别名，如：
+lable:begin
+...........
+end lable;
+可以用leave lable;跳出区块，执行区块以后的代码
+begin和end如同C语言中的{ 和 }。
+--------------------输入和输出--------------------
+mysql存储过程的参数用在存储过程的定义，共有三种参数类型,IN,OUT,INOUT
+Create procedure|function([[IN |OUT |INOUT ] 参数名 数据类形...])
+IN 输入参数
+表示该参数的值必须在调用存储过程时指定，在存储过程中修改该参数的值不能被返回，为默认值
+OUT 输出参数
+该值可在存储过程内部被改变，并可返回
+INOUT 输入输出参数
+调用时指定，并且可被改变和返回
+1、游标的作用及属性
+游标的作用就是用于对查询数据库所返回的记录进行遍历，以便进行相应的操作；游标有下面这些属性：
+    a、游标是只读的，也就是不能更新它；
+    b、游标是不能滚动的，也就是只能在一个方向上进行遍历，不能在记录之间随意进退，不能跳过某些记录；
+    c、避免在已经打开游标的表上更新数据。
+2、如何使用游标
+使用游标需要遵循下面步骤：
+     a、首先用DECLARE语句声明一个游标              
+1.	DECLARE cursor_name CURSOR FOR SELECT_statement;  
+上面这条语句就对，我们执行的select语句返回的记录指定了一个游标   
+
+  b、其次需要使用OPEN语句来打开上面你定义的游标
+1.	OPEN cursor_name;  
+     c、接下来你可以用FETCH语句来获得下一行数据，并且游标也将移动到对应的记录上(这个就类似java里面的那个iterator)。
+1.	FETCH cursor_name INTO variable list;  
+     d、然后最后当我们所需要进行的操作都结束后我们要把游标释放掉。
+1.	CLOSE cursor_name;  
+在使用游标时需要注意的是，使用定义一个针对NOT FOUND的条件处理函数(condition handler)来避免出现“no data to fetch”这样的错误，条件处理函数就是当某种条件产生时所执行的代码，这里但我们游标指到记录的末尾时，便达到NOT FOUND这样条件
+
+事件 类似于linux的crontab 计划任务。
+Mysql事件学习
+在系统管理或者数据库管理中，经常要周期性的执行某一个命令或者SQL语句。对于linux系统熟悉的人都知道linux的cron计划任务，能很方便地实现定期运行指定命令的功能。Mysql在5.1以后推出了事件调度器(Event Scheduler)，和linux的cron功能一样，能方便地实现 mysql数据库的计划任务，而且能精确到秒。使用起来非常简单和方便。
+由于最近需要用到事件这个功能，因此学习了一下，感觉非常棒，总结一下，方便以后使用，也希望能对其他的初学者有帮助。
+一、    如果开启事件
+在使用事件这个功能，首先要保证你的mysql的版本是5.1以上，然后还要查看你的mysql服务器上的事件是否开启。
+查看事件是否开启，使用如下命令查看：
+SHOW VARIABLES LIKE 'event_scheduler';
+SELECT @@event_scheduler;
+SHOW PROCESSLIST;
+如果看到event_scheduler为on或者PROCESSLIST中显示有event_scheduler的信息说明就已经开启了事件。如果显示为off或者在PROCESSLIST中查看不到event_scheduler的信息，那么就说明事件没有开启，我们需要开启它。
+开启mysql的事件，通过如下三种方式开启：
+?  通过动态参数修改
+SET GLOBAL event_scheduler = ON;
+更改完这个参数就立刻生效了
+注意：还是要在my.cnf中添加event_scheduler=ON。因为如果没有添加的话，mysql重启事件又会回到原来的状态了。
+?  更改配置文件然后重启
+在my.cnf中的[mysqld]部分添加如下内容，然后重启mysql。
+event_scheduler=ON
+?  通过制定事件参数启动
+mysqld ... --event_scheduler=ON
+ 
+二、    Mysql事件的语法简介
+1.        创建事件的语法
+CREATE
+ [DEFINER = { user | CURRENT_USER }]
+EVENT [IF NOT EXISTS] event_name
+ ON SCHEDULE schedule
+[ON COMPLETION [NOT] PRESERVE]
+[ENABLE | DISABLE | DISABLE ON SLAVE] [COMMENT 'comment']
+DO event_body;
+ 
+schedule:
+AT timestamp [+ INTERVAL interval] ...| EVERY interval
+[STARTS timestamp [+ INTERVAL interval] ...][ENDS timestamp [+ INTERVAL interval] ...]
+interval:
+quantity {YEAR | QUARTER | MONTH | DAY | HOUR | MINUTE | WEEK | SECOND | YEAR_MONTH | DAY_HOUR |DAY_MINUTE |DAY_SECOND | HOUR_MINUTE |
+HOUR_SECOND | MINUTE_SECOND}
+参数详细说明：
+DEFINER: 定义事件执行的时候检查权限的用户。
+ON SCHEDULE schedule: 定义执行的时间和时间间隔。
+ON COMPLETION [NOT] PRESERVE: 定义事件是一次执行还是永久执行，默认为一次执行，即NOT PRESERVE。
+ENABLE | DISABLE | DISABLE ON SLAVE: 定义事件创建以后是开启还是关闭，以及在从上关闭。如果是从服务器自动同步主上的创建事件的语句的话，会自动加上DISABLE ON SLAVE。
+COMMENT 'comment': 定义事件的注释。
+2.        更改事件的语法
+ALTER
+    [DEFINER = { user | CURRENT_USER }]    EVENT event_name
+    [ON SCHEDULE schedule]
+    [ON COMPLETION [NOT] PRESERVE]
+    [RENAME TO new_event_name]
+    [ENABLE | DISABLE | DISABLE ON SLAVE]
+    [COMMENT 'comment']
+    [DO event_body]
+3.        删除事件的语法
+DROP EVENT [IF EXISTS] event_name
+三、    Mysql事件实战
+1.         测试环境
+创建一个用于测试的test表：
+CREATE TABLE `test` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `t1` datetime DEFAULT NULL,
+  `id2` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=utf8
+2.         实战1
+?  创建一个每隔3秒往test表中插入一条数据的事件，代码如下：
+CREATE EVENT IF NOT EXISTS test ON SCHEDULE EVERY 3 SECOND
+ON COMPLETION PRESERVE
+DO INSERT INTO test(id,t1) VALUES('',NOW());
+?  创建一个10分钟后清空test表数据的事件
+CREATE EVENT IF NOT EXISTS test
+ON SCHEDULE
+AT CURRENT_TIMESTAMP + INTERVAL 1 MINUTE
+DO TRUNCATE TABLE test;
+?  创建一个在2012-08-23 00:00:00时刻清空test表数据的事件，代码如下：
+CREATE EVENT IF NOT EXISTS test
+ON SCHEDULE
+AT TIMESTAMP '2012-08-23 00:00:00'
+DO TRUNCATE TABLE test;
+?  创建一个从2012年8月22日21点45分开始到10分钟后结束，运行每隔3秒往test表中插入一条数据的事件，代码如下：
+CREATE EVENT IF NOT EXISTS test ON SCHEDULE EVERY 3 SECOND
+STARTS '2012-08-22 21:49:00' 
+ENDS '2012-08-22 21:49:00'+ INTERVAL  10 MINUTE
+ON COMPLETION PRESERVE
+DO INSERT INTO test(id,t1) VALUES('',NOW());
+ 
+3.         实战2
+通常的应用场景是通过事件来定期的调用存储过程，下面是一个简单的示例：
+创建一个让test表的id2字段每行加基数2的存储过程，存储过程代码如下：
+DROP PROCEDURE IF EXISTS test_add;
+DELIMITER //
+CREATE PROCEDURE test_add()
+BEGIN
+DECLARE 1_id INT DEFAULT 1;
+DECLARE 1_id2 INT DEFAULT 0;
+DECLARE error_status INT DEFAULT 0;
+DECLARE datas CURSOR  FOR SELECT id FROM test;
+DECLARE CONTINUE HANDLER FOR NOT FOUND SET error_status=1;
+OPEN datas;
+FETCH datas INTO 1_id;
+REPEAT
+SET  1_id2=1_id2+2;
+UPDATE test SET id2=1_id2 WHERE id=1_id;
+FETCH datas INTO 1_id;
+UNTIL  error_status
+END REPEAT;
+CLOSE  datas;
+END
+//
+事件设置2012-08-22 00:00:00时刻开始运行，每隔1调用一次存储过程，40天后结束，代码如下：
+CREATE EVENT test ON SCHEDULE EVERY 1 DAY
+STARTS '2012-08-22 00:00:00'
+ENDS '2012-08-22 00:00:00'+INTERVAL 40 DAY
+ON COMPLETION 
+PRESERVE DO
+CALL test_add();
+innodb共享表空间与独立表空间
+   mysql表空间是什么概念呢？
+      开启了Innodb的innodb_file_per_table这个参数之后【innodb_file_per_table = 1】，也就是启用InnoDB的独立表空间模式，便于管理。此时，在新建的innodb表的数据库目录下会多出来一个.ibd这个文件。这个就是此时的数据文件了。mysql会把这个innodb表的数据存放在这个文件中。并且每个innodb表此时都会对应这么一个ibd文件。
+看官方文档：
+      If innodb_file_per_table is disabled (the default), InnoDB creates tables in the system tablespace. Ifinnodb_file_per_table is enabled, InnoDB creates each new table using its own .ibd file for storing data and indexes, rather than in the system tablespace. 
+      那么这样做有什么好处呢？
+      可以实现单表在不同的数据库之间移动。具体怎么移动呢？假设有两个数据库，一个test，一个tt。
+      InnoDB 默认会将所有的数据库InnoDB引擎的表数据存储在一个共享空间中：ibdata1，这样就感觉不爽，增删数据库的时候，ibdata1文件不会自动收缩，单个数据库的备份也将成为问题。通常只能将数据使用mysqldump 导出，然后再导入解决这个问题。共享表空间在Insert操作上少有优势。其它都没独立表空间表现好。当启用独立表空间时，请合理调整一 下innodb_open_files 的值。
+-------------------------------------------------------------------------------
+需要说明的是：
+1、设置了独立表空间之后，如果改成了共享表空间，那么，此时如果执行表的插入操作，数据会存放在哪里呢？
+对于之前已经存在了的表，还是存放在独立表空间。对于新建的表，就会存放在共享表空间了。
+2、如果一开始用了独立表空间，后来改了innodb_file_per_table变量的值，改成独立表空间了，那么数据如何存储？
+对于已经存在了的innodb引擎的表来说，数据还是存放在共享表空间的，而此时如果创建了新的表，那么就会在数据库的目录中多出一个.ibd的文件用于存储这个新表的数据。
+总结上面的1、2，就是：原来的还是按照原来的方式存储。新的表按照新的规则来存储。
+第一，共享表空间是永远存在的，即使你设置了innodb_file_per_table=1.因为有些数据永远是放在共享表空间里面的，具体哪些去手册里面查。
+第二，之前没设置独立表空间的表，即使后面设为独立表空间，但是数据仍然存在功效表空间里面。而新创建的表的数据当然是存在独立表空间里面。
+第三，alter表的原理实际上是先生成一个新的表，然后删除原来的表，然后将新的表重命名为以前的那个表名。因此就相当于新创建了表一样，所以是存在独立表空间里面。
+共享表空间方式
+由于是默认的方式，就暂且理解为Mysql官方推荐的方式。相对而言所有的数据都在一个（或几个）文件中，比较利于管理，而且在操作的时候只需要open这一个（或几个）文件即可，相对来说代价很低。
+但问题是在数据达到以G为单位来计算的时候优劣逆转。一个大小惊人的文件很不利于管理，而且对于一个如此巨大的文件来说，读写它需要耗费的资源一样巨大。更加令人费解的是，MySQL竟然将索引和数据保存于同一个文件中，索引和数据之间尚存在资源争用，不利于性能的提升。你当然可以通过innodb_data_file_path的配置规划多个表空间文件，但MySQL的逻辑是“用满后增加”，仅仅是一个文件的拆分而已，不能从根本上分离数据和索引。
+之前曾经遭遇到700G以上的表空间文件，而且更加让人郁闷的是对于如此大的文件还在以每天数G的数量增加。由于无法停机，即便是拷贝一下也要花费差不多一夜，只能眼睁睁看着它继续增大而毫无保守可行的办法。
+独立表空间方式
+相对而言对立表空间每个表都有独立的多个数据文件，而且做到了索引和数据的分离。多个小文件之间很方便的完成跨数据库甚至跨硬件的数据拷贝和迁移。相对来说灵活性很好。
+这样做同样带来另一个方面的问题。当数据库中的表数量达到一定级别时，每次操作所涉及的文件过多，如果按照默认Centos的ulimit -n = 1024的话，仅仅只能保证同时打开256个表以内，这在习惯上“拆库拆表”的MySQL数据结构上很难达到要求。尚且这种数据文件的利用率不算很高，当大量“不高”的文件集中起来，浪费的空间也很惊人，更何况最后可能出现的状况不是“一堆K级别的小文件”而是“一堆G级别的大文件”，有点适得其反的意思。你自然可以联想到分区表，又是一个“仅仅做文件拆分而已”，多个分区文件缺一不可。
+之前同样遇到过这个问题，MySQL连接大的状况下大量的timeout，但主机负载还算可以，查了一圈才知道是open files限制的问题，限制一修改，负载变得惊人，但连接数却又提升的不多。
+总之，两种方法各有所长，部分互补，但都不是解决问题的终极方案。期待MySQL能够出现真正意义上表空间的概念，更加自由的规划数据文件。
+
+一、       mysql分区简介
+数据库分区
+数据库分区是一种物理数据库设计技术。虽然分区技术可以实现很多效果，但其主要目的是为了在特定的SQL操作中减少数据读写的总量以缩减sql语句的响应时间，同时对于应用来说分区完全是透明的。
+MYSQL的分区主要有两种形式：水平分区和垂直分区
+ 
+水平分区（HorizontalPartitioning）
+这种形式的分区是对根据表的行进行分区，通过这样的方式不同分组里面的物理列分割的数据集得以组合，从而进行个体分割（单分区）或集体分割（1个或多个分区）。
+所有在表中定义的列在每个数据集中都能找到，所以表的特性依然得以保持。水平分区一定要通过某个属性列来分割。常见的比如年份，日期等。
+ 
+垂直分区（VerticalPartitioning）
+这种分区方式一般来说是通过对表的垂直划分来减少目标表的宽度，使某些特定的列被划分到特定的分区，每个分区都包含了其中的列所对应所有行。
+可以用  showvariables like '%partition%';
+命令查询当前的mysql数据库版本是否支持分区。
+分区的作用：数据库性能的提升和简化数据管理
+在扫描操作中，mysql优化器只扫描保护数据的那个分区以减少扫描范围获得性能的提高。
+分区技术使得数据管理变得简单，删除某个分区不会对另外的分区造成影响，分区有系统直接管理不用手工干预。
+mysql从5.1版本开始支持分区。每个分区的名称是不区分大小写。同个表中的分区表名称要唯一。
+二、       mysql分区类型
+根据所使用的不同分区规则可以分成几大分区类型。
+RANGE 分区：
+基于属于一个给定连续区间的列值，把多行分配给分区。
+LIST 分区：
+类似于按RANGE分区，区别在于LIST分区是基于列值匹配一个离散值集合中的某个值来进行选择。
+HASH分区：
+基于用户定义的表达式的返回值来进行选择的分区，该表达式使用将要插入到表中的这些行的列值进行计算。这个函数可以包含MySQL中有效的、产生非负整数值的任何表达式。
+KEY
+分区：类似于按HASH分区，区别在于KEY分区只支持计算一列或多列，且MySQL服务器提供其自身的哈希函数。必须有一列或多列包含整数值。
+复合分区：
+基于RANGE/LIST 类型的分区表中每个分区的再次分割。子分区可以是 HASH/KEY 等类型。
+ 
+三、       mysql分区表常用操作示例
+以部门员工表为例子：
+1)       创建range分区
+ 
+create table emp
+(empno varchar(20) not null ,
+empname varchar(20),
+deptno int,
+birthdate date,
+salary int
+)
+partition by range(salary)
+(
+partition p1 values less than (1000),
+partition p2 values less than (2000),
+partition p3 values less than maxvalue
+);
+以员工工资为依据做范围分区。
+ 
+create table emp
+(empno varchar(20) not null ,
+empname varchar(20),
+deptno int,
+birthdate date not null,
+salary int
+)
+partition by range(year(birthdate))
+(
+partition p1 values less than (1980),
+partition p2 values less than (1990),
+partition p3 values less than maxvalue
+);
+以year(birthdate)表达式（计算员工的出生日期）作为范围分区依据。这里最值得注意的是表达式必须有返回值。
+ 
+2)       创建list分区
+ 
+create table emp
+(empno  varchar(20) not null ,
+empname varchar(20),
+deptno  int,
+birthdate date not null,
+salary int
+)
+partition by list(deptno)
+(
+partition p1 values in  (10),
+partition p2 values in  (20),
+partition p3 values  in  (30)
+);
+以部门作为分区依据，每个部门做一分区。
+ 
+3)       创建hash分区
+HASH分区主要用来确保数据在预先确定数目的分区中平均分布。在RANGE和LIST分区中，必须明确指定一个给定的列值或列值集合应该保存在哪个分区中；而在HASH分区中，MySQL 自动完成这些工作，你所要做的只是基于将要被哈希的列值指定一个列值或表达式，以及指定被分区的表将要被分割成的分区数量。
+create table emp
+(empno varchar(20) not null ,
+empname varchar(20),
+deptno int,
+birthdate date not null,
+salary int
+)
+partition by hash(year(birthdate))
+partitions 4;
+4)       创建key分区
+按照KEY进行分区类似于按照HASH分区，除了HASH分区使用的用户定义的表达式，而KEY分区的哈希函数是由MySQL 服务器提供，服务器使用其自己内部的哈希函数，这些函数是基于与PASSWORD()一样的运算法则。“CREATE TABLE ...PARTITION BY KEY”的语法规则类似于创建一个通过HASH分区的表的规则。它们唯一的区别在于使用的关键字是KEY而不是HASH，并且KEY分区只采用一个或多个列名的一个列表。
+create table emp
+(empno varchar(20) not null ,
+empname varchar(20),
+deptno int,
+birthdate date not null,
+salary int
+)
+partition by key(birthdate)
+partitions 4;
+ 
+ 
+5)       创建复合分区
+ 
+range - hash(范围哈希)复合分区
+ 
+create table emp
+(empno varchar(20) not null ,
+empname varchar(20),
+deptno int,
+birthdate date not null,
+salary int
+)
+partition by range(salary)
+subpartition by hash(year(birthdate))
+subpartitions 3
+(
+partition p1 values less than (2000),
+partition p2 values less than maxvalue
+);
+range- key复合分区
+ 
+create table emp
+(empno varchar(20) not null ,
+empname varchar(20),
+deptno int,
+birthdate date not null,
+salary int
+)
+partition by range(salary)
+subpartition by key(birthdate)
+subpartitions 3
+(
+partition p1 values less than (2000),
+partition p2 values less than maxvalue
+);
+list - hash复合分区
+CREATE TABLE emp (
+empno varchar(20) NOT NULL,
+empname varchar(20) ,
+deptno int,
+birthdate date NOT NULL,
+salary int
+)
+PARTITION BY list (deptno)
+subpartition by hash(year(birthdate))
+subpartitions 3
+(
+PARTITION p1 VALUES in  (10),
+PARTITION p2 VALUES in  (20)
+)
+;
+list - key 复合分区
+ 
+CREATE TABLE empk (
+empno varchar(20) NOT NULL,
+empname varchar(20) ,
+deptno int,
+birthdate date NOT NULL,
+salary int
+)
+PARTITION BY list (deptno)
+subpartition by key(birthdate)
+subpartitions 3
+(
+PARTITION p1 VALUES in  (10),
+PARTITION p2 VALUES in  (20)
+)
+;
+6)       分区表的管理操作
+删除分区:
+alter table emp drop partition p1;
+不可以删除hash或者key分区。
+一次性删除多个分区，alter table emp drop partition p1,p2;
+ 
+增加分区:
+alter table emp add partition (partition p3 values less than (4000));
+alter table empl add partition (partition p3 values in (40));
+ 
+分解分区:
+Reorganizepartition关键字可以对表的部分分区或全部分区进行修改，并且不会丢失数据。分解前后分区的整体范围应该一致。
+alter table te
+reorganize partition p1 into
+(
+partition p1 values less than (100),
+partition p3 values less than (1000)
+); ----不会丢失数据
+ 
+合并分区:
+Merge分区：把2个分区合并为一个。
+alter table te
+reorganize partition p1,p3 into
+(partition p1 values less than (1000));
+----不会丢失数据
+ 
+重新定义hash分区表:
+Alter table emp partition by hash(salary)partitions 7;
+----不会丢失数据
+重新定义range分区表:
+Alter table emp partitionbyrange(salary)
+(
+partition p1 values less than (2000),
+partition p2 values less than (4000)
+); ----不会丢失数据
+ 
+删除表的所有分区:
+
+
+Alter table emp removepartitioning;--不会丢失数据
+ 
+重建分区：
+这和先删除保存在分区中的所有记录，然后重新插入它们，具有同样的效果。它可用于整理分区碎片。
+ALTER TABLE emp rebuild partitionp1,p2;
+ 
+优化分区：
+如果从分区中删除了大量的行，或者对一个带有可变长度的行（也就是说，有VARCHAR，BLOB，或TEXT类型的列）作了许多修改，可以使用“ALTER TABLE ... OPTIMIZE PARTITION”来收回没有使用的空间，并整理分区数据文件的碎片。
+ALTER TABLE emp optimize partition p1,p2;
+ 
+分析分区：
+读取并保存分区的键分布。
+ALTER TABLE emp analyze partition p1,p2;
+ 
+修补分区：
+修补被破坏的分区。
+ALTER TABLE emp repair partition p1,p2;
+ 
+检查分区：
+可以使用几乎与对非分区表使用CHECK TABLE 相同的方式检查分区。
+ALTER TABLE emp CHECK partition p1,p2;
+这个命令可以告诉你表emp的分区p1,p2中的数据或索引是否已经被破坏。如果发生了这种情况，使用“ALTER TABLE ... REPAIR PARTITION”来修补该分区。
+ 
+ 
+【mysql分区表的局限性】
+1.      在5.1版本中分区表对唯一约束有明确的规定，每一个唯一约束必须包含在分区表的分区键（也包括主键约束）。
+ 
+CREATE TABLE emptt (
+empno varchar(20) NOT NULL  ,
+empname varchar(20)，
+deptno int,
+birthdate date NOT NULL,
+salary int ,
+primary key (empno)
+)
+PARTITION BY range (salary)
+(
+PARTITION p1 VALUES less than (100),
+PARTITION p2 VALUES less than (200)
+);
+这样的语句会报错。MySQL Database Error: A PRIMARY KEY must include allcolumns in the table's partitioning function；
+CREATE TABLE emptt (
+empno varchar(20) NOT NULL  ,
+empname varchar(20) ,
+deptno int(11),
+birthdate date NOT NULL,
+salary int(11) ,
+primary key (empno，salary)
+)
+PARTITION BY range (salary)
+(
+PARTITION p1 VALUES less than (100),
+PARTITION p2 VALUES less than (200)
+);
+在主键中加入salary列就正常。
+ 
+2.      MySQL分区处理NULL值的方式
+如果分区键所在列没有notnull约束。
+如果是range分区表，那么null行将被保存在范围最小的分区。
+如果是list分区表，那么null行将被保存到list为0的分区。
+在按HASH和KEY分区的情况下，任何产生NULL值的表达式mysql都视同它的返回值为0。
+为了避免这种情况的产生，建议分区键设置成NOT NULL。
+ 
+3.      分区键必须是INT类型，或者通过表达式返回INT类型，可以为NULL。唯一的例外是当分
+区类型为KEY分区的时候，可以使用其他类型的列作为分区键（ BLOB or TEXT 列除外）。
+ 
+4.      对分区表的分区键创建索引，那么这个索引也将被分区,分区键没有全局索引一说。
+5.      只有RANG和LIST分区能进行子分区，HASH和KEY分区不能进行子分区。
+6.      临时表不能被分区。
+ 
+四、       获取mysql分区表信息的几种方法
+1.     show create table 表名
+可以查看创建分区表的create语句 
+2.     show table status 
+可以查看表是不是分区表 
+3.     查看information_schema.partitions表 
+select 
+  partition_name part,  
+  partition_expression expr,  
+  partition_description descr,  
+  table_rows  
+from information_schema.partitions  where 
+  table_schema = schema()  
+  and table_name='test';  
+可以查看表具有哪几个分区、分区的方法、分区中数据的记录数等信息
+4.     explain partitions select语句
+通过此语句来显示扫描哪些分区，及他们是如何使用的.
+ 
+五、       分区表性能比较
+1.     创建两张表: part_tab(分区表),no_part_tab(普通表)
+CREATE TABLE part_tab
+( c1 int default NULL, c2 varchar(30) default NULL, c3 date not null)
+PARTITION BY RANGE(year(c3))
+(PARTITION p0 VALUES LESS THAN (1995),
+PARTITION p1 VALUESLESS THAN (1996) ,
+PARTITION p2 VALUESLESS THAN (1997) ,
+PARTITION p3 VALUESLESS THAN (1998) ,
+PARTITION p4 VALUES LESS THAN (1999) ,
+PARTITION p5 VALUESLESS THAN (2000) ,
+PARTITION p6 VALUESLESS THAN (2001) ,
+PARTITION p7 VALUESLESS THAN (2002) ,
+PARTITION p8 VALUESLESS THAN (2003) ,
+PARTITION p9 VALUES LESS THAN (2004) ,
+PARTITION p10VALUES LESS THAN (2010),
+PARTITION p11VALUES LESS THAN (MAXVALUE) );
+CREATE TABLE no_part_tab
+( c1 int defaultNULL, c2 varchar2(30) default NULL, c3 date not null)；
+ 
+2.     用存储过程插入800万条数据
+CREATE PROCEDURE load_part_tab()
+    begin
+    declare v int default 0;
+    while v < 8000000
+    do
+        insert into part_tab
+        values (v,'testingpartitions',adddate('1995-01-01',(rand(v)*36520)mod 3652));
+         set v = v + 1;
+    end while;
+end;
+insert into no_part_tab  select * frompart_tab;
+3.     测试sql性能
+查询分区表：
+selectcount(*) from part_tab where c3 > date '1995-01-01'and c3 < date '1995-12-31';
++----------+
+| count(*) |
++----------+
+|   795181 |
++----------+
+1 row in set (2.62 sec)
+查询普通表：
+selectcount(*) from part_tab where c3 > date '1995-01-01'and c3 < date '1995-12-31';
++----------+
+| count(*) |
++----------+
+|   795181 |
++----------+
+1 row in set (7.33 sec)
+分区表的执行时间比普通表少70%。
+ 
+4.     通过explain语句来分析执行情况
+mysql>explain select count(*) from part_tab where c3 > date '1995-01-01'and c3 < date '1995-12-31';
++----+-------------+----------+------+---------------+------+---------+------+---------+-------------+
+| id |select_type | table    | type |possible_keys | key  | key_len | ref  | rows   | Extra       |
++----+-------------+----------+------+---------------+------+---------+------+---------+-------------+
+|  1 | SIMPLE      | part_tab | ALL  | NULL          | NULL | NULL    | NULL | 7980796 | Using where |
++----+-------------+----------+------+---------------+------+---------+------+---------+-------------+
+1 rowin set
+ 
+mysql>explain select count(*) from no_part_tab where c3 > date '1995-01-01'and c3 < date '1995-12-31';
++----+-------------+-------------+------+---------------+------+---------+------+---------+-------------+
+| id |select_type | table       | type |possible_keys | key  | key_len | ref  | rows   | Extra       |
++----+-------------+-------------+------+---------------+------+---------+------+---------+-------------+
+|  1 | SIMPLE      | no_part_tab | ALL  | NULL          | NULL | NULL    | NULL | 8000206 | Using where |
++----+-------------+-------------+------+---------------+------+---------+------+---------+-------------+
+1 rowin set
+mysql >
+分区表执行扫描了7980796行，而普通表则扫描了8000206行。
+
+查看存储过程
+SHOW PROCEDURE STATUS WHERE Db = 'game';
+show create procedure procedure_name;
+查看事件
+SHOW EVENTS；
+SELECT `Event_name`,`Definer`,`Event_type`,`Execute_at`,`Interval_value`,`Interval_field`,`Starts`,`Ends`,`Status` FROM `INFORMATION_SCHEMA`.`EVENTS` WHERE `EVENT_SCHEMA` = 'game'; 
+
+
+mysqldump参数详细说明
+Mysqldump参数大全（参数来源于mysql5.5.19源码）
+ 
+参数
+参数说明
+--all-databases  , -A
+导出全部数据库。
+mysqldump  -uroot -p --all-databases
+--all-tablespaces  , -Y
+导出全部表空间。
+mysqldump  -uroot -p --all-databases --all-tablespaces
+--no-tablespaces  , -y
+不导出任何表空间信息。
+mysqldump  -uroot -p --all-databases --no-tablespaces
+--add-drop-database
+每个数据库创建之前添加drop数据库语句。
+mysqldump  -uroot -p --all-databases --add-drop-database
+--add-drop-table
+每个数据表创建之前添加drop数据表语句。(默认为打开状态，使用--skip-add-drop-table取消选项)
+mysqldump  -uroot -p --all-databases  (默认添加drop语句)
+mysqldump  -uroot -p --all-databases –skip-add-drop-table  (取消drop语句)
+--add-locks
+在每个表导出之前增加LOCK TABLES并且之后UNLOCK  TABLE。(默认为打开状态，使用--skip-add-locks取消选项)
+mysqldump  -uroot -p --all-databases  (默认添加LOCK语句)
+mysqldump  -uroot -p --all-databases –skip-add-locks   (取消LOCK语句)
+--allow-keywords
+允许创建是关键词的列名字。这由表名前缀于每个列名做到。
+mysqldump  -uroot -p --all-databases --allow-keywords
+--apply-slave-statements
+在'CHANGE MASTER'前添加'STOP SLAVE'，并且在导出的最后添加'START SLAVE'。
+mysqldump  -uroot -p --all-databases --apply-slave-statements
+--character-sets-dir
+字符集文件的目录
+mysqldump  -uroot -p --all-databases  --character-sets-dir=/usr/local/mysql/share/mysql/charsets
+--comments
+附加注释信息。默认为打开，可以用--skip-comments取消
+mysqldump  -uroot -p --all-databases  (默认记录注释)
+mysqldump  -uroot -p --all-databases --skip-comments   (取消注释)
+--compatible
+导出的数据将和其它数据库或旧版本的MySQL 相兼容。值可以为ansi、mysql323、mysql40、postgresql、oracle、mssql、db2、maxdb、no_key_options、no_tables_options、no_field_options等，
+要使用几个值，用逗号将它们隔开。它并不保证能完全兼容，而是尽量兼容。
+mysqldump  -uroot -p --all-databases --compatible=ansi
+--compact
+导出更少的输出信息(用于调试)。去掉注释和头尾等结构。可以使用选项：--skip-add-drop-table  --skip-add-locks --skip-comments --skip-disable-keys
+mysqldump  -uroot -p --all-databases --compact
+--complete-insert,  -c
+使用完整的insert语句(包含列名称)。这么做能提高插入效率，但是可能会受到max_allowed_packet参数的影响而导致插入失败。
+mysqldump  -uroot -p --all-databases --complete-insert
+--compress, -C
+在客户端和服务器之间启用压缩传递所有信息
+mysqldump  -uroot -p --all-databases --compress
+--create-options,  -a
+在CREATE TABLE语句中包括所有MySQL特性选项。(默认为打开状态)
+mysqldump  -uroot -p --all-databases
+--databases,  -B
+导出几个数据库。参数后面所有名字参量都被看作数据库名。
+mysqldump  -uroot -p --databases test mysql
+--debug
+输出debug信息，用于调试。默认值为：d:t:o,/tmp/mysqldump.trace
+mysqldump  -uroot -p --all-databases --debug
+mysqldump  -uroot -p --all-databases --debug=” d:t:o,/tmp/debug.trace”
+--debug-check
+检查内存和打开文件使用说明并退出。
+mysqldump  -uroot -p --all-databases --debug-check
+--debug-info
+输出调试信息并退出
+mysqldump  -uroot -p --all-databases --debug-info
+--default-character-set
+设置默认字符集，默认值为utf8
+mysqldump  -uroot -p --all-databases --default-character-set=latin1
+--delayed-insert
+采用延时插入方式（INSERT DELAYED）导出数据
+mysqldump  -uroot -p --all-databases --delayed-insert
+--delete-master-logs
+master备份后删除日志. 这个参数将自动激活--master-data。
+mysqldump  -uroot -p --all-databases --delete-master-logs
+--disable-keys
+对于每个表，用/*!40000 ALTER TABLE tbl_name DISABLE KEYS */;和/*!40000 ALTER TABLE tbl_name ENABLE KEYS */;语句引用INSERT语句。这样可以更快地导入dump出来的文件，因为它是在插入所有行后创建索引的。该选项只适合MyISAM表，默认为打开状态。
+mysqldump  -uroot -p --all-databases 
+--dump-slave
+该选项将导致主的binlog位置和文件名追加到导出数据的文件中。设置为1时，将会以CHANGE MASTER命令输出到数据文件；设置为2时，在命令前增加说明信息。该选项将会打开--lock-all-tables，除非--single-transaction被指定。该选项会自动关闭--lock-tables选项。默认值为0。
+mysqldump  -uroot -p --all-databases --dump-slave=1
+mysqldump  -uroot -p --all-databases --dump-slave=2
+--events, -E
+导出事件。
+mysqldump  -uroot -p --all-databases --events
+--extended-insert,  -e
+使用具有多个VALUES列的INSERT语法。这样使导出文件更小，并加速导入时的速度。默认为打开状态，使用--skip-extended-insert取消选项。
+mysqldump  -uroot -p --all-databases
+mysqldump  -uroot -p --all-databases--skip-extended-insert   (取消选项)
+--fields-terminated-by
+导出文件中忽略给定字段。与--tab选项一起使用，不能用于--databases和--all-databases选项
+mysqldump  -uroot -p test test --tab=”/home/mysql” --fields-terminated-by=”#”
+--fields-enclosed-by
+输出文件中的各个字段用给定字符包裹。与--tab选项一起使用，不能用于--databases和--all-databases选项
+mysqldump  -uroot -p test test --tab=”/home/mysql” --fields-enclosed-by=”#”
+--fields-optionally-enclosed-by
+输出文件中的各个字段用给定字符选择性包裹。与--tab选项一起使用，不能用于--databases和--all-databases选项
+mysqldump  -uroot -p test test --tab=”/home/mysql”  --fields-enclosed-by=”#” --fields-optionally-enclosed-by  =”#”
+--fields-escaped-by
+输出文件中的各个字段忽略给定字符。与--tab选项一起使用，不能用于--databases和--all-databases选项
+mysqldump  -uroot -p mysql user --tab=”/home/mysql” --fields-escaped-by=”#”
+--flush-logs
+开始导出之前刷新日志。
+请注意：假如一次导出多个数据库(使用选项--databases或者--all-databases)，将会逐个数据库刷新日志。除使用--lock-all-tables或者--master-data外。在这种情况下，日志将会被刷新一次，相应的所以表同时被锁定。因此，如果打算同时导出和刷新日志应该使用--lock-all-tables 或者--master-data 和--flush-logs。
+mysqldump  -uroot -p --all-databases --flush-logs
+--flush-privileges
+在导出mysql数据库之后，发出一条FLUSH  PRIVILEGES 语句。为了正确恢复，该选项应该用于导出mysql数据库和依赖mysql数据库数据的任何时候。
+mysqldump  -uroot -p --all-databases --flush-privileges
+--force
+在导出过程中忽略出现的SQL错误。
+mysqldump  -uroot -p --all-databases --force
+--help
+显示帮助信息并退出。
+mysqldump  --help
+--hex-blob
+使用十六进制格式导出二进制字符串字段。如果有二进制数据就必须使用该选项。影响到的字段类型有BINARY、VARBINARY、BLOB。
+mysqldump  -uroot -p --all-databases --hex-blob
+--host, -h
+需要导出的主机信息
+mysqldump  -uroot -p --host=localhost --all-databases
+--ignore-table
+不导出指定表。指定忽略多个表时，需要重复多次，每次一个表。每个表必须同时指定数据库和表名。例如：--ignore-table=database.table1 --ignore-table=database.table2 ……
+mysqldump  -uroot -p --host=localhost --all-databases --ignore-table=mysql.user
+--include-master-host-port
+在--dump-slave产生的'CHANGE  MASTER TO..'语句中增加'MASTER_HOST=<host>，MASTER_PORT=<port>'  
+mysqldump  -uroot -p --host=localhost --all-databases --include-master-host-port
+--insert-ignore
+在插入行时使用INSERT IGNORE语句.
+mysqldump  -uroot -p --host=localhost --all-databases --insert-ignore
+--lines-terminated-by
+输出文件的每行用给定字符串划分。与--tab选项一起使用，不能用于--databases和--all-databases选项。
+mysqldump  -uroot -p --host=localhost test test --tab=”/tmp/mysql”  --lines-terminated-by=”##”
+--lock-all-tables,  -x
+提交请求锁定所有数据库中的所有表，以保证数据的一致性。这是一个全局读锁，并且自动关闭--single-transaction 和--lock-tables 选项。
+mysqldump  -uroot -p --host=localhost --all-databases --lock-all-tables
+--lock-tables,  -l
+开始导出前，锁定所有表。用READ  LOCAL锁定表以允许MyISAM表并行插入。对于支持事务的表例如InnoDB和BDB，--single-transaction是一个更好的选择，因为它根本不需要锁定表。
+请注意当导出多个数据库时，--lock-tables分别为每个数据库锁定表。因此，该选项不能保证导出文件中的表在数据库之间的逻辑一致性。不同数据库表的导出状态可以完全不同。
+mysqldump  -uroot -p --host=localhost --all-databases --lock-tables
+--log-error
+附加警告和错误信息到给定文件
+mysqldump  -uroot -p --host=localhost --all-databases  --log-error=/tmp/mysqldump_error_log.err
+--master-data
+该选项将binlog的位置和文件名追加到输出文件中。如果为1，将会输出CHANGE MASTER 命令；如果为2，输出的CHANGE  MASTER命令前添加注释信息。该选项将打开--lock-all-tables 选项，除非--single-transaction也被指定（在这种情况下，全局读锁在开始导出时获得很短的时间；其他内容参考下面的--single-transaction选项）。该选项自动关闭--lock-tables选项。
+mysqldump  -uroot -p --host=localhost --all-databases --master-data=1;
+mysqldump  -uroot -p --host=localhost --all-databases --master-data=2;
+--max_allowed_packet
+服务器发送和接受的最大包长度。
+mysqldump  -uroot -p --host=localhost --all-databases --max_allowed_packet=10240
+--net_buffer_length
+TCP/IP和socket连接的缓存大小。
+mysqldump  -uroot -p --host=localhost --all-databases --net_buffer_length=1024
+--no-autocommit
+使用autocommit/commit 语句包裹表。
+mysqldump  -uroot -p --host=localhost --all-databases --no-autocommit
+--no-create-db,  -n
+只导出数据，而不添加CREATE DATABASE 语句。
+mysqldump  -uroot -p --host=localhost --all-databases --no-create-db
+--no-create-info,  -t
+只导出数据，而不添加CREATE TABLE 语句。
+mysqldump  -uroot -p --host=localhost --all-databases --no-create-info
+--no-data, -d
+不导出任何数据，只导出数据库表结构。
+mysqldump  -uroot -p --host=localhost --all-databases --no-data
+--no-set-names,  -N
+等同于--skip-set-charset
+mysqldump  -uroot -p --host=localhost --all-databases --no-set-names
+--opt
+等同于--add-drop-table,  --add-locks, --create-options, --quick, --extended-insert, --lock-tables,  --set-charset, --disable-keys 该选项默认开启,  可以用--skip-opt禁用.
+mysqldump  -uroot -p --host=localhost --all-databases --opt
+--order-by-primary
+如果存在主键，或者第一个唯一键，对每个表的记录进行排序。在导出MyISAM表到InnoDB表时有效，但会使得导出工作花费很长时间。 
+mysqldump  -uroot -p --host=localhost --all-databases --order-by-primary
+--password, -p
+连接数据库密码
+--pipe(windows系统可用)
+使用命名管道连接mysql
+mysqldump  -uroot -p --host=localhost --all-databases --pipe
+--port, -P
+连接数据库端口号
+--protocol
+使用的连接协议，包括：tcp, socket, pipe, memory.
+mysqldump  -uroot -p --host=localhost --all-databases --protocol=tcp
+--quick, -q
+不缓冲查询，直接导出到标准输出。默认为打开状态，使用--skip-quick取消该选项。
+mysqldump  -uroot -p --host=localhost --all-databases 
+mysqldump  -uroot -p --host=localhost --all-databases --skip-quick
+--quote-names,-Q
+使用（`）引起表和列名。默认为打开状态，使用--skip-quote-names取消该选项。
+mysqldump  -uroot -p --host=localhost --all-databases
+mysqldump  -uroot -p --host=localhost --all-databases --skip-quote-names
+--replace
+使用REPLACE INTO 取代INSERT INTO.
+mysqldump  -uroot -p --host=localhost --all-databases --replace
+--result-file,  -r
+直接输出到指定文件中。该选项应该用在使用回车换行对（\\r\\n）换行的系统上（例如：DOS，Windows）。该选项确保只有一行被使用。
+mysqldump  -uroot -p --host=localhost --all-databases --result-file=/tmp/mysqldump_result_file.txt
+--routines, -R
+导出存储过程以及自定义函数。
+mysqldump  -uroot -p --host=localhost --all-databases --routines
+--set-charset
+添加'SET NAMES  default_character_set'到输出文件。默认为打开状态，使用--skip-set-charset关闭选项。
+mysqldump  -uroot -p --host=localhost --all-databases 
+mysqldump  -uroot -p --host=localhost --all-databases --skip-set-charset
+--single-transaction
+该选项在导出数据之前提交一个BEGIN SQL语句，BEGIN 不会阻塞任何应用程序且能保证导出时数据库的一致性状态。它只适用于多版本存储引擎，仅InnoDB。本选项和--lock-tables 选项是互斥的，因为LOCK  TABLES 会使任何挂起的事务隐含提交。要想导出大表的话，应结合使用--quick 选项。
+mysqldump  -uroot -p --host=localhost --all-databases --single-transaction
+--dump-date
+将导出时间添加到输出文件中。默认为打开状态，使用--skip-dump-date关闭选项。
+mysqldump  -uroot -p --host=localhost --all-databases
+mysqldump  -uroot -p --host=localhost --all-databases --skip-dump-date
+--skip-opt
+禁用–opt选项.
+mysqldump  -uroot -p --host=localhost --all-databases --skip-opt
+--socket,-S
+指定连接mysql的socket文件位置，默认路径/tmp/mysql.sock
+mysqldump  -uroot -p --host=localhost --all-databases --socket=/tmp/mysqld.sock
+--tab,-T
+为每个表在给定路径创建tab分割的文本文件。注意：仅仅用于mysqldump和mysqld服务器运行在相同机器上。
+mysqldump  -uroot -p --host=localhost test test --tab="/home/mysql"
+--tables
+覆盖--databases (-B)参数，指定需要导出的表名。
+mysqldump  -uroot -p --host=localhost --databases test --tables test
+--triggers
+导出触发器。该选项默认启用，用--skip-triggers禁用它。
+mysqldump  -uroot -p --host=localhost --all-databases --triggers
+--tz-utc
+在导出顶部设置时区TIME_ZONE='+00:00' ，以保证在不同时区导出的TIMESTAMP 数据或者数据被移动其他时区时的正确性。
+mysqldump  -uroot -p --host=localhost --all-databases --tz-utc
+--user, -u
+指定连接的用户名。
+--verbose, --v
+输出多种平台信息。
+--version, -V
+输出mysqldump版本信息并退出
+--where, -w
+只转储给定的WHERE条件选择的记录。请注意如果条件包含命令解释符专用空格或字符，一定要将条件引用起来。
+mysqldump  -uroot -p --host=localhost --all-databases --where=” user=’root’”
+--xml, -X
+导出XML格式.
+mysqldump  -uroot -p --host=localhost --all-databases --xml
+--plugin_dir
+客户端插件的目录，用于兼容不同的插件版本。
+mysqldump  -uroot -p --host=localhost --all-databases --plugin_dir=”/usr/local/lib/plugin”
+--default_auth
+客户端插件默认使用权限。
+mysqldump  -uroot -p --host=localhost --all-databases --default-auth=”/usr/local/lib/plugin/<PLUGIN>”
+
+
+
+DB_HOST="localhost"
+DB_PORT=3306
+DB_USER="root"
+DB_PASS=""
+maxtime=10
+sql="SHOW PROCESSLIST"
+sss=$(/usr/bin/mysqladmin processlist|sed -e "s/\s//g"|awk -F'|' '{print $2,$7,substr($9,1,6)}'|awk '{if($2>'"$maxtime"' && $3=="SELECT"){print $1}}')
+for pid in $(echo "$sss"); do
+/usr/bin/mysql -h$DB_HOST -P$DB_PORT -u$DB_USER -p$DB_PASS -e "kill $pid"
+done
+echo "$sss"
+date
+
+skip-name-resolve
+在mysql客户端登陆mysql服务器的登录速度太慢的解决方案一篇文章中，我介绍了如何通过在my.ini文件(linux下是my.cnf文件)中添加"SKIP-NAME-RESOLVE"的参数设置，使得客户端在登录服务器的时候不通过主机解析这一关，直接登陆的方法，以此来提高登录速度。
+     这里要介绍一下这种方法的负面作用，以及不合理的时机使用这种方法会引发的不可发现的错误。
+     首先，回顾一下在my.ini文件中添加"SKIP-NAME-RESOLVE"参数来提高访问速度的原理：
+     在没有设置该参数的时候，客户端在登陆请求发出后，服务器要解析请求者是谁，经过解析，发现登录者是从另外的电脑登录的，也就是说不是服务器本机，那么，服务器会到mysql.user表中去查找是否有这个用户，假设服务器IP是192.168.0.1，而客户机的IP是192.168.0.2；那么查询的顺序是先找'root'@'192.168.0.2'这个user是否存在，若存在，则匹配这个用户登陆，并加载权限列表。若没有该用户，则查找'root'@'%'这个用户是否存在，若存在，则加载权限列表。否则，登录失败。
+    在设置了SKIP-NAME-RESOLVE参数后，客户端的登录请求的解析式同上面一样的，但是在服务器本机的解析过程却发生了改变：服务器会把在本机登录的用户自动解析为'root'@'127.0.0.1'；而不是'root'@'localhost'；这样一来就坏了，因为我们在服务器上登录是为了进行一些维护操作，但是显然，'root'@'127.0.0.1'这个用户是被默认为'root'@'%'这个用户的，这个用户还没有足够得权限去执行一些超级管理员'root'@'localhost'才能执行的大作。因为未分配权限。
+    所以结论是：加入你在服务器本机上登录mysql服务器的话，要么先取消SKIP-NAME-RESOLVE的参数设置，重新启动服务器再登陆，设置完成后，再设置上该参数；要么就给'root'@'127.0.0.1'分配超级管理员权限，但这么做显然是不明智的，因为任何人在任何机器上都可以用这个用户执行管理员操作，前提是知道了密码。
+    我有一次在mysql服务器上执行数据库创建脚本，并同时创建表、触发器、存储过程等。结果，总是失败，经过了一上午的折腾，最后发现时这个参数造成我以'root'@'127.0.0.1'这个用户登陆了服务器，这个用户没有创建触发器的权限。后来，取消了SKIP-NAME-RESOLVE参数后，执行成功，再把该参数设置回去。重启。OK。
+    所以，在设置这个参数的时候一定要注意时机：先用超级管理员将所有的用户创建好，再将权限分配好之后，才设置这个参数生效。
+
+设置隔离级别
+set session transaction isolation level read commited;
+删除binlog日志
+purge binary|master logs to 'mysql-bin.000123' 不删除mysql-bin.000123 只删除之前的。
+purge binary|master logs before '2013-01-01 00:00:00'
+更改表的引擎
+start transaction;
+create table innodb_table like myisam_table;
+alter table innodb_table engine=Innodb;
+alter table innodb_table disable keys;
+insert into innodb_table select * from myisam_table where id between x and y;
+alter table innodb_table enable keys;
+创建一张相同结构的空表，并进行所需要的修改
+flush tables with read lock 关闭所有正在使用的表，并禁止任何表打开。
+交换.frm文件
+unlock tables 释放锁。
+
+较高频率每秒执行一次show global status 诊断服务器上程序突然变慢，又突然变好的问题
+1,mysqladmin -uroot -p -S /tmp/mysql.sock ext -i1 |awk '/Queries/{q=$4-qp;qp=$4} /Threads_connected/{tc=$4} /Threads_running/{printf "%5d %5d %5d\n", q, tc, $4}'
+2,awk '/^# Time:/{print $3, $4, c;c=0}/^# User/{c++}' ice-slow.log
+$3 Query_time $5 Lock_time
+awk '/Lock_time/ && ( $3>1 || $5>1) {print;getline;print;getline;print}' 20131226_slow.log     ($3 Query_time $5 Lock_time)
+3,mysql -uroot -p -S /tmp/mysql.sock -e 'show processlist \G' | grep State: |sort |uniq -c |sort -rn
+诊断触发器
+mysql -e 'show processlist\G' |grep -c "sate: freeing items" 超过5秒
+
+${file_name%/*}
+${file_name#/*}
+${file_name:0:5}
+${file_name}_good
+#是去掉左边(在鉴盘上#在$之左边) 
+%是去掉右边(在鉴盘上%在$之右边) 
+单一符号是最小匹配﹔两个符号是最大匹配。
+
+考虑下面的语句，其中key1是有索引的列，nonkey没有索引：
+select * from t1 where
+ (key1 < 'abc' and (key1 like 'abcde%' or key1 like '%b')) or 
+ (key 1 < 'bar' and nonkey = 4 ) or
+ (key < 'uux' and key1 > 'z' );
+优化为
+select * from t1 where key1 < 'bar'
+
+select * from a,b left join c on (c.key=a.key) left join d on (d.key=a.key) where b.key=d.key;
+优化为
+select * from b,a left join c on (c.key=a.key) left join d on (d.key=a.key) where b.key=d.key;
+
+linux 命令
+ps aux--sort=-%cpu | grep -m 11 -v `whoami` 找出最占用时间的前十个程序
+du -kx | egrep -v "\./.+/" | sort -n        搜寻最大的目录。
+
+find / -perm -1000 -type d 2>/dev/null
+find / -perm -g=s -type f 2>/dev/null
+find / -perm -u=s -type f 2>/dev/null
+find / -perm -g=s -o perm -u=s -type f 2>/dev/null
+find / -perm -g=s -o -perm -4000 ! -type l -maxdepth 3 -exec ls -ld {} 2>/dev/null
+find / -writable -type d 2>/dev/null
+find / -perm -222 -type d 2>/dev/null
+find / -perm -o+w -type d 2>/dev/null
+find / -perm -o+x -type d 2>/dev/null
+find / (-perm -o+x -perm -o+x ) -type d 2>/dev/null
+find / -x dev -type d (-perm -0002 -a ! -perm -1000) -print
+find /dir -x dev (-nouser -o -nogroup) -print 
+
+linux下svn客户端命令
+svn import . url  如果是第一次提交文件，很可能会出现“svn：'.'不是工作副本”，即当前目录不是工作副本，这个时候需要用到import：
+svn checkout svn://192.168.0.202/qipai/develop/code/game/php/require require目录
+等于svn co svn://192.168.0.202/qipai/develop/code/game/php/require  /home/www/require目录
+svn co svn://192.168.0.202/qipai/develop/code/game/php/htdocs/Portal  /home/www/html/Portal 目录
+svn co svn://192.168.0.202/qipai/develop/code/game/php/htdocs/Mobile  /home/www/html/Mobile 目录
+
+svn log 更新内容.txt                       #文件的日志信息
+svn diff -r11885:11815 更新内容.txt        #比对两个文件
+svn update -r 11815 更新内容.txt           #回滚到11815版本
+svn info 更新内容.txt                      #更新内容.txt 的详细svn信息 
+svn list .                                 #等同于 shell下的ls .
+svn revert 更新内容.txt                    #将工作副本文件恢复到原始版本。(恢复大部分的本地修改）
+svn status -v 更新内容.txt                 #查看svn状态
+svn cat -r 11885 更新内容.txt              #查看11885更新内容.txt的内容
+svn resolved --accept working PATH         #移除工作副本的目录或文件的冲突状态,让PATH可以被提交
+svn cleanup                                #递归清理工作副本，删除锁，继续未完成操作，等等
+svn move (mv, rename) SRC... DST           #在工作副本或版本库中移动或改名文件或目录。 用法: move SRC... DST
+svn import . url                           #将未纳入版本控制的文件或目录树提交到版本库。 用法: import [PATH] URL
+svn add ./更新内容.txt                     #把文件和目录纳入版本控制，通过调度加到版本库。它们会在下一次提交时加入。用法: add 路径...
+svn blame 更新内容.txt 11815               #输出指定文件或URL的追溯内容，包含版本和作者信息。 用法: blame 目标[@版本]...
+svn changelist                             #耦合(或解耦)文件与修改列表 CLNAME。使用: 1. changelist CLNAME TARGET...  2. changelist --remove TARGET...
+svn switch svn://192.168.0.202/qipai/version/1.1.900/product/web/all/require  将旧的地址改成这个
+svn switch --relocate 原来地址，新的地址
+
+
+key_buffer_size = 4G
+hot_cache.key_buffer_size = 2G
+cold_cache.key_buffer_size = 2G
+init_file=/path/to/data-directory/mysqld_init.sql   mysql预热
+
+cat mysqld_init.sql 
+CACHE INDEX a.t1, a.t2, b.t3 IN hot_cache
+CACHE INDEX a.t4, b.t5, b.t6 IN cold_cache
+
+awk 'NR>1{if($0!="CC")print i}{i=$0}' file <(echo)  
+sed -n '$!N;/\nCC/!P;D' file
+
+
+
+awk '/lock_time/ && ($3>1 || $5>1){print;getline;print;getline;print}' 20140728_slow.log
+grep -A 2 -B 1 "SELECT"  20140728_slow.log
+
+
+mysql> set query_id = 1;
+mysql> select state,sum(duration) as total_R,
+    -> round(
+    -> 100 * sum(duration) /
+    -> (select sum(duration) 
+    -> from information_schema.profiling where query_id=@query_id
+    -> ),2) AS pct_R,
+    -> count(*) AS calls,
+    -> sum(duration)/count(*) AS "R/call"
+    -> from information_schema.profiling
+    -> where query_ID=@query_id
+    -> group by state
+    -> order by total_R DESC;
+
+mysqladmin  -S /var/tmp/mysql_3306.sock ext -i1 | awk '/Queries/{q=$4-qp;qp=$4} /Threads_connected/{tc=$4} /Threads_running/{printf "%5d %5d %5d\n",q,tc,$4}' 服务器级别偶尔停顿检测脚本。观察是否有尖刺
+awk '/^# Time:/ {print $3,$4,c;c=0}/^# User/{c++}' slow.log   slow.log里每个时间段执行的语句数。
+mysql  -e 'show processlist\G' |grep State |sort |uniq -c |sort -rn    观察是否有大量线程处于不正常的状态
+
+mysql> select left(now(),14);
++----------------+
+| left(now(),14) |
++----------------+
+| 2014-08-21 17: |
++----------------+
+1 row in set (0.02 sec)
+
+mysql> select now() - interval 23 HOUR;
++--------------------------+
+| now() - interval 23 HOUR |
++--------------------------+
+| 2014-08-20 18:02:17      |
++--------------------------+
+1 row in set (0.00 sec)
+
+mysql> select concat(left(now(),14), '00:00') - INTERVAL 1 hour;
++---------------------------------------------------+
+| concat(left(now(),14), '00:00') - INTERVAL 1 hour |
++---------------------------------------------------+
+| 2014-08-21 16:00:00                               |
++---------------------------------------------------+
+1 row in set (0.00 sec)
+
+Drop table if exists my_summary_new, my_summary_old;
+Create table my_summary_new like my_summary;
+Rename table my_summary To my_summary_old, my_summary_new TO my_summary;
+
+mysql 物化视图
+
+ALTER TABLE film MODIFY COLUMN rental_duration TINYINT(3) SET NOT NULL  default 5; SHOW STATUS显示这个语句做了1000次读和1000次插入操作。
+ALTER TABLE film ALTER COLUMN rental_duration SET default 5; 这个语句会直接修改.frm文件，而不涉及表数据。
+
+ALTER TABLE 允许三种操作 MODIFY COLUMN, ALTER COLUMN, CHANGE COLUMN。这三种操作都是不一样的
+
+只修改.frm文件。
+create table film_new like film;
+alter table film_new modify column rating enum('G','PG','PG-13','R','NC-17','PG-14') DEFAULT 'G';
+flush tables with read lock;
+\! cd /usr/local/mysql/data/test && mv film.frm film_tmp.frm && mv film_new.frm film.frm && mv film_tmp.frm film_new.frm
+unlock tables;
+show columns from film like 'rating'\G
+drop table film_new;
+
+快速创建MYISAM索引
+alter table test disable keys;
+
+块级别元数据
+
+前缀索引及选择
+select  count(distinct left(column,3))/count(*) AS sel3,
+	count(distinct left(column,4))/count(*) AS sel4,
+	count(distinct left(column,5))/count(*) AS sel5,
+	count(distinct left(column,6))/count(*) AS sel6,
+	count(distinct left(column,7))/count(*) AS sel7
+from table;							查看基数参考值为：0.031
+
+select count(*) AS cnt, left(column,4) AS pref from table group by pref order by cnt DESC ; 分布是否均匀
+ALTER TABLE table ADD KEY (column(7));                          添加前缀索引
+
+索引三原则：
+
+1.单行访问很慢
+2.按顺序访问范围数据很快。
+3.索引覆盖查询是很快的。
+
+索引三星系统
+大大减少了服务器需要扫描的数据量
+可以帮助服务器避免排序和临时表
+索引可以将随机I/0变为顺序I/0
+对应条件的数量越小，索引越放在前面。
+
+针对某个数据库执行optimize table操作：
+Drop procedure if exists optimize_tables;
+delimiter //
+create procedure optimize_tables(game varchar(64))
+begin
+    declare t varchar(64);
+    declare done INT default 0;
+    declare c cursor for
+        select table_name from INFORMATION_SCHEMA.TABLES where table_schema = db_name AND table_type = 'BASE TABLE';
+    declare continue HANDLER for sqlstate '02000' SET done = 1;
+    open c;
+    tables_loop: LOOP
+        FETCH c INTO t;
+	IF done THEN
+	    LEAVE tables_loop;
+	END IF;
+	SET @stmt_text := CONCAT("OPTIMIZE TABLE ", game, ".", t);
+	PREPARE stmt FROM @stmt_text;
+	EXECUTE stmt;
+	DEALLOCATE PREPARE stmt;
+    END LOOP;
+    CLOSE c;
+    END //
+    DELIMITER ;
+
+key_buffer_size		设置这个变量可以一次性为键缓冲区分配所指定的空间，然而并非真正立刻分配，用到时才分配。
+table_cache_size	设置这个变量不会立即生效，会延迟到下次有线程打开表才有效果。如果值比缓存中的表数小，mysql将从缓存中删除不常使用的表
+thread_cache_size	设置这个表里不会立即生效，将在下次有连接被关闭时产生效果。如果没有空间来缓存线程，将销毁改线程。
+query_cache_size	启动的时候，一次性分配并初始化这块内存，如果修改该变量，将立刻删除所有缓存的查询，重新分配缓存，并重新初始化内存。
+read_buffer_size	只会在有查询需要使用时才为该缓存分配内存。并且会一次性分配该参数指定大小的全部内存。
+read_rnd_buffer_size	只会在有查询需要使用时才为该缓存分配内存。并且会一次性分配需要使用的内存
+sort_buffer_size	只会在有查询需要做排序操作时才会为该缓存分配内存。然而一旦需要排序，就会立刻分配该参数指定大小的全部内存。
+
+mysqladmin extended-status -ri60 每隔60S来查看状态变量的增量变化
+
+关闭innodb_stats_on_metadata避免耗时的表统计信息刷新
+打开innodb_use_sys_stats_table持久化存储信息到磁盘，解决预热时间长，花费更多的时间等待IO的问题
+
+innodb_log_file_size,innodb_log_file_in_group两个参数控制整体的日志文件大小，对写性能非常重要。
+innodb-log_buffer_size控制日志缓冲区大小。
+innodb_flush_log_at_trx_commit 控制日志缓冲刷新的频繁程度（0，最不安全，1，最安全，2除非服务器挂了，或者断电，不然也安全。）
+
+show innodb status的输出中log部分来监控innodb的日志和日志缓冲区的I/O性能，通过观察innodb_os_log_written状态变量来查看innodb对日志文件写了多少数据。可以查看10~100m间隔的数字，记录峰值，如果峰值为100kb/s，那么100*60*60/1024M的日志记录就足够了，大概容纳一个小时。
+
+###innodb 并发配置
+show engine innodb status\G
+
+Buffer pool size   655359
+Free buffers       1
+Database pages     643639
+Old database pages 237
+查询内存有压力 因为没有free buffers了
+
+srv_master_thread loops: 1151794 1_second, 1151791 sleeps, 115168 10_second, 129 background, 129 flush
+srv_master_thread log flush and writes: 1165278
+1_second,次数与sleeps近乎相等，与10_second 10:1 表示压力不是很大。
+
+show global status like 'innodb_dblwr%'; 
++----------------------------+----------+
+| Variable_name              | Value    |
++----------------------------+----------+
+| Innodb_dblwr_pages_written | 75493960 |
+| Innodb_dblwr_writes        | 661062   |
++----------------------------+----------+
+写了75493960页，但是实际写了661062次，比数为114:1，远大于64:1说明有写的压力
+
+innodb_thread_concurrency 并发值<=cpu数量*磁盘数量*2  有时候需要关闭有时候需要开启，看情况而定。
+
+###innodb 最重要的两个配置
+innodb_buffer_pool_size
+innodb_log_file_size
+
+#!/bin/bash
+iptables -t nat -A PREROUTING -p tcp  -m tcp --dport 13000 -j DNAT --to-destination   192.168.53.9:3306
+iptables -t nat -A POSTROUTING -p tcp -m tcp --dport 3306 -j SNAT --to-source 192.168.53.9
+
+set ff=unix  windows下的文件编码转为unix
