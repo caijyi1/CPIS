@@ -1,0 +1,68 @@
+﻿kali 系统全面解析
+#修改网络配置
+cat /etc/resolv.conf
+nameserver 8.8.8.8
+nameserver 114.114.114.114
+
+cat /etc/network/interfaces
+auto lo
+iface lo inet loopback
+auto eth0
+iface eth0 inet static
+address 192.168.0.127
+netmask 255.255.255.0
+gateway 192.168.0.1
+
+安装vmware-tools工具
+tar xf VMware*.tar.gz
+cd VMware*
+./INSTALL_pl
+
+#安装mac主题
+参考资料：
+http://jingyan.baidu.com/article/d2b1d1027ec8d85c7e37d492.html
+
+修改下面这个文件，不然 add-apt-repository ppa库 可能会报错。
+root@kali:~# cat /etc/lsb-release
+DISTRIB_ID=Ubuntu 
+DISTRIB_RELEASE=11.10 
+DISTRIB_CODENAME=oneiric 
+DISTRIB_DESCRIPTION="Ubuntu oneiric"
+
+sudo apt-get install software-properties-common python-software-properties
+sudo apt-get install apt-file && apt-file update
+apt-file search add-apt-repository
+
+add-apt-repository ppa:noobslab/themes
+add-apt-repository ppa:ricotz/docky
+添加mac主题和图标
+apt-get install mac-os-lion-theme-v2
+apt-get install mac-os-lion-icons-v2
+添加管理工具
+apt-get install unity-tweak-tool || apt-get install gnome-tweak-tool
+apt-get gconf-editor
+安装docky
+apt-get install cairo-dock cairo-dock-plug-ins cairo-clock
+cairo-clock -c -o
+glxinfo |head 查看显卡是否安装好了
+
+apt-get install xcompmgr #如果docky有黑框，则一定要装这个。复合特效
+xcompmgr -c -t-5 -l-5 -r4.2 -o.55 
+
+root@kali:~/.config/autostart# cat /root/.config/autostart/xcompmgr.desktop 
+[Desktop Entry]
+Type=Application
+Encodeing=UTF-8
+Name="xcompmgr"
+Comment=""
+Exec="xcompmgr"
+hidden=false
+NoDisplay=false
+Terminal=false
+
+apt-get install gtk2-engines-murrine (防止Gtk-WARNING **: 无法在模块路径中找到主题引擎：“murrine” 报这个错误）
+apt-get install terminator
+
+参考资料：	http://xiao106347.blog.163.com/blog/static/215992078201342410347137/ 
+			http://www.ubuntukylin.com/ukylin/forum.php?mod=viewthread&tid=4702
+			http://blog.codinglabs.org/articles/getting-started-with-ubuntu.html

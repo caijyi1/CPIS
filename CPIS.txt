@@ -1,492 +1,492 @@
 
-È¥³ı¶ÎÂä±ê¼Ç
-ÔÚÒÑ´ò¿ªµÄWord2007ÎÄµµÖĞ£¬µ¥»÷¡°Office¡±°´Å¥£¬Ñ¡Ôñ¡°Word¡±Ñ¡ÏîÃüÁî¡£
-µ¯³ö¡°WordÑ¡Ïî¡±¶Ô»°¿ò£¬ÇĞ»»µ½¡°ÏÔÊ¾¡±Ñ¡Ïî¿¨£¬ÔÚÓÒ²àµÄ¡°Ê¼ÖÕÔÚÆÁÄ»ÉÏÏÔÊ¾ÕâĞ©¸ñÊ½±ê¼Ç¡±À¸ÏÂÈ¡ÏûÑ¡ÖĞ¡°¶ÎÂä±ê¼Ç¡±¸´Ñ¡¿ò¡£
- µ¥»÷¡°È·¶¨¡±°´Å¥¡£
+å»é™¤æ®µè½æ ‡è®°
+åœ¨å·²æ‰“å¼€çš„Word2007æ–‡æ¡£ä¸­ï¼Œå•å‡»â€œOfficeâ€æŒ‰é’®ï¼Œé€‰æ‹©â€œWordâ€é€‰é¡¹å‘½ä»¤ã€‚
+å¼¹å‡ºâ€œWordé€‰é¡¹â€å¯¹è¯æ¡†ï¼Œåˆ‡æ¢åˆ°â€œæ˜¾ç¤ºâ€é€‰é¡¹å¡ï¼Œåœ¨å³ä¾§çš„â€œå§‹ç»ˆåœ¨å±å¹•ä¸Šæ˜¾ç¤ºè¿™äº›æ ¼å¼æ ‡è®°â€æ ä¸‹å–æ¶ˆé€‰ä¸­â€œæ®µè½æ ‡è®°â€å¤é€‰æ¡†ã€‚
+ å•å‡»â€œç¡®å®šâ€æŒ‰é’®ã€‚
 
-VIM °²×°ÅäÖÃ²å¼ş
+VIM å®‰è£…é…ç½®æ’ä»¶
 git clone https://github.com/ericzhang-cn/vim-conf.git
 cd vim-conf && ./init.sh
 cd ~/.vim/bundle
 git clone git://github.com/altercation/vim-colors-solarized.git
 
-web ¸üĞÂ
-1.°ÑrequireÄ¿Â¼¸´ÖÆµ½Web¸ùÄ¿Â¼µÄÉÏÒ»¼¶Ä¿Â¼ÄÚ;
-2.Êı¾İ¿âÁ¬½ÓÅäÖÃ£º
+web æ›´æ–°
+1.æŠŠrequireç›®å½•å¤åˆ¶åˆ°Webæ ¹ç›®å½•çš„ä¸Šä¸€çº§ç›®å½•å†…;
+2.æ•°æ®åº“è¿æ¥é…ç½®ï¼š
 /home/www/require/app/etc/game/local.xml
 /home/www/require/app/code/core/Game/Ice/etc/config.xml
-3.htdocsÄ¿Â¼£¨Web¸ùÄ¿Â¼£©ÈçÓëÏÖÓĞWeb³ÌĞò³åÍ»£¬¿ÉÒÔ½«¡°htdocs¡±Ä¿Â¼ÄÚ´´½¨Ò»¸ö×ÓÄ¿Â¼
-  È»ºó°Ñ¡°htdocs¡±Ä¿Â¼µÄ³ÌĞò¸´ÖÆµ½×ÓÄ¿Â¼¼´¿É£¡
-4.iceÅäÖÃ
+3.htdocsç›®å½•ï¼ˆWebæ ¹ç›®å½•ï¼‰å¦‚ä¸ç°æœ‰Webç¨‹åºå†²çªï¼Œå¯ä»¥å°†â€œhtdocsâ€ç›®å½•å†…åˆ›å»ºä¸€ä¸ªå­ç›®å½•
+  ç„¶åæŠŠâ€œhtdocsâ€ç›®å½•çš„ç¨‹åºå¤åˆ¶åˆ°å­ç›®å½•å³å¯ï¼
+4.iceé…ç½®
 /home/www/require/app/code/core/Game/Snapshot/etc/config.xml
-5,´Ó±¸·İÖĞ¿½±´require/app/code/core/Game/Adminhtml/Controller/Action.php£¨Ç°Ì¨£©
-6,Çåweb»º´æ
+5,ä»å¤‡ä»½ä¸­æ‹·è´require/app/code/core/Game/Adminhtml/Controller/Action.phpï¼ˆå‰å°ï¼‰
+6,æ¸…webç¼“å­˜
 /home/www/require/var/cache/:
-7,mediaºÍrequireÄ¿Â¼È¨ÏŞ±ØĞëÊÇ£º0777
-Í¬Ê±media¼°Æä×ÓÄ¿Â¼¶¼ÊÇ£º0777
-requireºÍvar£¨¼°varµÄ×ÓÄ¿Â¼¶¼ÊÇ0777£©
-8.¼ÇµÃ±¸·İ´ÓDBÉÏµÄindex.phpÎÄ¼ş£¬´ËÎÄ¼şÓëÇ°Ì¨µÄindex.phpÎÄ¼ş²»Ò»Ñù
-ÅäÖÃÍê³É£¡
-¿ØÖÆhttp×ªhttpsµÄÅäÖÃÎÄ¼ş
+7,mediaå’Œrequireç›®å½•æƒé™å¿…é¡»æ˜¯ï¼š0777
+åŒæ—¶mediaåŠå…¶å­ç›®å½•éƒ½æ˜¯ï¼š0777
+requireå’Œvarï¼ˆåŠvarçš„å­ç›®å½•éƒ½æ˜¯0777ï¼‰
+8.è®°å¾—å¤‡ä»½ä»DBä¸Šçš„index.phpæ–‡ä»¶ï¼Œæ­¤æ–‡ä»¶ä¸å‰å°çš„index.phpæ–‡ä»¶ä¸ä¸€æ ·
+é…ç½®å®Œæˆï¼
+æ§åˆ¶httpè½¬httpsçš„é…ç½®æ–‡ä»¶
 require/app/code/core/Game/Core/Model/Url.php
 
 
-Linux²¿·Ö£º
+Linuxéƒ¨åˆ†ï¼š
 linux for fun
 
 yes "$(seq 232 255;seq 254 -1 233)" |
-while read i; do printf "\x1b[48;5;${i}m\n"; sleep .01; done ÆÁÄ»ºÚ°×
+while read i; do printf "\x1b[48;5;${i}m\n"; sleep .01; done å±å¹•é»‘ç™½
 
 tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock |
-GREP_COLOR="1;32" grep --color "[^ ]"  ÆÁÄ»¶¯»­
+GREP_COLOR="1;32" grep --color "[^ ]"  å±å¹•åŠ¨ç”»
 
-Esc+. ÈÈ½¨alt+. »ò esc+. ¿ÉÒÔ°ÑÉÏ´ÎÃüÁîĞĞµÄ²ÎÊı¸øÖØ¸´³öÀ´
+Esc+. çƒ­å»ºalt+. æˆ– esc+. å¯ä»¥æŠŠä¸Šæ¬¡å‘½ä»¤è¡Œçš„å‚æ•°ç»™é‡å¤å‡ºæ¥
 
-!$ ´ú±íÁËÉÏÒ»¸öÃüÁîµÄ×îºóÒ»¸ö×Ö·û´® 
+!$ ä»£è¡¨äº†ä¸Šä¸€ä¸ªå‘½ä»¤çš„æœ€åä¸€ä¸ªå­—ç¬¦ä¸² 
 
-^old^new Ìæ»»Ç°Ò»ÌõÃüÁîÀïµÄ²¿·Ö×Ö·û´®¡£Ò²¿ÉÒÔÊ¹ÓÃ !!:gs/old/new
+^old^new æ›¿æ¢å‰ä¸€æ¡å‘½ä»¤é‡Œçš„éƒ¨åˆ†å­—ç¬¦ä¸²ã€‚ä¹Ÿå¯ä»¥ä½¿ç”¨ !!:gs/old/new
 
-date -d@1234567890 Ê±¼ä½Ø×ªÊ±¼ä
+date -d@1234567890 æ—¶é—´æˆªè½¬æ—¶é—´
 
-mtr www.example.com ×·×ÙÂ·ÓÉ
+mtr www.example.com è¿½è¸ªè·¯ç”±
 
-echo ¡°ls -l¡± | at midnight ÔÚÄ³¸öÊ±¼äÔËĞĞÄ³¸öÃüÁî
+echo â€œls -lâ€ | at midnight åœ¨æŸä¸ªæ—¶é—´è¿è¡ŒæŸä¸ªå‘½ä»¤
 
-curl -u user:pass -d status=¡±Tweeting from the shell¡± http://twitter.com/statuses/update.xml  ÃüÁîĞĞµÄ·½Ê½¸üĞÂtwitter¡£
+curl -u user:pass -d status=â€Tweeting from the shellâ€ http://twitter.com/statuses/update.xml  å‘½ä»¤è¡Œçš„æ–¹å¼æ›´æ–°twitterã€‚
 
-curl -u username ¨Csilent ¡°https://mail.google.com/mail/feed/atom¡± | perl -ne ¡®print ¡°\t¡± if /<name>/; print ¡°$2\n¡± if /<(title|name)>(.*)<\/\1>/;¡¯ ¼ì²éÄãµÄgmailÎ´¶ÁÓÊ¼ş
+curl -u username Csilent â€œhttps://mail.google.com/mail/feed/atomâ€ | perl -ne â€˜print â€œ\tâ€ if /<name>/; print â€œ$2\nâ€ if /<(title|name)>(.*)<\/\1>/;â€™ æ£€æŸ¥ä½ çš„gmailæœªè¯»é‚®ä»¶
 
-ps aux | sort -nk +4 | tail ÁĞ³öÍ·Ê®¸ö×îºÄÄÚ´æµÄ½ø³Ì
+ps aux | sort -nk +4 | tail åˆ—å‡ºå¤´åä¸ªæœ€è€—å†…å­˜çš„è¿›ç¨‹
 ps aux | sort -nk +3 | tail
 
-tail -f /path/to/file.log | sed '/^Finished: SUCCESS$/ q'  ÊµÊ±¼à¿Ø²¢¹ıÂËlogÊÇ·ñ³öÏÖÁËÄ³Ìõ¼ÇÂ¼¡£
+tail -f /path/to/file.log | sed '/^Finished: SUCCESS$/ q'  å®æ—¶ç›‘æ§å¹¶è¿‡æ»¤logæ˜¯å¦å‡ºç°äº†æŸæ¡è®°å½•ã€‚
 
-ssh user@server bash < /path/to/local/script.sh  ÔÚÔ¶³Ì»úÆ÷ÉÏÔËĞĞÒ»¶Î½Å±¾¡£ÕâÌõÃüÁî×î´óµÄºÃ´¦¾ÍÊÇ²»ÓÃ°Ñ½Å±¾¿½µ½Ô¶³Ì»úÆ÷ÉÏ
+ssh user@server bash < /path/to/local/script.sh  åœ¨è¿œç¨‹æœºå™¨ä¸Šè¿è¡Œä¸€æ®µè„šæœ¬ã€‚è¿™æ¡å‘½ä»¤æœ€å¤§çš„å¥½å¤„å°±æ˜¯ä¸ç”¨æŠŠè„šæœ¬æ‹·åˆ°è¿œç¨‹æœºå™¨ä¸Š
 
-ssh user@host cat /path/to/remotefile | diff /path/to/localfile - ±È½ÏÒ»¸öÔ¶³ÌÎÄ¼şºÍÒ»¸ö±¾µØÎÄ¼ş
+ssh user@host cat /path/to/remotefile | diff /path/to/localfile - æ¯”è¾ƒä¸€ä¸ªè¿œç¨‹æ–‡ä»¶å’Œä¸€ä¸ªæœ¬åœ°æ–‡ä»¶
 
-screen -d -m -S some_name ping my_router  ºóÌ¨ÔËĞĞÒ»¶Î²»ÖÕÖ¹µÄ³ÌĞò£¬²¢¿ÉÒÔËæÊ±²é¿´ËüµÄ×´Ì¬
+screen -d -m -S some_name ping my_router  åå°è¿è¡Œä¸€æ®µä¸ç»ˆæ­¢çš„ç¨‹åºï¼Œå¹¶å¯ä»¥éšæ—¶æŸ¥çœ‹å®ƒçš„çŠ¶æ€
 
-wget --random-wait -r -p -e robots=off -U mozilla http://www.example.com ÏÂÔØÕû¸öwww.example.comÍøÕ¾
+wget --random-wait -r -p -e robots=off -U mozilla http://www.example.com ä¸‹è½½æ•´ä¸ªwww.example.comç½‘ç«™
 
-curl ifconfig.me ²é¿´ÍâÍøIP
+curl ifconfig.me æŸ¥çœ‹å¤–ç½‘IP
 
-python -m SimpleHTTPServer µ±Ç°Ä¿Â¼ÉèÎªHTTP·şÎñÄ¿Â¼£¬¿ÉÒÔÍ¨¹ıhttp://localhost:8000·ÃÎÊ
+python -m SimpleHTTPServer å½“å‰ç›®å½•è®¾ä¸ºHTTPæœåŠ¡ç›®å½•ï¼Œå¯ä»¥é€šè¿‡http://localhost:8000è®¿é—®
 
 history | awk '{CMD[$2]++;count++;} END { for (a in CMD )print CMD[a] " " CMD[a]/count*100 "% " a }' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl | head -n10 
 
 
-possibly_hanging_job & { sleep ${TIMEOUT}; eval 'kill -9 $!' &>/dev/null; } É±µô³öÎÊÌâµÄ³ÌĞò
+possibly_hanging_job & { sleep ${TIMEOUT}; eval 'kill -9 $!' &>/dev/null; } æ€æ‰å‡ºé—®é¢˜çš„ç¨‹åº
 
 curl --head -s "http://www.068.com/customer/validate/username/?ajax=true&username=dsfafa" |awk '/HTTP/{print $2}'
 
-ÕıÔò±í´ïÊ½ÈëÃÅ£º
-\\Æ¥Åä\£¬µÚÒ»¸ö\Îª×ªÒå×Ö·û
-\bÓÃ·¨£º
-¾«È·µØ²éÕÒhiÕâ¸öµ¥´ÊµÄ»°£¬ÎÒÃÇÓ¦¸ÃÊ¹ÓÃ\bhi\b
-\b Ö»Æ¥ÅäÒ»¸öÎ»ÖÃ ´ú±í×Åµ¥´ÊµÄ¿ªÍ·»ò½áÎ²£¬Ò²¾ÍÊÇµ¥´ÊµÄ·Ö½ç´¦¡£
-hiºóÃæ²»Ô¶´¦¸ú×ÅÒ»¸öLucy£¬ÄãÓ¦¸ÃÓÃ\bhi\b.*\bLucy\b
-. Æ¥Åä³ıÁË»»ĞĞ·ûµÄÈÎÒâ×Ö·û£¬* Ç°±ßÄÚÈİ¿ÉÒÔÁ¬ĞøÖØ¸´Ê¹ÓÃÈÎÒâ´Î¡£.*´ú±íÈÎÒâÊıÁ¿µÄ²»°üº¬»»ĞĞµÄ×Ö·û
-+ÓÃ·¨£º
-+ÔòÆ¥ÅäÖØ¸´1´Î»ò¸ü¶à´Î ±È*Òª¶àÒ»´Î£¬*¿ÉÄÜÎª0´Î 
-\d+ Æ¥Åä1¸ö»ò¸ü¶àÁ¬ĞøµÄÊı×Ö
-\dÓÃ·¨£º
-\dÊÇ¸öĞÂµÄÔª×Ö·û£¬Æ¥ÅäÒ»Î»Êı×Ö(0£¬»ò1£¬»ò2£¬»ò¡­¡­)
-0\d\d-\d\d\d\d\d\d\d\dÆ¥ÅäÕâÑùµÄ×Ö·û´®£ºÒÔ0¿ªÍ·£¬È»ºóÊÇÁ½¸öÊı×Ö£¬È»ºóÊÇÒ»¸öÁ¬×ÖºÅ¡°-¡±£¬×îºóÊÇ8¸öÊı×Ö(Ò²¾ÍÊÇÖĞ¹úµÄµç»°ºÅÂë¡£µ±È»£¬Õâ¸öÀı×ÓÖ»ÄÜÆ¥ÅäÇøºÅÎª3Î»µÄÇéĞÎ)
-±ÜÃâÂé·³¿ÉÒÔĞ´³É£º0\d{2}-\d{8}
-\sÓÃ·¨£º
-\sÆ¥ÅäÈÎÒâµÄ¿Õ°×·û£¬°üÀ¨¿Õ¸ñ£¬ÖÆ±í·û(Tab)£¬»»ĞĞ·û£¬ÖĞÎÄÈ«½Ç¿Õ¸ñµÈ
-\wÓÃ·¨£º
-\wÆ¥Åä×ÖÄ¸»òÊı×Ö»òÏÂ»®Ïß»òºº×ÖµÈ¡£
-^£¬$ Æ¥ÅäÎ»ÖÃºÍ\bÏàÊÔ¡£^Æ¥Åä¿ªÊ¼£¬$Æ¥Åä½áÎ²
-\1´ú±í·Ö×é1Æ¥ÅäµÄÎÄ±¾
-(?=exp)Ò²½ĞÁã¿í¶ÈÕıÔ¤²âÏÈĞĞ¶ÏÑÔ£¬Ëü¶ÏÑÔ×ÔÉí³öÏÖµÄÎ»ÖÃµÄºóÃæÄÜÆ¥Åä±í´ïÊ½exp
-(?<=exp)Ò²½ĞÁã¿í¶ÈÕı»Ø¹Ëºó·¢¶ÏÑÔ£¬Ëü¶ÏÑÔ×ÔÉí³öÏÖµÄÎ»ÖÃµÄÇ°ÃæÄÜÆ¥Åä±í´ïÊ½exp
-(?!exp)£¬¶ÏÑÔ´ËÎ»ÖÃµÄºóÃæ²»ÄÜÆ¥Åä±í´ïÊ½exp
+æ­£åˆ™è¡¨è¾¾å¼å…¥é—¨ï¼š
+\\åŒ¹é…\ï¼Œç¬¬ä¸€ä¸ª\ä¸ºè½¬ä¹‰å­—ç¬¦
+\bç”¨æ³•ï¼š
+ç²¾ç¡®åœ°æŸ¥æ‰¾hiè¿™ä¸ªå•è¯çš„è¯ï¼Œæˆ‘ä»¬åº”è¯¥ä½¿ç”¨\bhi\b
+\b åªåŒ¹é…ä¸€ä¸ªä½ç½® ä»£è¡¨ç€å•è¯çš„å¼€å¤´æˆ–ç»“å°¾ï¼Œä¹Ÿå°±æ˜¯å•è¯çš„åˆ†ç•Œå¤„ã€‚
+hiåé¢ä¸è¿œå¤„è·Ÿç€ä¸€ä¸ªLucyï¼Œä½ åº”è¯¥ç”¨\bhi\b.*\bLucy\b
+. åŒ¹é…é™¤äº†æ¢è¡Œç¬¦çš„ä»»æ„å­—ç¬¦ï¼Œ* å‰è¾¹å†…å®¹å¯ä»¥è¿ç»­é‡å¤ä½¿ç”¨ä»»æ„æ¬¡ã€‚.*ä»£è¡¨ä»»æ„æ•°é‡çš„ä¸åŒ…å«æ¢è¡Œçš„å­—ç¬¦
++ç”¨æ³•ï¼š
++åˆ™åŒ¹é…é‡å¤1æ¬¡æˆ–æ›´å¤šæ¬¡ æ¯”*è¦å¤šä¸€æ¬¡ï¼Œ*å¯èƒ½ä¸º0æ¬¡ 
+\d+ åŒ¹é…1ä¸ªæˆ–æ›´å¤šè¿ç»­çš„æ•°å­—
+\dç”¨æ³•ï¼š
+\dæ˜¯ä¸ªæ–°çš„å…ƒå­—ç¬¦ï¼ŒåŒ¹é…ä¸€ä½æ•°å­—(0ï¼Œæˆ–1ï¼Œæˆ–2ï¼Œæˆ–â€¦â€¦)
+0\d\d-\d\d\d\d\d\d\d\dåŒ¹é…è¿™æ ·çš„å­—ç¬¦ä¸²ï¼šä»¥0å¼€å¤´ï¼Œç„¶åæ˜¯ä¸¤ä¸ªæ•°å­—ï¼Œç„¶åæ˜¯ä¸€ä¸ªè¿å­—å·â€œ-â€ï¼Œæœ€åæ˜¯8ä¸ªæ•°å­—(ä¹Ÿå°±æ˜¯ä¸­å›½çš„ç”µè¯å·ç ã€‚å½“ç„¶ï¼Œè¿™ä¸ªä¾‹å­åªèƒ½åŒ¹é…åŒºå·ä¸º3ä½çš„æƒ…å½¢)
+é¿å…éº»çƒ¦å¯ä»¥å†™æˆï¼š0\d{2}-\d{8}
+\sç”¨æ³•ï¼š
+\såŒ¹é…ä»»æ„çš„ç©ºç™½ç¬¦ï¼ŒåŒ…æ‹¬ç©ºæ ¼ï¼Œåˆ¶è¡¨ç¬¦(Tab)ï¼Œæ¢è¡Œç¬¦ï¼Œä¸­æ–‡å…¨è§’ç©ºæ ¼ç­‰
+\wç”¨æ³•ï¼š
+\wåŒ¹é…å­—æ¯æˆ–æ•°å­—æˆ–ä¸‹åˆ’çº¿æˆ–æ±‰å­—ç­‰ã€‚
+^ï¼Œ$ åŒ¹é…ä½ç½®å’Œ\bç›¸è¯•ã€‚^åŒ¹é…å¼€å§‹ï¼Œ$åŒ¹é…ç»“å°¾
+\1ä»£è¡¨åˆ†ç»„1åŒ¹é…çš„æ–‡æœ¬
+(?=exp)ä¹Ÿå«é›¶å®½åº¦æ­£é¢„æµ‹å…ˆè¡Œæ–­è¨€ï¼Œå®ƒæ–­è¨€è‡ªèº«å‡ºç°çš„ä½ç½®çš„åé¢èƒ½åŒ¹é…è¡¨è¾¾å¼exp
+(?<=exp)ä¹Ÿå«é›¶å®½åº¦æ­£å›é¡¾åå‘æ–­è¨€ï¼Œå®ƒæ–­è¨€è‡ªèº«å‡ºç°çš„ä½ç½®çš„å‰é¢èƒ½åŒ¹é…è¡¨è¾¾å¼exp
+(?!exp)ï¼Œæ–­è¨€æ­¤ä½ç½®çš„åé¢ä¸èƒ½åŒ¹é…è¡¨è¾¾å¼exp
 
-Àı×Ó£º
-\ba\w*\bÆ¥ÅäÒÔ×ÖÄ¸a¿ªÍ·µÄµ¥´Ê¡ª¡ªÏÈÊÇÄ³¸öµ¥´Ê¿ªÊ¼´¦(\b)£¬È»ºóÊÇ×ÖÄ¸a,È»ºóÊÇÈÎÒâÊıÁ¿µÄ×ÖÄ¸»òÊı×Ö(\w*)£¬×îºóÊÇµ¥´Ê½áÊø´¦(\b)
-\b\w{6}\b Æ¥Åä¸ÕºÃ6¸ö×Ö·ûµÄµ¥´Ê
-^\d{5,12}$ Æ¥Åä5Î»µ½12Î»µÄÊı×Ö£¬±ÈÈçËµQQºÅ
+ä¾‹å­ï¼š
+\ba\w*\båŒ¹é…ä»¥å­—æ¯aå¼€å¤´çš„å•è¯â€•â€•å…ˆæ˜¯æŸä¸ªå•è¯å¼€å§‹å¤„(\b)ï¼Œç„¶åæ˜¯å­—æ¯a,ç„¶åæ˜¯ä»»æ„æ•°é‡çš„å­—æ¯æˆ–æ•°å­—(\w*)ï¼Œæœ€åæ˜¯å•è¯ç»“æŸå¤„(\b)
+\b\w{6}\b åŒ¹é…åˆšå¥½6ä¸ªå­—ç¬¦çš„å•è¯
+^\d{5,12}$ åŒ¹é…5ä½åˆ°12ä½çš„æ•°å­—ï¼Œæ¯”å¦‚è¯´QQå·
 
-deerchao\.net Æ¥Åädeerchao.net c:\\WindowsÆ¥Åäc:\windows
+deerchao\.net åŒ¹é…deerchao.net c:\\WindowsåŒ¹é…c:\windows
 
-[aeiou]¾ÍÆ¥ÅäÈÎºÎÒ»¸öÓ¢ÎÄÔªÒô×ÖÄ¸,[.?!]Æ¥Åä±êµã·ûºÅ(.»ò?»ò!)£¬[0-9]´ú±íµÄº¬ÒâÓë\d¾ÍÊÇÍêÈ«Ò»ÖÂµÄ£ºÒ»Î»Êı×Ö£»Í¬Àí[a-z0-9A-Z_]Ò²ÍêÈ«µÈÍ¬ÓÚ\w£¨Èç¹ûÖ»¿¼ÂÇÓ¢ÎÄµÄ»°£©¡£
+[aeiou]å°±åŒ¹é…ä»»ä½•ä¸€ä¸ªè‹±æ–‡å…ƒéŸ³å­—æ¯,[.?!]åŒ¹é…æ ‡ç‚¹ç¬¦å·(.æˆ–?æˆ–!)ï¼Œ[0-9]ä»£è¡¨çš„å«æ„ä¸\då°±æ˜¯å®Œå…¨ä¸€è‡´çš„ï¼šä¸€ä½æ•°å­—ï¼›åŒç†[a-z0-9A-Z_]ä¹Ÿå®Œå…¨ç­‰åŒäº\wï¼ˆå¦‚æœåªè€ƒè™‘è‹±æ–‡çš„è¯ï¼‰ã€‚
 
-\(?0\d{2}[) -]?\d{8} ·ÖÎö£ºÊ×ÏÈÊÇÒ»¸ö×ªÒå×Ö·û\(,ËüÄÜ³öÏÖ0´Î»ò1´Î(?),È»ºóÊÇÒ»¸ö0£¬ºóÃæ¸ú×Å2¸öÊı×Ö(\d{2})£¬È»ºóÊÇ)»ò-»ò¿Õ¸ñÖĞµÄÒ»¸ö£¬Ëü³öÏÖ1´Î»ò²»³öÏÖ(?)£¬×îºóÊÇ8¸öÊı×Ö(\d{8})¡£(010)88886666£¬»ò022-22334455£¬»ò02912345678µÈ 010)12345678»ò(022-87654321¡°²»ÕıÈ·¡± ¸ñÊ½
-\(?0\d{2}\)?[- ]?\d{8}|0\d{2}[- ]?\d{8}Æ¥Åä3Î»ÇøºÅµÄµç»°ºÅÂë£¬ÆäÖĞÇøºÅ¿ÉÒÔÓÃĞ¡À¨ºÅÀ¨ÆğÀ´£¬Ò²¿ÉÒÔ²»ÓÃ£¬ÇøºÅÓë±¾µØºÅ¼ä¿ÉÒÔÓÃÁ¬×ÖºÅ»ò¿Õ¸ñ¼ä¸ô£¬Ò²¿ÉÒÔÃ»ÓĞ¼ä¸ô
-((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?) IPµØÖ·Æ¥Åä 2[0-4]\d|25[0-5] ±íÊ¾200-249|250-255 [01]?\d\d?Æ¥Åä000-199
-\S+Æ¥Åä²»°üº¬¿Õ°×·ûµÄ×Ö·û´®¡£
-<a[^>]+>Æ¥ÅäÓÃ¼âÀ¨ºÅÀ¨ÆğÀ´µÄÒÔa¿ªÍ·µÄ×Ö·û´®¡£
+\(?0\d{2}[) -]?\d{8} åˆ†æï¼šé¦–å…ˆæ˜¯ä¸€ä¸ªè½¬ä¹‰å­—ç¬¦\(,å®ƒèƒ½å‡ºç°0æ¬¡æˆ–1æ¬¡(?),ç„¶åæ˜¯ä¸€ä¸ª0ï¼Œåé¢è·Ÿç€2ä¸ªæ•°å­—(\d{2})ï¼Œç„¶åæ˜¯)æˆ–-æˆ–ç©ºæ ¼ä¸­çš„ä¸€ä¸ªï¼Œå®ƒå‡ºç°1æ¬¡æˆ–ä¸å‡ºç°(?)ï¼Œæœ€åæ˜¯8ä¸ªæ•°å­—(\d{8})ã€‚(010)88886666ï¼Œæˆ–022-22334455ï¼Œæˆ–02912345678ç­‰ 010)12345678æˆ–(022-87654321â€œä¸æ­£ç¡®â€ æ ¼å¼
+\(?0\d{2}\)?[- ]?\d{8}|0\d{2}[- ]?\d{8}åŒ¹é…3ä½åŒºå·çš„ç”µè¯å·ç ï¼Œå…¶ä¸­åŒºå·å¯ä»¥ç”¨å°æ‹¬å·æ‹¬èµ·æ¥ï¼Œä¹Ÿå¯ä»¥ä¸ç”¨ï¼ŒåŒºå·ä¸æœ¬åœ°å·é—´å¯ä»¥ç”¨è¿å­—å·æˆ–ç©ºæ ¼é—´éš”ï¼Œä¹Ÿå¯ä»¥æ²¡æœ‰é—´éš”
+((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?) IPåœ°å€åŒ¹é… 2[0-4]\d|25[0-5] è¡¨ç¤º200-249|250-255 [01]?\d\d?åŒ¹é…000-199
+\S+åŒ¹é…ä¸åŒ…å«ç©ºç™½ç¬¦çš„å­—ç¬¦ä¸²ã€‚
+<a[^>]+>åŒ¹é…ç”¨å°–æ‹¬å·æ‹¬èµ·æ¥çš„ä»¥aå¼€å¤´çš„å­—ç¬¦ä¸²ã€‚
 
-\b(\w+)\b\s+\1\b¿ÉÒÔÓÃÀ´Æ¥ÅäÖØ¸´µÄµ¥´Ê£¬Ïñgo go, »òÕßkitty kitty¡£Õâ¸ö±í´ïÊ½Ê×ÏÈÊÇÒ»¸öµ¥´Ê£¬Ò²¾ÍÊÇµ¥´Ê¿ªÊ¼´¦ºÍ½áÊø´¦Ö®¼äµÄ¶àÓÚÒ»¸öµÄ×ÖÄ¸»òÊı×Ö(\b(\w+)\b)£¬Õâ¸öµ¥´Ê»á±»²¶»ñµ½±àºÅÎª1µÄ·Ö×éÖĞ£¬È»ºóÊÇ1¸ö»ò¼¸¸ö¿Õ°×·û(\s+)£¬×îºóÊÇ·Ö×é1ÖĞ²¶»ñµÄÄÚÈİ£¨Ò²¾ÍÊÇÇ°ÃæÆ¥ÅäµÄÄÇ¸öµ¥´Ê£©(\1)¡£
-\b(?<Word>\w+)\b\s+\k<Word>\b (?<Word>\w+)(»òÕß°Ñ¼âÀ¨ºÅ»»³É'Ò²ĞĞ£º(?'Word'\w+)),ÕâÑù¾Í°Ñ\w+µÄ×éÃûÖ¸¶¨ÎªWord¡£ÒıÓÃÊ±£¬¿ÉÒÔÊ¹ÓÃ\k<Word>
+\b(\w+)\b\s+\1\bå¯ä»¥ç”¨æ¥åŒ¹é…é‡å¤çš„å•è¯ï¼Œåƒgo go, æˆ–è€…kitty kittyã€‚è¿™ä¸ªè¡¨è¾¾å¼é¦–å…ˆæ˜¯ä¸€ä¸ªå•è¯ï¼Œä¹Ÿå°±æ˜¯å•è¯å¼€å§‹å¤„å’Œç»“æŸå¤„ä¹‹é—´çš„å¤šäºä¸€ä¸ªçš„å­—æ¯æˆ–æ•°å­—(\b(\w+)\b)ï¼Œè¿™ä¸ªå•è¯ä¼šè¢«æ•è·åˆ°ç¼–å·ä¸º1çš„åˆ†ç»„ä¸­ï¼Œç„¶åæ˜¯1ä¸ªæˆ–å‡ ä¸ªç©ºç™½ç¬¦(\s+)ï¼Œæœ€åæ˜¯åˆ†ç»„1ä¸­æ•è·çš„å†…å®¹ï¼ˆä¹Ÿå°±æ˜¯å‰é¢åŒ¹é…çš„é‚£ä¸ªå•è¯ï¼‰(\1)ã€‚
+\b(?<Word>\w+)\b\s+\k<Word>\b (?<Word>\w+)(æˆ–è€…æŠŠå°–æ‹¬å·æ¢æˆ'ä¹Ÿè¡Œï¼š(?'Word'\w+)),è¿™æ ·å°±æŠŠ\w+çš„ç»„åæŒ‡å®šä¸ºWordã€‚å¼•ç”¨æ—¶ï¼Œå¯ä»¥ä½¿ç”¨\k<Word>
 
-\b\w+(?=ing\b)£¬Æ¥ÅäÒÔing½áÎ²µÄµ¥´ÊµÄÇ°Ãæ²¿·Ö(³ıÁËingÒÔÍâµÄ²¿·Ö)£¬Èç²éÕÒI'm singing while you're dancing.Ê±£¬Ëü»áÆ¥ÅäsingºÍdanc¡£
+\b\w+(?=ing\b)ï¼ŒåŒ¹é…ä»¥ingç»“å°¾çš„å•è¯çš„å‰é¢éƒ¨åˆ†(é™¤äº†ingä»¥å¤–çš„éƒ¨åˆ†)ï¼Œå¦‚æŸ¥æ‰¾I'm singing while you're dancing.æ—¶ï¼Œå®ƒä¼šåŒ¹é…singå’Œdancã€‚
 
-(?<=\s)\d+(?=\s)Æ¥ÅäÒÔ¿Õ°×·û¼ä¸ôµÄÊı×Ö(ÔÙ´ÎÇ¿µ÷£¬²»°üÀ¨ÕâĞ©¿Õ°×·û)
+(?<=\s)\d+(?=\s)åŒ¹é…ä»¥ç©ºç™½ç¬¦é—´éš”çš„æ•°å­—(å†æ¬¡å¼ºè°ƒï¼Œä¸åŒ…æ‹¬è¿™äº›ç©ºç™½ç¬¦)
 
-\b\w*q[^u]\w*\bÆ¥Åä°üº¬ºóÃæ²»ÊÇ×ÖÄ¸uµÄ×ÖÄ¸qµÄµ¥´Ê¡£µ«ÊÇÈç¹û¶à×ö²âÊÔ(»òÕßÄãË¼Î¬×ã¹»ÃôÈñ£¬Ö±½Ó¾Í¹Û²ì³öÀ´ÁË)£¬Äã»á·¢ÏÖ£¬Èç¹ûq³öÏÖÔÚµ¥´ÊµÄ½áÎ²µÄ»°£¬ÏñIraq,Benq£¬Õâ¸ö±í´ïÊ½¾Í»á³ö´í¡£ÕâÊÇÒòÎª[^u]×ÜÒªÆ¥ÅäÒ»¸ö×Ö·û£¬ËùÒÔÈç¹ûqÊÇµ¥´ÊµÄ×îºóÒ»¸ö×Ö·ûµÄ»°£¬ºóÃæµÄ[^u]½«»áÆ¥ÅäqºóÃæµÄµ¥´Ê·Ö¸ô·û(¿ÉÄÜÊÇ¿Õ¸ñ£¬»òÕßÊÇ¾äºÅ»òÆäËüµÄÊ²Ã´)£¬ºóÃæµÄ\w*\b½«»áÆ¥ÅäÏÂÒ»¸öµ¥´Ê£¬ÓÚÊÇ\b\w*q[^u]\w*\b¾ÍÄÜÆ¥ÅäÕû¸öIraq fighting¡£¸ºÏòÁã¿í¶ÏÑÔÄÜ½â¾öÕâÑùµÄÎÊÌâ£¬ÒòÎªËüÖ»Æ¥ÅäÒ»¸öÎ»ÖÃ£¬²¢²»Ïû·ÑÈÎºÎ×Ö·û¡£ÏÖÔÚ£¬ÎÒÃÇ¿ÉÒÔÕâÑùÀ´½â¾öÕâ¸öÎÊÌâ£º\b\w*q(?!u)\w*\b
+\b\w*q[^u]\w*\båŒ¹é…åŒ…å«åé¢ä¸æ˜¯å­—æ¯uçš„å­—æ¯qçš„å•è¯ã€‚ä½†æ˜¯å¦‚æœå¤šåšæµ‹è¯•(æˆ–è€…ä½ æ€ç»´è¶³å¤Ÿæ•é”ï¼Œç›´æ¥å°±è§‚å¯Ÿå‡ºæ¥äº†)ï¼Œä½ ä¼šå‘ç°ï¼Œå¦‚æœqå‡ºç°åœ¨å•è¯çš„ç»“å°¾çš„è¯ï¼ŒåƒIraq,Benqï¼Œè¿™ä¸ªè¡¨è¾¾å¼å°±ä¼šå‡ºé”™ã€‚è¿™æ˜¯å› ä¸º[^u]æ€»è¦åŒ¹é…ä¸€ä¸ªå­—ç¬¦ï¼Œæ‰€ä»¥å¦‚æœqæ˜¯å•è¯çš„æœ€åä¸€ä¸ªå­—ç¬¦çš„è¯ï¼Œåé¢çš„[^u]å°†ä¼šåŒ¹é…qåé¢çš„å•è¯åˆ†éš”ç¬¦(å¯èƒ½æ˜¯ç©ºæ ¼ï¼Œæˆ–è€…æ˜¯å¥å·æˆ–å…¶å®ƒçš„ä»€ä¹ˆ)ï¼Œåé¢çš„\w*\bå°†ä¼šåŒ¹é…ä¸‹ä¸€ä¸ªå•è¯ï¼Œäºæ˜¯\b\w*q[^u]\w*\bå°±èƒ½åŒ¹é…æ•´ä¸ªIraq fightingã€‚è´Ÿå‘é›¶å®½æ–­è¨€èƒ½è§£å†³è¿™æ ·çš„é—®é¢˜ï¼Œå› ä¸ºå®ƒåªåŒ¹é…ä¸€ä¸ªä½ç½®ï¼Œå¹¶ä¸æ¶ˆè´¹ä»»ä½•å­—ç¬¦ã€‚ç°åœ¨ï¼Œæˆ‘ä»¬å¯ä»¥è¿™æ ·æ¥è§£å†³è¿™ä¸ªé—®é¢˜ï¼š\b\w*q(?!u)\w*\b
 
-\d{3}(?!\d)Æ¥ÅäÈıÎ»Êı×Ö£¬¶øÇÒÕâÈıÎ»Êı×ÖµÄºóÃæ²»ÄÜÊÇÊı×Ö
-\b((?!abc)\w)+\bÆ¥Åä²»°üº¬Á¬Ğø×Ö·û´®abcµÄµ¥´Ê
-(?<![a-z])\d{7}Æ¥ÅäÇ°Ãæ²»ÊÇĞ¡Ğ´×ÖÄ¸µÄÆßÎ»Êı×Ö
-Ò»¸ö¸ü¸´ÔÓµÄÀı×Ó£º(?<=<(\w+)>).*(?=<\/\1>)Æ¥Åä²»°üº¬ÊôĞÔµÄ¼òµ¥HTML±êÇ©ÄÚÀïµÄÄÚÈİ¡£(?<=<(\w+)>)Ö¸¶¨ÁËÕâÑùµÄÇ°×º£º±»¼âÀ¨ºÅÀ¨ÆğÀ´µÄµ¥´Ê(±ÈÈç¿ÉÄÜÊÇ<b>)£¬È»ºóÊÇ.*(ÈÎÒâµÄ×Ö·û´®),×îºóÊÇÒ»¸öºó×º(?=<\/\1>)¡£×¢Òâºó×ºÀïµÄ\/£¬ËüÓÃµ½ÁËÇ°ÃæÌá¹ıµÄ×Ö·û×ªÒå£»\1ÔòÊÇÒ»¸ö·´ÏòÒıÓÃ£¬ÒıÓÃµÄÕıÊÇ²¶»ñµÄµÚÒ»×é£¬Ç°ÃæµÄ(\w+)Æ¥ÅäµÄÄÚÈİ£¬ÕâÑùÈç¹ûÇ°×ºÊµ¼ÊÉÏÊÇ<b>µÄ»°£¬ºó×º¾ÍÊÇ</b>ÁË¡£Õû¸ö±í´ïÊ½Æ¥ÅäµÄÊÇ<b>ºÍ</b>Ö®¼äµÄÄÚÈİ(ÔÙ´ÎÌáĞÑ£¬²»°üÀ¨Ç°×ººÍºó×º±¾Éí)
+\d{3}(?!\d)åŒ¹é…ä¸‰ä½æ•°å­—ï¼Œè€Œä¸”è¿™ä¸‰ä½æ•°å­—çš„åé¢ä¸èƒ½æ˜¯æ•°å­—
+\b((?!abc)\w)+\båŒ¹é…ä¸åŒ…å«è¿ç»­å­—ç¬¦ä¸²abcçš„å•è¯
+(?<![a-z])\d{7}åŒ¹é…å‰é¢ä¸æ˜¯å°å†™å­—æ¯çš„ä¸ƒä½æ•°å­—
+ä¸€ä¸ªæ›´å¤æ‚çš„ä¾‹å­ï¼š(?<=<(\w+)>).*(?=<\/\1>)åŒ¹é…ä¸åŒ…å«å±æ€§çš„ç®€å•HTMLæ ‡ç­¾å†…é‡Œçš„å†…å®¹ã€‚(?<=<(\w+)>)æŒ‡å®šäº†è¿™æ ·çš„å‰ç¼€ï¼šè¢«å°–æ‹¬å·æ‹¬èµ·æ¥çš„å•è¯(æ¯”å¦‚å¯èƒ½æ˜¯<b>)ï¼Œç„¶åæ˜¯.*(ä»»æ„çš„å­—ç¬¦ä¸²),æœ€åæ˜¯ä¸€ä¸ªåç¼€(?=<\/\1>)ã€‚æ³¨æ„åç¼€é‡Œçš„\/ï¼Œå®ƒç”¨åˆ°äº†å‰é¢æè¿‡çš„å­—ç¬¦è½¬ä¹‰ï¼›\1åˆ™æ˜¯ä¸€ä¸ªåå‘å¼•ç”¨ï¼Œå¼•ç”¨çš„æ­£æ˜¯æ•è·çš„ç¬¬ä¸€ç»„ï¼Œå‰é¢çš„(\w+)åŒ¹é…çš„å†…å®¹ï¼Œè¿™æ ·å¦‚æœå‰ç¼€å®é™…ä¸Šæ˜¯<b>çš„è¯ï¼Œåç¼€å°±æ˜¯</b>äº†ã€‚æ•´ä¸ªè¡¨è¾¾å¼åŒ¹é…çš„æ˜¯<b>å’Œ</b>ä¹‹é—´çš„å†…å®¹(å†æ¬¡æé†’ï¼Œä¸åŒ…æ‹¬å‰ç¼€å’Œåç¼€æœ¬èº«)
 
-Ğ¡À¨ºÅµÄÁíÒ»ÖÖÓÃÍ¾ÊÇÍ¨¹ıÓï·¨(?#comment)À´°üº¬×¢ÊÍ¡£ÀıÈç£º2[0-4]\d(?#200-249)|25[0-5](?#250-255)|[01]?\d\d?(?#0-199)
+å°æ‹¬å·çš„å¦ä¸€ç§ç”¨é€”æ˜¯é€šè¿‡è¯­æ³•(?#comment)æ¥åŒ…å«æ³¨é‡Šã€‚ä¾‹å¦‚ï¼š2[0-4]\d(?#200-249)|25[0-5](?#250-255)|[01]?\d\d?(?#0-199)
 
-(?<=    # ¶ÏÑÔÒªÆ¥ÅäµÄÎÄ±¾µÄÇ°×º
-<(\w+)> # ²éÕÒ¼âÀ¨ºÅÀ¨ÆğÀ´µÄ×ÖÄ¸»òÊı×Ö(¼´HTML/XML±êÇ©)
-)       # Ç°×º½áÊø
-.*      # Æ¥ÅäÈÎÒâÎÄ±¾
-(?=     # ¶ÏÑÔÒªÆ¥ÅäµÄÎÄ±¾µÄºó×º
-<\/\1>  # ²éÕÒ¼âÀ¨ºÅÀ¨ÆğÀ´µÄÄÚÈİ£ºÇ°ÃæÊÇÒ»¸ö"/"£¬ºóÃæÊÇÏÈÇ°²¶»ñµÄ±êÇ©
-)       # ºó×º½áÊø
+(?<=    # æ–­è¨€è¦åŒ¹é…çš„æ–‡æœ¬çš„å‰ç¼€
+<(\w+)> # æŸ¥æ‰¾å°–æ‹¬å·æ‹¬èµ·æ¥çš„å­—æ¯æˆ–æ•°å­—(å³HTML/XMLæ ‡ç­¾)
+)       # å‰ç¼€ç»“æŸ
+.*      # åŒ¹é…ä»»æ„æ–‡æœ¬
+(?=     # æ–­è¨€è¦åŒ¹é…çš„æ–‡æœ¬çš„åç¼€
+<\/\1>  # æŸ¥æ‰¾å°–æ‹¬å·æ‹¬èµ·æ¥çš„å†…å®¹ï¼šå‰é¢æ˜¯ä¸€ä¸ª"/"ï¼Œåé¢æ˜¯å…ˆå‰æ•è·çš„æ ‡ç­¾
+)       # åç¼€ç»“æŸ
 
 
-<                         #×îÍâ²ãµÄ×óÀ¨ºÅ
-    [^<>]*                #×îÍâ²ãµÄ×óÀ¨ºÅºóÃæµÄ²»ÊÇÀ¨ºÅµÄÄÚÈİ
+<                         #æœ€å¤–å±‚çš„å·¦æ‹¬å·
+    [^<>]*                #æœ€å¤–å±‚çš„å·¦æ‹¬å·åé¢çš„ä¸æ˜¯æ‹¬å·çš„å†…å®¹
     (
         (
-            (?'Open'<)    #Åöµ½ÁË×óÀ¨ºÅ£¬ÔÚºÚ°åÉÏĞ´Ò»¸ö"Open"
-            [^<>]*       #Æ¥Åä×óÀ¨ºÅºóÃæµÄ²»ÊÇÀ¨ºÅµÄÄÚÈİ
+            (?'Open'<)    #ç¢°åˆ°äº†å·¦æ‹¬å·ï¼Œåœ¨é»‘æ¿ä¸Šå†™ä¸€ä¸ª"Open"
+            [^<>]*       #åŒ¹é…å·¦æ‹¬å·åé¢çš„ä¸æ˜¯æ‹¬å·çš„å†…å®¹
         )+
         (
-            (?'-Open'>)   #Åöµ½ÁËÓÒÀ¨ºÅ£¬²ÁµôÒ»¸ö"Open"
-            [^<>]*        #Æ¥ÅäÓÒÀ¨ºÅºóÃæ²»ÊÇÀ¨ºÅµÄÄÚÈİ
+            (?'-Open'>)   #ç¢°åˆ°äº†å³æ‹¬å·ï¼Œæ“¦æ‰ä¸€ä¸ª"Open"
+            [^<>]*        #åŒ¹é…å³æ‹¬å·åé¢ä¸æ˜¯æ‹¬å·çš„å†…å®¹
         )+
     )*
-    (?(Open)(?!))         #ÔÚÓöµ½×îÍâ²ãµÄÓÒÀ¨ºÅÇ°Ãæ£¬ÅĞ¶ÏºÚ°åÉÏ»¹ÓĞÃ»ÓĞÃ»²ÁµôµÄ"Open"£»Èç¹û»¹ÓĞ£¬ÔòÆ¥ÅäÊ§°Ü
+    (?(Open)(?!))         #åœ¨é‡åˆ°æœ€å¤–å±‚çš„å³æ‹¬å·å‰é¢ï¼Œåˆ¤æ–­é»‘æ¿ä¸Šè¿˜æœ‰æ²¡æœ‰æ²¡æ“¦æ‰çš„"Open"ï¼›å¦‚æœè¿˜æœ‰ï¼Œåˆ™åŒ¹é…å¤±è´¥
 
->                         #×îÍâ²ãµÄÓÒÀ¨ºÅ
+>                         #æœ€å¤–å±‚çš„å³æ‹¬å·
 
-<div[^>]*>[^<>]*(((?'Open'<div[^>]*>)[^<>]*)+((?'-Open'</div>)[^<>]*)+)*(?(Open)(?!))</div Æ¥ÅäÇ¶Ì×µÄ<div>±êÇ©
+<div[^>]*>[^<>]*(((?'Open'<div[^>]*>)[^<>]*)+((?'-Open'</div>)[^<>]*)+)*(?(Open)(?!))</div åŒ¹é…åµŒå¥—çš„<div>æ ‡ç­¾
 
-´úÂë/Óï·¨	ËµÃ÷
-.			Æ¥Åä³ı»»ĞĞ·ûÒÔÍâµÄÈÎÒâ×Ö·û
-\w			Æ¥Åä×ÖÄ¸»òÊı×Ö»òÏÂ»®Ïß»òºº×Ö
-\s			Æ¥ÅäÈÎÒâµÄ¿Õ°×·û
-\d			Æ¥ÅäÊı×Ö
-\b			Æ¥Åäµ¥´ÊµÄ¿ªÊ¼»ò½áÊø
-^			Æ¥Åä×Ö·û´®µÄ¿ªÊ¼
-$			Æ¥Åä×Ö·û´®µÄ½áÊø
-*			ÖØ¸´Áã´Î»ò¸ü¶à´Î
-+			ÖØ¸´Ò»´Î»ò¸ü¶à´Î
-?			ÖØ¸´Áã´Î»òÒ»´Î
-{n}			ÖØ¸´n´Î
-{n,}		ÖØ¸´n´Î»ò¸ü¶à´Î
-{n,m}		ÖØ¸´nµ½m´Î
-\W			Æ¥ÅäÈÎÒâ²»ÊÇ×ÖÄ¸£¬Êı×Ö£¬ÏÂ»®Ïß£¬ºº×ÖµÄ×Ö·û
-\S			Æ¥ÅäÈÎÒâ²»ÊÇ¿Õ°×·ûµÄ×Ö·û
-\D			Æ¥ÅäÈÎÒâ·ÇÊı×ÖµÄ×Ö·û
-\B			Æ¥Åä²»ÊÇµ¥´Ê¿ªÍ·»ò½áÊøµÄÎ»ÖÃ
-[^x]		Æ¥Åä³ıÁËxÒÔÍâµÄÈÎÒâ×Ö·û
-[^aeiou]	Æ¥Åä³ıÁËaeiouÕâ¼¸¸ö×ÖÄ¸ÒÔÍâµÄÈÎÒâ×Ö·û
-(exp)		Æ¥Åäexp,²¢²¶»ñÎÄ±¾µ½×Ô¶¯ÃüÃûµÄ×éÀï
-(?<name>exp)Æ¥Åäexp,²¢²¶»ñÎÄ±¾µ½Ãû³ÆÎªnameµÄ×éÀï£¬Ò²¿ÉÒÔĞ´³É(?'name'exp)
-(?:exp)		Æ¥Åäexp,²»²¶»ñÆ¥ÅäµÄÎÄ±¾£¬Ò²²»¸ø´Ë·Ö×é·ÖÅä×éºÅ
-(?=exp)		Æ¥ÅäexpÇ°ÃæµÄÎ»ÖÃ
-(?<=exp)	Æ¥ÅäexpºóÃæµÄÎ»ÖÃ
-(?!exp)		Æ¥ÅäºóÃæ¸úµÄ²»ÊÇexpµÄÎ»ÖÃ
-(?<!exp)	Æ¥ÅäÇ°Ãæ²»ÊÇexpµÄÎ»ÖÃ
-(?#comment)	ÕâÖÖÀàĞÍµÄ·Ö×é²»¶ÔÕıÔò±í´ïÊ½µÄ´¦Àí²úÉúÈÎºÎÓ°Ïì£¬ÓÃÓÚÌá¹©×¢ÊÍÈÃÈËÔÄ¶Á
-*?			ÖØ¸´ÈÎÒâ´Î£¬µ«¾¡¿ÉÄÜÉÙÖØ¸´
-+?			ÖØ¸´1´Î»ò¸ü¶à´Î£¬µ«¾¡¿ÉÄÜÉÙÖØ¸´
-??			ÖØ¸´0´Î»ò1´Î£¬µ«¾¡¿ÉÄÜÉÙÖØ¸´
-{n,m}?		ÖØ¸´nµ½m´Î£¬µ«¾¡¿ÉÄÜÉÙÖØ¸´
-{n,}?		ÖØ¸´n´ÎÒÔÉÏ£¬µ«¾¡¿ÉÄÜÉÙÖØ¸´
-\a			±¨¾¯×Ö·û(´òÓ¡ËüµÄĞ§¹ûÊÇµçÄÔàÖÒ»Éù)
-\b			Í¨³£ÊÇµ¥´Ê·Ö½çÎ»ÖÃ£¬µ«Èç¹ûÔÚ×Ö·ûÀàÀïÊ¹ÓÃ´ú±íÍË¸ñ
-\t			ÖÆ±í·û£¬Tab
-\r			»Ø³µ
-\v			ÊúÏòÖÆ±í·û
-\f			»»Ò³·û
-\n			»»ĞĞ·û
+ä»£ç /è¯­æ³•	è¯´æ˜
+.			åŒ¹é…é™¤æ¢è¡Œç¬¦ä»¥å¤–çš„ä»»æ„å­—ç¬¦
+\w			åŒ¹é…å­—æ¯æˆ–æ•°å­—æˆ–ä¸‹åˆ’çº¿æˆ–æ±‰å­—
+\s			åŒ¹é…ä»»æ„çš„ç©ºç™½ç¬¦
+\d			åŒ¹é…æ•°å­—
+\b			åŒ¹é…å•è¯çš„å¼€å§‹æˆ–ç»“æŸ
+^			åŒ¹é…å­—ç¬¦ä¸²çš„å¼€å§‹
+$			åŒ¹é…å­—ç¬¦ä¸²çš„ç»“æŸ
+*			é‡å¤é›¶æ¬¡æˆ–æ›´å¤šæ¬¡
++			é‡å¤ä¸€æ¬¡æˆ–æ›´å¤šæ¬¡
+?			é‡å¤é›¶æ¬¡æˆ–ä¸€æ¬¡
+{n}			é‡å¤næ¬¡
+{n,}		é‡å¤næ¬¡æˆ–æ›´å¤šæ¬¡
+{n,m}		é‡å¤nåˆ°mæ¬¡
+\W			åŒ¹é…ä»»æ„ä¸æ˜¯å­—æ¯ï¼Œæ•°å­—ï¼Œä¸‹åˆ’çº¿ï¼Œæ±‰å­—çš„å­—ç¬¦
+\S			åŒ¹é…ä»»æ„ä¸æ˜¯ç©ºç™½ç¬¦çš„å­—ç¬¦
+\D			åŒ¹é…ä»»æ„éæ•°å­—çš„å­—ç¬¦
+\B			åŒ¹é…ä¸æ˜¯å•è¯å¼€å¤´æˆ–ç»“æŸçš„ä½ç½®
+[^x]		åŒ¹é…é™¤äº†xä»¥å¤–çš„ä»»æ„å­—ç¬¦
+[^aeiou]	åŒ¹é…é™¤äº†aeiouè¿™å‡ ä¸ªå­—æ¯ä»¥å¤–çš„ä»»æ„å­—ç¬¦
+(exp)		åŒ¹é…exp,å¹¶æ•è·æ–‡æœ¬åˆ°è‡ªåŠ¨å‘½åçš„ç»„é‡Œ
+(?<name>exp)åŒ¹é…exp,å¹¶æ•è·æ–‡æœ¬åˆ°åç§°ä¸ºnameçš„ç»„é‡Œï¼Œä¹Ÿå¯ä»¥å†™æˆ(?'name'exp)
+(?:exp)		åŒ¹é…exp,ä¸æ•è·åŒ¹é…çš„æ–‡æœ¬ï¼Œä¹Ÿä¸ç»™æ­¤åˆ†ç»„åˆ†é…ç»„å·
+(?=exp)		åŒ¹é…expå‰é¢çš„ä½ç½®
+(?<=exp)	åŒ¹é…expåé¢çš„ä½ç½®
+(?!exp)		åŒ¹é…åé¢è·Ÿçš„ä¸æ˜¯expçš„ä½ç½®
+(?<!exp)	åŒ¹é…å‰é¢ä¸æ˜¯expçš„ä½ç½®
+(?#comment)	è¿™ç§ç±»å‹çš„åˆ†ç»„ä¸å¯¹æ­£åˆ™è¡¨è¾¾å¼çš„å¤„ç†äº§ç”Ÿä»»ä½•å½±å“ï¼Œç”¨äºæä¾›æ³¨é‡Šè®©äººé˜…è¯»
+*?			é‡å¤ä»»æ„æ¬¡ï¼Œä½†å°½å¯èƒ½å°‘é‡å¤
++?			é‡å¤1æ¬¡æˆ–æ›´å¤šæ¬¡ï¼Œä½†å°½å¯èƒ½å°‘é‡å¤
+??			é‡å¤0æ¬¡æˆ–1æ¬¡ï¼Œä½†å°½å¯èƒ½å°‘é‡å¤
+{n,m}?		é‡å¤nåˆ°mæ¬¡ï¼Œä½†å°½å¯èƒ½å°‘é‡å¤
+{n,}?		é‡å¤næ¬¡ä»¥ä¸Šï¼Œä½†å°½å¯èƒ½å°‘é‡å¤
+\a			æŠ¥è­¦å­—ç¬¦(æ‰“å°å®ƒçš„æ•ˆæœæ˜¯ç”µè„‘å˜€ä¸€å£°)
+\b			é€šå¸¸æ˜¯å•è¯åˆ†ç•Œä½ç½®ï¼Œä½†å¦‚æœåœ¨å­—ç¬¦ç±»é‡Œä½¿ç”¨ä»£è¡¨é€€æ ¼
+\t			åˆ¶è¡¨ç¬¦ï¼ŒTab
+\r			å›è½¦
+\v			ç«–å‘åˆ¶è¡¨ç¬¦
+\f			æ¢é¡µç¬¦
+\n			æ¢è¡Œç¬¦
 \e			Escape
-\0nn		ASCII´úÂëÖĞ°Ë½øÖÆ´úÂëÎªnnµÄ×Ö·û
-\xnn		ASCII´úÂëÖĞÊ®Áù½øÖÆ´úÂëÎªnnµÄ×Ö·û
-\unnnn		Unicode´úÂëÖĞÊ®Áù½øÖÆ´úÂëÎªnnnnµÄ×Ö·û
-\cN			ASCII¿ØÖÆ×Ö·û¡£±ÈÈç\cC´ú±íCtrl+C
-\A			×Ö·û´®¿ªÍ·(ÀàËÆ^£¬µ«²»ÊÜ´¦Àí¶àĞĞÑ¡ÏîµÄÓ°Ïì)
-\Z			×Ö·û´®½áÎ²»òĞĞÎ²(²»ÊÜ´¦Àí¶àĞĞÑ¡ÏîµÄÓ°Ïì)
-\z			×Ö·û´®½áÎ²(ÀàËÆ$£¬µ«²»ÊÜ´¦Àí¶àĞĞÑ¡ÏîµÄÓ°Ïì)
-\G			µ±Ç°ËÑË÷µÄ¿ªÍ·
-\p{name}	UnicodeÖĞÃüÃûÎªnameµÄ×Ö·ûÀà£¬ÀıÈç\p{IsGreek}
-(?>exp)		Ì°À·×Ó±í´ïÊ½
-(?<x>-<y>exp)	Æ½ºâ×é
-(?im-nsx:exp)	ÔÚ×Ó±í´ïÊ½expÖĞ¸Ä±ä´¦ÀíÑ¡Ïî
-(?im-nsx)		Îª±í´ïÊ½ºóÃæµÄ²¿·Ö¸Ä±ä´¦ÀíÑ¡Ïî
-(?(exp)yes|no)	°Ñexpµ±×÷Áã¿íÕıÏòÏÈĞĞ¶ÏÑÔ£¬Èç¹ûÔÚÕâ¸öÎ»ÖÃÄÜÆ¥Åä£¬Ê¹ÓÃyes×÷Îª´Ë×éµÄ±í´ïÊ½£»·ñÔòÊ¹ÓÃno
-(?(exp)yes)		Í¬ÉÏ£¬Ö»ÊÇÊ¹ÓÃ¿Õ±í´ïÊ½×÷Îªno
-(?(name)yes|no)	Èç¹ûÃüÃûÎªnameµÄ×é²¶»ñµ½ÁËÄÚÈİ£¬Ê¹ÓÃyes×÷Îª±í´ïÊ½£»·ñÔòÊ¹ÓÃno
-(?(name)yes)	Í¬ÉÏ£¬Ö»ÊÇÊ¹ÓÃ¿Õ±í´ïÊ½×÷Îªno
+\0nn		ASCIIä»£ç ä¸­å…«è¿›åˆ¶ä»£ç ä¸ºnnçš„å­—ç¬¦
+\xnn		ASCIIä»£ç ä¸­åå…­è¿›åˆ¶ä»£ç ä¸ºnnçš„å­—ç¬¦
+\unnnn		Unicodeä»£ç ä¸­åå…­è¿›åˆ¶ä»£ç ä¸ºnnnnçš„å­—ç¬¦
+\cN			ASCIIæ§åˆ¶å­—ç¬¦ã€‚æ¯”å¦‚\cCä»£è¡¨Ctrl+C
+\A			å­—ç¬¦ä¸²å¼€å¤´(ç±»ä¼¼^ï¼Œä½†ä¸å—å¤„ç†å¤šè¡Œé€‰é¡¹çš„å½±å“)
+\Z			å­—ç¬¦ä¸²ç»“å°¾æˆ–è¡Œå°¾(ä¸å—å¤„ç†å¤šè¡Œé€‰é¡¹çš„å½±å“)
+\z			å­—ç¬¦ä¸²ç»“å°¾(ç±»ä¼¼$ï¼Œä½†ä¸å—å¤„ç†å¤šè¡Œé€‰é¡¹çš„å½±å“)
+\G			å½“å‰æœç´¢çš„å¼€å¤´
+\p{name}	Unicodeä¸­å‘½åä¸ºnameçš„å­—ç¬¦ç±»ï¼Œä¾‹å¦‚\p{IsGreek}
+(?>exp)		è´ªå©ªå­è¡¨è¾¾å¼
+(?<x>-<y>exp)	å¹³è¡¡ç»„
+(?im-nsx:exp)	åœ¨å­è¡¨è¾¾å¼expä¸­æ”¹å˜å¤„ç†é€‰é¡¹
+(?im-nsx)		ä¸ºè¡¨è¾¾å¼åé¢çš„éƒ¨åˆ†æ”¹å˜å¤„ç†é€‰é¡¹
+(?(exp)yes|no)	æŠŠexpå½“ä½œé›¶å®½æ­£å‘å…ˆè¡Œæ–­è¨€ï¼Œå¦‚æœåœ¨è¿™ä¸ªä½ç½®èƒ½åŒ¹é…ï¼Œä½¿ç”¨yesä½œä¸ºæ­¤ç»„çš„è¡¨è¾¾å¼ï¼›å¦åˆ™ä½¿ç”¨no
+(?(exp)yes)		åŒä¸Šï¼Œåªæ˜¯ä½¿ç”¨ç©ºè¡¨è¾¾å¼ä½œä¸ºno
+(?(name)yes|no)	å¦‚æœå‘½åä¸ºnameçš„ç»„æ•è·åˆ°äº†å†…å®¹ï¼Œä½¿ç”¨yesä½œä¸ºè¡¨è¾¾å¼ï¼›å¦åˆ™ä½¿ç”¨no
+(?(name)yes)	åŒä¸Šï¼Œåªæ˜¯ä½¿ç”¨ç©ºè¡¨è¾¾å¼ä½œä¸ºno
 
 
-1. Sed¼ò½é  
-sed ÊÇÒ»ÖÖÔÚÏß±à¼­Æ÷£¬ËüÒ»´Î´¦ÀíÒ»ĞĞÄÚÈİ¡£´¦ÀíÊ±£¬°Ñµ±Ç°´¦ÀíµÄĞĞ´æ´¢ÔÚÁÙÊ±»º³åÇøÖĞ£¬³ÆÎª¡°Ä£Ê½¿Õ¼ä¡±£¨pattern space£©£¬½Ó×ÅÓÃsedÃüÁî´¦Àí»º³åÇøÖĞµÄÄÚÈİ£¬´¦ÀíÍê³Éºó£¬°Ñ»º³åÇøµÄÄÚÈİËÍÍùÆÁÄ»¡£½Ó×Å´¦ÀíÏÂÒ»ĞĞ£¬ÕâÑù²»¶ÏÖØ¸´£¬Ö±µ½ÎÄ¼şÄ©Î²¡£ÎÄ¼şÄÚÈİ²¢Ã»ÓĞ ¸Ä±ä£¬³ı·ÇÄãÊ¹ÓÃÖØ¶¨Ïò´æ´¢Êä³ö¡£SedÖ÷ÒªÓÃÀ´×Ô¶¯±à¼­Ò»¸ö»ò¶à¸öÎÄ¼ş£»¼ò»¯¶ÔÎÄ¼şµÄ·´¸´²Ù×÷£»±àĞ´×ª»»³ÌĞòµÈ¡£ÒÔÏÂ½éÉÜµÄÊÇGnu°æ±¾µÄSed 3.02¡£  
-2. ¶¨Ö·  
-¿ÉÒÔÍ¨¹ı¶¨Ö·À´¶¨Î»ÄãËùÏ£Íû±à¼­µÄĞĞ£¬¸ÃµØÖ·ÓÃÊı×Ö¹¹³É£¬ÓÃ¶ººÅ·Ö¸ôµÄÁ½¸öĞĞÊı±íÊ¾ÒÔÕâÁ½ĞĞÎªÆğÖ¹µÄĞĞµÄ·¶Î§£¨°üÀ¨ĞĞÊı±íÊ¾µÄÄÇÁ½ĞĞ£©¡£Èç1£¬3±íÊ¾1£¬2£¬3ĞĞ£¬ÃÀÔª·ûºÅ($)±íÊ¾×îºóÒ»ĞĞ¡£·¶Î§¿ÉÒÔÍ¨¹ıÊı¾İ£¬ÕıÔò±í´ïÊ½»òÕß¶şÕß½áºÏµÄ·½Ê½È·¶¨ ¡£  
+1. Sedç®€ä»‹  
+sed æ˜¯ä¸€ç§åœ¨çº¿ç¼–è¾‘å™¨ï¼Œå®ƒä¸€æ¬¡å¤„ç†ä¸€è¡Œå†…å®¹ã€‚å¤„ç†æ—¶ï¼ŒæŠŠå½“å‰å¤„ç†çš„è¡Œå­˜å‚¨åœ¨ä¸´æ—¶ç¼“å†²åŒºä¸­ï¼Œç§°ä¸ºâ€œæ¨¡å¼ç©ºé—´â€ï¼ˆpattern spaceï¼‰ï¼Œæ¥ç€ç”¨sedå‘½ä»¤å¤„ç†ç¼“å†²åŒºä¸­çš„å†…å®¹ï¼Œå¤„ç†å®Œæˆåï¼ŒæŠŠç¼“å†²åŒºçš„å†…å®¹é€å¾€å±å¹•ã€‚æ¥ç€å¤„ç†ä¸‹ä¸€è¡Œï¼Œè¿™æ ·ä¸æ–­é‡å¤ï¼Œç›´åˆ°æ–‡ä»¶æœ«å°¾ã€‚æ–‡ä»¶å†…å®¹å¹¶æ²¡æœ‰ æ”¹å˜ï¼Œé™¤éä½ ä½¿ç”¨é‡å®šå‘å­˜å‚¨è¾“å‡ºã€‚Sedä¸»è¦ç”¨æ¥è‡ªåŠ¨ç¼–è¾‘ä¸€ä¸ªæˆ–å¤šä¸ªæ–‡ä»¶ï¼›ç®€åŒ–å¯¹æ–‡ä»¶çš„åå¤æ“ä½œï¼›ç¼–å†™è½¬æ¢ç¨‹åºç­‰ã€‚ä»¥ä¸‹ä»‹ç»çš„æ˜¯Gnuç‰ˆæœ¬çš„Sed 3.02ã€‚  
+2. å®šå€  
+å¯ä»¥é€šè¿‡å®šå€æ¥å®šä½ä½ æ‰€å¸Œæœ›ç¼–è¾‘çš„è¡Œï¼Œè¯¥åœ°å€ç”¨æ•°å­—æ„æˆï¼Œç”¨é€—å·åˆ†éš”çš„ä¸¤ä¸ªè¡Œæ•°è¡¨ç¤ºä»¥è¿™ä¸¤è¡Œä¸ºèµ·æ­¢çš„è¡Œçš„èŒƒå›´ï¼ˆåŒ…æ‹¬è¡Œæ•°è¡¨ç¤ºçš„é‚£ä¸¤è¡Œï¼‰ã€‚å¦‚1ï¼Œ3è¡¨ç¤º1ï¼Œ2ï¼Œ3è¡Œï¼Œç¾å…ƒç¬¦å·($)è¡¨ç¤ºæœ€åä¸€è¡Œã€‚èŒƒå›´å¯ä»¥é€šè¿‡æ•°æ®ï¼Œæ­£åˆ™è¡¨è¾¾å¼æˆ–è€…äºŒè€…ç»“åˆçš„æ–¹å¼ç¡®å®š ã€‚  
   
-3. SedÃüÁî  
-µ÷ÓÃsedÃüÁîÓĞÁ½ÖÖĞÎÊ½£º  
+3. Sedå‘½ä»¤  
+è°ƒç”¨sedå‘½ä»¤æœ‰ä¸¤ç§å½¢å¼ï¼š  
 *  
 sed [options] 'command' file(s)  
 *  
 sed [options] -f scriptfile file(s)  
 a\  
-ÔÚµ±Ç°ĞĞºóÃæ¼ÓÈëÒ»ĞĞÎÄ±¾¡£  
+åœ¨å½“å‰è¡Œåé¢åŠ å…¥ä¸€è¡Œæ–‡æœ¬ã€‚  
 b lable  
-·ÖÖ§µ½½Å±¾ÖĞ´øÓĞ±ê¼ÇµÄµØ·½£¬Èç¹û·ÖÖ§²»´æÔÚÔò·ÖÖ§µ½½Å±¾µÄÄ©Î²¡£  
+åˆ†æ”¯åˆ°è„šæœ¬ä¸­å¸¦æœ‰æ ‡è®°çš„åœ°æ–¹ï¼Œå¦‚æœåˆ†æ”¯ä¸å­˜åœ¨åˆ™åˆ†æ”¯åˆ°è„šæœ¬çš„æœ«å°¾ã€‚  
 c\  
-ÓÃĞÂµÄÎÄ±¾¸Ä±ä±¾ĞĞµÄÎÄ±¾¡£  
+ç”¨æ–°çš„æ–‡æœ¬æ”¹å˜æœ¬è¡Œçš„æ–‡æœ¬ã€‚  
 d  
-´ÓÄ£°å¿é£¨Pattern space£©Î»ÖÃÉ¾³ıĞĞ¡£  
+ä»æ¨¡æ¿å—ï¼ˆPattern spaceï¼‰ä½ç½®åˆ é™¤è¡Œã€‚  
 D  
-É¾³ıÄ£°å¿éµÄµÚÒ»ĞĞ¡£  
+åˆ é™¤æ¨¡æ¿å—çš„ç¬¬ä¸€è¡Œã€‚  
 i\  
-ÔÚµ±Ç°ĞĞÉÏÃæ²åÈëÎÄ±¾¡£  
+åœ¨å½“å‰è¡Œä¸Šé¢æ’å…¥æ–‡æœ¬ã€‚  
 h  
-¿½±´Ä£°å¿éµÄÄÚÈİµ½ÄÚ´æÖĞµÄ»º³åÇø¡£  
+æ‹·è´æ¨¡æ¿å—çš„å†…å®¹åˆ°å†…å­˜ä¸­çš„ç¼“å†²åŒºã€‚  
 H  
-×·¼ÓÄ£°å¿éµÄÄÚÈİµ½ÄÚ´æÖĞµÄ»º³åÇø  
+è¿½åŠ æ¨¡æ¿å—çš„å†…å®¹åˆ°å†…å­˜ä¸­çš„ç¼“å†²åŒº  
 g  
-»ñµÃÄÚ´æ»º³åÇøµÄÄÚÈİ£¬²¢Ìæ´úµ±Ç°Ä£°å¿éÖĞµÄÎÄ±¾¡£  
+è·å¾—å†…å­˜ç¼“å†²åŒºçš„å†…å®¹ï¼Œå¹¶æ›¿ä»£å½“å‰æ¨¡æ¿å—ä¸­çš„æ–‡æœ¬ã€‚  
 G  
-»ñµÃÄÚ´æ»º³åÇøµÄÄÚÈİ£¬²¢×·¼Óµ½µ±Ç°Ä£°å¿éÎÄ±¾µÄºóÃæ¡£  
+è·å¾—å†…å­˜ç¼“å†²åŒºçš„å†…å®¹ï¼Œå¹¶è¿½åŠ åˆ°å½“å‰æ¨¡æ¿å—æ–‡æœ¬çš„åé¢ã€‚  
 l  
-ÁĞ±í²»ÄÜ´òÓ¡×Ö·ûµÄÇåµ¥¡£  
+åˆ—è¡¨ä¸èƒ½æ‰“å°å­—ç¬¦çš„æ¸…å•ã€‚  
 n  
-¶ÁÈ¡ÏÂÒ»¸öÊäÈëĞĞ£¬ÓÃÏÂÒ»¸öÃüÁî´¦ÀíĞÂµÄĞĞ¶ø²»ÊÇÓÃµÚÒ»¸öÃüÁî¡£  
+è¯»å–ä¸‹ä¸€ä¸ªè¾“å…¥è¡Œï¼Œç”¨ä¸‹ä¸€ä¸ªå‘½ä»¤å¤„ç†æ–°çš„è¡Œè€Œä¸æ˜¯ç”¨ç¬¬ä¸€ä¸ªå‘½ä»¤ã€‚  
 N  
-×·¼ÓÏÂÒ»¸öÊäÈëĞĞµ½Ä£°å¿éºóÃæ²¢ÔÚ¶şÕß¼äÇ¶ÈëÒ»¸öĞÂĞĞ£¬¸Ä±äµ±Ç°ĞĞºÅÂë¡£  
+è¿½åŠ ä¸‹ä¸€ä¸ªè¾“å…¥è¡Œåˆ°æ¨¡æ¿å—åé¢å¹¶åœ¨äºŒè€…é—´åµŒå…¥ä¸€ä¸ªæ–°è¡Œï¼Œæ”¹å˜å½“å‰è¡Œå·ç ã€‚  
 p  
-´òÓ¡Ä£°å¿éµÄĞĞ¡£  
-P£¨´óĞ´£©  
-´òÓ¡Ä£°å¿éµÄµÚÒ»ĞĞ¡£  
+æ‰“å°æ¨¡æ¿å—çš„è¡Œã€‚  
+Pï¼ˆå¤§å†™ï¼‰  
+æ‰“å°æ¨¡æ¿å—çš„ç¬¬ä¸€è¡Œã€‚  
 q  
-ÍË³öSed¡£  
+é€€å‡ºSedã€‚  
 r file  
-´ÓfileÖĞ¶ÁĞĞ¡£  
+ä»fileä¸­è¯»è¡Œã€‚  
 t label  
-if·ÖÖ§£¬´Ó×îºóÒ»ĞĞ¿ªÊ¼£¬Ìõ¼şÒ»µ©Âú×ã»òÕßT£¬tÃüÁî£¬½«µ¼ÖÂ·ÖÖ§µ½´øÓĞ±êºÅµÄÃüÁî´¦£¬»òÕßµ½½Å±¾µÄÄ©Î²¡£  
+ifåˆ†æ”¯ï¼Œä»æœ€åä¸€è¡Œå¼€å§‹ï¼Œæ¡ä»¶ä¸€æ—¦æ»¡è¶³æˆ–è€…Tï¼Œtå‘½ä»¤ï¼Œå°†å¯¼è‡´åˆ†æ”¯åˆ°å¸¦æœ‰æ ‡å·çš„å‘½ä»¤å¤„ï¼Œæˆ–è€…åˆ°è„šæœ¬çš„æœ«å°¾ã€‚  
 T label  
-´íÎó·ÖÖ§£¬´Ó×îºóÒ»ĞĞ¿ªÊ¼£¬Ò»µ©·¢Éú´íÎó»òÕßT£¬tÃüÁî£¬½«µ¼ÖÂ·ÖÖ§µ½´øÓĞ±êºÅµÄÃüÁî´¦£¬»òÕßµ½½Å±¾µÄÄ©Î²¡£  
+é”™è¯¯åˆ†æ”¯ï¼Œä»æœ€åä¸€è¡Œå¼€å§‹ï¼Œä¸€æ—¦å‘ç”Ÿé”™è¯¯æˆ–è€…Tï¼Œtå‘½ä»¤ï¼Œå°†å¯¼è‡´åˆ†æ”¯åˆ°å¸¦æœ‰æ ‡å·çš„å‘½ä»¤å¤„ï¼Œæˆ–è€…åˆ°è„šæœ¬çš„æœ«å°¾ã€‚  
 w file  
-Ğ´²¢×·¼ÓÄ£°å¿éµ½fileÄ©Î²¡£  
+å†™å¹¶è¿½åŠ æ¨¡æ¿å—åˆ°fileæœ«å°¾ã€‚  
 W file  
-Ğ´²¢×·¼ÓÄ£°å¿éµÄµÚÒ»ĞĞµ½fileÄ©Î²¡£  
+å†™å¹¶è¿½åŠ æ¨¡æ¿å—çš„ç¬¬ä¸€è¡Œåˆ°fileæœ«å°¾ã€‚  
 !  
-±íÊ¾ºóÃæµÄÃüÁî¶ÔËùÓĞÃ»ÓĞ±»Ñ¡¶¨µÄĞĞ·¢Éú×÷ÓÃ¡£  
+è¡¨ç¤ºåé¢çš„å‘½ä»¤å¯¹æ‰€æœ‰æ²¡æœ‰è¢«é€‰å®šçš„è¡Œå‘ç”Ÿä½œç”¨ã€‚  
 s/re/string  
-ÓÃstringÌæ»»ÕıÔò±í´ïÊ½re¡£  
+ç”¨stringæ›¿æ¢æ­£åˆ™è¡¨è¾¾å¼reã€‚  
 =  
-´òÓ¡µ±Ç°ĞĞºÅÂë¡£  
+æ‰“å°å½“å‰è¡Œå·ç ã€‚  
 #  
-°Ñ×¢ÊÍÀ©Õ¹µ½ÏÂÒ»¸ö»»ĞĞ·ûÒÔÇ°¡£  
-ÒÔÏÂµÄÊÇÌæ»»±ê¼Ç  
+æŠŠæ³¨é‡Šæ‰©å±•åˆ°ä¸‹ä¸€ä¸ªæ¢è¡Œç¬¦ä»¥å‰ã€‚  
+ä»¥ä¸‹çš„æ˜¯æ›¿æ¢æ ‡è®°  
 *  
-g±íÊ¾ĞĞÄÚÈ«ÃæÌæ»»¡£  
+gè¡¨ç¤ºè¡Œå†…å…¨é¢æ›¿æ¢ã€‚  
 *  
-p±íÊ¾´òÓ¡ĞĞ¡£  
+pè¡¨ç¤ºæ‰“å°è¡Œã€‚  
 *  
-w±íÊ¾°ÑĞĞĞ´ÈëÒ»¸öÎÄ¼ş¡£  
+wè¡¨ç¤ºæŠŠè¡Œå†™å…¥ä¸€ä¸ªæ–‡ä»¶ã€‚  
 *  
-x±íÊ¾»¥»»Ä£°å¿éÖĞµÄÎÄ±¾ºÍ»º³åÇøÖĞµÄÎÄ±¾¡£  
+xè¡¨ç¤ºäº’æ¢æ¨¡æ¿å—ä¸­çš„æ–‡æœ¬å’Œç¼“å†²åŒºä¸­çš„æ–‡æœ¬ã€‚  
 *  
-y±íÊ¾°ÑÒ»¸ö×Ö·û·­ÒëÎªÁíÍâµÄ×Ö·û£¨µ«ÊÇ²»ÓÃÓÚÕıÔò±í´ïÊ½£©  
+yè¡¨ç¤ºæŠŠä¸€ä¸ªå­—ç¬¦ç¿»è¯‘ä¸ºå¦å¤–çš„å­—ç¬¦ï¼ˆä½†æ˜¯ä¸ç”¨äºæ­£åˆ™è¡¨è¾¾å¼ï¼‰  
   
-4. Ñ¡Ïî  
+4. é€‰é¡¹  
 -e command, --expression=command  
-ÔÊĞí¶àÌ¨±à¼­¡£  
+å…è®¸å¤šå°ç¼–è¾‘ã€‚  
 -h, --help  
-´òÓ¡°ïÖú£¬²¢ÏÔÊ¾bugÁĞ±íµÄµØÖ·¡£  
+æ‰“å°å¸®åŠ©ï¼Œå¹¶æ˜¾ç¤ºbugåˆ—è¡¨çš„åœ°å€ã€‚  
 -n, --quiet, --silent  
   
-È¡ÏûÄ¬ÈÏÊä³ö¡£  
+å–æ¶ˆé»˜è®¤è¾“å‡ºã€‚  
 -f, --filer=script-file  
-Òıµ¼sed½Å±¾ÎÄ¼şÃû¡£  
+å¼•å¯¼sedè„šæœ¬æ–‡ä»¶åã€‚  
 -V, --version  
-´òÓ¡°æ±¾ºÍ°æÈ¨ĞÅÏ¢¡£  
+æ‰“å°ç‰ˆæœ¬å’Œç‰ˆæƒä¿¡æ¯ã€‚  
   
-5. Ôª×Ö·û¼¯^  
-Ãª¶¨ĞĞµÄ¿ªÊ¼ Èç£º/^sed/Æ¥ÅäËùÓĞÒÔsed¿ªÍ·µÄĞĞ¡£   
+5. å…ƒå­—ç¬¦é›†^  
+é”šå®šè¡Œçš„å¼€å§‹ å¦‚ï¼š/^sed/åŒ¹é…æ‰€æœ‰ä»¥sedå¼€å¤´çš„è¡Œã€‚   
 $  
-Ãª¶¨ĞĞµÄ½áÊø Èç£º/sed$/Æ¥ÅäËùÓĞÒÔsed½áÎ²µÄĞĞ¡£   
+é”šå®šè¡Œçš„ç»“æŸ å¦‚ï¼š/sed$/åŒ¹é…æ‰€æœ‰ä»¥sedç»“å°¾çš„è¡Œã€‚   
 .  
-Æ¥ÅäÒ»¸ö·Ç»»ĞĞ·ûµÄ×Ö·û Èç£º/s.d/Æ¥Åäsºó½ÓÒ»¸öÈÎÒâ×Ö·û£¬È»ºóÊÇd¡£   
+åŒ¹é…ä¸€ä¸ªéæ¢è¡Œç¬¦çš„å­—ç¬¦ å¦‚ï¼š/s.d/åŒ¹é…såæ¥ä¸€ä¸ªä»»æ„å­—ç¬¦ï¼Œç„¶åæ˜¯dã€‚   
 *  
-Æ¥ÅäÁã»ò¶à¸ö×Ö·û Èç£º/*sed/Æ¥ÅäËùÓĞÄ£°åÊÇÒ»¸ö»ò¶à¸ö¿Õ¸ñºó½ô¸úsedµÄĞĞ¡£  
+åŒ¹é…é›¶æˆ–å¤šä¸ªå­—ç¬¦ å¦‚ï¼š/*sed/åŒ¹é…æ‰€æœ‰æ¨¡æ¿æ˜¯ä¸€ä¸ªæˆ–å¤šä¸ªç©ºæ ¼åç´§è·Ÿsedçš„è¡Œã€‚  
 [] 
-Æ¥ÅäÒ»¸öÖ¸¶¨·¶Î§ÄÚµÄ×Ö·û£¬Èç/[Ss]ed/Æ¥ÅäsedºÍSed¡£  
+åŒ¹é…ä¸€ä¸ªæŒ‡å®šèŒƒå›´å†…çš„å­—ç¬¦ï¼Œå¦‚/[Ss]ed/åŒ¹é…sedå’ŒSedã€‚  
 [^] 
-Æ¥ÅäÒ»¸ö²»ÔÚÖ¸¶¨·¶Î§ÄÚµÄ×Ö·û£¬Èç£º/[^A-RT-Z]ed/Æ¥Åä²»°üº¬A-RºÍT-ZµÄÒ»¸ö×ÖÄ¸¿ªÍ·£¬½ô¸úedµÄĞĞ¡£  
+åŒ¹é…ä¸€ä¸ªä¸åœ¨æŒ‡å®šèŒƒå›´å†…çš„å­—ç¬¦ï¼Œå¦‚ï¼š/[^A-RT-Z]ed/åŒ¹é…ä¸åŒ…å«A-Rå’ŒT-Zçš„ä¸€ä¸ªå­—æ¯å¼€å¤´ï¼Œç´§è·Ÿedçš„è¡Œã€‚  
 \(..\) 
-±£´æÆ¥ÅäµÄ×Ö·û£¬Èçs/\(love\)able/\1rs£¬loveable±»Ìæ»»³Élovers¡£  
+ä¿å­˜åŒ¹é…çš„å­—ç¬¦ï¼Œå¦‚s/\(love\)able/\1rsï¼Œloveableè¢«æ›¿æ¢æˆloversã€‚  
 & 
-±£´æËÑË÷×Ö·ûÓÃÀ´Ìæ»»ÆäËû×Ö·û£¬Èçs/love/**&**/£¬loveÕâ³É**love**¡£   
+ä¿å­˜æœç´¢å­—ç¬¦ç”¨æ¥æ›¿æ¢å…¶ä»–å­—ç¬¦ï¼Œå¦‚s/love/**&**/ï¼Œloveè¿™æˆ**love**ã€‚   
 \<  
-Ãª¶¨µ¥´ÊµÄ¿ªÊ¼£¬Èç:/\<love/Æ¥Åä°üº¬ÒÔlove¿ªÍ·µÄµ¥´ÊµÄĞĞ¡£   
+é”šå®šå•è¯çš„å¼€å§‹ï¼Œå¦‚:/\<love/åŒ¹é…åŒ…å«ä»¥loveå¼€å¤´çš„å•è¯çš„è¡Œã€‚   
 \>  
-Ãª¶¨µ¥´ÊµÄ½áÊø£¬Èç/love\>/Æ¥Åä°üº¬ÒÔlove½áÎ²µÄµ¥´ÊµÄĞĞ¡£   
+é”šå®šå•è¯çš„ç»“æŸï¼Œå¦‚/love\>/åŒ¹é…åŒ…å«ä»¥loveç»“å°¾çš„å•è¯çš„è¡Œã€‚   
 x\{m\}  
-ÖØ¸´×Ö·ûx£¬m´Î£¬Èç£º/0\{5\}/Æ¥Åä°üº¬5¸öoµÄĞĞ¡£   
+é‡å¤å­—ç¬¦xï¼Œmæ¬¡ï¼Œå¦‚ï¼š/0\{5\}/åŒ¹é…åŒ…å«5ä¸ªoçš„è¡Œã€‚   
 x\{m,\}  
-ÖØ¸´×Ö·ûx,ÖÁÉÙm´Î£¬Èç£º/o\{5,\}/Æ¥ÅäÖÁÉÙÓĞ5¸öoµÄĞĞ¡£   
+é‡å¤å­—ç¬¦x,è‡³å°‘mæ¬¡ï¼Œå¦‚ï¼š/o\{5,\}/åŒ¹é…è‡³å°‘æœ‰5ä¸ªoçš„è¡Œã€‚   
 x\{m,n\}  
-ÖØ¸´×Ö·ûx£¬ÖÁÉÙm´Î£¬²»¶àÓÚn´Î£¬Èç£º/o\{5,10\}/Æ¥Åä5--10¸öoµÄĞĞ¡£  
-6. ÊµÀı  
-É¾³ı£ºdÃüÁî  
+é‡å¤å­—ç¬¦xï¼Œè‡³å°‘mæ¬¡ï¼Œä¸å¤šäºnæ¬¡ï¼Œå¦‚ï¼š/o\{5,10\}/åŒ¹é…5--10ä¸ªoçš„è¡Œã€‚  
+6. å®ä¾‹  
+åˆ é™¤ï¼šdå‘½ä»¤  
 *  
-$ sed '2d' example-----É¾³ıexampleÎÄ¼şµÄµÚ¶şĞĞ¡£  
+$ sed '2d' example-----åˆ é™¤exampleæ–‡ä»¶çš„ç¬¬äºŒè¡Œã€‚  
 *  
-$ sed '2,$d' example-----É¾³ıexampleÎÄ¼şµÄµÚ¶şĞĞµ½Ä©Î²ËùÓĞĞĞ¡£  
+$ sed '2,$d' example-----åˆ é™¤exampleæ–‡ä»¶çš„ç¬¬äºŒè¡Œåˆ°æœ«å°¾æ‰€æœ‰è¡Œã€‚  
 *  
-$ sed '$d' example-----É¾³ıexampleÎÄ¼şµÄ×îºóÒ»ĞĞ¡£  
+$ sed '$d' example-----åˆ é™¤exampleæ–‡ä»¶çš„æœ€åä¸€è¡Œã€‚  
 *  
-$ sed '/test/'d example-----É¾³ıexampleÎÄ¼şËùÓĞ°üº¬testµÄĞĞ¡£  
-Ìæ»»£ºsÃüÁî  
+$ sed '/test/'d example-----åˆ é™¤exampleæ–‡ä»¶æ‰€æœ‰åŒ…å«testçš„è¡Œã€‚  
+æ›¿æ¢ï¼šså‘½ä»¤  
 *  
-$ sed 's/test/mytest/g' example-----ÔÚÕûĞĞ·¶Î§ÄÚ°ÑtestÌæ»»Îªmytest¡£Èç¹ûÃ»ÓĞg±ê¼Ç£¬ÔòÖ»ÓĞÃ¿ĞĞµÚÒ»¸öÆ¥ÅäµÄtest±»Ìæ»»³Émytest¡£  
+$ sed 's/test/mytest/g' example-----åœ¨æ•´è¡ŒèŒƒå›´å†…æŠŠtestæ›¿æ¢ä¸ºmytestã€‚å¦‚æœæ²¡æœ‰gæ ‡è®°ï¼Œåˆ™åªæœ‰æ¯è¡Œç¬¬ä¸€ä¸ªåŒ¹é…çš„testè¢«æ›¿æ¢æˆmytestã€‚  
 *  
-$ sed -n 's/^test/mytest/p' example-----(-n)Ñ¡ÏîºÍp±êÖ¾Ò»ÆğÊ¹ÓÃ±íÊ¾Ö»´òÓ¡ÄÇĞ©·¢ÉúÌæ»»µÄĞĞ¡£Ò²¾ÍÊÇËµ£¬Èç¹ûÄ³Ò»ĞĞ¿ªÍ·µÄtest±»Ìæ»»³Émytest£¬¾Í´òÓ¡Ëü¡£  
+$ sed -n 's/^test/mytest/p' example-----(-n)é€‰é¡¹å’Œpæ ‡å¿—ä¸€èµ·ä½¿ç”¨è¡¨ç¤ºåªæ‰“å°é‚£äº›å‘ç”Ÿæ›¿æ¢çš„è¡Œã€‚ä¹Ÿå°±æ˜¯è¯´ï¼Œå¦‚æœæŸä¸€è¡Œå¼€å¤´çš„testè¢«æ›¿æ¢æˆmytestï¼Œå°±æ‰“å°å®ƒã€‚  
 *  
-$ sed 's/^192.168.0.1/&localhost/' example-----&·ûºÅ±íÊ¾Ìæ»»»»×Ö·û´®ÖĞ±»ÕÒµ½µÄ²¿·İ¡£ËùÓĞÒÔ192.168.0.1¿ªÍ·µÄĞĞ¶¼»á±»Ìæ»»³ÉËü×ÔÒÑ¼Ó localhost£¬±ä³É192.168.0.1localhost¡£  
+$ sed 's/^192.168.0.1/&localhost/' example-----&ç¬¦å·è¡¨ç¤ºæ›¿æ¢æ¢å­—ç¬¦ä¸²ä¸­è¢«æ‰¾åˆ°çš„éƒ¨ä»½ã€‚æ‰€æœ‰ä»¥192.168.0.1å¼€å¤´çš„è¡Œéƒ½ä¼šè¢«æ›¿æ¢æˆå®ƒè‡ªå·²åŠ  localhostï¼Œå˜æˆ192.168.0.1localhostã€‚  
 *  
-$ sed -n 's/\(love\)able/\1rs/p' example-----love±»±ê¼ÇÎª1£¬ËùÓĞloveable»á±»Ìæ»»³Élovers£¬¶øÇÒÌæ»»µÄĞĞ»á±»´òÓ¡³öÀ´¡£  
+$ sed -n 's/\(love\)able/\1rs/p' example-----loveè¢«æ ‡è®°ä¸º1ï¼Œæ‰€æœ‰loveableä¼šè¢«æ›¿æ¢æˆloversï¼Œè€Œä¸”æ›¿æ¢çš„è¡Œä¼šè¢«æ‰“å°å‡ºæ¥ã€‚  
 *  
-$ sed 's#10#100#g' example-----²»ÂÛÊ²Ã´×Ö·û£¬½ô¸ú×ÅsÃüÁîµÄ¶¼±»ÈÏÎªÊÇĞÂµÄ·Ö¸ô·û£¬ËùÒÔ£¬¡°#¡±ÔÚÕâÀïÊÇ·Ö¸ô·û£¬´úÌæÁËÄ¬ÈÏµÄ¡°/¡±·Ö¸ô·û¡£±íÊ¾°ÑËùÓĞ10Ìæ»»³É100¡£  
-Ñ¡¶¨ĞĞµÄ·¶Î§£º¶ººÅ  
+$ sed 's#10#100#g' example-----ä¸è®ºä»€ä¹ˆå­—ç¬¦ï¼Œç´§è·Ÿç€så‘½ä»¤çš„éƒ½è¢«è®¤ä¸ºæ˜¯æ–°çš„åˆ†éš”ç¬¦ï¼Œæ‰€ä»¥ï¼Œâ€œ#â€åœ¨è¿™é‡Œæ˜¯åˆ†éš”ç¬¦ï¼Œä»£æ›¿äº†é»˜è®¤çš„â€œ/â€åˆ†éš”ç¬¦ã€‚è¡¨ç¤ºæŠŠæ‰€æœ‰10æ›¿æ¢æˆ100ã€‚  
+é€‰å®šè¡Œçš„èŒƒå›´ï¼šé€—å·  
 *  
-$ sed -n '/test/,/check/p' example-----ËùÓĞÔÚÄ£°åtestºÍcheckËùÈ·¶¨µÄ·¶Î§ÄÚµÄĞĞ¶¼±»´òÓ¡¡£  
+$ sed -n '/test/,/check/p' example-----æ‰€æœ‰åœ¨æ¨¡æ¿testå’Œcheckæ‰€ç¡®å®šçš„èŒƒå›´å†…çš„è¡Œéƒ½è¢«æ‰“å°ã€‚  
 *  
-$ sed -n '5,/^test/p' example-----´òÓ¡´ÓµÚÎåĞĞ¿ªÊ¼µ½µÚÒ»¸ö°üº¬ÒÔtest¿ªÊ¼µÄĞĞÖ®¼äµÄËùÓĞĞĞ¡£  
+$ sed -n '5,/^test/p' example-----æ‰“å°ä»ç¬¬äº”è¡Œå¼€å§‹åˆ°ç¬¬ä¸€ä¸ªåŒ…å«ä»¥testå¼€å§‹çš„è¡Œä¹‹é—´çš„æ‰€æœ‰è¡Œã€‚  
 *  
-$ sed '/test/,/check/s/$/sed test/' example-----¶ÔÓÚÄ£°åtestºÍwestÖ®¼äµÄĞĞ£¬Ã¿ĞĞµÄÄ©Î²ÓÃ×Ö·û´®sed testÌæ»»¡£  
-¶àµã±à¼­£ºeÃüÁî  
+$ sed '/test/,/check/s/$/sed test/' example-----å¯¹äºæ¨¡æ¿testå’Œwestä¹‹é—´çš„è¡Œï¼Œæ¯è¡Œçš„æœ«å°¾ç”¨å­—ç¬¦ä¸²sed testæ›¿æ¢ã€‚  
+å¤šç‚¹ç¼–è¾‘ï¼šeå‘½ä»¤  
 *  
-$ sed -e '1,5d' -e 's/test/check/' example-----(-e)Ñ¡ÏîÔÊĞíÔÚÍ¬Ò»ĞĞÀïÖ´ĞĞ¶àÌõÃüÁî¡£ÈçÀı×ÓËùÊ¾£¬µÚÒ»ÌõÃüÁîÉ¾³ı1ÖÁ5ĞĞ£¬µÚ¶şÌõÃüÁîÓÃcheckÌæ»»test¡£ÃüÁîµÄÖ´ ĞĞË³Ğò¶Ô½á¹ûÓĞÓ°Ïì¡£Èç¹ûÁ½¸öÃüÁî¶¼ÊÇÌæ»»ÃüÁî£¬ÄÇÃ´µÚÒ»¸öÌæ»»ÃüÁî½«Ó°ÏìµÚ¶ş¸öÌæ»»ÃüÁîµÄ½á¹û¡£  
+$ sed -e '1,5d' -e 's/test/check/' example-----(-e)é€‰é¡¹å…è®¸åœ¨åŒä¸€è¡Œé‡Œæ‰§è¡Œå¤šæ¡å‘½ä»¤ã€‚å¦‚ä¾‹å­æ‰€ç¤ºï¼Œç¬¬ä¸€æ¡å‘½ä»¤åˆ é™¤1è‡³5è¡Œï¼Œç¬¬äºŒæ¡å‘½ä»¤ç”¨checkæ›¿æ¢testã€‚å‘½ä»¤çš„æ‰§ è¡Œé¡ºåºå¯¹ç»“æœæœ‰å½±å“ã€‚å¦‚æœä¸¤ä¸ªå‘½ä»¤éƒ½æ˜¯æ›¿æ¢å‘½ä»¤ï¼Œé‚£ä¹ˆç¬¬ä¸€ä¸ªæ›¿æ¢å‘½ä»¤å°†å½±å“ç¬¬äºŒä¸ªæ›¿æ¢å‘½ä»¤çš„ç»“æœã€‚  
 *  
-$ sed --expression='s/test/check/' --expression='/love/d' example-----Ò»¸ö±È-e¸üºÃµÄÃüÁîÊÇ--expression¡£ËüÄÜ¸øsed±í´ïÊ½¸³Öµ¡£  
-´ÓÎÄ¼ş¶ÁÈë£ºrÃüÁî  
+$ sed --expression='s/test/check/' --expression='/love/d' example-----ä¸€ä¸ªæ¯”-eæ›´å¥½çš„å‘½ä»¤æ˜¯--expressionã€‚å®ƒèƒ½ç»™sedè¡¨è¾¾å¼èµ‹å€¼ã€‚  
+ä»æ–‡ä»¶è¯»å…¥ï¼šrå‘½ä»¤  
 *  
-$ sed '/test/r file' example-----fileÀïµÄÄÚÈİ±»¶Á½øÀ´£¬ÏÔÊ¾ÔÚÓëtestÆ¥ÅäµÄĞĞºóÃæ£¬Èç¹ûÆ¥Åä¶àĞĞ£¬ÔòfileµÄÄÚÈİ½«ÏÔÊ¾ÔÚËùÓĞÆ¥ÅäĞĞµÄÏÂÃæ¡£  
-Ğ´ÈëÎÄ¼ş£ºwÃüÁî  
+$ sed '/test/r file' example-----fileé‡Œçš„å†…å®¹è¢«è¯»è¿›æ¥ï¼Œæ˜¾ç¤ºåœ¨ä¸teståŒ¹é…çš„è¡Œåé¢ï¼Œå¦‚æœåŒ¹é…å¤šè¡Œï¼Œåˆ™fileçš„å†…å®¹å°†æ˜¾ç¤ºåœ¨æ‰€æœ‰åŒ¹é…è¡Œçš„ä¸‹é¢ã€‚  
+å†™å…¥æ–‡ä»¶ï¼šwå‘½ä»¤  
 *  
-$ sed -n '/test/w file' example-----ÔÚexampleÖĞËùÓĞ°üº¬testµÄĞĞ¶¼±»Ğ´ÈëfileÀï¡£  
-×·¼ÓÃüÁî£ºaÃüÁî  
+$ sed -n '/test/w file' example-----åœ¨exampleä¸­æ‰€æœ‰åŒ…å«testçš„è¡Œéƒ½è¢«å†™å…¥fileé‡Œã€‚  
+è¿½åŠ å‘½ä»¤ï¼šaå‘½ä»¤  
 *  
-$ sed '/^test/a\\--->this is a example' example<-----'this is a example'±»×·¼Óµ½ÒÔtest¿ªÍ·µÄĞĞºóÃæ£¬sedÒªÇóÃüÁîaºóÃæÓĞÒ»¸ö·´Ğ±¸Ü¡£  
-²åÈë£ºiÃüÁî  
+$ sed '/^test/a\\--->this is a example' example<-----'this is a example'è¢«è¿½åŠ åˆ°ä»¥testå¼€å¤´çš„è¡Œåé¢ï¼Œsedè¦æ±‚å‘½ä»¤aåé¢æœ‰ä¸€ä¸ªåæ–œæ ã€‚  
+æ’å…¥ï¼šiå‘½ä»¤  
 $ sed '/test/i\\  
 new line  
 -------------------------' example  
-Èç¹ûtest±»Æ¥Åä£¬Ôò°Ñ·´Ğ±¸ÜºóÃæµÄÎÄ±¾²åÈëµ½Æ¥ÅäĞĞµÄÇ°Ãæ¡£  
-ÏÂÒ»¸ö£ºnÃüÁî  
+å¦‚æœtestè¢«åŒ¹é…ï¼Œåˆ™æŠŠåæ–œæ åé¢çš„æ–‡æœ¬æ’å…¥åˆ°åŒ¹é…è¡Œçš„å‰é¢ã€‚  
+ä¸‹ä¸€ä¸ªï¼šnå‘½ä»¤  
 *  
-$ sed '/test/{ n; s/aa/bb/; }' example-----Èç¹ûtest±»Æ¥Åä£¬ÔòÒÆ¶¯µ½Æ¥ÅäĞĞµÄÏÂÒ»ĞĞ£¬Ìæ»»ÕâÒ»ĞĞµÄaa£¬±äÎªbb£¬²¢´òÓ¡¸ÃĞĞ£¬È»ºó¼ÌĞø¡£  
-±äĞÎ£ºyÃüÁî  
+$ sed '/test/{ n; s/aa/bb/; }' example-----å¦‚æœtestè¢«åŒ¹é…ï¼Œåˆ™ç§»åŠ¨åˆ°åŒ¹é…è¡Œçš„ä¸‹ä¸€è¡Œï¼Œæ›¿æ¢è¿™ä¸€è¡Œçš„aaï¼Œå˜ä¸ºbbï¼Œå¹¶æ‰“å°è¯¥è¡Œï¼Œç„¶åç»§ç»­ã€‚  
+å˜å½¢ï¼šyå‘½ä»¤  
 *  
-$ sed '1,10y/abcde/ABCDE/' example-----°Ñ1--10ĞĞÄÚËùÓĞabcde×ª±äÎª´óĞ´£¬×¢Òâ£¬ÕıÔò±í´ïÊ½Ôª×Ö·û²»ÄÜÊ¹ÓÃÕâ¸öÃüÁî¡£  
-ÍË³ö£ºqÃüÁî  
+$ sed '1,10y/abcde/ABCDE/' example-----æŠŠ1--10è¡Œå†…æ‰€æœ‰abcdeè½¬å˜ä¸ºå¤§å†™ï¼Œæ³¨æ„ï¼Œæ­£åˆ™è¡¨è¾¾å¼å…ƒå­—ç¬¦ä¸èƒ½ä½¿ç”¨è¿™ä¸ªå‘½ä»¤ã€‚  
+é€€å‡ºï¼šqå‘½ä»¤  
 *  
-$ sed '10q' example-----´òÓ¡ÍêµÚ10ĞĞºó£¬ÍË³ösed¡£  
-±£³ÖºÍ»ñÈ¡£ºhÃüÁîºÍGÃüÁî  
+$ sed '10q' example-----æ‰“å°å®Œç¬¬10è¡Œåï¼Œé€€å‡ºsedã€‚  
+ä¿æŒå’Œè·å–ï¼šhå‘½ä»¤å’ŒGå‘½ä»¤  
 *  
-$ sed -e '/test/h' -e '$G example-----ÔÚsed´¦ÀíÎÄ¼şµÄÊ±ºò£¬Ã¿Ò»ĞĞ¶¼±»±£´æÔÚÒ»¸ö½ĞÄ£Ê½¿Õ¼äµÄÁÙÊ±»º³åÇøÖĞ£¬³ı·ÇĞĞ±»É¾³ı»òÕßÊä³ö±»È¡Ïû£¬·ñÔòËùÓĞ±»´¦ÀíµÄĞĞ¶¼½« ´òÓ¡ÔÚÆÁÄ»ÉÏ¡£½Ó×ÅÄ£Ê½¿Õ¼ä±»Çå¿Õ£¬²¢´æÈëĞÂµÄÒ»ĞĞµÈ´ı´¦Àí¡£ÔÚÕâ¸öÀı×ÓÀï£¬Æ¥ÅätestµÄĞĞ±»ÕÒµ½ºó£¬½«´æÈëÄ£Ê½¿Õ¼ä£¬hÃüÁî½«Æä¸´ÖÆ²¢´æÈëÒ»¸ö³ÆÎª±£ ³Ö»º´æÇøµÄÌØÊâ»º³åÇøÄÚ¡£µÚ¶şÌõÓï¾äµÄÒâË¼ÊÇ£¬µ±µ½´ï×îºóÒ»ĞĞºó£¬GÃüÁîÈ¡³ö±£³Ö»º³åÇøµÄĞĞ£¬È»ºó°ÑËü·Å»ØÄ£Ê½¿Õ¼äÖĞ£¬ÇÒ×·¼Óµ½ÏÖÔÚÒÑ¾­´æÔÚÓÚÄ£Ê½¿Õ¼äÖĞ µÄĞĞµÄÄ©Î²¡£ÔÚÕâ¸öÀı×ÓÖĞ¾ÍÊÇ×·¼Óµ½×îºóÒ»ĞĞ¡£¼òµ¥À´Ëµ£¬ÈÎºÎ°üº¬testµÄĞĞ¶¼±»¸´ÖÆ²¢×·¼Óµ½¸ÃÎÄ¼şµÄÄ©Î²¡£  
-±£³ÖºÍ»¥»»£ºhÃüÁîºÍxÃüÁî  
+$ sed -e '/test/h' -e '$G example-----åœ¨sedå¤„ç†æ–‡ä»¶çš„æ—¶å€™ï¼Œæ¯ä¸€è¡Œéƒ½è¢«ä¿å­˜åœ¨ä¸€ä¸ªå«æ¨¡å¼ç©ºé—´çš„ä¸´æ—¶ç¼“å†²åŒºä¸­ï¼Œé™¤éè¡Œè¢«åˆ é™¤æˆ–è€…è¾“å‡ºè¢«å–æ¶ˆï¼Œå¦åˆ™æ‰€æœ‰è¢«å¤„ç†çš„è¡Œéƒ½å°† æ‰“å°åœ¨å±å¹•ä¸Šã€‚æ¥ç€æ¨¡å¼ç©ºé—´è¢«æ¸…ç©ºï¼Œå¹¶å­˜å…¥æ–°çš„ä¸€è¡Œç­‰å¾…å¤„ç†ã€‚åœ¨è¿™ä¸ªä¾‹å­é‡Œï¼ŒåŒ¹é…testçš„è¡Œè¢«æ‰¾åˆ°åï¼Œå°†å­˜å…¥æ¨¡å¼ç©ºé—´ï¼Œhå‘½ä»¤å°†å…¶å¤åˆ¶å¹¶å­˜å…¥ä¸€ä¸ªç§°ä¸ºä¿ æŒç¼“å­˜åŒºçš„ç‰¹æ®Šç¼“å†²åŒºå†…ã€‚ç¬¬äºŒæ¡è¯­å¥çš„æ„æ€æ˜¯ï¼Œå½“åˆ°è¾¾æœ€åä¸€è¡Œåï¼ŒGå‘½ä»¤å–å‡ºä¿æŒç¼“å†²åŒºçš„è¡Œï¼Œç„¶åæŠŠå®ƒæ”¾å›æ¨¡å¼ç©ºé—´ä¸­ï¼Œä¸”è¿½åŠ åˆ°ç°åœ¨å·²ç»å­˜åœ¨äºæ¨¡å¼ç©ºé—´ä¸­ çš„è¡Œçš„æœ«å°¾ã€‚åœ¨è¿™ä¸ªä¾‹å­ä¸­å°±æ˜¯è¿½åŠ åˆ°æœ€åä¸€è¡Œã€‚ç®€å•æ¥è¯´ï¼Œä»»ä½•åŒ…å«testçš„è¡Œéƒ½è¢«å¤åˆ¶å¹¶è¿½åŠ åˆ°è¯¥æ–‡ä»¶çš„æœ«å°¾ã€‚  
+ä¿æŒå’Œäº’æ¢ï¼šhå‘½ä»¤å’Œxå‘½ä»¤  
 *  
-$ sed -e '/test/h' -e '/check/x' example -----»¥»»Ä£Ê½¿Õ¼äºÍ±£³Ö»º³åÇøµÄÄÚÈİ¡£Ò²¾ÍÊÇ°Ñ°üº¬testÓëcheckµÄĞĞ»¥»»¡£  
-7. ½Å±¾  
-Sed½Å±¾ÊÇÒ»¸ösedµÄÃüÁîÇåµ¥£¬Æô¶¯SedÊ±ÒÔ-fÑ¡ÏîÒıµ¼½Å±¾ÎÄ¼şÃû¡£Sed¶ÔÓÚ½Å±¾ÖĞÊäÈëµÄÃüÁî·Ç³£ÌôÌŞ£¬ÔÚÃüÁîµÄÄ©Î²²»ÄÜÓĞÈÎºÎ¿Õ°×»òÎÄ±¾£¬Èç¹ûÔÚÒ»ĞĞÖĞÓĞ¶à¸öÃüÁî£¬ÒªÓÃ·ÖºÅ·Ö¸ô¡£ÒÔ#¿ªÍ·µÄĞĞÎª×¢ÊÍĞĞ£¬ÇÒ²»ÄÜ¿çĞĞ¡£  
+$ sed -e '/test/h' -e '/check/x' example -----äº’æ¢æ¨¡å¼ç©ºé—´å’Œä¿æŒç¼“å†²åŒºçš„å†…å®¹ã€‚ä¹Ÿå°±æ˜¯æŠŠåŒ…å«testä¸checkçš„è¡Œäº’æ¢ã€‚  
+7. è„šæœ¬  
+Sedè„šæœ¬æ˜¯ä¸€ä¸ªsedçš„å‘½ä»¤æ¸…å•ï¼Œå¯åŠ¨Sedæ—¶ä»¥-fé€‰é¡¹å¼•å¯¼è„šæœ¬æ–‡ä»¶åã€‚Sedå¯¹äºè„šæœ¬ä¸­è¾“å…¥çš„å‘½ä»¤éå¸¸æŒ‘å‰”ï¼Œåœ¨å‘½ä»¤çš„æœ«å°¾ä¸èƒ½æœ‰ä»»ä½•ç©ºç™½æˆ–æ–‡æœ¬ï¼Œå¦‚æœåœ¨ä¸€è¡Œä¸­æœ‰å¤šä¸ªå‘½ä»¤ï¼Œè¦ç”¨åˆ†å·åˆ†éš”ã€‚ä»¥#å¼€å¤´çš„è¡Œä¸ºæ³¨é‡Šè¡Œï¼Œä¸”ä¸èƒ½è·¨è¡Œã€‚  
 
 sed -n "/2014-05-04 10:00:00/,/2014-05-04 11:00:00/p" 2014-05-04.log
 
 
-LNMP»·¾³²¿·Ö
+LNMPç¯å¢ƒéƒ¨åˆ†
 
 
 
-nginxÅäÖÃÏêÏ¸½²½âÆª¡£
-fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;#½Å±¾ÎÄ¼şÇëÇóµÄÂ·¾¶
-fastcgi_param  QUERY_STRING       $query_string; #ÇëÇóµÄ²ÎÊı;Èç?app=123
-fastcgi_param  REQUEST_METHOD     $request_method; #ÇëÇóµÄ¶¯×÷(GET,POST)
-fastcgi_param  CONTENT_TYPE       $content_type; #ÇëÇóÍ·ÖĞµÄContent-Type×Ö¶Î
-fastcgi_param  CONTENT_LENGTH     $content_length; #ÇëÇóÍ·ÖĞµÄContent-length×Ö¶Î¡£
+nginxé…ç½®è¯¦ç»†è®²è§£ç¯‡ã€‚
+fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;#è„šæœ¬æ–‡ä»¶è¯·æ±‚çš„è·¯å¾„
+fastcgi_param  QUERY_STRING       $query_string; #è¯·æ±‚çš„å‚æ•°;å¦‚?app=123
+fastcgi_param  REQUEST_METHOD     $request_method; #è¯·æ±‚çš„åŠ¨ä½œ(GET,POST)
+fastcgi_param  CONTENT_TYPE       $content_type; #è¯·æ±‚å¤´ä¸­çš„Content-Typeå­—æ®µ
+fastcgi_param  CONTENT_LENGTH     $content_length; #è¯·æ±‚å¤´ä¸­çš„Content-lengthå­—æ®µã€‚
 
-fastcgi_param  SCRIPT_NAME        $fastcgi_script_name; #½Å±¾Ãû³Æ 
-fastcgi_param  REQUEST_URI        $request_uri; #ÇëÇóµÄµØÖ·²»´ø²ÎÊı
-fastcgi_param  DOCUMENT_URI       $document_uri; #Óë$uriÏàÍ¬¡£ 
-fastcgi_param  DOCUMENT_ROOT      $document_root; #ÍøÕ¾µÄ¸ùÄ¿Â¼¡£ÔÚserverÅäÖÃÖĞrootÖ¸ÁîÖĞÖ¸¶¨µÄÖµ 
-fastcgi_param  SERVER_PROTOCOL    $server_protocol; #ÇëÇóÊ¹ÓÃµÄĞ­Òé£¬Í¨³£ÊÇHTTP/1.0»òHTTP/1.1¡£  
+fastcgi_param  SCRIPT_NAME        $fastcgi_script_name; #è„šæœ¬åç§° 
+fastcgi_param  REQUEST_URI        $request_uri; #è¯·æ±‚çš„åœ°å€ä¸å¸¦å‚æ•°
+fastcgi_param  DOCUMENT_URI       $document_uri; #ä¸$uriç›¸åŒã€‚ 
+fastcgi_param  DOCUMENT_ROOT      $document_root; #ç½‘ç«™çš„æ ¹ç›®å½•ã€‚åœ¨serveré…ç½®ä¸­rootæŒ‡ä»¤ä¸­æŒ‡å®šçš„å€¼ 
+fastcgi_param  SERVER_PROTOCOL    $server_protocol; #è¯·æ±‚ä½¿ç”¨çš„åè®®ï¼Œé€šå¸¸æ˜¯HTTP/1.0æˆ–HTTP/1.1ã€‚  
 
-fastcgi_param  GATEWAY_INTERFACE  CGI/1.1;#cgi °æ±¾
-fastcgi_param  SERVER_SOFTWARE    nginx/$nginx_version;#nginx °æ±¾ºÅ£¬¿ÉĞŞ¸Ä¡¢Òş²Ø
+fastcgi_param  GATEWAY_INTERFACE  CGI/1.1;#cgi ç‰ˆæœ¬
+fastcgi_param  SERVER_SOFTWARE    nginx/$nginx_version;#nginx ç‰ˆæœ¬å·ï¼Œå¯ä¿®æ”¹ã€éšè—
 
-fastcgi_param  REMOTE_ADDR        $remote_addr; #¿Í»§¶ËIP
-fastcgi_param  REMOTE_PORT        $remote_port; #¿Í»§¶Ë¶Ë¿Ú
-fastcgi_param  SERVER_ADDR        $server_addr; #·şÎñÆ÷IPµØÖ·
-fastcgi_param  SERVER_PORT        $server_port; #·şÎñÆ÷¶Ë¿Ú
-fastcgi_param  SERVER_NAME        $server_name; #·şÎñÆ÷Ãû£¬ÓòÃûÔÚserverÅäÖÃÖĞÖ¸¶¨µÄserver_name
+fastcgi_param  REMOTE_ADDR        $remote_addr; #å®¢æˆ·ç«¯IP
+fastcgi_param  REMOTE_PORT        $remote_port; #å®¢æˆ·ç«¯ç«¯å£
+fastcgi_param  SERVER_ADDR        $server_addr; #æœåŠ¡å™¨IPåœ°å€
+fastcgi_param  SERVER_PORT        $server_port; #æœåŠ¡å™¨ç«¯å£
+fastcgi_param  SERVER_NAME        $server_name; #æœåŠ¡å™¨åï¼ŒåŸŸååœ¨serveré…ç½®ä¸­æŒ‡å®šçš„server_name
 
-#fastcgi_param  PATH_INFO           $path_info;#¿É×Ô¶¨Òå±äÁ¿
+#fastcgi_param  PATH_INFO           $path_info;#å¯è‡ªå®šä¹‰å˜é‡
 
 # PHP only, required if PHP was built with --enable-force-cgi-redirect
 #fastcgi_param  REDIRECT_STATUS    200;
 
-ÔÚphp¿É´òÓ¡³öÉÏÃæµÄ·şÎñ»·¾³±äÁ¿
-Èç£ºecho $_SERVER['REMOTE_ADDR']
+åœ¨phpå¯æ‰“å°å‡ºä¸Šé¢çš„æœåŠ¡ç¯å¢ƒå˜é‡
+å¦‚ï¼šecho $_SERVER['REMOTE_ADDR']
 
-$args ´Ë±äÁ¿ÓëÇëÇóĞĞÖĞµÄ²ÎÊıÏàµÈ
-$content_length µÈÓÚÇëÇóĞĞµÄ¡°Content_Length¡±µÄÖµ¡£
-$content_type µÈÍ¬ÓëÇëÇóÍ·²¿µÄ¡±Content_Type¡±µÄÖµ
-$document_root µÈÍ¬ÓÚµ±Ç°ÇëÇóµÄrootÖ¸ÁîÖ¸¶¨µÄÖµ
-$document_uri Óë$uriÒ»Ñù
-$host ÓëÇëÇóÍ·²¿ÖĞ¡°Host¡±ĞĞÖ¸¶¨µÄÖµ»òÊÇrequestµ½´ïµÄserverµÄÃû×Ö£¨Ã»ÓĞHostĞĞ£©Ò»Ñù
-$limit_rate ÔÊĞíÏŞÖÆµÄÁ¬½ÓËÙÂÊ
-$request_method µÈÍ¬ÓÚrequestµÄmethod£¬Í¨³£ÊÇ¡°GET¡±»ò¡°POST¡±
-$remote_addr ¿Í»§¶Ëip
-$remote_port ¿Í»§¶Ëport
-$remote_user µÈÍ¬ÓÚÓÃ»§Ãû£¬ÓÉngx_http_auth_basic_moduleÈÏÖ¤
-$request_filename µ±Ç°ÇëÇóµÄÎÄ¼şµÄÂ·¾¶Ãû£¬ÓÉroot»òaliasºÍURI request×éºÏ¶ø³É
+$args æ­¤å˜é‡ä¸è¯·æ±‚è¡Œä¸­çš„å‚æ•°ç›¸ç­‰
+$content_length ç­‰äºè¯·æ±‚è¡Œçš„â€œContent_Lengthâ€çš„å€¼ã€‚
+$content_type ç­‰åŒä¸è¯·æ±‚å¤´éƒ¨çš„â€Content_Typeâ€çš„å€¼
+$document_root ç­‰åŒäºå½“å‰è¯·æ±‚çš„rootæŒ‡ä»¤æŒ‡å®šçš„å€¼
+$document_uri ä¸$uriä¸€æ ·
+$host ä¸è¯·æ±‚å¤´éƒ¨ä¸­â€œHostâ€è¡ŒæŒ‡å®šçš„å€¼æˆ–æ˜¯requeståˆ°è¾¾çš„serverçš„åå­—ï¼ˆæ²¡æœ‰Hostè¡Œï¼‰ä¸€æ ·
+$limit_rate å…è®¸é™åˆ¶çš„è¿æ¥é€Ÿç‡
+$request_method ç­‰åŒäºrequestçš„methodï¼Œé€šå¸¸æ˜¯â€œGETâ€æˆ–â€œPOSTâ€
+$remote_addr å®¢æˆ·ç«¯ip
+$remote_port å®¢æˆ·ç«¯port
+$remote_user ç­‰åŒäºç”¨æˆ·åï¼Œç”±ngx_http_auth_basic_moduleè®¤è¯
+$request_filename å½“å‰è¯·æ±‚çš„æ–‡ä»¶çš„è·¯å¾„åï¼Œç”±rootæˆ–aliaså’ŒURI requestç»„åˆè€Œæˆ
 $request_body_file
-$request_uri º¬ÓĞ²ÎÊıµÄÍêÕûµÄ³õÊ¼URI
-$query_string Óë$argsÒ»Ñù
-$server_protocol µÈÍ¬ÓÚrequestµÄĞ­Òé£¬Ê¹ÓÃ¡°HTTP/1.0¡±»ò¡°HTTP/1.1¡±
-$server_addr requestµ½´ïµÄserverµÄip£¬Ò»°ã»ñµÃ´Ë±äÁ¿µÄÖµµÄÄ¿µÄÊÇ½øĞĞÏµÍ³µ÷ÓÃ¡£ÎªÁË±ÜÃâÏµÍ³µ÷ÓÃ£¬ÓĞ±ØÒªÔÚlistenÖ¸ÁîÖĞÖ¸Ã÷ip£¬²¢Ê¹ÓÃbind²ÎÊı¡£
-$server_name ÇëÇóµ½´ïµÄ·şÎñÆ÷Ãû
-$server_port ÇëÇóµ½´ïµÄ·şÎñÆ÷µÄ¶Ë¿ÚºÅ
-$uri µÈÍ¬ÓÚµ±Ç°requestÖĞµÄURI£¬¿É²»Í¬ÓÚ³õÊ¼Öµ£¬ÀıÈçÄÚ²¿ÖØ¶¨ÏòÊ±»òÊ¹ÓÃindex
+$request_uri å«æœ‰å‚æ•°çš„å®Œæ•´çš„åˆå§‹URI
+$query_string ä¸$argsä¸€æ ·
+$server_protocol ç­‰åŒäºrequestçš„åè®®ï¼Œä½¿ç”¨â€œHTTP/1.0â€æˆ–â€œHTTP/1.1â€
+$server_addr requeståˆ°è¾¾çš„serverçš„ipï¼Œä¸€èˆ¬è·å¾—æ­¤å˜é‡çš„å€¼çš„ç›®çš„æ˜¯è¿›è¡Œç³»ç»Ÿè°ƒç”¨ã€‚ä¸ºäº†é¿å…ç³»ç»Ÿè°ƒç”¨ï¼Œæœ‰å¿…è¦åœ¨listenæŒ‡ä»¤ä¸­æŒ‡æ˜ipï¼Œå¹¶ä½¿ç”¨bindå‚æ•°ã€‚
+$server_name è¯·æ±‚åˆ°è¾¾çš„æœåŠ¡å™¨å
+$server_port è¯·æ±‚åˆ°è¾¾çš„æœåŠ¡å™¨çš„ç«¯å£å·
+$uri ç­‰åŒäºå½“å‰requestä¸­çš„URIï¼Œå¯ä¸åŒäºåˆå§‹å€¼ï¼Œä¾‹å¦‚å†…éƒ¨é‡å®šå‘æ—¶æˆ–ä½¿ç”¨index
 
-1.Æô¶¯ Nginx
+1.å¯åŠ¨ Nginx
 poechant@ubuntu:sudo ./sbin/nginx
-2. Í£Ö¹ Nginx
+2. åœæ­¢ Nginx
 poechant@ubuntu:sudo ./sbin/nginx -s stop
 poechant@ubuntu:sudo ./sbin/nginx -s quit
--s¶¼ÊÇ²ÉÓÃÏò Nginx ·¢ËÍĞÅºÅµÄ·½Ê½¡£
-3. Nginx ÖØÔØÅäÖÃ
+-séƒ½æ˜¯é‡‡ç”¨å‘ Nginx å‘é€ä¿¡å·çš„æ–¹å¼ã€‚
+3. Nginx é‡è½½é…ç½®
 poechant@ubuntu:sudo ./sbin/nginx -s reload
-ÉÏÊöÊÇ²ÉÓÃÏò Nginx ·¢ËÍĞÅºÅµÄ·½Ê½£¬»òÕßÊ¹ÓÃ£º
+ä¸Šè¿°æ˜¯é‡‡ç”¨å‘ Nginx å‘é€ä¿¡å·çš„æ–¹å¼ï¼Œæˆ–è€…ä½¿ç”¨ï¼š
 poechant@ubuntu:service nginx reload
-4. Ö¸¶¨ÅäÖÃÎÄ¼ş
+4. æŒ‡å®šé…ç½®æ–‡ä»¶
 poechant@ubuntu:sudo ./sbin/nginx -c /usr/local/nginx/conf/nginx.conf
--c±íÊ¾configuration£¬Ö¸¶¨ÅäÖÃÎÄ¼ş¡£
+-cè¡¨ç¤ºconfigurationï¼ŒæŒ‡å®šé…ç½®æ–‡ä»¶ã€‚
 
-½ñÌìÅäÖÃÒ»¸önginxµÄrewrite£¬¼òÖ±ÊÇ±»¸ãËÀÁË¡£ÆäÊµÎÒ¾ÍÊÇÏë°Ñ/xxx/0.mp4?key=123456abcde×ª»»Îª/xxx.mp4?segno=0&key=123456abcdeÕâÖÖĞÎÊ½¾­¹ı²»¶ÏµÄ³¢ÊÔ£¬Ò²·ÖÎöÁËÒ»ÏÂÔ­Òò£¬·¢ÏÖniginxµÄÄÚÈİÉèÖÃÖĞ±ØĞë×¢ÒâµÄÒ»Ğ©ÎÊÌâ:
-1.nginxÔÚ½øĞĞrewriteµÄÕıÔò±í´ïÊ½ÖĞÖ»»á½«urlÖĞ?Ç°ÃæµÄ²¿·ÖÄÃ³öÀ´Æ¥Åä
-2.Æ¥ÅäÍê³Éºó£¬?ºóÃæµÄÄÚÈİ½«×Ô¶¯×·¼Óµ½urlÖĞ£¨°üº¬?£©£¬Èç¹û²»ÈÃºóÃæµÄÄÚÈİ×·¼ÓÉÏÈ¥£¬ÇëÔÚ×îºó¼ÓÉÏ?¼´¿É
-3.Èç¹ûÏëÒª?ºóÃæµÄÄÚÈİÊ±ÇëÊ¹ÓÃ$query_string
+ä»Šå¤©é…ç½®ä¸€ä¸ªnginxçš„rewriteï¼Œç®€ç›´æ˜¯è¢«ææ­»äº†ã€‚å…¶å®æˆ‘å°±æ˜¯æƒ³æŠŠ/xxx/0.mp4?key=123456abcdeè½¬æ¢ä¸º/xxx.mp4?segno=0&key=123456abcdeè¿™ç§å½¢å¼ç»è¿‡ä¸æ–­çš„å°è¯•ï¼Œä¹Ÿåˆ†æäº†ä¸€ä¸‹åŸå› ï¼Œå‘ç°niginxçš„å†…å®¹è®¾ç½®ä¸­å¿…é¡»æ³¨æ„çš„ä¸€äº›é—®é¢˜:
+1.nginxåœ¨è¿›è¡Œrewriteçš„æ­£åˆ™è¡¨è¾¾å¼ä¸­åªä¼šå°†urlä¸­?å‰é¢çš„éƒ¨åˆ†æ‹¿å‡ºæ¥åŒ¹é…
+2.åŒ¹é…å®Œæˆåï¼Œ?åé¢çš„å†…å®¹å°†è‡ªåŠ¨è¿½åŠ åˆ°urlä¸­ï¼ˆåŒ…å«?ï¼‰ï¼Œå¦‚æœä¸è®©åé¢çš„å†…å®¹è¿½åŠ ä¸Šå»ï¼Œè¯·åœ¨æœ€ååŠ ä¸Š?å³å¯
+3.å¦‚æœæƒ³è¦?åé¢çš„å†…å®¹æ—¶è¯·ä½¿ç”¨$query_string
 
-ÔÚÕâÀïÌáĞÑÒ»µã£¬µ÷ÊÔµÄÊ±ºòÔÚrewriteµÄ×îºóÒ»¸öÅäÖÃÏîÖĞ²»ÒªÊ¹ÓÃbreak lastÕâĞ©£¬Ê¹ÓÃredirect¿ÉÒÔ¿´µ½×ª»»ºóµÄµØÖ·¡£×ÛºÏÒÔÉÏ¼¸µã£¬Ê¹ÓÃµÄÅäÖÃÏîÎª
+åœ¨è¿™é‡Œæé†’ä¸€ç‚¹ï¼Œè°ƒè¯•çš„æ—¶å€™åœ¨rewriteçš„æœ€åä¸€ä¸ªé…ç½®é¡¹ä¸­ä¸è¦ä½¿ç”¨break lastè¿™äº›ï¼Œä½¿ç”¨redirectå¯ä»¥çœ‹åˆ°è½¬æ¢åçš„åœ°å€ã€‚ç»¼åˆä»¥ä¸Šå‡ ç‚¹ï¼Œä½¿ç”¨çš„é…ç½®é¡¹ä¸º
 
 rewrite ^/(.+)/(\d+)\.mp4$ /$1.mp4?segno=$2&$query_string? last;  
 
-ÊµÏÖ http://a.com/abc µ½ http://b.com/abc
-ÔÚ Nginx µÄÄ¬ÈÏÅäÖÃÎÄ¼şÖĞµÄ http Ä£¿éµÄ×ÓÄ£¿é server ÖĞÌí¼ÓÒ»¶Î´úÂë£º
+å®ç° http://a.com/abc åˆ° http://b.com/abc
+åœ¨ Nginx çš„é»˜è®¤é…ç½®æ–‡ä»¶ä¸­çš„ http æ¨¡å—çš„å­æ¨¡å— server ä¸­æ·»åŠ ä¸€æ®µä»£ç ï¼š
 location ^~ /hd
 {
    rewrite  ^/hd/(.*)$  http://www.google.com/$1  permanent;
 }
-ÊµÏÖ http://a.com/msg?url=www.b.com µ½ http://www.b.com
+å®ç° http://a.com/msg?url=www.b.com åˆ° http://www.b.com
 location ^~ /img_proxy
 {
    set $img_proxy_url "";
@@ -500,7 +500,7 @@ location ^~ /img_proxy
    proxy_pass http://$img_proxy_url/$suffix;
    proxy_set_header referer "http://$img_proxy_url";
 }
-½¨Á¢Ò»¸ö/home/michael/test_spaceÄ¿Â¼£¬ÓÃÀ´´æ´¢ÎÒÃÇµÄ²âÊÔÓÃÀı¡£ÔÙÖ±½ÓÔÚ Nginx µÄÄ¬ÈÏÅäÖÃÎÄ¼ş/usr/loca/nginx/conf/nginx.confÖĞĞŞ¸Ä£¬ÔÚhttpÖĞÔö¼ÓÒ»¸öserverÄ£¿é£¬ÈçÏÂ£º
+å»ºç«‹ä¸€ä¸ª/home/michael/test_spaceç›®å½•ï¼Œç”¨æ¥å­˜å‚¨æˆ‘ä»¬çš„æµ‹è¯•ç”¨ä¾‹ã€‚å†ç›´æ¥åœ¨ Nginx çš„é»˜è®¤é…ç½®æ–‡ä»¶/usr/loca/nginx/conf/nginx.confä¸­ä¿®æ”¹ï¼Œåœ¨httpä¸­å¢åŠ ä¸€ä¸ªserveræ¨¡å—ï¼Œå¦‚ä¸‹ï¼š
 server {
     listen      8011;
     server_name localhost;
@@ -509,8 +509,8 @@ server {
         alias   /home/michael/test_space/;
     }
 }
-ÆäÖĞlisten±íÊ¾¼àÌıµÄ¶Ë¿ÚºÅ£¬sever_nameÔòÊÇweb·şÎñÆ÷µÄÃû³Æ£¨¿ÉÒÔÊÇÓòÃû¡¢host »ò IP µØÖ·£©£¬charsetÖ¸¶¨±àÂë×Ö·û¼¯£¬ÕâÀïµÄlocationÔòÍ¨¹ıaliasÖ¸¶¨ÁËweb·şÎñµÄÎÄ¼şÄ¿Â¼¡£
-Ò»¸ö¼òµ¥µÄ PHP Õ¾µãµÄ Nginx ÅäÖÃ
+å…¶ä¸­listenè¡¨ç¤ºç›‘å¬çš„ç«¯å£å·ï¼Œsever_nameåˆ™æ˜¯webæœåŠ¡å™¨çš„åç§°ï¼ˆå¯ä»¥æ˜¯åŸŸåã€host æˆ– IP åœ°å€ï¼‰ï¼ŒcharsetæŒ‡å®šç¼–ç å­—ç¬¦é›†ï¼Œè¿™é‡Œçš„locationåˆ™é€šè¿‡aliasæŒ‡å®šäº†webæœåŠ¡çš„æ–‡ä»¶ç›®å½•ã€‚
+ä¸€ä¸ªç®€å•çš„ PHP ç«™ç‚¹çš„ Nginx é…ç½®
 server {
     listen        80;
     server_name   nginx.org  www.nginx.org;
@@ -531,318 +531,318 @@ server {
         include        fastcgi_params;
     }
 }
-Nginx ÔÚÆ¥ÅälocationµÄÊ±ºò£¬²»ÊÇ°´ÕÕÅäÖÃ´úÂë¸ø³öµÄË³Ğò½øĞĞÆ¥ÅäµÄ£¬¶øÊÇÏÈ°´ÕÕÆ¥Åä±í´ïÊ½ÖĞµÄÎÄ×Ö×Ö·û´®£¨literal string£©µÄÃ÷È·³Ì¶È£¬´Ó×îÃ÷È·µÄ¿ªÊ¼Æ¥Åä¡£ÕâÃ´Ëµ¿ÉÄÜÓĞµãº¬»ì²»Çå£¬¼òµ¥Ëµ£¬Ã»ÓĞÕıÔò¹æÔòµÄÆ¥Åä±í´ïÊ½£¬ÊÇ×îÃ÷È·µÄ¡£±ÈÈçÈç¹ûÕâ¸öÆ¥Åä±í´ïÊ½¾ÍÊÇÒ»¸ö¡°/¡±»òÕß¡°/abc¡±£¬ÄÇÃ´Õâ¾ÍÊÇ×îÃ÷È·µÄ¡£ÉÏÀıÖĞµÄ"/"¾ÍÊÇÕâ¸ö×îÃ÷È·µÄÎÃ×Ó×Ö·û´®£¨the most specific literal string£©£¬ÆäÊµÒ²ÊÇ¸ÃÀıÖĞÎ¨Ò»µÄ¡£ËùÒÔÏÈ´ÓÕâ¸ölocation¿ªÊ¼£¬È»ºóÔÙ°´ÕÕlocationµÄÁĞ³öË³Ğò£¬ÒÀ´ÎÆ¥Åä£¬Ö±µ½³öÏÖµÚÒ»¸öÆ¥ÅäµÄlocationºóÍ£Ö¹¡£Èç¹ûËùÓĞµÄlocation¶¼²»Æ¥Åä£¬¾ÍÓÃµÚÒ»¸öÕÒµ½µÄ×îÃ÷È·µÄÎÄ×Ö×Ö·û´®À´Æ¥Åä£¨the most specific literal string£©¡£
-´ı²éÑ¯µÄ HTTP ÇëÇó
-NginxÖ»´¦ÀíÎŞ²éÑ¯µÄHTTPÇëÇó£¬ÒòÎª²éÑ¯ÇëÇóµÄ²éÑ¯×Ö¶ÎµÄË³Ğò²»È·¶¨£¬±ÈÈç£º
+Nginx åœ¨åŒ¹é…locationçš„æ—¶å€™ï¼Œä¸æ˜¯æŒ‰ç…§é…ç½®ä»£ç ç»™å‡ºçš„é¡ºåºè¿›è¡ŒåŒ¹é…çš„ï¼Œè€Œæ˜¯å…ˆæŒ‰ç…§åŒ¹é…è¡¨è¾¾å¼ä¸­çš„æ–‡å­—å­—ç¬¦ä¸²ï¼ˆliteral stringï¼‰çš„æ˜ç¡®ç¨‹åº¦ï¼Œä»æœ€æ˜ç¡®çš„å¼€å§‹åŒ¹é…ã€‚è¿™ä¹ˆè¯´å¯èƒ½æœ‰ç‚¹å«æ··ä¸æ¸…ï¼Œç®€å•è¯´ï¼Œæ²¡æœ‰æ­£åˆ™è§„åˆ™çš„åŒ¹é…è¡¨è¾¾å¼ï¼Œæ˜¯æœ€æ˜ç¡®çš„ã€‚æ¯”å¦‚å¦‚æœè¿™ä¸ªåŒ¹é…è¡¨è¾¾å¼å°±æ˜¯ä¸€ä¸ªâ€œ/â€æˆ–è€…â€œ/abcâ€ï¼Œé‚£ä¹ˆè¿™å°±æ˜¯æœ€æ˜ç¡®çš„ã€‚ä¸Šä¾‹ä¸­çš„"/"å°±æ˜¯è¿™ä¸ªæœ€æ˜ç¡®çš„èšŠå­å­—ç¬¦ä¸²ï¼ˆthe most specific literal stringï¼‰ï¼Œå…¶å®ä¹Ÿæ˜¯è¯¥ä¾‹ä¸­å”¯ä¸€çš„ã€‚æ‰€ä»¥å…ˆä»è¿™ä¸ªlocationå¼€å§‹ï¼Œç„¶åå†æŒ‰ç…§locationçš„åˆ—å‡ºé¡ºåºï¼Œä¾æ¬¡åŒ¹é…ï¼Œç›´åˆ°å‡ºç°ç¬¬ä¸€ä¸ªåŒ¹é…çš„locationååœæ­¢ã€‚å¦‚æœæ‰€æœ‰çš„locationéƒ½ä¸åŒ¹é…ï¼Œå°±ç”¨ç¬¬ä¸€ä¸ªæ‰¾åˆ°çš„æœ€æ˜ç¡®çš„æ–‡å­—å­—ç¬¦ä¸²æ¥åŒ¹é…ï¼ˆthe most specific literal stringï¼‰ã€‚
+å¾…æŸ¥è¯¢çš„ HTTP è¯·æ±‚
+Nginxåªå¤„ç†æ— æŸ¥è¯¢çš„HTTPè¯·æ±‚ï¼Œå› ä¸ºæŸ¥è¯¢è¯·æ±‚çš„æŸ¥è¯¢å­—æ®µçš„é¡ºåºä¸ç¡®å®šï¼Œæ¯”å¦‚ï¼š
 /index.php?user=john&page=1
 /index.php?page=1&user=john
-ÔÙ±ÈÈç£º
+å†æ¯”å¦‚ï¼š
 /index.php?page=1&something+else&user=john
-¼¸¸ölocationµÄÀı×Ó
-Àı1£º
+å‡ ä¸ªlocationçš„ä¾‹å­
+ä¾‹1ï¼š
 /logo.gif
-¡°/¡±ÏÈ±»ÕÒµ½£¬È»ºóÆ¥Åä"\.(gif|jpg|png)$"£¬ÔÙ¸ù¾İ redirective ÕÒµ½rootÊÇ/data/www£¬È»ºóÕâ¸öÇëÇó¾Í±»Ó³Éäµ½"/data/www/logo.gif"ÁË£¬×îºóÎÄ¼ş¾Í±»·¢ËÍ¸øµ½ÁË¿Í»§¶Ë¡£
-Àı2£º
+â€œ/â€å…ˆè¢«æ‰¾åˆ°ï¼Œç„¶ååŒ¹é…"\.(gif|jpg|png)$"ï¼Œå†æ ¹æ® redirective æ‰¾åˆ°rootæ˜¯/data/wwwï¼Œç„¶åè¿™ä¸ªè¯·æ±‚å°±è¢«æ˜ å°„åˆ°"/data/www/logo.gif"äº†ï¼Œæœ€åæ–‡ä»¶å°±è¢«å‘é€ç»™åˆ°äº†å®¢æˆ·ç«¯ã€‚
+ä¾‹2ï¼š
 /index.php
-"/"ÏÈ±»ÕÒµ½£¬È»ºóÆ¥Åä"\.(php)$"£¬È»ºó request ¾Í±»´«µİ¸øÔÚ 9000 ¶Ë¿ÚÉÏ¼àÌıµÄ FastCGI ·şÎñÆ÷£¬"fastcgi_param" directive ÉèÖÃ FastCGI µÄ²ÎÊıSCRIPT_FILENAMEÎª"/data/www/index.php"£¬È»ºóFastCGI·şÎñÆ÷¾ÍÖ´ĞĞÕâ¸öÎÄ¼ş¡££¨×¢ÒâÆäÖĞdocument_rootÊÇ/data/www£¬fastcgi_script_nameÊÇ/index.php¡££©
-Àı3£º
+"/"å…ˆè¢«æ‰¾åˆ°ï¼Œç„¶ååŒ¹é…"\.(php)$"ï¼Œç„¶å request å°±è¢«ä¼ é€’ç»™åœ¨ 9000 ç«¯å£ä¸Šç›‘å¬çš„ FastCGI æœåŠ¡å™¨ï¼Œ"fastcgi_param" directive è®¾ç½® FastCGI çš„å‚æ•°SCRIPT_FILENAMEä¸º"/data/www/index.php"ï¼Œç„¶åFastCGIæœåŠ¡å™¨å°±æ‰§è¡Œè¿™ä¸ªæ–‡ä»¶ã€‚ï¼ˆæ³¨æ„å…¶ä¸­document_rootæ˜¯/data/wwwï¼Œfastcgi_script_nameæ˜¯/index.phpã€‚ï¼‰
+ä¾‹3ï¼š
 /
-"/"ÊÇºÜ¸´ÔÓµÄ£¬ÏÈÕÒµ½"/"Õâ¸ölocation£¬È»ºó¸ù¾İrootÖµ/data/www£¬¿´/data/www/index.phpÊÇ·ñ´æÔÚ£¬Èç¹û´æÔÚ directive ¾ÍÔÚÄÚ²¿ÖØ¶¨Ïòµ½/index.php£¬È»ºó Nginx ¸ù¾İÕâ¸öÔÙ´ÎËÑË÷location£¬ÖØ¸´ÉÏÃæµÚ¶ş¸öÀı×Ó
+"/"æ˜¯å¾ˆå¤æ‚çš„ï¼Œå…ˆæ‰¾åˆ°"/"è¿™ä¸ªlocationï¼Œç„¶åæ ¹æ®rootå€¼/data/wwwï¼Œçœ‹/data/www/index.phpæ˜¯å¦å­˜åœ¨ï¼Œå¦‚æœå­˜åœ¨ directive å°±åœ¨å†…éƒ¨é‡å®šå‘åˆ°/index.phpï¼Œç„¶å Nginx æ ¹æ®è¿™ä¸ªå†æ¬¡æœç´¢locationï¼Œé‡å¤ä¸Šé¢ç¬¬äºŒä¸ªä¾‹å­
 
-ºËĞÄÄ£¿éÖ®Ö÷Ä£¿éµÄ²âÊÔ³£ÓÃÖ¸Áî
+æ ¸å¿ƒæ¨¡å—ä¹‹ä¸»æ¨¡å—çš„æµ‹è¯•å¸¸ç”¨æŒ‡ä»¤
 1. daemon
-º¬Òå£ºÉèÖÃÊÇ·ñÒÔÊØ»¤½ø³ÌÄ£Ê½ÔËĞĞ
-Óï·¨£ºdaemon on|off
-È±Ê¡£ºon
-Ê¾Àı£ºdaemon off;
-×¢Òâ£ºÉú²ú»·¾³£¨production mode£©ÖĞ²»ÒªÊ¹ÓÃdaemonÖ¸Áî£¬ÕâĞ©Ñ¡Ïî½öÓÃÓÚ¿ª·¢²âÊÔ£¨development mode£©¡£
+å«ä¹‰ï¼šè®¾ç½®æ˜¯å¦ä»¥å®ˆæŠ¤è¿›ç¨‹æ¨¡å¼è¿è¡Œ
+è¯­æ³•ï¼šdaemon on|off
+ç¼ºçœï¼šon
+ç¤ºä¾‹ï¼šdaemon off;
+æ³¨æ„ï¼šç”Ÿäº§ç¯å¢ƒï¼ˆproduction modeï¼‰ä¸­ä¸è¦ä½¿ç”¨daemonæŒ‡ä»¤ï¼Œè¿™äº›é€‰é¡¹ä»…ç”¨äºå¼€å‘æµ‹è¯•ï¼ˆdevelopment modeï¼‰ã€‚
 
 2. debug_points
-º¬Òå£º¶Ïµãµ÷ÊÔ
-Óï·¨£ºdebug_points [stop|abort]
-È±Ê¡£ºnone
-Ê¾Àı£ºdebug_points stop;
-×¢Òâ£ºÔÚNginxÄÚÓĞÒ»Ğ©assert¶ÏÑÔ£¬ÕâĞ©¶ÏÑÔÔÊĞíNginx£¬ÅäºÏµ÷ÊÔÆ÷ÖĞ¶Ï³ÌĞòÔËĞĞ¡¢Í£Ö¹»ò´´½¨coreÎÄ¼ş¡£
+å«ä¹‰ï¼šæ–­ç‚¹è°ƒè¯•
+è¯­æ³•ï¼šdebug_points [stop|abort]
+ç¼ºçœï¼šnone
+ç¤ºä¾‹ï¼šdebug_points stop;
+æ³¨æ„ï¼šåœ¨Nginxå†…æœ‰ä¸€äº›assertæ–­è¨€ï¼Œè¿™äº›æ–­è¨€å…è®¸Nginxï¼Œé…åˆè°ƒè¯•å™¨ä¸­æ–­ç¨‹åºè¿è¡Œã€åœæ­¢æˆ–åˆ›å»ºcoreæ–‡ä»¶ã€‚
 
 3. master_process
-º¬Òå£ºÉèÖÃÊÇ·ñÆôÓÃÖ÷½ø³Ì
-Óï·¨£ºmaster_process on|off
-È±Ê¡£ºon
-Ê¾Àı£ºmaster_process off;
-×¢Òâ£º²»ÒªÔÚÉú²ú»·¾³£¨production mode£©ÖĞÊ¹ÓÃmaster_processÖ¸Áî£¬ÕâĞ©Ñ¡Ïî½öÓÃÓÚ¿ª·¢²âÊÔ£¨development mode£©¡£
+å«ä¹‰ï¼šè®¾ç½®æ˜¯å¦å¯ç”¨ä¸»è¿›ç¨‹
+è¯­æ³•ï¼šmaster_process on|off
+ç¼ºçœï¼šon
+ç¤ºä¾‹ï¼šmaster_process off;
+æ³¨æ„ï¼šä¸è¦åœ¨ç”Ÿäº§ç¯å¢ƒï¼ˆproduction modeï¼‰ä¸­ä½¿ç”¨master_processæŒ‡ä»¤ï¼Œè¿™äº›é€‰é¡¹ä»…ç”¨äºå¼€å‘æµ‹è¯•ï¼ˆdevelopment modeï¼‰ã€‚
 
 4. error_log
-º¬Òå£ºÖ¸¶¨´íÎóÈÕÖ¾ÎÄ¼ş
-Óï·¨£ºerror_log file [debug|info|notice|warn|error|crit]
-È±Ê¡£º${prefix}/logs/error.log
-Ê¾Àı£ºerror_log /data/nginx/logs/error.log debug
-×¢Òâ£º¸ÃÃüÁî²¢·ÇÖ»ÓĞÔÚ²âÊÔ£¨»ò³ÆÎª¿ª·¢£©Ä£Ê½ÏÂ²Å¿ÉÒÔÊ¹ÓÃ£¬¶øÊÇÔÚ±àÒëÊ±Ìí¼ÓÁË--with-debug²ÎÊıÊ±£¬Ôò¿ÉÒÔÊ¹ÓÃerror_logÖ¸ÁîµÄ¶îÍâ²ÎÊı£¬¼´£º
+å«ä¹‰ï¼šæŒ‡å®šé”™è¯¯æ—¥å¿—æ–‡ä»¶
+è¯­æ³•ï¼šerror_log file [debug|info|notice|warn|error|crit]
+ç¼ºçœï¼š${prefix}/logs/error.log
+ç¤ºä¾‹ï¼šerror_log /data/nginx/logs/error.log debug
+æ³¨æ„ï¼šè¯¥å‘½ä»¤å¹¶éåªæœ‰åœ¨æµ‹è¯•ï¼ˆæˆ–ç§°ä¸ºå¼€å‘ï¼‰æ¨¡å¼ä¸‹æ‰å¯ä»¥ä½¿ç”¨ï¼Œè€Œæ˜¯åœ¨ç¼–è¯‘æ—¶æ·»åŠ äº†--with-debugå‚æ•°æ—¶ï¼Œåˆ™å¯ä»¥ä½¿ç”¨error_logæŒ‡ä»¤çš„é¢å¤–å‚æ•°ï¼Œå³ï¼š
 error_log file [debug_core|debug_alloc|debug_mutex|debug_event|debug_http|debug_imap];
 
-ºËĞÄÄ£¿éÖ®Ö÷Ä£¿éµÄ·Ç²âÊÔ³£ÓÃÖ¸Áî
+æ ¸å¿ƒæ¨¡å—ä¹‹ä¸»æ¨¡å—çš„éæµ‹è¯•å¸¸ç”¨æŒ‡ä»¤
 2. include
-º¬Òå£ºÖ¸¶¨ËùÒª°üº¬µÄNginxÅäÖÃÎÄ¼ş
-Óï·¨£ºinclude <file|*>
-È±Ê¡£ºnone
-Ê¾Àı£ºinclude vhosts/*.conf »ò include /home/michael/nginx/conf/nginx-main.conf
-×¢Òâ£º
-£¨1£©includeÃüÁî¿ÉÒÔÖ¸¶¨°üº¬Ò»¸öÎÄ¼ş£¬±ÈÈçµÚ¶ş¸öÊ¾Àı¡£Ò²¿ÉÒÔÖ¸¶¨°üº¬Ò»¸öÄ¿Â¼ÏÂµÄËùÓĞÎÄ¼ş£¬±ÈÈçµÚÒ»¸öÊ¾Àı¡£
-£¨2£©Ö¸¶¨µÄÎÄ¼şÂ·¾¶µÄ»ùÂ·¾¶£¬ÓÉ±àÒëÑ¡Ïî--prefix¾ö¶¨£¬Èç¹û±àÒëÊ±Ã»ÓĞÖ¸¶¨£¬ÔòÄ¬ÈÏµÄÂ·¾¶ÊÇ/usr/local/nginx¡£
+å«ä¹‰ï¼šæŒ‡å®šæ‰€è¦åŒ…å«çš„Nginxé…ç½®æ–‡ä»¶
+è¯­æ³•ï¼šinclude <file|*>
+ç¼ºçœï¼šnone
+ç¤ºä¾‹ï¼šinclude vhosts/*.conf æˆ– include /home/michael/nginx/conf/nginx-main.conf
+æ³¨æ„ï¼š
+ï¼ˆ1ï¼‰includeå‘½ä»¤å¯ä»¥æŒ‡å®šåŒ…å«ä¸€ä¸ªæ–‡ä»¶ï¼Œæ¯”å¦‚ç¬¬äºŒä¸ªç¤ºä¾‹ã€‚ä¹Ÿå¯ä»¥æŒ‡å®šåŒ…å«ä¸€ä¸ªç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶ï¼Œæ¯”å¦‚ç¬¬ä¸€ä¸ªç¤ºä¾‹ã€‚
+ï¼ˆ2ï¼‰æŒ‡å®šçš„æ–‡ä»¶è·¯å¾„çš„åŸºè·¯å¾„ï¼Œç”±ç¼–è¯‘é€‰é¡¹--prefixå†³å®šï¼Œå¦‚æœç¼–è¯‘æ—¶æ²¡æœ‰æŒ‡å®šï¼Œåˆ™é»˜è®¤çš„è·¯å¾„æ˜¯/usr/local/nginxã€‚
 
 3. lock_file
-º¬Òå£º
-Óï·¨£ºlock_file <file>
-È±Ê¡£ºcompile-time option
-Ê¾Àı£ºlock_file /var/log/lock_file;
-×¢Òâ£ºNginxÊ¹ÓÃaccept mutexÀ´ĞòÁĞ»¯accept()ÏµÍ³µ÷ÓÃ£¨syscalls£©¡£Èç¹ûÊÇÔÚi386£¬sparc64£¬ppc64»òamd64Æ½Ì¨ÉÏÓÃGCC£¬Intel C++£¬SunPro C++±àÒëÆ÷±àÒëµÄ£¬ÔòNginxÊ¹ÓÃCPUÔ­Ö¸ÁîÊµÏÖmutex¡£ÆäËûÇé¿öÏÂ£¬ÔòÊ¹ÓÃlock_file¡£
+å«ä¹‰ï¼š
+è¯­æ³•ï¼šlock_file <file>
+ç¼ºçœï¼šcompile-time option
+ç¤ºä¾‹ï¼šlock_file /var/log/lock_file;
+æ³¨æ„ï¼šNginxä½¿ç”¨accept mutexæ¥åºåˆ—åŒ–accept()ç³»ç»Ÿè°ƒç”¨ï¼ˆsyscallsï¼‰ã€‚å¦‚æœæ˜¯åœ¨i386ï¼Œsparc64ï¼Œppc64æˆ–amd64å¹³å°ä¸Šç”¨GCCï¼ŒIntel C++ï¼ŒSunPro C++ç¼–è¯‘å™¨ç¼–è¯‘çš„ï¼Œåˆ™Nginxä½¿ç”¨CPUåŸæŒ‡ä»¤å®ç°mutexã€‚å…¶ä»–æƒ…å†µä¸‹ï¼Œåˆ™ä½¿ç”¨lock_fileã€‚
 
 4. pid
-º¬Òå£ºÖ¸¶¨´æ´¢½ø³ÌID£¨¼´PID£©µÄÎÄ¼ş¡£
-Óï·¨£ºpid <file>
-È±Ê¡£ºcompile-time option Example
-Ê¾Àı£ºpid /var/log/nginx.pid;
-×¢Òâ£º¿ÉÒÔÊ¹ÓÃÃüÁîkill -HUP cat /var/log/nginx.pid\ ¶ÔNginx½øĞĞ½ø³ÌIDÎÄ¼şµÄÖØĞÂ¼ÓÔØ¡£
+å«ä¹‰ï¼šæŒ‡å®šå­˜å‚¨è¿›ç¨‹IDï¼ˆå³PIDï¼‰çš„æ–‡ä»¶ã€‚
+è¯­æ³•ï¼špid <file>
+ç¼ºçœï¼šcompile-time option Example
+ç¤ºä¾‹ï¼špid /var/log/nginx.pid;
+æ³¨æ„ï¼šå¯ä»¥ä½¿ç”¨å‘½ä»¤kill -HUP cat /var/log/nginx.pid\ å¯¹Nginxè¿›è¡Œè¿›ç¨‹IDæ–‡ä»¶çš„é‡æ–°åŠ è½½ã€‚
 
 5. ssl_engine
-º¬Òå£ºÖ¸¶¨Ê¹ÓÃµÄopensslÒıÇæ¡£
-Óï·¨£ºssl_engine engine;
-È±Ê¡£ºÊÓÏµÍ³¶ø¶¨
-Ê¾Àı£º
-×¢Òâ£ºÄã¿ÉÒÔÊ¹ÓÃopenssl engine -tÃüÁîÀ´²é¿´ÏµÍ³Ä¿Ç°Ö§³ÖµÄopensslÒıÇæ¡£
+å«ä¹‰ï¼šæŒ‡å®šä½¿ç”¨çš„opensslå¼•æ“ã€‚
+è¯­æ³•ï¼šssl_engine engine;
+ç¼ºçœï¼šè§†ç³»ç»Ÿè€Œå®š
+ç¤ºä¾‹ï¼š
+æ³¨æ„ï¼šä½ å¯ä»¥ä½¿ç”¨openssl engine -tå‘½ä»¤æ¥æŸ¥çœ‹ç³»ç»Ÿç›®å‰æ”¯æŒçš„opensslå¼•æ“ã€‚
 
 6. timer_resolution
-ÂÔ
+ç•¥
 
 7. user
-º¬Òå£ºÖ¸¶¨¿ÉÒÔÊ¹ÓÃNginxµÄÓÃ»§
-Óï·¨£ºuser <user> [group]
-È±Ê¡£ºnobody nobody£¨µÚÒ»¸önobodyÊÇuser£¬µÚ¶ş¸önobodyÊÇgroup£©
-Ê¾Àı£ºuser www users;
+å«ä¹‰ï¼šæŒ‡å®šå¯ä»¥ä½¿ç”¨Nginxçš„ç”¨æˆ·
+è¯­æ³•ï¼šuser <user> [group]
+ç¼ºçœï¼šnobody nobodyï¼ˆç¬¬ä¸€ä¸ªnobodyæ˜¯userï¼Œç¬¬äºŒä¸ªnobodyæ˜¯groupï¼‰
+ç¤ºä¾‹ï¼šuser www users;
 
 8. worker_processes
-º¬Òå£ºÖ¸¶¨worker½ø³ÌÊı
-Óï·¨£ºworker_processes <number>
-È±Ê¡£º1
-Ê¾Àı£ºworker_processes 4;
-×¢Òâ£º×î´óÓÃ»§Á¬½ÓÊı=worker½ø³ÌÊı¡ÁworkerÁ¬½ÓÊı£¬¼´max_clients=worker_processes*worker_connections¡£
+å«ä¹‰ï¼šæŒ‡å®šworkerè¿›ç¨‹æ•°
+è¯­æ³•ï¼šworker_processes <number>
+ç¼ºçœï¼š1
+ç¤ºä¾‹ï¼šworker_processes 4;
+æ³¨æ„ï¼šæœ€å¤§ç”¨æˆ·è¿æ¥æ•°=workerè¿›ç¨‹æ•°Ã—workerè¿æ¥æ•°ï¼Œå³max_clients=worker_processes*worker_connectionsã€‚
 
 9. worker_cpu_affinity
-º¬Òå£ºÎªworker½ø³Ì°ó¶¨CPU¡£
-Óï·¨£ºworker_cpu_affinity cpumask [cpumask...]
-È±Ê¡£ºnone
-Ê¾Àı£º
-£¨1£©Èç¹ûÓĞ4¸öCPU£¬²¢ÇÒÖ¸¶¨4¸öworker½ø³Ì£¬Ôò£º
+å«ä¹‰ï¼šä¸ºworkerè¿›ç¨‹ç»‘å®šCPUã€‚
+è¯­æ³•ï¼šworker_cpu_affinity cpumask [cpumask...]
+ç¼ºçœï¼šnone
+ç¤ºä¾‹ï¼š
+ï¼ˆ1ï¼‰å¦‚æœæœ‰4ä¸ªCPUï¼Œå¹¶ä¸”æŒ‡å®š4ä¸ªworkerè¿›ç¨‹ï¼Œåˆ™ï¼š
 worker_processes 4;
 worker_cpu_affinity 0001 0010 0100 1000;
-£¨2£©Èç¹ûÓĞ4¸öCPU£¬²¢ÇÒÖ¸¶¨2¸öworker½ø³Ì£¬Ôò£º
+ï¼ˆ2ï¼‰å¦‚æœæœ‰4ä¸ªCPUï¼Œå¹¶ä¸”æŒ‡å®š2ä¸ªworkerè¿›ç¨‹ï¼Œåˆ™ï¼š
 worker_processes 2;
 worker_cpu_affinity 0101 1010;
-×¢Òâ£ºÖ»ÓĞLinuxÆ½Ì¨ÉÏ²Å¿ÉÒÔÊ¹ÓÃ¸ÃÖ¸Áî¡£
+æ³¨æ„ï¼šåªæœ‰Linuxå¹³å°ä¸Šæ‰å¯ä»¥ä½¿ç”¨è¯¥æŒ‡ä»¤ã€‚
 
 10. worker_priority
-º¬Òå£ºÖ¸¶¨¸÷worker½ø³ÌµÄÓÅÏÈ¼¶
-Óï·¨£ºworker_priority [-] <number>;
-È±Ê¡£ºon
-Ê¾Àı£º
-×¢Òâ£ºÊ¹ÓÃ¸ÃÖ¸Áî¿ÉÒÔ¸øwoker½ø³Ì·ÖÅäÓÅÏÈÖµ¡£
+å«ä¹‰ï¼šæŒ‡å®šå„workerè¿›ç¨‹çš„ä¼˜å…ˆçº§
+è¯­æ³•ï¼šworker_priority [-] <number>;
+ç¼ºçœï¼šon
+ç¤ºä¾‹ï¼š
+æ³¨æ„ï¼šä½¿ç”¨è¯¥æŒ‡ä»¤å¯ä»¥ç»™wokerè¿›ç¨‹åˆ†é…ä¼˜å…ˆå€¼ã€‚
 
 11. worker_rlimit_core
-º¬Òå£ºÖ¸¶¨Ã¿¸öworker½ø³ÌµÄcoreÎÄ¼ş×î´ósize¡£
-Óï·¨£ºworker_rlimit_core <max_size>;
+å«ä¹‰ï¼šæŒ‡å®šæ¯ä¸ªworkerè¿›ç¨‹çš„coreæ–‡ä»¶æœ€å¤§sizeã€‚
+è¯­æ³•ï¼šworker_rlimit_core <max_size>;
 
 12. worker_rlimit_nofile
-º¬Òå£ºworker½ø³ÌµÄfile descriptor¿ÉÒÔ´ò¿ªµÄ×î´óÎÄ¼şÊı¡£
-Óï·¨£ºworker_rlimit_nofile <number>;
+å«ä¹‰ï¼šworkerè¿›ç¨‹çš„file descriptorå¯ä»¥æ‰“å¼€çš„æœ€å¤§æ–‡ä»¶æ•°ã€‚
+è¯­æ³•ï¼šworker_rlimit_nofile <number>;
 
 13. worker_rlimit_sigpending
-ÂÔ
+ç•¥
 
 
 14. working_directory
-º¬Òå£ºÖ¸¶¨worker½ø³ÌµÄcoreÎÄ¼şÄ¿Â¼¡£
-Óï·¨£ºworking_directory <path>
-È±Ê¡£º±àÒëNginxÊ±µÄ--prefixÑ¡ÏîÖ¸¶¨µÄÄ¿Â¼
-Ê¾Àı£ºworking_directory /data/nginx/data;
-×¢Òâ£ºÈç¹ûÊÇÏà¶ÔÂ·¾¶£¬ÔòÒÔ±àÒëNginxÊ±µÄ--prefixÑ¡ÏîÎª»ùÂ·¾¶¡£
+å«ä¹‰ï¼šæŒ‡å®šworkerè¿›ç¨‹çš„coreæ–‡ä»¶ç›®å½•ã€‚
+è¯­æ³•ï¼šworking_directory <path>
+ç¼ºçœï¼šç¼–è¯‘Nginxæ—¶çš„--prefixé€‰é¡¹æŒ‡å®šçš„ç›®å½•
+ç¤ºä¾‹ï¼šworking_directory /data/nginx/data;
+æ³¨æ„ï¼šå¦‚æœæ˜¯ç›¸å¯¹è·¯å¾„ï¼Œåˆ™ä»¥ç¼–è¯‘Nginxæ—¶çš„--prefixé€‰é¡¹ä¸ºåŸºè·¯å¾„ã€‚
 
-ºËĞÄÄ£¿éÖ®ÊÂ¼şÄ£¿é
-Ò»¡¢ÊÂ¼şÄ£¿éµÄ×÷ÓÃÊÇÊ²Ã´£¿
+æ ¸å¿ƒæ¨¡å—ä¹‹äº‹ä»¶æ¨¡å—
+ä¸€ã€äº‹ä»¶æ¨¡å—çš„ä½œç”¨æ˜¯ä»€ä¹ˆï¼Ÿ
 
-ÓÃÀ´ÉèÖÃNginx´¦ÀíÁ´½ÓÇëÇó¡£
+ç”¨æ¥è®¾ç½®Nginxå¤„ç†é“¾æ¥è¯·æ±‚ã€‚
 
-¶ş¡¢Ïà¹ØÖ¸Áî
+äºŒã€ç›¸å…³æŒ‡ä»¤
 
 1. accept_mutex
-º¬Òå£ºÉèÖÃÊÇ·ñÊ¹ÓÃÁ¬½Ó»¥³âËø½øĞĞË³ĞòµÄaccept()ÏµÍ³µ÷ÓÃ¡£
-Óï·¨£ºaccept_mutex <on|off>;
-È±Ê¡£ºon
-Ê¾Àı£ºaccept_mutex off;
+å«ä¹‰ï¼šè®¾ç½®æ˜¯å¦ä½¿ç”¨è¿æ¥äº’æ–¥é”è¿›è¡Œé¡ºåºçš„accept()ç³»ç»Ÿè°ƒç”¨ã€‚
+è¯­æ³•ï¼šaccept_mutex <on|off>;
+ç¼ºçœï¼šon
+ç¤ºä¾‹ï¼šaccept_mutex off;
 
 2. accept_mutex_delay
-º¬Òå£ºÉèÖÃ»ñµÃ»¥³âËøµÄ×îÉÙÑÓ³ÙÊ±¼ä¡£
-Óï·¨£ºaccpet_mutex_delay <number of millisecs>
-È±Ê¡£º500ms
-Ê¾Àı£ºaccpet_mutex_delay 1000ms;
+å«ä¹‰ï¼šè®¾ç½®è·å¾—äº’æ–¥é”çš„æœ€å°‘å»¶è¿Ÿæ—¶é—´ã€‚
+è¯­æ³•ï¼šaccpet_mutex_delay <number of millisecs>
+ç¼ºçœï¼š500ms
+ç¤ºä¾‹ï¼šaccpet_mutex_delay 1000ms;
 
 3. debug_connection
-º¬Òå£ºÉèÖÃÖ¸¶¨µÄclients²úÉúdebugÈÕÖ¾¡£
-Óï·¨£ºdebug_connection [ip|CIDR];
-È±Ê¡£ºnone
-Ê¾Àı£ºdebug_connection 172.16.44.96;
-Ò»¶Î½ÏÍêÕûµÄÊÂ¼şÄ£¿é´úÂëÈçÏÂ£º
+å«ä¹‰ï¼šè®¾ç½®æŒ‡å®šçš„clientsäº§ç”Ÿdebugæ—¥å¿—ã€‚
+è¯­æ³•ï¼šdebug_connection [ip|CIDR];
+ç¼ºçœï¼šnone
+ç¤ºä¾‹ï¼šdebug_connection 172.16.44.96;
+ä¸€æ®µè¾ƒå®Œæ•´çš„äº‹ä»¶æ¨¡å—ä»£ç å¦‚ä¸‹ï¼š
 error_log /data/nginx/log/error.log;
 events {
 debug_connection172.16.44.96;
 }
 
 4. multi_accept
-º¬Òå£ºÉèÖÃÊÇ·ñÔÊĞí£¬NginxÔÚÒÑ¾­µÃµ½Ò»¸öĞÂÁ¬½ÓµÄÍ¨ÖªÊ±£¬½ÓÊÕ¾¡¿ÉÄÜ¸ü¶àµÄÁ¬½Ó¡£
-Óï·¨£ºmulti_accept <on|off>;
-È±Ê¡£ºoff
-Ê¾Àı£ºmulti_accept on;
+å«ä¹‰ï¼šè®¾ç½®æ˜¯å¦å…è®¸ï¼ŒNginxåœ¨å·²ç»å¾—åˆ°ä¸€ä¸ªæ–°è¿æ¥çš„é€šçŸ¥æ—¶ï¼Œæ¥æ”¶å°½å¯èƒ½æ›´å¤šçš„è¿æ¥ã€‚
+è¯­æ³•ï¼šmulti_accept <on|off>;
+ç¼ºçœï¼šoff
+ç¤ºä¾‹ï¼šmulti_accept on;
 
 5. rtsig_signo
-ÂÔ
+ç•¥
 
 6. rtsig_overflow_threshold
 
 7. use
-Óï·¨£ºuse [kqueue | rtsig | epoll | /dev/poll | select | poll | eventport];
-×¢Òâ£ºÈç¹ûÔÚ./configureµÄÊ±ºòÖ¸¶¨ÁË²»Ö¹Ò»ÖÖÊÂ¼şÄ£ĞÍ£¬ÄÇÃ´¿ÉÒÔÉèÖÃÆäÖĞÒ»¸ö£¬¸æËßNginxÊ¹ÓÃÄÄÖÖÊÂ¼şÄ£ĞÍ¡£Ä¬ÈÏÇé¿öÏÂ£¬Nginx»áÔÚ./configureÊ±ÕÒ³ö×îÊÊºÏÏµÍ³µÄÊÂ¼şÄ£ĞÍ¡£
+è¯­æ³•ï¼šuse [kqueue | rtsig | epoll | /dev/poll | select | poll | eventport];
+æ³¨æ„ï¼šå¦‚æœåœ¨./configureçš„æ—¶å€™æŒ‡å®šäº†ä¸æ­¢ä¸€ç§äº‹ä»¶æ¨¡å‹ï¼Œé‚£ä¹ˆå¯ä»¥è®¾ç½®å…¶ä¸­ä¸€ä¸ªï¼Œå‘Šè¯‰Nginxä½¿ç”¨å“ªç§äº‹ä»¶æ¨¡å‹ã€‚é»˜è®¤æƒ…å†µä¸‹ï¼ŒNginxä¼šåœ¨./configureæ—¶æ‰¾å‡ºæœ€é€‚åˆç³»ç»Ÿçš„äº‹ä»¶æ¨¡å‹ã€‚
 
 8. worker_connections
-Óï·¨£ºworker_connection <number>;
-×¢Òâ£º
-×î´óÁ¬½ÓÊıµÄ¼ÆËã¹«Ê½ÈçÏÂ£º
+è¯­æ³•ï¼šworker_connection <number>;
+æ³¨æ„ï¼š
+æœ€å¤§è¿æ¥æ•°çš„è®¡ç®—å…¬å¼å¦‚ä¸‹ï¼š
 max_clients = worker_processes * worker_connections;
-Èç¹û×÷Îª·´Ïò´úÀí£¬ÒòÎªä¯ÀÀÆ÷Ä¬ÈÏ»á¿ªÆô2¸öÁ¬½Óµ½server£¬¶øÇÒNginx»¹»áÊ¹ÓÃfds£¨file descriptor£©´ÓÍ¬Ò»¸öÁ¬½Ó³Ø½¨Á¢Á¬½Óµ½upstreamºó¶Ë¡£Ôò×î´óÁ¬½ÓÊıµÄ¼ÆËã¹«Ê½ÈçÏÂ£º
+å¦‚æœä½œä¸ºåå‘ä»£ç†ï¼Œå› ä¸ºæµè§ˆå™¨é»˜è®¤ä¼šå¼€å¯2ä¸ªè¿æ¥åˆ°serverï¼Œè€Œä¸”Nginxè¿˜ä¼šä½¿ç”¨fdsï¼ˆfile descriptorï¼‰ä»åŒä¸€ä¸ªè¿æ¥æ± å»ºç«‹è¿æ¥åˆ°upstreamåç«¯ã€‚åˆ™æœ€å¤§è¿æ¥æ•°çš„è®¡ç®—å…¬å¼å¦‚ä¸‹ï¼š
 max_clients = worker_processes * worker_connections / 4;
 
-ºËĞÄÄ£¿éÖ®HTTPÄ£¿é»ù±¾³£ÓÃÖ¸Áî
+æ ¸å¿ƒæ¨¡å—ä¹‹HTTPæ¨¡å—åŸºæœ¬å¸¸ç”¨æŒ‡ä»¤
 
-Ò»¡¢HTTPÄ£¿éµÄ×÷ÓÃÊÇÊ²Ã´£¿
+ä¸€ã€HTTPæ¨¡å—çš„ä½œç”¨æ˜¯ä»€ä¹ˆï¼Ÿ
 
-NginxµÄHTTPÄ£¿éÓÃÓÚ¿ØÖÆNginxµÄHTTP½ø³Ì¡£
+Nginxçš„HTTPæ¨¡å—ç”¨äºæ§åˆ¶Nginxçš„HTTPè¿›ç¨‹ã€‚
 
 
-¶ş¡¢Ö¸Áî
+äºŒã€æŒ‡ä»¤
 
 1. alias
-º¬Òå£ºÖ¸¶¨locationÊ¹ÓÃµÄÂ·¾¶£¬ÓërootÀàËÆ£¬µ«²»¸Ä±äÎÄ¼şµÄ¸úÂ·¾¶£¬½öÊÊÓÃÎÄ¼şÏµÍ³µÄÂ·¾¶¡£
-Óï·¨£ºalias <file-path | directory-path>
-È±Ê¡£ºN/A
-×÷ÓÃÓò£ºhttp.server.location
-Ê¾Àı£º
+å«ä¹‰ï¼šæŒ‡å®šlocationä½¿ç”¨çš„è·¯å¾„ï¼Œä¸rootç±»ä¼¼ï¼Œä½†ä¸æ”¹å˜æ–‡ä»¶çš„è·Ÿè·¯å¾„ï¼Œä»…é€‚ç”¨æ–‡ä»¶ç³»ç»Ÿçš„è·¯å¾„ã€‚
+è¯­æ³•ï¼šalias <file-path | directory-path>
+ç¼ºçœï¼šN/A
+ä½œç”¨åŸŸï¼šhttp.server.location
+ç¤ºä¾‹ï¼š
 location /i/ {
 alias /home/michael/web/i/;
 }
-ÔòÇëÇó /i/logo.png Ôò·µ»Ø /home/michael/web/i/logo.png¡£
-×¢Òâ£º
-£¨1£©Ìæ»»Â·¾¶Ê±£¬¿ÉÒÔÊ¹ÓÃ±äÁ¿¡£
-£¨2£©aliasÎŞ·¨ÔÚÕıÔòµÄlocationÖĞÊ¹ÓÃ¡£Èç¹ûÓĞÕâÖÖĞèÇó£¬Ôò±ØĞëÊ¹ÓÃrewriteºÍroot¡£
+åˆ™è¯·æ±‚ /i/logo.png åˆ™è¿”å› /home/michael/web/i/logo.pngã€‚
+æ³¨æ„ï¼š
+ï¼ˆ1ï¼‰æ›¿æ¢è·¯å¾„æ—¶ï¼Œå¯ä»¥ä½¿ç”¨å˜é‡ã€‚
+ï¼ˆ2ï¼‰aliasæ— æ³•åœ¨æ­£åˆ™çš„locationä¸­ä½¿ç”¨ã€‚å¦‚æœæœ‰è¿™ç§éœ€æ±‚ï¼Œåˆ™å¿…é¡»ä½¿ç”¨rewriteå’Œrootã€‚
 
 2. client_body_in_file_only
-º¬Òå£ºÖ¸¶¨ÊÇ·ñ½«ÓÃ»§ÇëÇóÌå´æ´¢µ½Ò»¸öÎÄ¼şÀï¡£
-Óï·¨£ºclient_body_in_file_only <on | off>
-È±Ê¡£ºoff
-×÷ÓÃÓò£ºhttp.server.location
-Ê¾Àı£ºclient_body_in_file_only on;
-×¢Òâ£º
-£¨1£©¸ÃÖ¸ÁîÎªonÊ±£¬ÓÃ»§µÄÇëÇóÌå»á±»´æ´¢µ½Ò»¸öÎÄ¼şÖĞ£¬µ«ÊÇÇëÇó½áÊøºó£¬¸ÃÎÄ¼şÒ²²»»á±»É¾³ı£»
-£¨2£©¸ÃÖ¸ÁîÒ»°ãÔÚµ÷ÊÔµÄÊ±ºòÊ¹ÓÃ¡£
+å«ä¹‰ï¼šæŒ‡å®šæ˜¯å¦å°†ç”¨æˆ·è¯·æ±‚ä½“å­˜å‚¨åˆ°ä¸€ä¸ªæ–‡ä»¶é‡Œã€‚
+è¯­æ³•ï¼šclient_body_in_file_only <on | off>
+ç¼ºçœï¼šoff
+ä½œç”¨åŸŸï¼šhttp.server.location
+ç¤ºä¾‹ï¼šclient_body_in_file_only on;
+æ³¨æ„ï¼š
+ï¼ˆ1ï¼‰è¯¥æŒ‡ä»¤ä¸ºonæ—¶ï¼Œç”¨æˆ·çš„è¯·æ±‚ä½“ä¼šè¢«å­˜å‚¨åˆ°ä¸€ä¸ªæ–‡ä»¶ä¸­ï¼Œä½†æ˜¯è¯·æ±‚ç»“æŸåï¼Œè¯¥æ–‡ä»¶ä¹Ÿä¸ä¼šè¢«åˆ é™¤ï¼›
+ï¼ˆ2ï¼‰è¯¥æŒ‡ä»¤ä¸€èˆ¬åœ¨è°ƒè¯•çš„æ—¶å€™ä½¿ç”¨ã€‚
 
 3. client_body_buffer_size
-º¬Òå£ºÖ¸¶¨ÓÃ»§ÇëÇóÌåËùÊ¹ÓÃµÄbufferµÄ×î´óÖµ
-Óï·¨£ºclient_body_buffer_size <size>
-È±Ê¡£ºÁ½¸öpageµÄ´óĞ¡£¬Ò»°ãÎª8k»ò16k
-×÷ÓÃÓò£ºhttp.server.location
-Ê¾Àı£ºclient_body_buffer_size 512k;
-×¢Òâ£ºÈç¹ûÓÃ»§ÇëÇóÌå³¬¹ıÁËbufferµÄ´óĞ¡£¬Ôò½«È«²¿ÄÚÈİ»ò²¿·ÖÄÚÈİ´æ´¢µ½Ò»¸öÁÙÊ±ÎÄ¼şÖĞ¡£
+å«ä¹‰ï¼šæŒ‡å®šç”¨æˆ·è¯·æ±‚ä½“æ‰€ä½¿ç”¨çš„bufferçš„æœ€å¤§å€¼
+è¯­æ³•ï¼šclient_body_buffer_size <size>
+ç¼ºçœï¼šä¸¤ä¸ªpageçš„å¤§å°ï¼Œä¸€èˆ¬ä¸º8kæˆ–16k
+ä½œç”¨åŸŸï¼šhttp.server.location
+ç¤ºä¾‹ï¼šclient_body_buffer_size 512k;
+æ³¨æ„ï¼šå¦‚æœç”¨æˆ·è¯·æ±‚ä½“è¶…è¿‡äº†bufferçš„å¤§å°ï¼Œåˆ™å°†å…¨éƒ¨å†…å®¹æˆ–éƒ¨åˆ†å†…å®¹å­˜å‚¨åˆ°ä¸€ä¸ªä¸´æ—¶æ–‡ä»¶ä¸­ã€‚
 
 4. client_body_temp_path
-º¬Òå£ºÉèÖÃ´æ´¢ÓÃ»§ÇëÇóÌåµÄÎÄ¼şµÄÄ¿Â¼Â·¾¶
-Óï·¨£ºclient_body_temp_path <directory path> [level1 | level2 | level3]
-×÷ÓÃÓò£ºhttp.server.location
-Ê¾Àı£ºclient_body_temp_path /spool/nginx/client_temp 1 2;
+å«ä¹‰ï¼šè®¾ç½®å­˜å‚¨ç”¨æˆ·è¯·æ±‚ä½“çš„æ–‡ä»¶çš„ç›®å½•è·¯å¾„
+è¯­æ³•ï¼šclient_body_temp_path <directory path> [level1 | level2 | level3]
+ä½œç”¨åŸŸï¼šhttp.server.location
+ç¤ºä¾‹ï¼šclient_body_temp_path /spool/nginx/client_temp 1 2;
 
 5. client_body_timeout
-º¬Òå£ºÉèÖÃÓÃ»§ÇëÇóÌåµÄ³¬Ê±Ê±¼ä¡£
-Óï·¨£ºclient_body_timeout <time>
-×÷ÓÃÓò£ºhttp.server.location
-Ê¾Àı£ºclient_body_timeout 120s;
-×¢Òâ£ºÖ»ÓĞÇëÇóÌåĞèÒª±»1´ÎÒÔÉÏ¶ÁÈ¡Ê±£¬¸Ã³¬Ê±Ê±¼ä²Å»á±»ÉèÖÃ¡£ÇÒÈç¹ûÕâ¸öÊ±¼äºóÓÃ»§Ê²Ã´¶¼Ã»·¢£¬nginx»á·µ»Ørequests time out 408.
+å«ä¹‰ï¼šè®¾ç½®ç”¨æˆ·è¯·æ±‚ä½“çš„è¶…æ—¶æ—¶é—´ã€‚
+è¯­æ³•ï¼šclient_body_timeout <time>
+ä½œç”¨åŸŸï¼šhttp.server.location
+ç¤ºä¾‹ï¼šclient_body_timeout 120s;
+æ³¨æ„ï¼šåªæœ‰è¯·æ±‚ä½“éœ€è¦è¢«1æ¬¡ä»¥ä¸Šè¯»å–æ—¶ï¼Œè¯¥è¶…æ—¶æ—¶é—´æ‰ä¼šè¢«è®¾ç½®ã€‚ä¸”å¦‚æœè¿™ä¸ªæ—¶é—´åç”¨æˆ·ä»€ä¹ˆéƒ½æ²¡å‘ï¼Œnginxä¼šè¿”å›requests time out 408.
 
 6. client_header_buffer_size
-º¬Òå£ºÉèÖÃÓÃ»§ÇëÇóÍ·ËùÊ¹ÓÃµÄbuffer´óĞ¡
-Óï·¨£ºclient_header_buffer_size <size>
-È±Ê¡£º1k
-×÷ÓÃÓò£ºhttp.server
-Ê¾Àı£ºclient_header_buffer_size 2k;
-×¢Òâ£º
-£¨1£©¶Ô¾ø´ó¶àÊıÇëÇóÀ´Ëµ£¬1k×ãÒÔÂú×ãÇëÇóÍ·ËùĞèµÄbuffer£»
-£¨2£©¶ÔÓÚĞ¯´øÓĞ½Ï´ócookie»òÀ´×ÔÓÚwapÓÃ»§µÄÇëÇóÍ·À´Ëµ£¬1kµÄbufferÒ»°ã²»¹»£¬ÕâÊ±¿ÉÒÔÊ¹ÓÃÖ¸Áîlarge_client_header_buffers¡£
+å«ä¹‰ï¼šè®¾ç½®ç”¨æˆ·è¯·æ±‚å¤´æ‰€ä½¿ç”¨çš„bufferå¤§å°
+è¯­æ³•ï¼šclient_header_buffer_size <size>
+ç¼ºçœï¼š1k
+ä½œç”¨åŸŸï¼šhttp.server
+ç¤ºä¾‹ï¼šclient_header_buffer_size 2k;
+æ³¨æ„ï¼š
+ï¼ˆ1ï¼‰å¯¹ç»å¤§å¤šæ•°è¯·æ±‚æ¥è¯´ï¼Œ1kè¶³ä»¥æ»¡è¶³è¯·æ±‚å¤´æ‰€éœ€çš„bufferï¼›
+ï¼ˆ2ï¼‰å¯¹äºæºå¸¦æœ‰è¾ƒå¤§cookieæˆ–æ¥è‡ªäºwapç”¨æˆ·çš„è¯·æ±‚å¤´æ¥è¯´ï¼Œ1kçš„bufferä¸€èˆ¬ä¸å¤Ÿï¼Œè¿™æ—¶å¯ä»¥ä½¿ç”¨æŒ‡ä»¤large_client_header_buffersã€‚
 
 7. client_header_timeout
-º¬Òå£ºÉèÖÃÓÃ»§ÇëÇóÍ·µÄ³¬Ê±Ê±¼ä¡£
-Óï·¨£ºclient_header_timeout <time>
-È±Ê¡£º1m
-×÷ÓÃÓò£ºhttp.server.location
-Ê¾Àı£ºclient_header_timeout 3m;
-×¢Òâ£ºÖ»ÓĞÇëÇóÍ·ĞèÒª±»1´ÎÒÔÉÏ¶ÁÈ¡Ê±£¬¸Ã³¬Ê±Ê±¼ä²Å»á±»ÉèÖÃ¡£ÇÒÈç¹ûÕâ¸öÊ±¼äºóÓÃ»§Ê²Ã´¶¼Ã»·¢£¬nginx»á·µ»Ørequests time out 408.
+å«ä¹‰ï¼šè®¾ç½®ç”¨æˆ·è¯·æ±‚å¤´çš„è¶…æ—¶æ—¶é—´ã€‚
+è¯­æ³•ï¼šclient_header_timeout <time>
+ç¼ºçœï¼š1m
+ä½œç”¨åŸŸï¼šhttp.server.location
+ç¤ºä¾‹ï¼šclient_header_timeout 3m;
+æ³¨æ„ï¼šåªæœ‰è¯·æ±‚å¤´éœ€è¦è¢«1æ¬¡ä»¥ä¸Šè¯»å–æ—¶ï¼Œè¯¥è¶…æ—¶æ—¶é—´æ‰ä¼šè¢«è®¾ç½®ã€‚ä¸”å¦‚æœè¿™ä¸ªæ—¶é—´åç”¨æˆ·ä»€ä¹ˆéƒ½æ²¡å‘ï¼Œnginxä¼šè¿”å›requests time out 408.
 
 8. client_max_body_size
-º¬Òå£ºÉèÖÃËùÄÜ½ÓÊÕµÄ×î´óÇëÇóÌåµÄ´óĞ¡
-Óï·¨£ºclient_max_body_size <size>
-È±Ê¡£º1m
-×÷ÓÃÓò£ºhttp.server.location
-Ê¾Àı£ºclient_max_body_size 2m;
-×¢Òâ£º¸ù¾İÇëÇóÍ·ÖĞµÄContent-LengthÀ´ÅĞ¶ÏÇëÇóÌå´óĞ¡ÊÇ·ñÔÊĞí¡£Èç¹û´óÓÚÉè¶¨Öµ£¬Ôò·µ»Ø¡° Request Entity Too Large¡±(413)´íÎó¡£²»¹ıÒª×¢ÒâµÄÊÇ£¬ä¯ÀÀÆ÷Ò»°ã²¢²»¶ÔÕâ¸ö´íÎó½øĞĞÌØÊâÏÔÊ¾¡£
+å«ä¹‰ï¼šè®¾ç½®æ‰€èƒ½æ¥æ”¶çš„æœ€å¤§è¯·æ±‚ä½“çš„å¤§å°
+è¯­æ³•ï¼šclient_max_body_size <size>
+ç¼ºçœï¼š1m
+ä½œç”¨åŸŸï¼šhttp.server.location
+ç¤ºä¾‹ï¼šclient_max_body_size 2m;
+æ³¨æ„ï¼šæ ¹æ®è¯·æ±‚å¤´ä¸­çš„Content-Lengthæ¥åˆ¤æ–­è¯·æ±‚ä½“å¤§å°æ˜¯å¦å…è®¸ã€‚å¦‚æœå¤§äºè®¾å®šå€¼ï¼Œåˆ™è¿”å›â€œ Request Entity Too Largeâ€(413)é”™è¯¯ã€‚ä¸è¿‡è¦æ³¨æ„çš„æ˜¯ï¼Œæµè§ˆå™¨ä¸€èˆ¬å¹¶ä¸å¯¹è¿™ä¸ªé”™è¯¯è¿›è¡Œç‰¹æ®Šæ˜¾ç¤ºã€‚
 
-ºËĞÄÄ£¿éÖ®HTTPÄ£¿éLocationÏà¹ØÖ¸Áî
-Ò»¡¢»ù±¾Óï·¨
-Óï·¨£ºlocation [= | ~ | ~* | ^~] </uri/> {...}
-È±Ê¡£ºN/A
-×÷ÓÃÓò£ºserver
+æ ¸å¿ƒæ¨¡å—ä¹‹HTTPæ¨¡å—Locationç›¸å…³æŒ‡ä»¤
+ä¸€ã€åŸºæœ¬è¯­æ³•
+è¯­æ³•ï¼šlocation [= | ~ | ~* | ^~] </uri/> {...}
+ç¼ºçœï¼šN/A
+ä½œç”¨åŸŸï¼šserver
 
-¶ş¡¢Æ¥Åä¹æÔò
-1. ËÄÖÖÆ¥Åä·½Ê½
-= ¾«È·Æ¥Åä
-~ ´óĞ¡Ğ´Ãô¸ĞÕıÔòÆ¥Åä
-~* ´óĞ¡Ğ´²»Ãô¸ĞÕıÔòÆ¥Åä
-^~ Ç°×ºÆ¥Åä
+äºŒã€åŒ¹é…è§„åˆ™
+1. å››ç§åŒ¹é…æ–¹å¼
+= ç²¾ç¡®åŒ¹é…
+~ å¤§å°å†™æ•æ„Ÿæ­£åˆ™åŒ¹é…
+~* å¤§å°å†™ä¸æ•æ„Ÿæ­£åˆ™åŒ¹é…
+^~ å‰ç¼€åŒ¹é…
 
-2. locationÆ¥ÅäÖ¸ÁîµÄÖ´ĞĞË³Ğò
-Ê×ÏÈ£º= ¾«È·Æ¥Åä£»
-Æä´Î£º^~ Ç°×ºÆ¥Åä£»
-ÔÙ´Î£º~* ºÍ ~ ÕıÔòÆ¥Åä£¬Ë³ĞòÒÀ¾İ³öÏÖË³Ğò£»
-×îºó£ºÈç¹û³öÏÖÕıÔòÆ¥Åä³É¹¦£¬Ôò²ÉÓÃ¸ÃÕıÔòÆ¥Åä£»Èç¹ûÎŞ¿ÉÆ¥ÅäÕıÔò£¬Ôò²ÉÓÃÇ°×ºÆ¥Åä½á¹û¡£
+2. locationåŒ¹é…æŒ‡ä»¤çš„æ‰§è¡Œé¡ºåº
+é¦–å…ˆï¼š= ç²¾ç¡®åŒ¹é…ï¼›
+å…¶æ¬¡ï¼š^~ å‰ç¼€åŒ¹é…ï¼›
+å†æ¬¡ï¼š~* å’Œ ~ æ­£åˆ™åŒ¹é…ï¼Œé¡ºåºä¾æ®å‡ºç°é¡ºåºï¼›
+æœ€åï¼šå¦‚æœå‡ºç°æ­£åˆ™åŒ¹é…æˆåŠŸï¼Œåˆ™é‡‡ç”¨è¯¥æ­£åˆ™åŒ¹é…ï¼›å¦‚æœæ— å¯åŒ¹é…æ­£åˆ™ï¼Œåˆ™é‡‡ç”¨å‰ç¼€åŒ¹é…ç»“æœã€‚
 
-Èı¡¢³£ÓÃÖ¸Áî
+ä¸‰ã€å¸¸ç”¨æŒ‡ä»¤
 1. internal
-º¬Òå£º±íÊ¾ÇëÇó±ØĞëÀ´×ÔÄÚ²¿£¬Íâ²¿ÇëÇó»á¶ª¸ø404Ò³Ãæ¡£
-Óï·¨£ºinternal;
-×÷ÓÃÓò£ºlocation
+å«ä¹‰ï¼šè¡¨ç¤ºè¯·æ±‚å¿…é¡»æ¥è‡ªå†…éƒ¨ï¼Œå¤–éƒ¨è¯·æ±‚ä¼šä¸¢ç»™404é¡µé¢ã€‚
+è¯­æ³•ï¼šinternal;
+ä½œç”¨åŸŸï¼šlocation
 
 
-MemcachedÄ£¿éµÄÁ½´óÓ¦ÓÃ³¡¾°
-ÏÖÔÚÓĞÕâÑùÒ»ÖÖÓ¦ÓÃ³¡¾°£º
-¿Í»§¶ËClientÍ¨¹ıNginx·´Ïò´úÀí£¬·ÃÎÊ·şÎñÆ÷Server¡£Ã¿´Î·ÃÎÊµÄÄÚÈİ¾ÍÊÇ½«ÎÄ¼şFile´«µ½ServerÉÏ£¬È»ºó¿ÉÒÔ·ÃÎÊµ½FileµÄURL±»¹ã²¥µ½ËùÓĞClientÉÏ£¬Ã¿¸öClientÔÙ¼ÓÔØFile¡£
+Memcachedæ¨¡å—çš„ä¸¤å¤§åº”ç”¨åœºæ™¯
+ç°åœ¨æœ‰è¿™æ ·ä¸€ç§åº”ç”¨åœºæ™¯ï¼š
+å®¢æˆ·ç«¯Clienté€šè¿‡Nginxåå‘ä»£ç†ï¼Œè®¿é—®æœåŠ¡å™¨Serverã€‚æ¯æ¬¡è®¿é—®çš„å†…å®¹å°±æ˜¯å°†æ–‡ä»¶Fileä¼ åˆ°Serverä¸Šï¼Œç„¶åå¯ä»¥è®¿é—®åˆ°Fileçš„URLè¢«å¹¿æ’­åˆ°æ‰€æœ‰Clientä¸Šï¼Œæ¯ä¸ªClientå†åŠ è½½Fileã€‚
 
-Analysis£º
-ÕâÃ´¶àClientÍ¬Ê±¼ÓÔØFile£¬¶ÔServerµÄÑ¹Á¦Ò»¶¨ºÜ´ó°É£¿¶ÁÕßÅóÓÑ¿Ï¶¨»áËµ£¬ÓĞÁËNginx·´Ïò´úÀí£¬Client·ÃÎÊServerµÄÊ±ºò£¬ÏàÓ¦·ÃÎÊµÄ×ÊÔ´¾Í¿ÉÒÔ±»Nginx»º´æ£¬¼õÇáÁËServerµÄÑ¹Á¦¡£µ«ÓĞÒ»µãÒª×¢Òâ£¬Èç¹ûÕâÑùµÄ»°£¬Nginx·´Ïò´úÀíÅäÖÃµÄ»º´æÊÇÔÚÓĞClient·ÃÎÊµ½NginxÊ±²Å»á´ÓServerÄÃÀ´»º´æµ½NginxÉÏ¡£¿ÉÊÇ¹ã²¥ºó£¬ËùÓĞClient¼ÓÔØFileÊÇÍ¬Ê±µÄ£¬Èç¹ûµÈµØÒ»¸ö·ÃÎÊÇëÇóµ½À´²¢Ê¹µÃNginx²úÉú»º´æºó£¬ÆäËûClient½ÓÊÕµ½¹ã²¥ºóµÄ¼ÓÔØÏìÓ¦£¬¿ÖÅÂÔçÒÑ¾­·¢Æğ²¢ÇÒ½Ó½üÎ²ÉùÁË¡£¸ºÔØÑ¹Á¦»¹ÊÇÂäµ½ServerÉÏ¡£ÔõÃ´°ìÄØ£¿
+Analysisï¼š
+è¿™ä¹ˆå¤šClientåŒæ—¶åŠ è½½Fileï¼Œå¯¹Serverçš„å‹åŠ›ä¸€å®šå¾ˆå¤§å§ï¼Ÿè¯»è€…æœ‹å‹è‚¯å®šä¼šè¯´ï¼Œæœ‰äº†Nginxåå‘ä»£ç†ï¼ŒClientè®¿é—®Serverçš„æ—¶å€™ï¼Œç›¸åº”è®¿é—®çš„èµ„æºå°±å¯ä»¥è¢«Nginxç¼“å­˜ï¼Œå‡è½»äº†Serverçš„å‹åŠ›ã€‚ä½†æœ‰ä¸€ç‚¹è¦æ³¨æ„ï¼Œå¦‚æœè¿™æ ·çš„è¯ï¼ŒNginxåå‘ä»£ç†é…ç½®çš„ç¼“å­˜æ˜¯åœ¨æœ‰Clientè®¿é—®åˆ°Nginxæ—¶æ‰ä¼šä»Serveræ‹¿æ¥ç¼“å­˜åˆ°Nginxä¸Šã€‚å¯æ˜¯å¹¿æ’­åï¼Œæ‰€æœ‰ClientåŠ è½½Fileæ˜¯åŒæ—¶çš„ï¼Œå¦‚æœç­‰åœ°ä¸€ä¸ªè®¿é—®è¯·æ±‚åˆ°æ¥å¹¶ä½¿å¾—Nginxäº§ç”Ÿç¼“å­˜åï¼Œå…¶ä»–Clientæ¥æ”¶åˆ°å¹¿æ’­åçš„åŠ è½½å“åº”ï¼Œææ€•æ—©å·²ç»å‘èµ·å¹¶ä¸”æ¥è¿‘å°¾å£°äº†ã€‚è´Ÿè½½å‹åŠ›è¿˜æ˜¯è½åˆ°Serverä¸Šã€‚æ€ä¹ˆåŠå‘¢ï¼Ÿ
 
-Solution Overview£º
-Ä³¸öClientÉÏ´«Fileµ½ServerµÄÍ¬Ê±£¬½«FileÄÚÈİĞ´Èëµ½NginxµÄ»º´æÖĞ£¬È»ºó¹ã²¥ºó£¬Client¼ÓÔØFileµÄÇëÇóÔÚµ½´ïNginxÊ±È¥»º´æÖĞ²éÕÒ£¬ÄÇÃ´»ù±¾ÊÇ100%ÃüÖĞ¡£
+Solution Overviewï¼š
+æŸä¸ªClientä¸Šä¼ Fileåˆ°Serverçš„åŒæ—¶ï¼Œå°†Fileå†…å®¹å†™å…¥åˆ°Nginxçš„ç¼“å­˜ä¸­ï¼Œç„¶åå¹¿æ’­åï¼ŒClientåŠ è½½Fileçš„è¯·æ±‚åœ¨åˆ°è¾¾Nginxæ—¶å»ç¼“å­˜ä¸­æŸ¥æ‰¾ï¼Œé‚£ä¹ˆåŸºæœ¬æ˜¯100%å‘½ä¸­ã€‚
 
-Deployment Solution£º£¨1£©Reverse-Server£¨192.168.0.1£©£º·´Ïò´úÀí·şÎñÆ÷£¬ÓÃNginxÊµÏÖ¡£¶ÔÍâÌá¹©11000¶Ë¿Ú£¬½ÓÊÕµ½HTTPÇëÇóºóµ½Cache-ServerµÄ14000¶Ë¿ÚµÄ»º´æ·şÎñÖĞ²éÕÒ£¬Èç¹ûÓĞÔò·µ»Ø£¬Èç¹ûÃ»ÓĞÔò½«ÇëÇó´«µİ¸øStore-ServerµÄ12000¶Ë¿Ú¡£
-£¨2£©Store-Server£¨192.168.0.2£©£ºÎÄ¼ş´æ´¢·şÎñÆ÷£¬ÓÃFastDFSÊµÏÖ¡£¶ÔÍâÌá¹©12000¶Ë¿ÚÓÃÓÚÏÂÔØ£¬½ÓÊÕÀ´×ÔReverse-SeverµÄHTTPÇëÇó¡£¶ÔÍâ»¹Ìá¹©12500¶Ë¿ÚÓÃÓÚÉÏ´«¡£
-£¨3£©Process-Server£¨192.168.0.3£©£ºÒµÎñ´¦Àí·şÎñÆ÷£¬¶ÔÍâÌá¹©13000¶Ë¿Ú£¬½ÓÊÕClient´«µİÀ´µÄFile£¬²¢½«FileÍ¨¹ıStore-ServerµÄ12500¶Ë¿Ú×ª´¢µ½Store-ServerÖĞ¡£
-£¨4£©Cache-Server£¨192.168.0.4£©£ºÎÄ¼ş»º´æ·şÎñÆ÷£¬ÓÃMemcachedÊµÏÖ£¬¶ÔÍâÌá¹©14000¶Ë¿Ú¡£½ÓÊÕÀ´×ÔReverse-ServerµÄ¶Á²Ù×÷£¬ºÍProcess-ServerµÄĞ´²Ù×÷¡£
-Configuration Solution£º
-£¨1£©FastDFSµÄÅäÖÃÓë²¿Êğ£¬Çë²Î¼ûGoogleCodeÉÏµÄFastDFSÏà¹Øwiki¡£
-£¨2£©Memcached²¿ÊğºÜ¼òµ¥£¬wget£¬tar£¬./configure£¬make£¬make install¾ÍOKÁË¡£
-£¨3£©Process-ServerÊÇÓÉÎÒ×Ô¼ºÊµÏÖµÄ£¬²»¾ßÓĞÍ¨ÓÃĞÔ¾Í²»ËµÁË¡£
-£¨4£©Reverse-ServerµÄNginxÅäÖÃÎÄ¼şÖĞhttpÄ£¿éÖĞ£¬½¨Á¢Ò»¸öÓÃ»§½â¾ö¸ÃÎÊÌâµÄserver£¬ÅäÖÃ·½Ê½ÈçÏÂ£º
+Deployment Solutionï¼šï¼ˆ1ï¼‰Reverse-Serverï¼ˆ192.168.0.1ï¼‰ï¼šåå‘ä»£ç†æœåŠ¡å™¨ï¼Œç”¨Nginxå®ç°ã€‚å¯¹å¤–æä¾›11000ç«¯å£ï¼Œæ¥æ”¶åˆ°HTTPè¯·æ±‚ååˆ°Cache-Serverçš„14000ç«¯å£çš„ç¼“å­˜æœåŠ¡ä¸­æŸ¥æ‰¾ï¼Œå¦‚æœæœ‰åˆ™è¿”å›ï¼Œå¦‚æœæ²¡æœ‰åˆ™å°†è¯·æ±‚ä¼ é€’ç»™Store-Serverçš„12000ç«¯å£ã€‚
+ï¼ˆ2ï¼‰Store-Serverï¼ˆ192.168.0.2ï¼‰ï¼šæ–‡ä»¶å­˜å‚¨æœåŠ¡å™¨ï¼Œç”¨FastDFSå®ç°ã€‚å¯¹å¤–æä¾›12000ç«¯å£ç”¨äºä¸‹è½½ï¼Œæ¥æ”¶æ¥è‡ªReverse-Severçš„HTTPè¯·æ±‚ã€‚å¯¹å¤–è¿˜æä¾›12500ç«¯å£ç”¨äºä¸Šä¼ ã€‚
+ï¼ˆ3ï¼‰Process-Serverï¼ˆ192.168.0.3ï¼‰ï¼šä¸šåŠ¡å¤„ç†æœåŠ¡å™¨ï¼Œå¯¹å¤–æä¾›13000ç«¯å£ï¼Œæ¥æ”¶Clientä¼ é€’æ¥çš„Fileï¼Œå¹¶å°†Fileé€šè¿‡Store-Serverçš„12500ç«¯å£è½¬å‚¨åˆ°Store-Serverä¸­ã€‚
+ï¼ˆ4ï¼‰Cache-Serverï¼ˆ192.168.0.4ï¼‰ï¼šæ–‡ä»¶ç¼“å­˜æœåŠ¡å™¨ï¼Œç”¨Memcachedå®ç°ï¼Œå¯¹å¤–æä¾›14000ç«¯å£ã€‚æ¥æ”¶æ¥è‡ªReverse-Serverçš„è¯»æ“ä½œï¼Œå’ŒProcess-Serverçš„å†™æ“ä½œã€‚
+Configuration Solutionï¼š
+ï¼ˆ1ï¼‰FastDFSçš„é…ç½®ä¸éƒ¨ç½²ï¼Œè¯·å‚è§GoogleCodeä¸Šçš„FastDFSç›¸å…³wikiã€‚
+ï¼ˆ2ï¼‰Memcachedéƒ¨ç½²å¾ˆç®€å•ï¼Œwgetï¼Œtarï¼Œ./configureï¼Œmakeï¼Œmake installå°±OKäº†ã€‚
+ï¼ˆ3ï¼‰Process-Serveræ˜¯ç”±æˆ‘è‡ªå·±å®ç°çš„ï¼Œä¸å…·æœ‰é€šç”¨æ€§å°±ä¸è¯´äº†ã€‚
+ï¼ˆ4ï¼‰Reverse-Serverçš„Nginxé…ç½®æ–‡ä»¶ä¸­httpæ¨¡å—ä¸­ï¼Œå»ºç«‹ä¸€ä¸ªç”¨æˆ·è§£å†³è¯¥é—®é¢˜çš„serverï¼Œé…ç½®æ–¹å¼å¦‚ä¸‹ï¼š
 1.	server {  
 2.	    listen 11000;  
 3.	    server_name localhost;  
@@ -880,43 +880,43 @@ Configuration Solution£º
 
 
 Details
-NginxµÄMemcachedÄ£¿éÖ»Ìá¹©¶ÔMemcachedµÄ¶Á²Ù×÷£¬²»Ìá¹©Ğ´²Ù×÷¡£Èç¹ûMemcachedÖĞÃ»ÓĞÏàÓ¦µÄ¼üÖµ£¬¼´Î´ÃüÖĞ£¬Ôò·µ»Ø404¡£Èç¹ûÇëÇóÎ´ÄÜÕÒµ½Memcached Server£¬Ôò·µ»Ø502´íÎó¡£Òò´Ë£¬ÎÒÃÇ¿ÉÒÔ²ÉÓÃÕâÑùÒ»ÖÖ·½Ê½£ºµ±·µ»ØÕâÀà´íÎóÊ±£¬½«ÇëÇó½»¸øStore-Server¡£ÕâÑùÖ»ÓĞÔÚ²»ÃüÖĞÊ±²Å·ÃÎÊStore-Server£¬»º´æ·şÎñÆ÷ÓÉ´Ë¿ÉÒÔÎª´æ´¢·şÎñÆ÷·Öµ£ºÜ¶à¸ºÔØ¡£
+Nginxçš„Memcachedæ¨¡å—åªæä¾›å¯¹Memcachedçš„è¯»æ“ä½œï¼Œä¸æä¾›å†™æ“ä½œã€‚å¦‚æœMemcachedä¸­æ²¡æœ‰ç›¸åº”çš„é”®å€¼ï¼Œå³æœªå‘½ä¸­ï¼Œåˆ™è¿”å›404ã€‚å¦‚æœè¯·æ±‚æœªèƒ½æ‰¾åˆ°Memcached Serverï¼Œåˆ™è¿”å›502é”™è¯¯ã€‚å› æ­¤ï¼Œæˆ‘ä»¬å¯ä»¥é‡‡ç”¨è¿™æ ·ä¸€ç§æ–¹å¼ï¼šå½“è¿”å›è¿™ç±»é”™è¯¯æ—¶ï¼Œå°†è¯·æ±‚äº¤ç»™Store-Serverã€‚è¿™æ ·åªæœ‰åœ¨ä¸å‘½ä¸­æ—¶æ‰è®¿é—®Store-Serverï¼Œç¼“å­˜æœåŠ¡å™¨ç”±æ­¤å¯ä»¥ä¸ºå­˜å‚¨æœåŠ¡å™¨åˆ†æ‹…å¾ˆå¤šè´Ÿè½½ã€‚
 
 
-¶ş¡¢Ó¦ÓÃ³¡¾°2
+äºŒã€åº”ç”¨åœºæ™¯2
 
-ÔÚÓ¦ÓÃ³¡¾°1ÖĞ£¬½«²»ÃüÖĞÊ±µÄÂß¼­»»×÷ÏòMemcachedµÄĞ´²Ù×÷¡£ÕâÖÖ³¡¾°µÄ·şÎñÆ÷ÏµÍ³²¿Êğ·½°¸ÈçÏÂ£º
+åœ¨åº”ç”¨åœºæ™¯1ä¸­ï¼Œå°†ä¸å‘½ä¸­æ—¶çš„é€»è¾‘æ¢ä½œå‘Memcachedçš„å†™æ“ä½œã€‚è¿™ç§åœºæ™¯çš„æœåŠ¡å™¨ç³»ç»Ÿéƒ¨ç½²æ–¹æ¡ˆå¦‚ä¸‹ï¼š
 
-£¨1£©Reverse-Server£ºClient·ÃÎÊ¸Ã·şÎñÆ÷µÄ11000¶Ë¿Ú£¬ÇëÇó±»×ªÖÁCache-ServerµÄ14000¶Ë¿Ú£¬Èç¹ûCache-ServerÃüÖĞÔòresponse£»·ñÔò½»¸øProcess-ServerµÄ13000¶Ë¿Ú£¬½øĞĞ½øÒ»²½µÄ´¦Àí¡£
-£¨2£©Data-Server£º¶ÔÍâÌá¹©12000¶Ë¿Ú£¬ÓÃÓÚ¶ÁÈ¡Êı¾İ¡£
-£¨3£©Process-Server£ºÌá¹©13000¶Ë¿Ú£¬ÓÃÓÚ½ÓÊÕReverse-Server×ª·¢À´µÄHTTPÇëÇó£¬µ½Store-ServerµÄ12000¶Ë¿Ú²éÑ¯£¬²¢½«µÃµ½µÄValueÓë´ÓReverse-Server·¢À´µÄKeyÖµ¹²Í¬¹¹³ÉK-V¶Ô£¬Í¨¹ıCache-ServerµÄ14000¶Ë¿ÚĞ´ÈëCache-Server¡£
-£¨4£©Cache-Server£ºÌá¹©14000¶Ë¿Ú£¬ÓÃÓÚ¶ÔÍâÌá¹©¶ÁĞ´²Ù×÷¡£
+ï¼ˆ1ï¼‰Reverse-Serverï¼šClientè®¿é—®è¯¥æœåŠ¡å™¨çš„11000ç«¯å£ï¼Œè¯·æ±‚è¢«è½¬è‡³Cache-Serverçš„14000ç«¯å£ï¼Œå¦‚æœCache-Serverå‘½ä¸­åˆ™responseï¼›å¦åˆ™äº¤ç»™Process-Serverçš„13000ç«¯å£ï¼Œè¿›è¡Œè¿›ä¸€æ­¥çš„å¤„ç†ã€‚
+ï¼ˆ2ï¼‰Data-Serverï¼šå¯¹å¤–æä¾›12000ç«¯å£ï¼Œç”¨äºè¯»å–æ•°æ®ã€‚
+ï¼ˆ3ï¼‰Process-Serverï¼šæä¾›13000ç«¯å£ï¼Œç”¨äºæ¥æ”¶Reverse-Serverè½¬å‘æ¥çš„HTTPè¯·æ±‚ï¼Œåˆ°Store-Serverçš„12000ç«¯å£æŸ¥è¯¢ï¼Œå¹¶å°†å¾—åˆ°çš„Valueä¸ä»Reverse-Serverå‘æ¥çš„Keyå€¼å…±åŒæ„æˆK-Vå¯¹ï¼Œé€šè¿‡Cache-Serverçš„14000ç«¯å£å†™å…¥Cache-Serverã€‚
+ï¼ˆ4ï¼‰Cache-Serverï¼šæä¾›14000ç«¯å£ï¼Œç”¨äºå¯¹å¤–æä¾›è¯»å†™æ“ä½œã€‚
 
-ÕâÊÇµÄNginxµÄMemcachedÄ£¿éÅäÖÃ£¬Òª½«requestµÄ·½·¨ÎªpostºÍerror_log£¬²»ÔÙÊÇÈç¡°Ó¦ÓÃ³¡¾°1¡±ÖĞÄÇÑù×ªÖÁStore-Server£¬¶øÊÇ¶¼×ªÖÁProcess-ServerÈ¥¡£ÒòÎªÓ¦ÓÃ³¡¾°1ÖĞ£¬ÏòCacheĞ´µÄ²Ù×÷£¬ÊÇÔ¤ÏÈÍê³ÉµÄ¡£¶øÓ¦ÓÃ³¡¾°2ÖĞÏòCacheĞ´µÄ²Ù×÷£¬ÊÇÔÚ¶ÁCacheÊ§°Üºó·¢ÉúµÄ¡£×¢ÒâÕâÁ½ÕßÊÊÓÃµÄÒµÎñĞèÇó¡£
+è¿™æ˜¯çš„Nginxçš„Memcachedæ¨¡å—é…ç½®ï¼Œè¦å°†requestçš„æ–¹æ³•ä¸ºpostå’Œerror_logï¼Œä¸å†æ˜¯å¦‚â€œåº”ç”¨åœºæ™¯1â€ä¸­é‚£æ ·è½¬è‡³Store-Serverï¼Œè€Œæ˜¯éƒ½è½¬è‡³Process-Serverå»ã€‚å› ä¸ºåº”ç”¨åœºæ™¯1ä¸­ï¼Œå‘Cacheå†™çš„æ“ä½œï¼Œæ˜¯é¢„å…ˆå®Œæˆçš„ã€‚è€Œåº”ç”¨åœºæ™¯2ä¸­å‘Cacheå†™çš„æ“ä½œï¼Œæ˜¯åœ¨è¯»Cacheå¤±è´¥åå‘ç”Ÿçš„ã€‚æ³¨æ„è¿™ä¸¤è€…é€‚ç”¨çš„ä¸šåŠ¡éœ€æ±‚ã€‚
 
-µ±ÒÔ×Ö½ÚÊı×é·½Ê½»º´æ½Ï´óµÄÎÄ¼şÊ±£¬»º´æÊı¾İ»á±»Ñ¹Ëõ£¬´Ó¶øÔÚ¶ÁÈ¡µÄÊ±ºò³öÏÖÎÊÌâ¡£
+å½“ä»¥å­—èŠ‚æ•°ç»„æ–¹å¼ç¼“å­˜è¾ƒå¤§çš„æ–‡ä»¶æ—¶ï¼Œç¼“å­˜æ•°æ®ä¼šè¢«å‹ç¼©ï¼Œä»è€Œåœ¨è¯»å–çš„æ—¶å€™å‡ºç°é—®é¢˜ã€‚
 
-½â¾ö·½·¨ºÜ¼òµ¥£¬¾ÍÊÇÔÚMemcachedClient¶ËÉèÖÃÑ¹ËõµÄãĞÖµ¡£Èç¹ûÄãÊ¹ÓÃµÄÊÇnet.spy.memcachedµÄAPI£¬Ôò¿ÉÒÔÈçÏÂÉèÖÃ£º
+è§£å†³æ–¹æ³•å¾ˆç®€å•ï¼Œå°±æ˜¯åœ¨MemcachedClientç«¯è®¾ç½®å‹ç¼©çš„é˜ˆå€¼ã€‚å¦‚æœä½ ä½¿ç”¨çš„æ˜¯net.spy.memcachedçš„APIï¼Œåˆ™å¯ä»¥å¦‚ä¸‹è®¾ç½®ï¼š
 1.	int EXPIRE_SECONDS = 18000;  
 2.	SerializingTranscoder transcoder = new SerializingTranscoder();  
 3.	transcoder.setCompressionThreshold(5242880);  
 4.	fileCache.set(key, EXPIRE_SECONDS, value, transcoder);  
-Èç¹ûÄãÊ¹ÓÃµÄÊÇnet.rubyeye.xmemcachedµÄAPI£¬Ôò¿ÉÒÔÈçÏÂÉèÖÃ£º
+å¦‚æœä½ ä½¿ç”¨çš„æ˜¯net.rubyeye.xmemcachedçš„APIï¼Œåˆ™å¯ä»¥å¦‚ä¸‹è®¾ç½®ï¼š
 1.	int EXPIRE_SECONDS = 18000;  
 2.	BaseSerializingTranscoder transcoder = new BaseSerializingTranscoder();  
 3.	transcoder.setCompressionThreshold(5242880);  
 4.	client = set(key, EXPIRE_SECONDS, value, transcoder);  
-Èç¹ûÄãÊ¹ÓÃµÄÊÇdanga.MemCachedµÄAPI£¬Ôò¿ÉÒÔÈçÏÂÉèÖÃ£º
+å¦‚æœä½ ä½¿ç”¨çš„æ˜¯danga.MemCachedçš„APIï¼Œåˆ™å¯ä»¥å¦‚ä¸‹è®¾ç½®ï¼š
 1.	int EXPIRE_SECONDS = 18000;  
 2.	MemCachedClient.setCompressThreshold(5242880);  
 3.	MemCachedClient.set(key, value, new Date(System.currentTimeMillis() + EXPIRE_SECONDS * 1000L));  	
-1ÎÒÃÇÖªµÀNginx´ÓMemcached¶ÁÈ¡Êı¾İµÄ·½Ê½£¬Èç¹ûÃüÖĞ£¬ÄÇÃ´Ğ§ÂÊÊÇÏàµ±¸ßµÄ. Èç¹û²»ÃüÖĞÄØ£¿
+1æˆ‘ä»¬çŸ¥é“Nginxä»Memcachedè¯»å–æ•°æ®çš„æ–¹å¼ï¼Œå¦‚æœå‘½ä¸­ï¼Œé‚£ä¹ˆæ•ˆç‡æ˜¯ç›¸å½“é«˜çš„. å¦‚æœä¸å‘½ä¸­å‘¢ï¼Ÿ
 
-ÎÒÃÇ¿ÉÒÔµ½ÏàÓ¦µÄÊı¾İ·şÎñÆ÷ÉÏ¶ÁÈ¡Êı¾İ£¬È»ºó½«Ëü»º´æµ½Nginx·şÎñÆ÷ÉÏ£¬È»ºóÔÙ½«¸ÃÊı¾İ·µ»Ø¸ø¿Í»§¶Ë¡£ÕâÑù£¬¶ÔÓÚ¸Ã×ÊÔ´£¬Ö»ÓĞ´©Í¸MemcachedµÄµÚÒ»´ÎÇëÇóÊÇĞèÒªµ½Êı¾İ·şÎñÆ÷¶ÁÈ¡µÄ£¬Ö®ºóÔÚ»º´æ¹ıÆÚÊ±¼äÖ®ÄÚµÄËùÓĞÇëÇó£¬¶¼ÊÇ¶ÁÈ¡Nginx±¾µØµÄ¡£²»¹ıNginxµÄproxy_cacheÊÇ±¾µØÓ²ÅÌ»º´æ£¬Ğ§ÂÊÒªÔ¶µÍÓÚMemcached¡£
+æˆ‘ä»¬å¯ä»¥åˆ°ç›¸åº”çš„æ•°æ®æœåŠ¡å™¨ä¸Šè¯»å–æ•°æ®ï¼Œç„¶åå°†å®ƒç¼“å­˜åˆ°NginxæœåŠ¡å™¨ä¸Šï¼Œç„¶åå†å°†è¯¥æ•°æ®è¿”å›ç»™å®¢æˆ·ç«¯ã€‚è¿™æ ·ï¼Œå¯¹äºè¯¥èµ„æºï¼Œåªæœ‰ç©¿é€Memcachedçš„ç¬¬ä¸€æ¬¡è¯·æ±‚æ˜¯éœ€è¦åˆ°æ•°æ®æœåŠ¡å™¨è¯»å–çš„ï¼Œä¹‹ååœ¨ç¼“å­˜è¿‡æœŸæ—¶é—´ä¹‹å†…çš„æ‰€æœ‰è¯·æ±‚ï¼Œéƒ½æ˜¯è¯»å–Nginxæœ¬åœ°çš„ã€‚ä¸è¿‡Nginxçš„proxy_cacheæ˜¯æœ¬åœ°ç¡¬ç›˜ç¼“å­˜ï¼Œæ•ˆç‡è¦è¿œä½äºMemcachedã€‚
 
-2. Ó¦¸ÃÈçºÎ°²×°ºÍÅäÖÃÄØ£¿
-£¨1£©HttpMemcModuleÄ£¿é
-Èç¹ûÊ¹ÓÃNginxµÄ·ÇºËĞÄÄ£¿é¡ª¡ªHttpMemcModuleÄ£¿é£¬Ôò¿ÉÒÔÏÂÔØÄ£¿é£º
+2. åº”è¯¥å¦‚ä½•å®‰è£…å’Œé…ç½®å‘¢ï¼Ÿ
+ï¼ˆ1ï¼‰HttpMemcModuleæ¨¡å—
+å¦‚æœä½¿ç”¨Nginxçš„éæ ¸å¿ƒæ¨¡å—â€•â€•HttpMemcModuleæ¨¡å—ï¼Œåˆ™å¯ä»¥ä¸‹è½½æ¨¡å—ï¼š
 http://github.com/agentzh/memc-nginx-module/tags
 1.	michael@dev-machine:~$ tar -zxvf agentzh-memc-nginx-module-a0bc33a.tar.gz  
 2.	michael@dev-machine:~$ tar -zxvf nginx-1.1.12.tar.gz  
@@ -925,7 +925,7 @@ http://github.com/agentzh/memc-nginx-module/tags
 5.	michael@dev-machine:~$ sudo make  
 6.	michael@dev-machine:~$ sudo make install  
 
-Ä¿Ç°ÑéÖ¤·¢ÏÖNginx 1.0.10°æ±¾ NginxµÄ1.1.3¼°ÆäÖ®Ç°µÄ°æ±¾£¬ĞèÒª¶îÍâÍ¨¹ı--add-moduleÀ´¼ÓÔØupstream-keepaliveÄ£¿é£¬Çë×ÔĞĞgoogleÖ®¡£ÆäËû°æ±¾»¹²»È·¶¨£¬²Â²âÊÇÔÚ1.1  ´ÓnginxµÄ1.1.4¼°ÆäÖ®ºóµÄ°æ±¾¿ªÊ¼£¬×Ô¶¯Ğ¯´øupstream-keepliveÄ£¿éµÄ¡£ 
+ç›®å‰éªŒè¯å‘ç°Nginx 1.0.10ç‰ˆæœ¬ Nginxçš„1.1.3åŠå…¶ä¹‹å‰çš„ç‰ˆæœ¬ï¼Œéœ€è¦é¢å¤–é€šè¿‡--add-moduleæ¥åŠ è½½upstream-keepaliveæ¨¡å—ï¼Œè¯·è‡ªè¡Œgoogleä¹‹ã€‚å…¶ä»–ç‰ˆæœ¬è¿˜ä¸ç¡®å®šï¼ŒçŒœæµ‹æ˜¯åœ¨1.1  ä»nginxçš„1.1.4åŠå…¶ä¹‹åçš„ç‰ˆæœ¬å¼€å§‹ï¼Œè‡ªåŠ¨æºå¸¦upstream-keepliveæ¨¡å—çš„ã€‚ 
 1.	http {  
 2.	    ...  
 3.	    upstream data_server {  
@@ -970,68 +970,68 @@ http://github.com/agentzh/memc-nginx-module/tags
 42.	    ...  
 43.	}  
 
-´ÓÉÏÃæµÄÅäÖÃÎÄ¼şÎÒÃÇ¿ÉÒÔ¿´³ö£¬Ò»¸öÇëÇóµ½´ïºó£¬»áÆäuri×÷ÎªkeyÈ¥Memcached·şÎñÆ÷127.0.0.1:11211ÉÏ²éÕÒvalue£¬Èç¹ûÃ»ÓĞÃüÖĞ£¬Ôò·µ»Ø404¡£ÕâÊ±Í¨¹ıerror_page½«404½ÓÊÕ×ªµ½@fallback£¬È»ºóÈ¥data_serverÖĞÈ¡ÎÄ¼ş£¬È¡Íêºó½«¸ÃÎÄ¼şÔÚ±¾µØ´ÅÅÌ»º´æ£¬Í¬Ê±ÓÃ»§µÄä¯ÀÀÆ÷Ò²Í¨¹ıexpiresÉèÖÃ»º´æÊ±¼ä¡£
+ä»ä¸Šé¢çš„é…ç½®æ–‡ä»¶æˆ‘ä»¬å¯ä»¥çœ‹å‡ºï¼Œä¸€ä¸ªè¯·æ±‚åˆ°è¾¾åï¼Œä¼šå…¶uriä½œä¸ºkeyå»MemcachedæœåŠ¡å™¨127.0.0.1:11211ä¸ŠæŸ¥æ‰¾valueï¼Œå¦‚æœæ²¡æœ‰å‘½ä¸­ï¼Œåˆ™è¿”å›404ã€‚è¿™æ—¶é€šè¿‡error_pageå°†404æ¥æ”¶è½¬åˆ°@fallbackï¼Œç„¶åå»data_serverä¸­å–æ–‡ä»¶ï¼Œå–å®Œåå°†è¯¥æ–‡ä»¶åœ¨æœ¬åœ°ç£ç›˜ç¼“å­˜ï¼ŒåŒæ—¶ç”¨æˆ·çš„æµè§ˆå™¨ä¹Ÿé€šè¿‡expiresè®¾ç½®ç¼“å­˜æ—¶é—´ã€‚
 
-ÕâÑù¾ø´ó¶àÊıÇëÇóÈç¹û±»µÚÒ»²ãMemcachedµÄÄÚ´æ»º´æÀ¹½ØµÄ»°£¬Ê£ÓàµÄÇëÇó¿ÉÒÔÍ¨¹ı·ÃÎÊµÚ¶ş²ãNginx·şÎñÆ÷µÄÓ²ÅÌ»º´æÎÄ¼ş£¬À´¼õÉÙ´©Í¸¡£
+è¿™æ ·ç»å¤§å¤šæ•°è¯·æ±‚å¦‚æœè¢«ç¬¬ä¸€å±‚Memcachedçš„å†…å­˜ç¼“å­˜æ‹¦æˆªçš„è¯ï¼Œå‰©ä½™çš„è¯·æ±‚å¯ä»¥é€šè¿‡è®¿é—®ç¬¬äºŒå±‚NginxæœåŠ¡å™¨çš„ç¡¬ç›˜ç¼“å­˜æ–‡ä»¶ï¼Œæ¥å‡å°‘ç©¿é€ã€‚
 
-°´ÕÕÉÏÃæµÄ·½Ê½£¬¿Í»§¶ËµÃµ½µÄÇëÇóÏìÓ¦ÖĞËäÈ»°üº¬ÁËÕıÈ·µÄÎÄ¼şÄÚÈİ£¬µ«×´Ì¬Âë¶¼ÊÇ404£¨¿ÉÒÔÍ¨¹ıFiddlerÀ´¹Û²ì£©¡£ÕâËÆºõ»áÒıÆğÎÊÌâ¡£Ê²Ã´ÎÊÌâÄØ£¿¾ø´ó¶àÊıä¯ÀÀÆ÷£¬¼´Ê¹ÔÚ404µÄÇé¿öÏÂ£¬Ò²»á³¢ÊÔÈ¥¶ÁÈ¡ÄÚÈİ£¬Èç¹ûÓĞÕıÈ·µÄÄÚÈİ£¬ÊÇ¿ÉÒÔÕıÈ·ÏÔÊ¾µÄ¡£µ«ÊÇ±È½Ï³£¼ûµÄ¿ÉÄÜÒıÆğÎÊÌâµÄÁ½ÖÖÇé¿öÊÇ£º
-£¨a£©¡¢ËÑË÷ÒıÇæµÄspiderÅÀµ½µÄ404Ê±£¬Ò»°ã²»»áÊÕÂ¼¸ÃURL£¬ÎÒÏëÕâ²»ÊÇÄãËùÏ£Íû¿´µ½µÄ£»
-£¨b£©¡¢FlashµÈ·½Ê½¼ÓÔØÊ±£¬Èç¹ûÍ·ÊÇ404£¬¿ÉÄÜ²»ÓèÏÔÊ¾£¬ÎÒÏë×ÅÒ²²»ÊÇÄãËùÏ£Íû¿´µ½µÄ¡£
+æŒ‰ç…§ä¸Šé¢çš„æ–¹å¼ï¼Œå®¢æˆ·ç«¯å¾—åˆ°çš„è¯·æ±‚å“åº”ä¸­è™½ç„¶åŒ…å«äº†æ­£ç¡®çš„æ–‡ä»¶å†…å®¹ï¼Œä½†çŠ¶æ€ç éƒ½æ˜¯404ï¼ˆå¯ä»¥é€šè¿‡Fiddleræ¥è§‚å¯Ÿï¼‰ã€‚è¿™ä¼¼ä¹ä¼šå¼•èµ·é—®é¢˜ã€‚ä»€ä¹ˆé—®é¢˜å‘¢ï¼Ÿç»å¤§å¤šæ•°æµè§ˆå™¨ï¼Œå³ä½¿åœ¨404çš„æƒ…å†µä¸‹ï¼Œä¹Ÿä¼šå°è¯•å»è¯»å–å†…å®¹ï¼Œå¦‚æœæœ‰æ­£ç¡®çš„å†…å®¹ï¼Œæ˜¯å¯ä»¥æ­£ç¡®æ˜¾ç¤ºçš„ã€‚ä½†æ˜¯æ¯”è¾ƒå¸¸è§çš„å¯èƒ½å¼•èµ·é—®é¢˜çš„ä¸¤ç§æƒ…å†µæ˜¯ï¼š
+ï¼ˆaï¼‰ã€æœç´¢å¼•æ“çš„spiderçˆ¬åˆ°çš„404æ—¶ï¼Œä¸€èˆ¬ä¸ä¼šæ”¶å½•è¯¥URLï¼Œæˆ‘æƒ³è¿™ä¸æ˜¯ä½ æ‰€å¸Œæœ›çœ‹åˆ°çš„ï¼›
+ï¼ˆbï¼‰ã€Flashç­‰æ–¹å¼åŠ è½½æ—¶ï¼Œå¦‚æœå¤´æ˜¯404ï¼Œå¯èƒ½ä¸äºˆæ˜¾ç¤ºï¼Œæˆ‘æƒ³ç€ä¹Ÿä¸æ˜¯ä½ æ‰€å¸Œæœ›çœ‹åˆ°çš„ã€‚
 
-ÄÇÎÒÃÇ°ÑËü¸Ä³É¶¼ÊÇ200£¬ÊÇ²»ÊÇºÜºÃÄØ£¿
+é‚£æˆ‘ä»¬æŠŠå®ƒæ”¹æˆéƒ½æ˜¯200ï¼Œæ˜¯ä¸æ˜¯å¾ˆå¥½å‘¢ï¼Ÿ
 1.	error_page  404 =200 @fallback;  
 
-·ÇÒ²£¬ÕâÑù404´«µİµ½fallback´¦ÀíÇëÇóºóµÄ×´Ì¬Èç¹û²»ÊÇ200£¬¾ÍºÜ²»Ò»ÖÂÁË£¬»áÒıÆğ¸ü¶àÎÊÌâ¡£ËùÒÔÓ¦¸ÃÈçÏÂÅäÖÃ£º
+éä¹Ÿï¼Œè¿™æ ·404ä¼ é€’åˆ°fallbackå¤„ç†è¯·æ±‚åçš„çŠ¶æ€å¦‚æœä¸æ˜¯200ï¼Œå°±å¾ˆä¸ä¸€è‡´äº†ï¼Œä¼šå¼•èµ·æ›´å¤šé—®é¢˜ã€‚æ‰€ä»¥åº”è¯¥å¦‚ä¸‹é…ç½®ï¼š
 1.	error_page  404 = @fallback;  
 
-ÕâÑùfallbackµÄ´¦Àí½á¹û×´Ì¬ÊÇÊ²Ã´£¬¾ÍÓÃÊ²Ã´Ìæ»»404¡£
+è¿™æ ·fallbackçš„å¤„ç†ç»“æœçŠ¶æ€æ˜¯ä»€ä¹ˆï¼Œå°±ç”¨ä»€ä¹ˆæ›¿æ¢404ã€‚
 
-Æ½»¬Éı¼¶ÄãµÄNginx
-1¡¢¸ÅÊö£¨¿ÉÒÔÖ±½ÓÌø¹ı¿´µÚ2²¿·Ö£©
-Nginx·½±ãµØ°ïÖúÎÒÃÇÊµÏÖÁËÆ½»¬Éı¼¶¡£ÆäÔ­Àí¼òµ¥¸ÅÀ¨£¬¾ÍÊÇ£º
+å¹³æ»‘å‡çº§ä½ çš„Nginx
+1ã€æ¦‚è¿°ï¼ˆå¯ä»¥ç›´æ¥è·³è¿‡çœ‹ç¬¬2éƒ¨åˆ†ï¼‰
+Nginxæ–¹ä¾¿åœ°å¸®åŠ©æˆ‘ä»¬å®ç°äº†å¹³æ»‘å‡çº§ã€‚å…¶åŸç†ç®€å•æ¦‚æ‹¬ï¼Œå°±æ˜¯ï¼š
 
-£¨1£©ÔÚ²»Í£µôÀÏ½ø³ÌµÄÇé¿öÏÂ£¬Æô¶¯ĞÂ½ø³Ì¡£
-£¨2£©ÀÏ½ø³Ì¸ºÔğ´¦ÀíÈÔÈ»Ã»ÓĞ´¦ÀíÍêµÄÇëÇó£¬µ«²»ÔÙ½ÓÊÜ´¦ÀíÇëÇó¡£
-£¨3£©ĞÂ½ø³Ì½ÓÊÜĞÂÇëÇó¡£
-£¨4£©ÀÏ½ø³Ì´¦ÀíÍêËùÓĞÇëÇó£¬¹Ø±ÕËùÓĞÁ¬½Óºó£¬Í£Ö¹¡£
+ï¼ˆ1ï¼‰åœ¨ä¸åœæ‰è€è¿›ç¨‹çš„æƒ…å†µä¸‹ï¼Œå¯åŠ¨æ–°è¿›ç¨‹ã€‚
+ï¼ˆ2ï¼‰è€è¿›ç¨‹è´Ÿè´£å¤„ç†ä»ç„¶æ²¡æœ‰å¤„ç†å®Œçš„è¯·æ±‚ï¼Œä½†ä¸å†æ¥å—å¤„ç†è¯·æ±‚ã€‚
+ï¼ˆ3ï¼‰æ–°è¿›ç¨‹æ¥å—æ–°è¯·æ±‚ã€‚
+ï¼ˆ4ï¼‰è€è¿›ç¨‹å¤„ç†å®Œæ‰€æœ‰è¯·æ±‚ï¼Œå…³é—­æ‰€æœ‰è¿æ¥åï¼Œåœæ­¢ã€‚
 
-ÕâÑù¾ÍºÜ·½±ãµØÊµÏÖÁËÆ½»¬Éı¼¶¡£Ò»°ãÓĞÁ½ÖÖÇé¿öÏÂĞèÒªÉı¼¶Nginx£¬Ò»ÖÖÊÇÈ·ÊµÒªÉı¼¶NginxµÄ°æ±¾£¬ÁíÒ»ÖÖÊÇÒªÎªNginxÌí¼ÓĞÂµÄÄ£¿é¡£
+è¿™æ ·å°±å¾ˆæ–¹ä¾¿åœ°å®ç°äº†å¹³æ»‘å‡çº§ã€‚ä¸€èˆ¬æœ‰ä¸¤ç§æƒ…å†µä¸‹éœ€è¦å‡çº§Nginxï¼Œä¸€ç§æ˜¯ç¡®å®è¦å‡çº§Nginxçš„ç‰ˆæœ¬ï¼Œå¦ä¸€ç§æ˜¯è¦ä¸ºNginxæ·»åŠ æ–°çš„æ¨¡å—ã€‚
 
-2. Éı¼¶¹ı³Ì
-¾ßÌåµÄ²Ù×÷Ò²ºÜ¼òµ¥£¬ÈçÏÂ£º
+2. å‡çº§è¿‡ç¨‹
+å…·ä½“çš„æ“ä½œä¹Ÿå¾ˆç®€å•ï¼Œå¦‚ä¸‹ï¼š
 
-£¨0£©²é¿´µ±Ç°°æ±¾
-ÔÚ´æ·ÅNginxµÄ¿ÉÖ´ĞĞÎÄ¼şµÄÄ¿Â¼ÏÂÊäÈë£º
+ï¼ˆ0ï¼‰æŸ¥çœ‹å½“å‰ç‰ˆæœ¬
+åœ¨å­˜æ”¾Nginxçš„å¯æ‰§è¡Œæ–‡ä»¶çš„ç›®å½•ä¸‹è¾“å…¥ï¼š
 1.	./nginx -V  
 
-£¨1£©ÏÂÔØĞÂµÄNginx°æ±¾²¢±àÒë¡£
+ï¼ˆ1ï¼‰ä¸‹è½½æ–°çš„Nginxç‰ˆæœ¬å¹¶ç¼–è¯‘ã€‚
 1.	wget nginx-1.0.11.tar.gz  
 2.	tar zxvf nginx-1.0.11.tar.gz  
 3.	cd nginx-1.0.11  
 4.	./configure --add-module=/customized_module_0 --add-module=/customized_module_1  
 5.	make  
-×¢Òâ²»Òª½øĞĞmake install
+æ³¨æ„ä¸è¦è¿›è¡Œmake install
 
-£¨2£©±¸·İÀÏ°æ±¾µÄ¿ÉÖ´ĞĞÎÄ¼ş
+ï¼ˆ2ï¼‰å¤‡ä»½è€ç‰ˆæœ¬çš„å¯æ‰§è¡Œæ–‡ä»¶
 1.	cd /usr/local/nginx/sbin  
 2.	sudo cp nginx nginx.old  
-£¨3£©ĞŞ¸ÄÅäÖÃÎÄ¼ş
-Èç¹ûÓĞ±ØÒªµÄ»°£¬½øĞĞÅäÖÃÎÄ¼şµÄĞŞ¸Ä¡£
+ï¼ˆ3ï¼‰ä¿®æ”¹é…ç½®æ–‡ä»¶
+å¦‚æœæœ‰å¿…è¦çš„è¯ï¼Œè¿›è¡Œé…ç½®æ–‡ä»¶çš„ä¿®æ”¹ã€‚
 
-£¨4£©¿½±´ĞÂµÄ¿ÉÖ´ĞĞÎÄ¼ş
+ï¼ˆ4ï¼‰æ‹·è´æ–°çš„å¯æ‰§è¡Œæ–‡ä»¶
 1.	sudo cp /home/michael/tmp/nginx-1.0.11/objs/nginx /usr/local/nginx/sbin/  
-£¨5£©Éı¼¶
+ï¼ˆ5ï¼‰å‡çº§
 1.	cd /home/michael/tmp/nginx-1.0.11  
 2.	make upgrade  
-£¨6£©ÇåÀí¶àÓàÎÄ¼ş
+ï¼ˆ6ï¼‰æ¸…ç†å¤šä½™æ–‡ä»¶
 1.	rm -rf /home/michael/tmp/nginx-1.0.11  
-£¨7£©²é¿´Nginx°æ±¾
+ï¼ˆ7ï¼‰æŸ¥çœ‹Nginxç‰ˆæœ¬
 1.	cd /usr/local/nginx/sbin  
 2.	./nginx -V  
 
 
-Upstream¸ºÔØ¾ùºâÄ£¿é
-Nginx µÄ HttpUpstreamModule Ìá¹©¶Ôºó¶Ë£¨backend£©·şÎñÆ÷µÄ¼òµ¥¸ºÔØ¾ùºâ¡£Ò»¸ö×î¼òµ¥µÄ upstream Ğ´·¨ÈçÏÂ£º
+Upstreamè´Ÿè½½å‡è¡¡æ¨¡å—
+Nginx çš„ HttpUpstreamModule æä¾›å¯¹åç«¯ï¼ˆbackendï¼‰æœåŠ¡å™¨çš„ç®€å•è´Ÿè½½å‡è¡¡ã€‚ä¸€ä¸ªæœ€ç®€å•çš„ upstream å†™æ³•å¦‚ä¸‹ï¼š
 
 upstream backend {
     server backend1.example.com;
@@ -1045,9 +1045,9 @@ server {
     }
 }
 
-1¡¢ºó¶Ë·şÎñÆ÷
+1ã€åç«¯æœåŠ¡å™¨
 
-Í¨¹ı upstream ¿ÉÒÔÉè¶¨ºó¶Ë·şÎñÆ÷£¬Ö¸¶¨µÄ·½Ê½¿ÉÒÔÊÇ IP µØÖ·Óë¶Ë¿Ú¡¢ÓòÃû¡¢UNIX Ì×½Ó×Ö£¨socket£©¡£ÆäÖĞÈç¹ûÓòÃû¿ÉÒÔ±»½âÎöÎª¶à¸öµØÖ·£¬ÔòÕâĞ©µØÖ·¶¼×÷Îª backend¡£ÏÂÃæ¾ÙÀıËµÃ÷£º
+é€šè¿‡ upstream å¯ä»¥è®¾å®šåç«¯æœåŠ¡å™¨ï¼ŒæŒ‡å®šçš„æ–¹å¼å¯ä»¥æ˜¯ IP åœ°å€ä¸ç«¯å£ã€åŸŸåã€UNIX å¥—æ¥å­—ï¼ˆsocketï¼‰ã€‚å…¶ä¸­å¦‚æœåŸŸåå¯ä»¥è¢«è§£æä¸ºå¤šä¸ªåœ°å€ï¼Œåˆ™è¿™äº›åœ°å€éƒ½ä½œä¸º backendã€‚ä¸‹é¢ä¸¾ä¾‹è¯´æ˜ï¼š
 
 upstream backend {
     server blog.csdn.net/poechant;
@@ -1055,22 +1055,22 @@ upstream backend {
     server unix:/tmp/backend3;
 }
 
-µÚÒ»¸ö backend ÊÇÓÃÓòÃûÖ¸¶¨µÄ¡£µÚ¶ş¸ö backend ÊÇÓÃ IP ºÍ¶Ë¿ÚºÅÖ¸¶¨µÄ¡£µÚÈı¸ö backend ÊÇÓÃ UNIX Ì×½Ó×ÖÖ¸¶¨µÄ¡£
+ç¬¬ä¸€ä¸ª backend æ˜¯ç”¨åŸŸåæŒ‡å®šçš„ã€‚ç¬¬äºŒä¸ª backend æ˜¯ç”¨ IP å’Œç«¯å£å·æŒ‡å®šçš„ã€‚ç¬¬ä¸‰ä¸ª backend æ˜¯ç”¨ UNIX å¥—æ¥å­—æŒ‡å®šçš„ã€‚
 
-2¡¢¸ºÔØ¾ùºâ²ßÂÔ
+2ã€è´Ÿè½½å‡è¡¡ç­–ç•¥
 
-Nginx Ìá¹©ÂÖÑ¯£¨round robin£©¡¢ÓÃ»§ IP ¹şÏ££¨client IP£©ºÍÖ¸¶¨È¨ÖØ 3 ÖÖ·½Ê½¡£
+Nginx æä¾›è½®è¯¢ï¼ˆround robinï¼‰ã€ç”¨æˆ· IP å“ˆå¸Œï¼ˆclient IPï¼‰å’ŒæŒ‡å®šæƒé‡ 3 ç§æ–¹å¼ã€‚
 
-Ä¬ÈÏÇé¿öÏÂ£¬Nginx »áÎªÄãÌá¹©ÂÖÑ¯×÷Îª¸ºÔØ¾ùºâ²ßÂÔ¡£µ«ÊÇÕâ²¢²»Ò»¶¨ÄÜ¹»ÈÃÄãÂúÒâ¡£±ÈÈç£¬Ä³Ò»Ê±¶ÎÄÚµÄÒ»Á¬´®·ÃÎÊ¶¼ÊÇÓÉÍ¬Ò»¸öÓÃ»§ Michael ·¢ÆğµÄ£¬ÄÇÃ´µÚÒ»´Î Michael µÄÇëÇó¿ÉÄÜÊÇ backend2£¬¶øÏÂÒ»´ÎÊÇ backend3£¬È»ºóÊÇ backend1¡¢backend2¡¢backend3¡­¡­ ÔÚ´ó¶àÊıÓ¦ÓÃ³¡¾°ÖĞ£¬ÕâÑù²¢²»¸ßĞ§¡£µ±È»£¬Ò²ÕıÒòÈç´Ë£¬Nginx ÎªÄãÌá¹©ÁËÒ»¸ö°´ÕÕ Michael¡¢Jason¡¢David µÈµÈÕâĞ©ÂÒÆß°ËÔãµÄÓÃ»§µÄ IP À´ hash µÄ·½Ê½£¬ÕâÑùÃ¿¸ö client µÄ·ÃÎÊÇëÇó¶¼»á±»Ë¦¸øÍ¬Ò»¸öºó¶Ë·şÎñÆ÷
+é»˜è®¤æƒ…å†µä¸‹ï¼ŒNginx ä¼šä¸ºä½ æä¾›è½®è¯¢ä½œä¸ºè´Ÿè½½å‡è¡¡ç­–ç•¥ã€‚ä½†æ˜¯è¿™å¹¶ä¸ä¸€å®šèƒ½å¤Ÿè®©ä½ æ»¡æ„ã€‚æ¯”å¦‚ï¼ŒæŸä¸€æ—¶æ®µå†…çš„ä¸€è¿ä¸²è®¿é—®éƒ½æ˜¯ç”±åŒä¸€ä¸ªç”¨æˆ· Michael å‘èµ·çš„ï¼Œé‚£ä¹ˆç¬¬ä¸€æ¬¡ Michael çš„è¯·æ±‚å¯èƒ½æ˜¯ backend2ï¼Œè€Œä¸‹ä¸€æ¬¡æ˜¯ backend3ï¼Œç„¶åæ˜¯ backend1ã€backend2ã€backend3â€¦â€¦ åœ¨å¤§å¤šæ•°åº”ç”¨åœºæ™¯ä¸­ï¼Œè¿™æ ·å¹¶ä¸é«˜æ•ˆã€‚å½“ç„¶ï¼Œä¹Ÿæ­£å› å¦‚æ­¤ï¼ŒNginx ä¸ºä½ æä¾›äº†ä¸€ä¸ªæŒ‰ç…§ Michaelã€Jasonã€David ç­‰ç­‰è¿™äº›ä¹±ä¸ƒå…«ç³Ÿçš„ç”¨æˆ·çš„ IP æ¥ hash çš„æ–¹å¼ï¼Œè¿™æ ·æ¯ä¸ª client çš„è®¿é—®è¯·æ±‚éƒ½ä¼šè¢«ç”©ç»™åŒä¸€ä¸ªåç«¯æœåŠ¡å™¨
 upstream backend {
     ip_hash;
     server backend1.example.com;
     server backend2.example.com;
     server.backend3.example.com;
 }
-ÕâÖÖ²ßÂÔÖĞ£¬ÓÃÓÚ½øĞĞ hash ÔËËãµÄ key£¬ÊÇ client µÄ C Àà IP µØÖ·£¨C Àà IP µØÖ·¾ÍÊÇ·¶Î§ÔÚ 192.0.0.0 µ½ 223.255.255.255 Ö®¼ä£¬Ç°Èı¶ÎºÅÂë±íÊ¾×ÓÍø£¬µÚËÄ¶ÎºÅÂëÎª±¾µØÖ÷»úµÄ IP µØÖ·Àà±ğ£©¡£ÕâÑùµÄ·½Ê½±£Ö¤Ò»¸ö client Ã¿´ÎÇëÇó¶¼½«µ½´ïÍ¬Ò»¸ö backend¡£µ±È»£¬Èç¹ûËù hash µ½µÄ backend µ±Ç°²»¿ÉÓÃ£¬ÔòÇëÇó»á±»×ªÒÆµ½ÆäËû backend¡£
+è¿™ç§ç­–ç•¥ä¸­ï¼Œç”¨äºè¿›è¡Œ hash è¿ç®—çš„ keyï¼Œæ˜¯ client çš„ C ç±» IP åœ°å€ï¼ˆC ç±» IP åœ°å€å°±æ˜¯èŒƒå›´åœ¨ 192.0.0.0 åˆ° 223.255.255.255 ä¹‹é—´ï¼Œå‰ä¸‰æ®µå·ç è¡¨ç¤ºå­ç½‘ï¼Œç¬¬å››æ®µå·ç ä¸ºæœ¬åœ°ä¸»æœºçš„ IP åœ°å€ç±»åˆ«ï¼‰ã€‚è¿™æ ·çš„æ–¹å¼ä¿è¯ä¸€ä¸ª client æ¯æ¬¡è¯·æ±‚éƒ½å°†åˆ°è¾¾åŒä¸€ä¸ª backendã€‚å½“ç„¶ï¼Œå¦‚æœæ‰€ hash åˆ°çš„ backend å½“å‰ä¸å¯ç”¨ï¼Œåˆ™è¯·æ±‚ä¼šè¢«è½¬ç§»åˆ°å…¶ä»– backendã€‚
 
-ÔÙ½éÉÜÒ»¸öºÍ ip_hash ÅäºÏÊ¹ÓÃµÄ¹Ø¼ü×Ö£ºdown¡£µ±Ä³¸öÒ»¸ö server ÔİÊ±ĞÔµÄå´»ú£¨down£©Ê±£¬Äã¿ÉÒÔÊ¹ÓÃ¡°down¡±À´±êÊ¾³öÀ´£¬²¢ÇÒÕâÑù±»±êÊ¾µÄ server ¾Í²»»á½ÓÊÜÇëÇóÈ¥´¦Àí¡£¾ßÌåÈçÏÂ£º
+å†ä»‹ç»ä¸€ä¸ªå’Œ ip_hash é…åˆä½¿ç”¨çš„å…³é”®å­—ï¼šdownã€‚å½“æŸä¸ªä¸€ä¸ª server æš‚æ—¶æ€§çš„å®•æœºï¼ˆdownï¼‰æ—¶ï¼Œä½ å¯ä»¥ä½¿ç”¨â€œdownâ€æ¥æ ‡ç¤ºå‡ºæ¥ï¼Œå¹¶ä¸”è¿™æ ·è¢«æ ‡ç¤ºçš„ server å°±ä¸ä¼šæ¥å—è¯·æ±‚å»å¤„ç†ã€‚å…·ä½“å¦‚ä¸‹ï¼š
 
 upstream backend {
     server blog.csdn.net/poechant down;
@@ -1078,25 +1078,25 @@ upstream backend {
     server unix:/tmp/backend3;
 }
 
-»¹¿ÉÒÔÊ¹ÓÃÖ¸¶¨È¨ÖØ£¨weight£©µÄ·½Ê½£¬ÈçÏÂ£º
+è¿˜å¯ä»¥ä½¿ç”¨æŒ‡å®šæƒé‡ï¼ˆweightï¼‰çš„æ–¹å¼ï¼Œå¦‚ä¸‹ï¼š
 
 upstream backend {
     server backend1.example.com;
     server 123.321.123.321:456 weight=4;
 }
-Ä¬ÈÏÇé¿öÏÂ weight Îª 1£¬¶ÔÓÚÉÏÃæµÄÀı×Ó£¬µÚÒ»¸ö server µÄÈ¨ÖØÈ¡Ä¬ÈÏÖµ 1£¬µÚ¶ş¸öÊÇ 4£¬ËùÒÔÏàµ±ÓÚµÚÒ»¸ö server ½ÓÊÕ 20% µÄÇëÇó£¬µÚ¶ş½ÓÊÕ 80% µÄ¡£Òª×¢ÒâµÄÊÇ weight Óë ip_hash ÊÇ²»ÄÜÍ¬Ê±Ê¹ÓÃµÄ£¬Ô­ÒòºÜ¼òµ¥£¬ËûÃÇÊÇ²»Í¬ÇÒ±Ë´Ë³åÍ»µÄ²ßÂÔ¡£
+é»˜è®¤æƒ…å†µä¸‹ weight ä¸º 1ï¼Œå¯¹äºä¸Šé¢çš„ä¾‹å­ï¼Œç¬¬ä¸€ä¸ª server çš„æƒé‡å–é»˜è®¤å€¼ 1ï¼Œç¬¬äºŒä¸ªæ˜¯ 4ï¼Œæ‰€ä»¥ç›¸å½“äºç¬¬ä¸€ä¸ª server æ¥æ”¶ 20% çš„è¯·æ±‚ï¼Œç¬¬äºŒæ¥æ”¶ 80% çš„ã€‚è¦æ³¨æ„çš„æ˜¯ weight ä¸ ip_hash æ˜¯ä¸èƒ½åŒæ—¶ä½¿ç”¨çš„ï¼ŒåŸå› å¾ˆç®€å•ï¼Œä»–ä»¬æ˜¯ä¸åŒä¸”å½¼æ­¤å†²çªçš„ç­–ç•¥ã€‚
 
-3¡¢ÖØÊÔ²ßÂÔ
-¿ÉÒÔÎªÃ¿¸ö backend Ö¸¶¨×î´óµÄÖØÊÔ´ÎÊı£¬ºÍÖØÊÔÊ±¼ä¼ä¸ô¡£ËùÊ¹ÓÃµÄ¹Ø¼ü×ÖÊÇ max_fails ºÍ fail_timeout¡£ÈçÏÂËùÊ¾£º
+3ã€é‡è¯•ç­–ç•¥
+å¯ä»¥ä¸ºæ¯ä¸ª backend æŒ‡å®šæœ€å¤§çš„é‡è¯•æ¬¡æ•°ï¼Œå’Œé‡è¯•æ—¶é—´é—´éš”ã€‚æ‰€ä½¿ç”¨çš„å…³é”®å­—æ˜¯ max_fails å’Œ fail_timeoutã€‚å¦‚ä¸‹æ‰€ç¤ºï¼š
 
 upstream backend {
     server backend1.example.com weight=5;
     server 54.244.56.3:8081 max_fails=3 fail_timeout=30s;
 }
 
-ÔÚÉÏÀıÖĞ£¬×î´óÊ§°Ü´ÎÊıÎª 3£¬Ò²¾ÍÊÇ×î¶à½øĞĞ 3 ´Î³¢ÊÔ£¬ÇÒ³¬Ê±Ê±¼äÎª 30Ãë¡£max_fails µÄÄ¬ÈÏÖµÎª 1£¬fail_timeout µÄÄ¬ÈÏÖµÊÇ 10s¡£´«ÊäÊ§°ÜµÄÇéĞÎ£¬ÓÉ proxy_next_upstream »ò fastcgi_next_upstream Ö¸¶¨¡£¶øÇÒ¿ÉÒÔÊ¹ÓÃ proxy_connect_timeout ºÍ proxy_read_timeout ¿ØÖÆ upstream ÏìÓ¦Ê±¼ä¡£
+åœ¨ä¸Šä¾‹ä¸­ï¼Œæœ€å¤§å¤±è´¥æ¬¡æ•°ä¸º 3ï¼Œä¹Ÿå°±æ˜¯æœ€å¤šè¿›è¡Œ 3 æ¬¡å°è¯•ï¼Œä¸”è¶…æ—¶æ—¶é—´ä¸º 30ç§’ã€‚max_fails çš„é»˜è®¤å€¼ä¸º 1ï¼Œfail_timeout çš„é»˜è®¤å€¼æ˜¯ 10sã€‚ä¼ è¾“å¤±è´¥çš„æƒ…å½¢ï¼Œç”± proxy_next_upstream æˆ– fastcgi_next_upstream æŒ‡å®šã€‚è€Œä¸”å¯ä»¥ä½¿ç”¨ proxy_connect_timeout å’Œ proxy_read_timeout æ§åˆ¶ upstream å“åº”æ—¶é—´ã€‚
 
-ÓĞÒ»ÖÖÇé¿öĞèÒª×¢Òâ£¬¾ÍÊÇ upstream ÖĞÖ»ÓĞÒ»¸ö server Ê±£¬max_fails ºÍ fail_timeout ²ÎÊı¿ÉÄÜ²»»áÆğ×÷ÓÃ¡£µ¼ÖÂµÄÎÊÌâ¾ÍÊÇ nginx Ö»»á³¢ÊÔÒ»´Î upstream ÇëÇó£¬Èç¹ûÊ§°ÜÕâ¸öÇëÇó¾Í±»Å×ÆúÁË : ( ¡­¡­½â¾öµÄ·½·¨£¬±È½ÏÈ¡ÇÉ£¬¾ÍÊÇÔÚ upstream ÖĞ½«ÄãÕâ¸ö¿ÉÁ¯µÄÎ¨Ò» server ¶àĞ´¼¸´Î£¬ÈçÏÂ£º
+æœ‰ä¸€ç§æƒ…å†µéœ€è¦æ³¨æ„ï¼Œå°±æ˜¯ upstream ä¸­åªæœ‰ä¸€ä¸ª server æ—¶ï¼Œmax_fails å’Œ fail_timeout å‚æ•°å¯èƒ½ä¸ä¼šèµ·ä½œç”¨ã€‚å¯¼è‡´çš„é—®é¢˜å°±æ˜¯ nginx åªä¼šå°è¯•ä¸€æ¬¡ upstream è¯·æ±‚ï¼Œå¦‚æœå¤±è´¥è¿™ä¸ªè¯·æ±‚å°±è¢«æŠ›å¼ƒäº† : ( â€¦â€¦è§£å†³çš„æ–¹æ³•ï¼Œæ¯”è¾ƒå–å·§ï¼Œå°±æ˜¯åœ¨ upstream ä¸­å°†ä½ è¿™ä¸ªå¯æ€œçš„å”¯ä¸€ server å¤šå†™å‡ æ¬¡ï¼Œå¦‚ä¸‹ï¼š
 
 upstream backend {
     server backend.example.com max_fails fail_timeout=30s;
@@ -1104,9 +1104,9 @@ upstream backend {
     server backend.example.com max_fails fail_timeout=30s;
 }
 
-4¡¢±¸»ú²ßÂÔ
+4ã€å¤‡æœºç­–ç•¥
 
-´Ó Nginx µÄ 0.6.7 °æ±¾¿ªÊ¼£¬¿ÉÒÔÊ¹ÓÃ¡°backup¡±¹Ø¼ü×Ö¡£µ±ËùÓĞµÄ·Ç±¸»ú£¨non-backup£©¶¼å´»ú£¨down£©»òÕß·±Ã¦£¨busy£©µÄÊ±ºò£¬¾ÍÖ»Ê¹ÓÃÓÉ backup ±ê×¢µÄ±¸»ú¡£±ØĞëÒª×¢ÒâµÄÊÇ£¬backup ²»ÄÜºÍ ip_hash ¹Ø¼ü×ÖÒ»ÆğÊ¹ÓÃ¡£¾ÙÀıÈçÏÂ£º
+ä» Nginx çš„ 0.6.7 ç‰ˆæœ¬å¼€å§‹ï¼Œå¯ä»¥ä½¿ç”¨â€œbackupâ€å…³é”®å­—ã€‚å½“æ‰€æœ‰çš„éå¤‡æœºï¼ˆnon-backupï¼‰éƒ½å®•æœºï¼ˆdownï¼‰æˆ–è€…ç¹å¿™ï¼ˆbusyï¼‰çš„æ—¶å€™ï¼Œå°±åªä½¿ç”¨ç”± backup æ ‡æ³¨çš„å¤‡æœºã€‚å¿…é¡»è¦æ³¨æ„çš„æ˜¯ï¼Œbackup ä¸èƒ½å’Œ ip_hash å…³é”®å­—ä¸€èµ·ä½¿ç”¨ã€‚ä¸¾ä¾‹å¦‚ä¸‹ï¼š
 
 upstream backend {
     server backend1.example.com;
@@ -1118,7 +1118,7 @@ upstream backend {
 
 Nginx Redirect 
 
-½«ËùÓĞlinuxtone.orgÓënetseek.linuxtone.orgÓòÃûÈ«²¿×ÔÌø×ªµ½http://www.linuxtone.org 
+å°†æ‰€æœ‰linuxtone.orgä¸netseek.linuxtone.orgåŸŸåå…¨éƒ¨è‡ªè·³è½¬åˆ°http://www.linuxtone.org 
 server 
 { 
 listen 80; 
@@ -1130,14 +1130,14 @@ rewrite ^(.*) http://www.linuxtone.org$1 redirect;
 } 
 ........................ 
 } 
-Nginx Ä¿Â¼×Ô¶¯¼ÓĞ±Ïß: 
+Nginx ç›®å½•è‡ªåŠ¨åŠ æ–œçº¿: 
 
 if (-d $request_filename){ 
 rewrite ^/(.*)([^/])$ http://$host/$1$2/ permanent; }
 
 
 
-Í¬ÊµÏÖ·ÀµÁÁ´ºÍexpiresµÄ·½·¨
+åŒå®ç°é˜²ç›—é“¾å’Œexpiresçš„æ–¹æ³•
 
 #Preventing hot linking of images and other file types 
 location ~* ^.+\.(gif|jpg|png|swf|flv|rar|zip)$ { 
@@ -1150,21 +1150,21 @@ root /data/www/wwwroot/bbs;
 expires 1d; 
 break; 
 }
-ÕıÔò±í´ïÊ½Æ¥Åä£¬ÆäÖĞ£º
-1.	* ~ ÎªÇø·Ö´óĞ¡Ğ´Æ¥Åä
-2.	* ~* Îª²»Çø·Ö´óĞ¡Ğ´Æ¥Åä
-3.	* !~ºÍ!~*·Ö±ğÎªÇø·Ö´óĞ¡Ğ´²»Æ¥Åä¼°²»Çø·Ö´óĞ¡Ğ´²»Æ¥Åä
-ÎÄ¼ş¼°Ä¿Â¼Æ¥Åä£¬ÆäÖĞ£º
-1.	* -fºÍ!-fÓÃÀ´ÅĞ¶ÏÊÇ·ñ´æÔÚÎÄ¼ş
-2.	* -dºÍ!-dÓÃÀ´ÅĞ¶ÏÊÇ·ñ´æÔÚÄ¿Â¼
-3.	* -eºÍ!-eÓÃÀ´ÅĞ¶ÏÊÇ·ñ´æÔÚÎÄ¼ş»òÄ¿Â¼
-4.	* -xºÍ!-xÓÃÀ´ÅĞ¶ÏÎÄ¼şÊÇ·ñ¿ÉÖ´ĞĞ
-flag±ê¼ÇÓĞ£º
-1.	* last Ïàµ±ÓÚApacheÀïµÄ[L]±ê¼Ç£¬±íÊ¾Íê³Érewrite
-2.	* break ÖÕÖ¹Æ¥Åä, ²»ÔÙÆ¥ÅäºóÃæµÄ¹æÔò
-3.	* redirect ·µ»Ø302ÁÙÊ±ÖØ¶¨Ïò µØÖ·À¸»áÏÔÊ¾Ìø×ªºóµÄµØÖ·
-4.	* permanent ·µ»Ø301ÓÀ¾ÃÖØ¶¨Ïò µØÖ·À¸»áÏÔÊ¾Ìø×ªºóµÄµØÖ·
-Ò»Ğ©¿ÉÓÃµÄÈ«¾Ö±äÁ¿ÓĞ£¬¿ÉÒÔÓÃ×öÌõ¼şÅĞ¶Ï(´ı²¹È«)
+æ­£åˆ™è¡¨è¾¾å¼åŒ¹é…ï¼Œå…¶ä¸­ï¼š
+1.	* ~ ä¸ºåŒºåˆ†å¤§å°å†™åŒ¹é…
+2.	* ~* ä¸ºä¸åŒºåˆ†å¤§å°å†™åŒ¹é…
+3.	* !~å’Œ!~*åˆ†åˆ«ä¸ºåŒºåˆ†å¤§å°å†™ä¸åŒ¹é…åŠä¸åŒºåˆ†å¤§å°å†™ä¸åŒ¹é…
+æ–‡ä»¶åŠç›®å½•åŒ¹é…ï¼Œå…¶ä¸­ï¼š
+1.	* -få’Œ!-fç”¨æ¥åˆ¤æ–­æ˜¯å¦å­˜åœ¨æ–‡ä»¶
+2.	* -då’Œ!-dç”¨æ¥åˆ¤æ–­æ˜¯å¦å­˜åœ¨ç›®å½•
+3.	* -eå’Œ!-eç”¨æ¥åˆ¤æ–­æ˜¯å¦å­˜åœ¨æ–‡ä»¶æˆ–ç›®å½•
+4.	* -xå’Œ!-xç”¨æ¥åˆ¤æ–­æ–‡ä»¶æ˜¯å¦å¯æ‰§è¡Œ
+flagæ ‡è®°æœ‰ï¼š
+1.	* last ç›¸å½“äºApacheé‡Œçš„[L]æ ‡è®°ï¼Œè¡¨ç¤ºå®Œæˆrewrite
+2.	* break ç»ˆæ­¢åŒ¹é…, ä¸å†åŒ¹é…åé¢çš„è§„åˆ™
+3.	* redirect è¿”å›302ä¸´æ—¶é‡å®šå‘ åœ°å€æ ä¼šæ˜¾ç¤ºè·³è½¬åçš„åœ°å€
+4.	* permanent è¿”å›301æ°¸ä¹…é‡å®šå‘ åœ°å€æ ä¼šæ˜¾ç¤ºè·³è½¬åçš„åœ°å€
+ä¸€äº›å¯ç”¨çš„å…¨å±€å˜é‡æœ‰ï¼Œå¯ä»¥ç”¨åšæ¡ä»¶åˆ¤æ–­(å¾…è¡¥å…¨)
 1.	$args
 2.	$content_length
 3.	$content_type
@@ -1188,53 +1188,53 @@ flag±ê¼ÇÓĞ£º
 21.	$server_name
 22.	$server_port
 23.	$uri
-½áºÏQeePHPµÄÀı×Ó
+ç»“åˆQeePHPçš„ä¾‹å­
 1.	if (!-d $request_filename) {
 2.	rewrite ^/([a-z-A-Z]+)/([a-z-A-Z]+)/?(.*)$ /index.php?namespace=user&amp;controller=$1&amp;action=$2&amp;$3 last;
 3.	rewrite ^/([a-z-A-Z]+)/?$ /index.php?namespace=user&amp;controller=$1 last;
 4.	break;
-¶àÄ¿Â¼×ª³É²ÎÊı
+å¤šç›®å½•è½¬æˆå‚æ•°
 abc.domian.com/sort/2 => abc.domian.com/index.php?act=sort&name=abc&id=2
 1.	if ($host ~* (.*)\.domain\.com) {
 2.	set $sub_name $1;   
 3.	rewrite ^/sort\/(\d+)\/?$ /index.php?act=sort&cid=$sub_name&id=$1 last;
 4.	}
-Ä¿Â¼¶Ô»»
+ç›®å½•å¯¹æ¢
 /123456/xxxx -> /xxxx?id=123456
 1.	rewrite ^/(\d+)/(.+)/ /$2?id=$1 last;
-ÀıÈçÏÂÃæÉè¶¨nginxÔÚÓÃ»§Ê¹ÓÃieµÄÊ¹ÓÃÖØ¶¨Ïòµ½/nginx-ieÄ¿Â¼ÏÂ£º
+ä¾‹å¦‚ä¸‹é¢è®¾å®šnginxåœ¨ç”¨æˆ·ä½¿ç”¨ieçš„ä½¿ç”¨é‡å®šå‘åˆ°/nginx-ieç›®å½•ä¸‹ï¼š
 1.	if ($http_user_agent ~ MSIE) {
 2.	rewrite ^(.*)$ /nginx-ie/$1 break;
 3.	}
-Ä¿Â¼×Ô¶¯¼Ó¡°/¡±
+ç›®å½•è‡ªåŠ¨åŠ â€œ/â€
 1.	if (-d $request_filename){
 2.	rewrite ^/(.*)([^/])$ http://$host/$1$2/ permanent;
 3.	}
-½ûÖ¹htaccess
+ç¦æ­¢htaccess
 1.	location ~/\.ht {
 2.	         deny all;
 3.	     }
-½ûÖ¹¶à¸öÄ¿Â¼
+ç¦æ­¢å¤šä¸ªç›®å½•
 1.	location ~ ^/(cron|templates)/ {
 2.	         deny all;
 3.	break;
 4.	     }
-½ûÖ¹ÒÔ/data¿ªÍ·µÄÎÄ¼ş
-¿ÉÒÔ½ûÖ¹/data/ÏÂ¶à¼¶Ä¿Â¼ÏÂ.log.txtµÈÇëÇó;
+ç¦æ­¢ä»¥/dataå¼€å¤´çš„æ–‡ä»¶
+å¯ä»¥ç¦æ­¢/data/ä¸‹å¤šçº§ç›®å½•ä¸‹.log.txtç­‰è¯·æ±‚;
 1.	location ~ ^/data {
 2.	         deny all;
 3.	     }
-½ûÖ¹µ¥¸öÄ¿Â¼
-²»ÄÜ½ûÖ¹.log.txtÄÜÇëÇó
+ç¦æ­¢å•ä¸ªç›®å½•
+ä¸èƒ½ç¦æ­¢.log.txtèƒ½è¯·æ±‚
 1.	location /searchword/cron/ {
 2.	         deny all;
 3.	     }
-½ûÖ¹µ¥¸öÎÄ¼ş
+ç¦æ­¢å•ä¸ªæ–‡ä»¶
 1.	location ~ /data/sql/data.sql {
 2.	         deny all;
 3.	     }
-¸øfavicon.icoºÍrobots.txtÉèÖÃ¹ıÆÚÊ±¼ä;
-ÕâÀïÎªfavicon.icoÎª99Ìì,robots.txtÎª7Ìì²¢²»¼ÇÂ¼404´íÎóÈÕÖ¾
+ç»™favicon.icoå’Œrobots.txtè®¾ç½®è¿‡æœŸæ—¶é—´;
+è¿™é‡Œä¸ºfavicon.icoä¸º99å¤©,robots.txtä¸º7å¤©å¹¶ä¸è®°å½•404é”™è¯¯æ—¥å¿—
 1.	location ~(favicon.ico) {
 2.	                 log_not_found off;
 3.	expires 99d;
@@ -1246,18 +1246,18 @@ abc.domian.com/sort/2 => abc.domian.com/index.php?act=sort&name=abc&id=2
 9.	expires 7d;
 10.	break;
 11.	     }
-Éè¶¨Ä³¸öÎÄ¼şµÄ¹ıÆÚÊ±¼ä;ÕâÀïÎª600Ãë£¬²¢²»¼ÇÂ¼·ÃÎÊÈÕÖ¾
+è®¾å®šæŸä¸ªæ–‡ä»¶çš„è¿‡æœŸæ—¶é—´;è¿™é‡Œä¸º600ç§’ï¼Œå¹¶ä¸è®°å½•è®¿é—®æ—¥å¿—
 1.	location ^~ /html/scripts/loadhead_1.js {
 2.	                 access_log   off;
 3.	                 root /opt/lampp/htdocs/web;
 4.	expires 600;
 5.	break;
 6.	       }
-ÎÄ¼ş·´µÁÁ´²¢ÉèÖÃ¹ıÆÚÊ±¼ä
-ÕâÀïµÄreturn 412 Îª×Ô¶¨ÒåµÄhttp×´Ì¬Âë£¬Ä¬ÈÏÎª403£¬·½±ãÕÒ³öÕıÈ·µÄµÁÁ´µÄÇëÇó
-¡°rewrite ^/ http://leech.c1gstudio.com/leech.gif;¡±ÏÔÊ¾Ò»ÕÅ·ÀµÁÁ´Í¼Æ¬
-¡°access_log off;¡±²»¼ÇÂ¼·ÃÎÊÈÕÖ¾£¬¼õÇáÑ¹Á¦
-¡°expires 3d¡±ËùÓĞÎÄ¼ş3ÌìµÄä¯ÀÀÆ÷»º´æ
+æ–‡ä»¶åç›—é“¾å¹¶è®¾ç½®è¿‡æœŸæ—¶é—´
+è¿™é‡Œçš„return 412 ä¸ºè‡ªå®šä¹‰çš„httpçŠ¶æ€ç ï¼Œé»˜è®¤ä¸º403ï¼Œæ–¹ä¾¿æ‰¾å‡ºæ­£ç¡®çš„ç›—é“¾çš„è¯·æ±‚
+â€œrewrite ^/ http://leech.c1gstudio.com/leech.gif;â€æ˜¾ç¤ºä¸€å¼ é˜²ç›—é“¾å›¾ç‰‡
+â€œaccess_log off;â€ä¸è®°å½•è®¿é—®æ—¥å¿—ï¼Œå‡è½»å‹åŠ›
+â€œexpires 3dâ€æ‰€æœ‰æ–‡ä»¶3å¤©çš„æµè§ˆå™¨ç¼“å­˜
 1.	location ~* ^.+\.(jpg|jpeg|gif|png|swf|rar|zip|css|js)$ {
 2.	valid_referers none blocked *.c1gstudio.com *.c1gstudio.net localhost 208.97.167.194;
 3.	if ($invalid_referer) {
@@ -1270,7 +1270,7 @@ abc.domian.com/sort/2 => abc.domian.com/index.php?act=sort&name=abc&id=2
 10.	expires 3d;
 11.	break;
 12.	     }
-Ö»³äĞí¹Ì¶¨ip·ÃÎÊÍøÕ¾£¬²¢¼ÓÉÏÃÜÂë
+åªå……è®¸å›ºå®šipè®¿é—®ç½‘ç«™ï¼Œå¹¶åŠ ä¸Šå¯†ç 
 1.	root  /opt/htdocs/www;
 2.	allow   208.97.167.194;
 3.	allow   222.33.1.2;
@@ -1278,31 +1278,31 @@ abc.domian.com/sort/2 => abc.domian.com/index.php?act=sort&name=abc&id=2
 5.	deny    all;
 6.	auth_basic "C1G_ADMIN";
 7.	auth_basic_user_file htpasswd;
-½«¶à¼¶Ä¿Â¼ÏÂµÄÎÄ¼ş×ª³ÉÒ»¸öÎÄ¼ş£¬ÔöÇ¿seoĞ§¹û
-/job-123-456-789.html Ö¸Ïò/job/123/456/789.html
+å°†å¤šçº§ç›®å½•ä¸‹çš„æ–‡ä»¶è½¬æˆä¸€ä¸ªæ–‡ä»¶ï¼Œå¢å¼ºseoæ•ˆæœ
+/job-123-456-789.html æŒ‡å‘/job/123/456/789.html
 1.	rewrite ^/job-([0-9]+)-([0-9]+)-([0-9]+)\.html$ /job/$1/$2/jobshow_$3.html last;
-½«¸ùÄ¿Â¼ÏÂÄ³¸öÎÄ¼ş¼ĞÖ¸Ïò2¼¶Ä¿Â¼
-Èç/shanghaijob/ Ö¸Ïò /area/shanghai/
-Èç¹ûÄã½«last¸Ä³Épermanent£¬ÄÇÃ´ä¯ÀÀÆ÷µØÖ·À¸ÏÔÊÇ/location/shanghai/
+å°†æ ¹ç›®å½•ä¸‹æŸä¸ªæ–‡ä»¶å¤¹æŒ‡å‘2çº§ç›®å½•
+å¦‚/shanghaijob/ æŒ‡å‘ /area/shanghai/
+å¦‚æœä½ å°†lastæ”¹æˆpermanentï¼Œé‚£ä¹ˆæµè§ˆå™¨åœ°å€æ æ˜¾æ˜¯/location/shanghai/
 1.	rewrite ^/([0-9a-z]+)job/(.*)$ /area/$1/$2 last;
-ÉÏÃæÀı×ÓÓĞ¸öÎÊÌâÊÇ·ÃÎÊ/shanghai Ê±½«²»»áÆ¥Åä
+ä¸Šé¢ä¾‹å­æœ‰ä¸ªé—®é¢˜æ˜¯è®¿é—®/shanghai æ—¶å°†ä¸ä¼šåŒ¹é…
 1.	rewrite ^/([0-9a-z]+)job$ /area/$1/ last;
 2.	rewrite ^/([0-9a-z]+)job/(.*)$ /area/$1/$2 last;
-ÕâÑù/shanghai Ò²¿ÉÒÔ·ÃÎÊÁË£¬µ«Ò³ÃæÖĞµÄÏà¶ÔÁ´½ÓÎŞ·¨Ê¹ÓÃ£¬
-Èç./list_1.htmlÕæÊµµØÖ·ÊÇ/area/shanghia/list_1.html»á±ä³É/list_1.html,µ¼ÖÁÎŞ·¨·ÃÎÊ¡£
-ÄÇÎÒ¼ÓÉÏ×Ô¶¯Ìø×ªÒ²ÊÇ²»ĞĞ¿©
-(-d $request_filename)ËüÓĞ¸öÌõ¼şÊÇ±ØĞèÎªÕæÊµÄ¿Â¼£¬¶øÎÒµÄrewrite²»ÊÇµÄ£¬ËùÒÔÃ»ÓĞĞ§¹û
+è¿™æ ·/shanghai ä¹Ÿå¯ä»¥è®¿é—®äº†ï¼Œä½†é¡µé¢ä¸­çš„ç›¸å¯¹é“¾æ¥æ— æ³•ä½¿ç”¨ï¼Œ
+å¦‚./list_1.htmlçœŸå®åœ°å€æ˜¯/area/shanghia/list_1.htmlä¼šå˜æˆ/list_1.html,å¯¼è‡³æ— æ³•è®¿é—®ã€‚
+é‚£æˆ‘åŠ ä¸Šè‡ªåŠ¨è·³è½¬ä¹Ÿæ˜¯ä¸è¡Œå’¯
+(-d $request_filename)å®ƒæœ‰ä¸ªæ¡ä»¶æ˜¯å¿…éœ€ä¸ºçœŸå®ç›®å½•ï¼Œè€Œæˆ‘çš„rewriteä¸æ˜¯çš„ï¼Œæ‰€ä»¥æ²¡æœ‰æ•ˆæœ
 1.	if (-d $request_filename){
 2.	rewrite ^/(.*)([^/])$ http://$host/$1$2/ permanent;
 3.	}
-ÖªµÀÔ­Òòºó¾ÍºÃ°ìÁË£¬ÈÃÎÒÊÖ¶¯Ìø×ª°É
+çŸ¥é“åŸå› åå°±å¥½åŠäº†ï¼Œè®©æˆ‘æ‰‹åŠ¨è·³è½¬å§
 1.	rewrite ^/([0-9a-z]+)job$ /$1job/ permanent;
 2.	rewrite ^/([0-9a-z]+)job/(.*)$ /area/$1/$2 last;
-ÎÄ¼şºÍÄ¿Â¼²»´æÔÚµÄÊ±ºòÖØ¶¨Ïò£º
+æ–‡ä»¶å’Œç›®å½•ä¸å­˜åœ¨çš„æ—¶å€™é‡å®šå‘ï¼š
 1.	if (!-e $request_filename) {
 2.	proxy_pass http://127.0.0.1;
 3.	}
-ÓòÃûÌø×ª
+åŸŸåè·³è½¬
 1.	server
 2.	     {
 3.	             listen       80;
@@ -1312,19 +1312,19 @@ abc.domian.com/sort/2 => abc.domian.com/index.php?act=sort&name=abc&id=2
 7.	             rewrite ^/ http://www.c1gstudio.com/;
 8.	             access_log  off;
 9.	     }
-¶àÓòÃû×ªÏò
+å¤šåŸŸåè½¬å‘
 1.	server_name  www.c1gstudio.com www.c1gstudio.net;
 2.	             index index.html index.htm index.php;
 3.	             root  /opt/lampp/htdocs;
 4.	if ($host ~ "c1gstudio\.net") {
 5.	rewrite ^(.*) http://www.c1gstudio.com$1 permanent;
 6.	}
-Èı¼¶ÓòÃûÌø×ª
+ä¸‰çº§åŸŸåè·³è½¬
 1.	if ($http_host ~* "^(.*)\.i\.c1gstudio\.com$") {
 2.	rewrite ^(.*) http://top.c1gstudio.com$1;
 3.	break;
 4.	}
-ÓòÃû¾µÏò
+åŸŸåé•œå‘
 1.	server
 2.	     {
 3.	             listen       80;
@@ -1334,7 +1334,7 @@ abc.domian.com/sort/2 => abc.domian.com/index.php?act=sort&name=abc&id=2
 7.	             rewrite ^/(.*) http://www.c1gstudio.com/$1 last;
 8.	             access_log  off;
 9.	     }
-Ä³¸ö×ÓÄ¿Â¼×÷¾µÏò
+æŸä¸ªå­ç›®å½•ä½œé•œå‘
 1.	location ^~ /zhaopinhui {
 2.	  rewrite ^.+ http://zph.c1gstudio.com/ last;
 3.	  break;
@@ -1350,7 +1350,7 @@ discuz 7 rewrite
 4.	rewrite ^(.*)/profile-(username|uid)-(.+)\.html$ $1/viewpro.php?$2=$3 last;
 5.	rewrite ^(.*)/space-(username|uid)-(.+)\.html$ $1/space.php?$2=$3 last;
 6.	rewrite ^(.*)/tag-(.+)\.html$ $1/tag.php?name=$2 last;
-¸ødiscuzÄ³°æ¿éµ¥¶ÀÅäÖÃÓòÃû
+ç»™discuzæŸç‰ˆå—å•ç‹¬é…ç½®åŸŸå
 1.	server_name  bbs.c1gstudio.com news.c1gstudio.com;
 2.	 
 3.	     location = / {
@@ -1359,7 +1359,7 @@ discuz 7 rewrite
 6.	  break;
 7.	}
 8.	     }
-discuz ucenter Í·Ïñ rewrite ÓÅ»¯
+discuz ucenter å¤´åƒ rewrite ä¼˜åŒ–
 1.	location ^~ /ucenter {
 2.	     location ~ .*\.php?$
 3.	     {
@@ -1426,8 +1426,8 @@ discuzx 1.5 rewrite
 8.	if (!-e $request_filename) {
 9.	return 404;
 10.	}
-¶¯Ì¬²ÎÊırewrite
-ÒÔdiscuz7.2µ½discuzx1.5ÎªÀı
+åŠ¨æ€å‚æ•°rewrite
+ä»¥discuz7.2åˆ°discuzx1.5ä¸ºä¾‹
 1.	if ($query_string ~* tid=([0-9]+)) {
 2.	    set $id $1;
 3.	    rewrite "^(.*)/viewthread.php$" $1/forum.php?mod=viewthread&tid=$id&extra=page%3D&page=1 last;
@@ -1438,9 +1438,9 @@ discuzx 1.5 rewrite
 8.	}
 9.	rewrite ^([^\.]*)/archiver/$ $1/forum.php?archiver=1 last;
 
-nginx Ç¶Ì×if
-nginx²»Ö§³Öif andºÍ¶à²ãÇ¶Ì×if,ÈÃÎÒÍ·Í´ºÜ¾Ã,ĞèÒªÍ¨¹ıÆäËü·½·¨ÊµÏÖ.
-ÏÂÃæÊÇ°Ñ·ÃÎÊ¾µÏñÍøÕ¾cnc.c1gstudio.comµÄÅÀ³æ×ªµ½wwwÕ¾.
+nginx åµŒå¥—if
+nginxä¸æ”¯æŒif andå’Œå¤šå±‚åµŒå¥—if,è®©æˆ‘å¤´ç—›å¾ˆä¹…,éœ€è¦é€šè¿‡å…¶å®ƒæ–¹æ³•å®ç°.
+ä¸‹é¢æ˜¯æŠŠè®¿é—®é•œåƒç½‘ç«™cnc.c1gstudio.comçš„çˆ¬è™«è½¬åˆ°wwwç«™.
 1.	set $needrewrite '';
 2.	if ($http_user_agent ~* (baiduspider|googlebot|soso|bing|sogou|yahoo|sohu-search|yodao|YoudaoBot|robozilla|msnbot|MJ12bot|NHN|Twiceler)) {
 3.	set $needrewrite 'o';
@@ -1452,9 +1452,9 @@ nginx²»Ö§³Öif andºÍ¶à²ãÇ¶Ì×if,ÈÃÎÒÍ·Í´ºÜ¾Ã,ĞèÒªÍ¨¹ıÆäËü·½·¨ÊµÏÖ.
 9.	#return 403;
 10.	rewrite ^(.*) http://www.c1gstudio.com$1 permanent;
 11.	}
-reload nginxºó¿ÉÒÔÓÃcurlÀ´×ö²âÊÔ
-curl -I -A ¡°soso¡± cnc.c1gstudio.com
-ÍêÕûµÄnginx proxyÅäÖÃÊµÀı
+reload nginxåå¯ä»¥ç”¨curlæ¥åšæµ‹è¯•
+curl -I -A â€œsosoâ€ cnc.c1gstudio.com
+å®Œæ•´çš„nginx proxyé…ç½®å®ä¾‹
 proxy_redirect off; 
 proxy_set_header Host $host; 
 proxy_set_header X-Real-IP $remote_addr; 
@@ -1476,123 +1476,123 @@ proxy_store_access user:rw group:rw all:r;
 #client_body_temp_path /data/nginx_cache/client_body 1 2; 
 proxy_temp_path /data/nginx_cache/proxy_temp 1 2;
 
-mysql Ñ§Ï°¼ÇÂ¼
+mysql å­¦ä¹ è®°å½•
 
-mysql´æ´¢¹ı³Ì£º
-Q£ºÊ²Ã´ÊÇ´æ´¢¹ı³Ì£¿£¨stored procedure£©
-A£ºÊÇÒ»¶ÎĞ´ºÃµÄSQL´úÂë£¬ÌØ±ğµÄ¾ÍÊÇËüÊÇ´æÔÚÊı¾İ¿âµÄÄ¿Â¼Àï¡£ËùÒÔÍâ²¿³ÌĞò¿ÉÒÔÖ±½Óµ÷ÓÃÊı¾İ¿âÀïÃæ¶¨ÒåºÃµÄ´æ´¢¹ı³Ì£¬ÁíÍâÊı¾İ¿âÄÚ²¿µÄ´¥·¢Æ÷(trigger)¡¢»òÕßÆäËû´æ´¢¹ı³ÌÒ²¿ÉÒÔµ÷ÓÃËü¡£
-Q£º´æ´¢¹ı³ÌÓĞÊ²Ã´ºÃ´¦£¿ÓĞÊ²Ã´»µ´¦£¿
-ºÃ´¦£º1¡¢Ê×ÏÈÔÚĞÔÄÜÉÏµÄÌá¸ß£¬±ÈÆğÍ¨¹ıÓ¦ÓÃ³ÌĞò·¢ËÍsqlÓï¾ä¸øÊı¾İ¿âÖ´ĞĞ£¬ÈÃÊı¾İ¿â×Ô¼ºÄÚ²¿Ö´ĞĞ´æ´¢¹ı³ÌĞ§ÂÊ¸ü¸ß¡¢ËÙ¶È¸ü¿ì(´æ´¢¹ı³Ì½«sql±àÒëºÃºó´æÔÚÊı¾İ¿âÄ¿Â¼ÏÂ)£»
-2¡¢´æ´¢¹ı³Ì»¹¼õÉÙÁËÓ¦ÓÃ³ÌĞòÍ¬·şÎñÆ÷×Ô¼ºµÄĞÅÏ¢½»»¥ÆµÂÊ£¬¿ÉÒÔÏëÏóÔÚ²»ÊÇÊ¹ÓÃ´æ´¢¹ı³ÌµÄÇé¿ö£¬Ó¦ÓÃ³ÌĞòĞèÒª·¢ËÍ¶àÌõsqlÖ¸Áî¸ø·şÎñÆ÷£¬¶øÊ¹ÓÃ´æ´¢¹ı³ÌÔòÖ»ÒªÒ»Ìõµ÷ÓÃ´æ´¢¹ı³ÌµÄÓï¾ä£¬È»ºó»ñÈ¡ĞèÒªµÄÊı¾İ¾ÍokÁË¡£
-3¡¢´æ´¢¹ı³ÌÖØÓÃĞÔ±È½Ï¸ß£¬²¢ÇÒÊÇÍ¸Ã÷µÄ£¬ÒòÎª±£´æÔÚÊı¾İ¿âÀïÃæËùÒÔ¶ÔÈÎºÎÓ¦ÓÃÀ´Ëµ¶¼¿ÉÒÔÊ¹ÓÃ¡£ĞÂµÄÓ¦ÓÃÖ»ĞèÒªµ÷ÓÃÏàÓ¦µÄ´æ´¢¹ı³Ì¾Í¿ÉÒÔµÃµ½ÏàÓ¦µÄÊı¾İ·şÎñ¡£
-4¡¢´æ´¢¹ı³ÌÒ²ÊÇÖÖ°²È«µÄ×ö·¨£¬Êı¾İ¿â¹ÜÀíÔ±¿ÉÒÔ¶ÔÄÇĞ©Ã»ÓĞÈ¨ÏŞ·ÃÎÊÊı¾İ¿âÖĞµÄ±í¸ñµÄÓ¦ÓÃ£¬¸øËûÃÇÊ¹ÓÃ´æ´¢¹ı³ÌµÄÈ¨ÏŞÀ´»ñµÃÊı¾İ·şÎñ£¬¿ÉÒÔ¿´µ½Õâ¸öÊ±ºòÕâĞ©´æ´¢¹ı³ÌºÃÏñÎÒÃÇ±à³ÌÀïÃæµÄ¡±½Ó¿Ú¡°Õâ¸ö¸ÅÄî¡£¶ÔÓÚ°²È«ĞÔÒªÇóºÜ¸ßµÄÏµÍ³£¬ÀıÈçÒøĞĞ£¬»ù±¾ÉÏ³£ÓÃµÄ²Ù×÷¶¼ÊÇÍ¨¹ı´æ´¢¹ı³Ì»òÕßº¯ÊıÀ´½øĞĞµÄ£¬ÕâÑùÍêÈ«¶ÔÓ¦ÓÃ¡±Òş²Ø¡°ÁË±í¸ñ¡£
-»µ´¦£º1¡¢´æ´¢¹ı³Ì»áÊ¹µÃÊı¾İ¿âÕ¼ÓÃµÄÏµÍ³×ÊÔ´¼Ó´ó(cpu¡¢memory)£¬Êı¾İ¿â±Ï¾¹Ö÷ÒªÓÃÀ´×öÊı¾İ´æÈ¡µÄ£¬²¢²»½øĞĞ¸´ÔÓµÄÒµÎñÂß¼­²Ù×÷¡£
-2¡¢ÒòÎª´æ´¢¹ı³ÌÒÀ¾ÉÊÇsql£¬ËùÒÔÃ»°ì·¨Ïñ±à³ÌÓïÑÔÄÇÑùĞ´³ö¸´ÔÓÒµÎñÂß¼­¶ÔÓ¦µÄ´æ´¢¹ı³Ì¡£
-3¡¢´æ´¢¹ı³Ì²»ÈİÒ×½øĞĞµ÷ÊÔ¡£
-4¡¢´æ´¢¹ı³ÌÊéĞ´¼°Î¬»¤ÄÑ¶È¶¼±È½Ï´ó¡£
+mysqlå­˜å‚¨è¿‡ç¨‹ï¼š
+Qï¼šä»€ä¹ˆæ˜¯å­˜å‚¨è¿‡ç¨‹ï¼Ÿï¼ˆstored procedureï¼‰
+Aï¼šæ˜¯ä¸€æ®µå†™å¥½çš„SQLä»£ç ï¼Œç‰¹åˆ«çš„å°±æ˜¯å®ƒæ˜¯å­˜åœ¨æ•°æ®åº“çš„ç›®å½•é‡Œã€‚æ‰€ä»¥å¤–éƒ¨ç¨‹åºå¯ä»¥ç›´æ¥è°ƒç”¨æ•°æ®åº“é‡Œé¢å®šä¹‰å¥½çš„å­˜å‚¨è¿‡ç¨‹ï¼Œå¦å¤–æ•°æ®åº“å†…éƒ¨çš„è§¦å‘å™¨(trigger)ã€æˆ–è€…å…¶ä»–å­˜å‚¨è¿‡ç¨‹ä¹Ÿå¯ä»¥è°ƒç”¨å®ƒã€‚
+Qï¼šå­˜å‚¨è¿‡ç¨‹æœ‰ä»€ä¹ˆå¥½å¤„ï¼Ÿæœ‰ä»€ä¹ˆåå¤„ï¼Ÿ
+å¥½å¤„ï¼š1ã€é¦–å…ˆåœ¨æ€§èƒ½ä¸Šçš„æé«˜ï¼Œæ¯”èµ·é€šè¿‡åº”ç”¨ç¨‹åºå‘é€sqlè¯­å¥ç»™æ•°æ®åº“æ‰§è¡Œï¼Œè®©æ•°æ®åº“è‡ªå·±å†…éƒ¨æ‰§è¡Œå­˜å‚¨è¿‡ç¨‹æ•ˆç‡æ›´é«˜ã€é€Ÿåº¦æ›´å¿«(å­˜å‚¨è¿‡ç¨‹å°†sqlç¼–è¯‘å¥½åå­˜åœ¨æ•°æ®åº“ç›®å½•ä¸‹)ï¼›
+2ã€å­˜å‚¨è¿‡ç¨‹è¿˜å‡å°‘äº†åº”ç”¨ç¨‹åºåŒæœåŠ¡å™¨è‡ªå·±çš„ä¿¡æ¯äº¤äº’é¢‘ç‡ï¼Œå¯ä»¥æƒ³è±¡åœ¨ä¸æ˜¯ä½¿ç”¨å­˜å‚¨è¿‡ç¨‹çš„æƒ…å†µï¼Œåº”ç”¨ç¨‹åºéœ€è¦å‘é€å¤šæ¡sqlæŒ‡ä»¤ç»™æœåŠ¡å™¨ï¼Œè€Œä½¿ç”¨å­˜å‚¨è¿‡ç¨‹åˆ™åªè¦ä¸€æ¡è°ƒç”¨å­˜å‚¨è¿‡ç¨‹çš„è¯­å¥ï¼Œç„¶åè·å–éœ€è¦çš„æ•°æ®å°±okäº†ã€‚
+3ã€å­˜å‚¨è¿‡ç¨‹é‡ç”¨æ€§æ¯”è¾ƒé«˜ï¼Œå¹¶ä¸”æ˜¯é€æ˜çš„ï¼Œå› ä¸ºä¿å­˜åœ¨æ•°æ®åº“é‡Œé¢æ‰€ä»¥å¯¹ä»»ä½•åº”ç”¨æ¥è¯´éƒ½å¯ä»¥ä½¿ç”¨ã€‚æ–°çš„åº”ç”¨åªéœ€è¦è°ƒç”¨ç›¸åº”çš„å­˜å‚¨è¿‡ç¨‹å°±å¯ä»¥å¾—åˆ°ç›¸åº”çš„æ•°æ®æœåŠ¡ã€‚
+4ã€å­˜å‚¨è¿‡ç¨‹ä¹Ÿæ˜¯ç§å®‰å…¨çš„åšæ³•ï¼Œæ•°æ®åº“ç®¡ç†å‘˜å¯ä»¥å¯¹é‚£äº›æ²¡æœ‰æƒé™è®¿é—®æ•°æ®åº“ä¸­çš„è¡¨æ ¼çš„åº”ç”¨ï¼Œç»™ä»–ä»¬ä½¿ç”¨å­˜å‚¨è¿‡ç¨‹çš„æƒé™æ¥è·å¾—æ•°æ®æœåŠ¡ï¼Œå¯ä»¥çœ‹åˆ°è¿™ä¸ªæ—¶å€™è¿™äº›å­˜å‚¨è¿‡ç¨‹å¥½åƒæˆ‘ä»¬ç¼–ç¨‹é‡Œé¢çš„â€æ¥å£â€œè¿™ä¸ªæ¦‚å¿µã€‚å¯¹äºå®‰å…¨æ€§è¦æ±‚å¾ˆé«˜çš„ç³»ç»Ÿï¼Œä¾‹å¦‚é“¶è¡Œï¼ŒåŸºæœ¬ä¸Šå¸¸ç”¨çš„æ“ä½œéƒ½æ˜¯é€šè¿‡å­˜å‚¨è¿‡ç¨‹æˆ–è€…å‡½æ•°æ¥è¿›è¡Œçš„ï¼Œè¿™æ ·å®Œå…¨å¯¹åº”ç”¨â€éšè—â€œäº†è¡¨æ ¼ã€‚
+åå¤„ï¼š1ã€å­˜å‚¨è¿‡ç¨‹ä¼šä½¿å¾—æ•°æ®åº“å ç”¨çš„ç³»ç»Ÿèµ„æºåŠ å¤§(cpuã€memory)ï¼Œæ•°æ®åº“æ¯•ç«Ÿä¸»è¦ç”¨æ¥åšæ•°æ®å­˜å–çš„ï¼Œå¹¶ä¸è¿›è¡Œå¤æ‚çš„ä¸šåŠ¡é€»è¾‘æ“ä½œã€‚
+2ã€å› ä¸ºå­˜å‚¨è¿‡ç¨‹ä¾æ—§æ˜¯sqlï¼Œæ‰€ä»¥æ²¡åŠæ³•åƒç¼–ç¨‹è¯­è¨€é‚£æ ·å†™å‡ºå¤æ‚ä¸šåŠ¡é€»è¾‘å¯¹åº”çš„å­˜å‚¨è¿‡ç¨‹ã€‚
+3ã€å­˜å‚¨è¿‡ç¨‹ä¸å®¹æ˜“è¿›è¡Œè°ƒè¯•ã€‚
+4ã€å­˜å‚¨è¿‡ç¨‹ä¹¦å†™åŠç»´æŠ¤éš¾åº¦éƒ½æ¯”è¾ƒå¤§ã€‚
 
-º¯Êı¿â
-mysql´æ´¢¹ı³Ì»ù±¾º¯Êı°üÀ¨£º×Ö·û´®ÀàĞÍ£¬ÊıÖµÀàĞÍ£¬ÈÕÆÚÀàĞÍ
-×Ö·û´®Àà
-CHARSET(str) //·µ»Ø×Ö´®×Ö·û¼¯
-CONCAT (string2 [,¡­ ]) //Á¬½Ó×Ö´®
-INSTR (string ,substring ) //·µ»ØsubstringÊ×´ÎÔÚstringÖĞ³öÏÖµÄÎ»ÖÃ,²»´æÔÚ·µ»Ø0
-LCASE (string2 ) //×ª»»³ÉĞ¡Ğ´
-LEFT (string2 ,length ) //´Óstring2ÖĞµÄ×ó±ßÆğÈ¡length¸ö×Ö·û
-LENGTH (string ) //string³¤¶È
-LOAD_FILE (file_name ) //´ÓÎÄ¼ş¶ÁÈ¡ÄÚÈİ
-LOCATE (substring , string [,start_position ] ) Í¬INSTR,µ«¿ÉÖ¸¶¨¿ªÊ¼Î»ÖÃ
-LPAD (string2 ,length ,pad ) //ÖØ¸´ÓÃpad¼ÓÔÚstring¿ªÍ·,Ö±µ½×Ö´®³¤¶ÈÎªlength
-LTRIM (string2 ) //È¥³ıÇ°¶Ë¿Õ¸ñ
-REPEAT (string2 ,count ) //ÖØ¸´count´Î
-REPLACE (str ,search_str ,replace_str ) //ÔÚstrÖĞÓÃreplace_strÌæ»»search_str
-RPAD (string2 ,length ,pad) //ÔÚstrºóÓÃpad²¹³ä,Ö±µ½³¤¶ÈÎªlength
-RTRIM (string2 ) //È¥³ıºó¶Ë¿Õ¸ñ
-STRCMP (string1 ,string2 ) //Öğ×Ö·û±È½ÏÁ½×Ö´®´óĞ¡,
-SUBSTRING (str , position [,length ]) //´ÓstrµÄposition¿ªÊ¼,È¡length¸ö×Ö·û,
-×¢£ºmysqlÖĞ´¦Àí×Ö·û´®Ê±£¬Ä¬ÈÏµÚÒ»¸ö×Ö·ûÏÂ±êÎª1£¬¼´²ÎÊıposition±ØĞë´óÓÚµÈÓÚ1
-TRIM([[BOTH|LEADING|TRAILING] [padding] FROM]string2)È¥³ıÖ¸¶¨Î»ÖÃµÄÖ¸¶¨×Ö·û
-UCASE (string2 ) //×ª»»³É´óĞ´
-RIGHT(string2,length) //È¡string2×îºólength¸ö×Ö·û
-SPACE(count) //Éú³Écount¸ö¿Õ¸ñ
-ÊıÑ§Àà
-ABS (number2 ) //¾ø¶ÔÖµ 
-BIN (decimal_number ) //Ê®½øÖÆ×ª¶ş½øÖÆ 
-CEILING (number2 ) //ÏòÉÏÈ¡Õû 
-CONV(number2,from_base,to_base) //½øÖÆ×ª»» 
-FLOOR (number2 ) //ÏòÏÂÈ¡Õû 
-FORMAT (number,decimal_places ) //±£ÁôĞ¡ÊıÎ»Êı 
-HEX (DecimalNumber ) //×ªÊ®Áù½øÖÆ 
-×¢£ºHEX()ÖĞ¿É´«Èë×Ö·û´®£¬Ôò·µ»ØÆäASC-11Âë£¬ÈçHEX('DEF')·µ»Ø4142143 
-Ò²¿ÉÒÔ´«ÈëÊ®½øÖÆÕûÊı£¬·µ»ØÆäÊ®Áù½øÖÆ±àÂë£¬ÈçHEX(25)·µ»Ø19 
-LEAST (number , number2 [,..]) //Çó×îĞ¡Öµ 
-MOD (numerator ,denominator ) //ÇóÓà 
-POWER (number ,power ) //ÇóÖ¸Êı 
-RAND([seed]) //Ëæ»úÊı 
-ROUND (number [,decimals ]) //ËÄÉáÎåÈë,decimalsÎªĞ¡ÊıÎ»Êı] 
-×¢£º·µ»ØÀàĞÍ²¢·Ç¾ùÎªÕûÊı
-Ê±¼äÀàĞÍ
-ADDTIME (date2 ,time_interval ) //½«time_interval¼Óµ½date2 
-CONVERT_TZ (datetime2 ,fromTZ ,toTZ ) //×ª»»Ê±Çø 
-CURRENT_DATE ( ) //µ±Ç°ÈÕÆÚ 
-CURRENT_TIME ( ) //µ±Ç°Ê±¼ä 
-CURRENT_TIMESTAMP ( ) //µ±Ç°Ê±¼ä´Á 
-DATE (datetime ) //·µ»ØdatetimeµÄÈÕÆÚ²¿·Ö 
-DATE_ADD (date2 , INTERVAL d_value d_type ) //ÔÚdate2ÖĞ¼ÓÉÏÈÕÆÚ»òÊ±¼ä 
-DATE_FORMAT (datetime ,FormatCodes ) //Ê¹ÓÃformatcodes¸ñÊ½ÏÔÊ¾datetime 
-DATE_SUB (date2 , INTERVAL d_value d_type ) //ÔÚdate2ÉÏ¼õÈ¥Ò»¸öÊ±¼ä 
-DATEDIFF (date1 ,date2 ) //Á½¸öÈÕÆÚ²î 
-DAY (date ) //·µ»ØÈÕÆÚµÄÌì 
-DAYNAME (date ) //Ó¢ÎÄĞÇÆÚ 
-DAYOFWEEK (date ) //ĞÇÆÚ(1-7) ,1ÎªĞÇÆÚÌì 
-DAYOFYEAR (date ) //Ò»ÄêÖĞµÄµÚ¼¸Ìì 
-EXTRACT (interval_name FROM date ) //´ÓdateÖĞÌáÈ¡ÈÕÆÚµÄÖ¸¶¨²¿·Ö 
-MAKEDATE (year ,day ) //¸ø³öÄê¼°ÄêÖĞµÄµÚ¼¸Ìì,Éú³ÉÈÕÆÚ´® 
-MAKETIME (hour ,minute ,second ) //Éú³ÉÊ±¼ä´® 
-MONTHNAME (date ) //Ó¢ÎÄÔÂ·İÃû 
-NOW ( ) //µ±Ç°Ê±¼ä 
-SEC_TO_TIME (seconds ) //ÃëÊı×ª³ÉÊ±¼ä 
-STR_TO_DATE (string ,format ) //×Ö´®×ª³ÉÊ±¼ä,ÒÔformat¸ñÊ½ÏÔÊ¾ 
-TIMEDIFF (datetime1 ,datetime2 ) //Á½¸öÊ±¼ä²î 
-TIME_TO_SEC (time ) //Ê±¼ä×ªÃëÊı] 
-WEEK (date_time [,start_of_week ]) //µÚ¼¸ÖÜ 
-YEAR (datetime ) //Äê·İ 
-DAYOFMONTH(datetime) //ÔÂµÄµÚ¼¸Ìì 
-HOUR(datetime) //Ğ¡Ê± 
-LAST_DAY(date) //dateµÄÔÂµÄ×îºóÈÕÆÚ 
-MICROSECOND(datetime) //Î¢Ãë 
-MONTH(datetime) //ÔÂ 
-MINUTE(datetime) //·Ö·µ»Ø·ûºÅ,Õı¸º»ò0 
-SQRT(number2) //¿ªÆ½·½ 
+å‡½æ•°åº“
+mysqlå­˜å‚¨è¿‡ç¨‹åŸºæœ¬å‡½æ•°åŒ…æ‹¬ï¼šå­—ç¬¦ä¸²ç±»å‹ï¼Œæ•°å€¼ç±»å‹ï¼Œæ—¥æœŸç±»å‹
+å­—ç¬¦ä¸²ç±»
+CHARSET(str) //è¿”å›å­—ä¸²å­—ç¬¦é›†
+CONCAT (string2 [,â€¦ ]) //è¿æ¥å­—ä¸²
+INSTR (string ,substring ) //è¿”å›substringé¦–æ¬¡åœ¨stringä¸­å‡ºç°çš„ä½ç½®,ä¸å­˜åœ¨è¿”å›0
+LCASE (string2 ) //è½¬æ¢æˆå°å†™
+LEFT (string2 ,length ) //ä»string2ä¸­çš„å·¦è¾¹èµ·å–lengthä¸ªå­—ç¬¦
+LENGTH (string ) //stringé•¿åº¦
+LOAD_FILE (file_name ) //ä»æ–‡ä»¶è¯»å–å†…å®¹
+LOCATE (substring , string [,start_position ] ) åŒINSTR,ä½†å¯æŒ‡å®šå¼€å§‹ä½ç½®
+LPAD (string2 ,length ,pad ) //é‡å¤ç”¨padåŠ åœ¨stringå¼€å¤´,ç›´åˆ°å­—ä¸²é•¿åº¦ä¸ºlength
+LTRIM (string2 ) //å»é™¤å‰ç«¯ç©ºæ ¼
+REPEAT (string2 ,count ) //é‡å¤countæ¬¡
+REPLACE (str ,search_str ,replace_str ) //åœ¨strä¸­ç”¨replace_stræ›¿æ¢search_str
+RPAD (string2 ,length ,pad) //åœ¨stråç”¨padè¡¥å……,ç›´åˆ°é•¿åº¦ä¸ºlength
+RTRIM (string2 ) //å»é™¤åç«¯ç©ºæ ¼
+STRCMP (string1 ,string2 ) //é€å­—ç¬¦æ¯”è¾ƒä¸¤å­—ä¸²å¤§å°,
+SUBSTRING (str , position [,length ]) //ä»strçš„positionå¼€å§‹,å–lengthä¸ªå­—ç¬¦,
+æ³¨ï¼šmysqlä¸­å¤„ç†å­—ç¬¦ä¸²æ—¶ï¼Œé»˜è®¤ç¬¬ä¸€ä¸ªå­—ç¬¦ä¸‹æ ‡ä¸º1ï¼Œå³å‚æ•°positionå¿…é¡»å¤§äºç­‰äº1
+TRIM([[BOTH|LEADING|TRAILING] [padding] FROM]string2)å»é™¤æŒ‡å®šä½ç½®çš„æŒ‡å®šå­—ç¬¦
+UCASE (string2 ) //è½¬æ¢æˆå¤§å†™
+RIGHT(string2,length) //å–string2æœ€ålengthä¸ªå­—ç¬¦
+SPACE(count) //ç”Ÿæˆcountä¸ªç©ºæ ¼
+æ•°å­¦ç±»
+ABS (number2 ) //ç»å¯¹å€¼ 
+BIN (decimal_number ) //åè¿›åˆ¶è½¬äºŒè¿›åˆ¶ 
+CEILING (number2 ) //å‘ä¸Šå–æ•´ 
+CONV(number2,from_base,to_base) //è¿›åˆ¶è½¬æ¢ 
+FLOOR (number2 ) //å‘ä¸‹å–æ•´ 
+FORMAT (number,decimal_places ) //ä¿ç•™å°æ•°ä½æ•° 
+HEX (DecimalNumber ) //è½¬åå…­è¿›åˆ¶ 
+æ³¨ï¼šHEX()ä¸­å¯ä¼ å…¥å­—ç¬¦ä¸²ï¼Œåˆ™è¿”å›å…¶ASC-11ç ï¼Œå¦‚HEX('DEF')è¿”å›4142143 
+ä¹Ÿå¯ä»¥ä¼ å…¥åè¿›åˆ¶æ•´æ•°ï¼Œè¿”å›å…¶åå…­è¿›åˆ¶ç¼–ç ï¼Œå¦‚HEX(25)è¿”å›19 
+LEAST (number , number2 [,..]) //æ±‚æœ€å°å€¼ 
+MOD (numerator ,denominator ) //æ±‚ä½™ 
+POWER (number ,power ) //æ±‚æŒ‡æ•° 
+RAND([seed]) //éšæœºæ•° 
+ROUND (number [,decimals ]) //å››èˆäº”å…¥,decimalsä¸ºå°æ•°ä½æ•°] 
+æ³¨ï¼šè¿”å›ç±»å‹å¹¶éå‡ä¸ºæ•´æ•°
+æ—¶é—´ç±»å‹
+ADDTIME (date2 ,time_interval ) //å°†time_intervalåŠ åˆ°date2 
+CONVERT_TZ (datetime2 ,fromTZ ,toTZ ) //è½¬æ¢æ—¶åŒº 
+CURRENT_DATE ( ) //å½“å‰æ—¥æœŸ 
+CURRENT_TIME ( ) //å½“å‰æ—¶é—´ 
+CURRENT_TIMESTAMP ( ) //å½“å‰æ—¶é—´æˆ³ 
+DATE (datetime ) //è¿”å›datetimeçš„æ—¥æœŸéƒ¨åˆ† 
+DATE_ADD (date2 , INTERVAL d_value d_type ) //åœ¨date2ä¸­åŠ ä¸Šæ—¥æœŸæˆ–æ—¶é—´ 
+DATE_FORMAT (datetime ,FormatCodes ) //ä½¿ç”¨formatcodesæ ¼å¼æ˜¾ç¤ºdatetime 
+DATE_SUB (date2 , INTERVAL d_value d_type ) //åœ¨date2ä¸Šå‡å»ä¸€ä¸ªæ—¶é—´ 
+DATEDIFF (date1 ,date2 ) //ä¸¤ä¸ªæ—¥æœŸå·® 
+DAY (date ) //è¿”å›æ—¥æœŸçš„å¤© 
+DAYNAME (date ) //è‹±æ–‡æ˜ŸæœŸ 
+DAYOFWEEK (date ) //æ˜ŸæœŸ(1-7) ,1ä¸ºæ˜ŸæœŸå¤© 
+DAYOFYEAR (date ) //ä¸€å¹´ä¸­çš„ç¬¬å‡ å¤© 
+EXTRACT (interval_name FROM date ) //ä»dateä¸­æå–æ—¥æœŸçš„æŒ‡å®šéƒ¨åˆ† 
+MAKEDATE (year ,day ) //ç»™å‡ºå¹´åŠå¹´ä¸­çš„ç¬¬å‡ å¤©,ç”Ÿæˆæ—¥æœŸä¸² 
+MAKETIME (hour ,minute ,second ) //ç”Ÿæˆæ—¶é—´ä¸² 
+MONTHNAME (date ) //è‹±æ–‡æœˆä»½å 
+NOW ( ) //å½“å‰æ—¶é—´ 
+SEC_TO_TIME (seconds ) //ç§’æ•°è½¬æˆæ—¶é—´ 
+STR_TO_DATE (string ,format ) //å­—ä¸²è½¬æˆæ—¶é—´,ä»¥formatæ ¼å¼æ˜¾ç¤º 
+TIMEDIFF (datetime1 ,datetime2 ) //ä¸¤ä¸ªæ—¶é—´å·® 
+TIME_TO_SEC (time ) //æ—¶é—´è½¬ç§’æ•°] 
+WEEK (date_time [,start_of_week ]) //ç¬¬å‡ å‘¨ 
+YEAR (datetime ) //å¹´ä»½ 
+DAYOFMONTH(datetime) //æœˆçš„ç¬¬å‡ å¤© 
+HOUR(datetime) //å°æ—¶ 
+LAST_DAY(date) //dateçš„æœˆçš„æœ€åæ—¥æœŸ 
+MICROSECOND(datetime) //å¾®ç§’ 
+MONTH(datetime) //æœˆ 
+MINUTE(datetime) //åˆ†è¿”å›ç¬¦å·,æ­£è´Ÿæˆ–0 
+SQRT(number2) //å¼€å¹³æ–¹ 
 
---------------------»ù±¾Óï·¨--------------------
+--------------------åŸºæœ¬è¯­æ³•--------------------
 
 update mysql.event set definer='GaMe@%' where db='game';
 update mysql.proc set definer='GaMe@%' where db='game';
 
-Ò».´´½¨´æ´¢¹ı³Ì
+ä¸€.åˆ›å»ºå­˜å‚¨è¿‡ç¨‹
 create procedure sp_name()
 begin
 .........
 end
-¶ş.µ÷ÓÃ´æ´¢¹ı³Ì
-1.»ù±¾Óï·¨£ºcall sp_name()
-×¢Òâ£º´æ´¢¹ı³ÌÃû³ÆºóÃæ±ØĞë¼ÓÀ¨ºÅ£¬ÄÄÅÂ¸Ã´æ´¢¹ı³ÌÃ»ÓĞ²ÎÊı´«µİ
-Èı.É¾³ı´æ´¢¹ı³Ì
-1.»ù±¾Óï·¨£º
+äºŒ.è°ƒç”¨å­˜å‚¨è¿‡ç¨‹
+1.åŸºæœ¬è¯­æ³•ï¼šcall sp_name()
+æ³¨æ„ï¼šå­˜å‚¨è¿‡ç¨‹åç§°åé¢å¿…é¡»åŠ æ‹¬å·ï¼Œå“ªæ€•è¯¥å­˜å‚¨è¿‡ç¨‹æ²¡æœ‰å‚æ•°ä¼ é€’
+ä¸‰.åˆ é™¤å­˜å‚¨è¿‡ç¨‹
+1.åŸºæœ¬è¯­æ³•ï¼š
 drop procedure sp_name//
-2.×¢ÒâÊÂÏî
-(1)²»ÄÜÔÚÒ»¸ö´æ´¢¹ı³ÌÖĞÉ¾³ıÁíÒ»¸ö´æ´¢¹ı³Ì£¬Ö»ÄÜµ÷ÓÃÁíÒ»¸ö´æ´¢¹ı³Ì
-ËÄ.ÆäËû³£ÓÃÃüÁî
+2.æ³¨æ„äº‹é¡¹
+(1)ä¸èƒ½åœ¨ä¸€ä¸ªå­˜å‚¨è¿‡ç¨‹ä¸­åˆ é™¤å¦ä¸€ä¸ªå­˜å‚¨è¿‡ç¨‹ï¼Œåªèƒ½è°ƒç”¨å¦ä¸€ä¸ªå­˜å‚¨è¿‡ç¨‹
+å››.å…¶ä»–å¸¸ç”¨å‘½ä»¤
 1.show procedure status
-ÏÔÊ¾Êı¾İ¿âÖĞËùÓĞ´æ´¢µÄ´æ´¢¹ı³Ì»ù±¾ĞÅÏ¢£¬°üÀ¨ËùÊôÊı¾İ¿â£¬´æ´¢¹ı³ÌÃû³Æ£¬´´½¨Ê±¼äµÈ
+æ˜¾ç¤ºæ•°æ®åº“ä¸­æ‰€æœ‰å­˜å‚¨çš„å­˜å‚¨è¿‡ç¨‹åŸºæœ¬ä¿¡æ¯ï¼ŒåŒ…æ‹¬æ‰€å±æ•°æ®åº“ï¼Œå­˜å‚¨è¿‡ç¨‹åç§°ï¼Œåˆ›å»ºæ—¶é—´ç­‰
 2.show create procedure sp_name || show create function sp_name
-ÏÔÊ¾Ä³Ò»¸ömysql´æ´¢¹ı³ÌµÄÏêÏ¸ĞÅÏ¢
-±äÁ¿£º
-×Ô¶¨Òå±äÁ¿£ºDECLARE   a INT ; SET a=100;    ¿ÉÓÃÒÔÏÂÓï¾ä´úÌæ£ºDECLARE a INT DEFAULT 100;
-±äÁ¿·ÖÎªÓÃ»§±äÁ¿ºÍÏµÍ³±äÁ¿£¬ÏµÍ³±äÁ¿ÓÖ·ÖÎª»á»°ºÍÈ«¾Ö¼¶±äÁ¿
-ÓÃ»§±äÁ¿£ºÓÃ»§±äÁ¿ÃûÒ»°ãÒÔ@¿ªÍ·£¬ÀÄÓÃÓÃ»§±äÁ¿»áµ¼ÖÂ³ÌĞòÄÑÒÔÀí½â¼°¹ÜÀí
-1¡¢ ÔÚmysql¿Í»§¶ËÊ¹ÓÃÓÃ»§±äÁ¿
+æ˜¾ç¤ºæŸä¸€ä¸ªmysqlå­˜å‚¨è¿‡ç¨‹çš„è¯¦ç»†ä¿¡æ¯
+å˜é‡ï¼š
+è‡ªå®šä¹‰å˜é‡ï¼šDECLARE   a INT ; SET a=100;    å¯ç”¨ä»¥ä¸‹è¯­å¥ä»£æ›¿ï¼šDECLARE a INT DEFAULT 100;
+å˜é‡åˆ†ä¸ºç”¨æˆ·å˜é‡å’Œç³»ç»Ÿå˜é‡ï¼Œç³»ç»Ÿå˜é‡åˆåˆ†ä¸ºä¼šè¯å’Œå…¨å±€çº§å˜é‡
+ç”¨æˆ·å˜é‡ï¼šç”¨æˆ·å˜é‡åä¸€èˆ¬ä»¥@å¼€å¤´ï¼Œæ»¥ç”¨ç”¨æˆ·å˜é‡ä¼šå¯¼è‡´ç¨‹åºéš¾ä»¥ç†è§£åŠç®¡ç†
+1ã€ åœ¨mysqlå®¢æˆ·ç«¯ä½¿ç”¨ç”¨æˆ·å˜é‡
 mysql> SELECT 'Hello World' into @x;
 mysql> SELECT @x;
 mysql> SET @y='Goodbye Cruel World';
@@ -1600,143 +1600,143 @@ mysql> select @y;
 mysql> SET @z=1+2+3;
 mysql> select @z;
 
-2¡¢ ÔÚ´æ´¢¹ı³ÌÖĞÊ¹ÓÃÓÃ»§±äÁ¿
+2ã€ åœ¨å­˜å‚¨è¿‡ç¨‹ä¸­ä½¿ç”¨ç”¨æˆ·å˜é‡
 mysql> CREATE PROCEDURE GreetWorld( ) SELECT CONCAT(@greeting,' World');
 mysql> SET @greeting='Hello';
 mysql> CALL GreetWorld( );
 
-3¡¢ ÔÚ´æ´¢¹ı³Ì¼ä´«µİÈ«¾Ö·¶Î§µÄÓÃ»§±äÁ¿
+3ã€ åœ¨å­˜å‚¨è¿‡ç¨‹é—´ä¼ é€’å…¨å±€èŒƒå›´çš„ç”¨æˆ·å˜é‡
 mysql> CREATE PROCEDURE p1( )   SET @last_procedure='p1';
 mysql> CREATE PROCEDURE p2( ) SELECT CONCAT('Last procedure was ',@last_procedure);
 mysql> CALL p1( );
 mysql> CALL p2( );
  
-Èı¡¢ÔËËã·û£º
-1.ËãÊõÔËËã·û
-+     ¼Ó   SET var1=2+2;       4
--     ¼õ   SET var2=3-2;       1
-*      ³Ë   SET var3=3*2;       6
-/     ³ı   SET var4=10/3;      3.3333
-DIV   Õû³ı SET var5=10 DIV 3; 3
-%     È¡Ä£ SET var6=10%3 ;     1
-2.±È½ÏÔËËã·û
->            ´óÓÚ 1>2 False
-<            Ğ¡ÓÚ 2<1 False
-<=           Ğ¡ÓÚµÈÓÚ 2<=2 True
->=           ´óÓÚµÈÓÚ 3>=2 True
-BETWEEN      ÔÚÁ½ÖµÖ®¼ä 5 BETWEEN 1 AND 10 True
-NOT BETWEEN ²»ÔÚÁ½ÖµÖ®¼ä 5 NOT BETWEEN 1 AND 10 False
-IN           ÔÚ¼¯ºÏÖĞ 5 IN (1,2,3,4) False
-NOT IN       ²»ÔÚ¼¯ºÏÖĞ 5 NOT IN (1,2,3,4) True
-=             µÈÓÚ 2=3 False
-<>, !=       ²»µÈÓÚ 2<>3 False
-<=>          ÑÏ¸ñ±È½ÏÁ½¸öNULLÖµÊÇ·ñÏàµÈ NULL<=>NULL True
-LIKE          ¼òµ¥Ä£Ê½Æ¥Åä "Guy Harrison" LIKE "Guy%" True
-REGEXP       ÕıÔòÊ½Æ¥Åä "Guy Harrison" REGEXP "[Gg]reg" False
-IS NULL      Îª¿Õ 0 IS NULL False
-IS NOT NULL ²»Îª¿Õ 0 IS NOT NULL True
-3.Âß¼­ÔËËã·û
-4.Î»ÔËËã·û
-|   »ò
-&   Óë
-<< ×óÒÆÎ»
->> ÓÒÒÆÎ»
-~   ·Ç(µ¥Ä¿ÔËËã£¬°´Î»È¡·´)
-×¢ÊÍ£º
-mysql´æ´¢¹ı³Ì¿ÉÊ¹ÓÃÁ½ÖÖ·ç¸ñµÄ×¢ÊÍ
-Ë«ºá¸Ü£º--
-¸Ã·ç¸ñÒ»°ãÓÃÓÚµ¥ĞĞ×¢ÊÍ
-c·ç¸ñ£º/* ×¢ÊÍÄÚÈİ */ Ò»°ãÓÃÓÚ¶àĞĞ×¢ÊÍ-------------------Á÷³Ì¿ØÖÆ--------------------Ò»¡¢Ë³Ğò½á¹¹
-¶ş¡¢·ÖÖ§½á¹¹
-1.	IF Óï·¨
+ä¸‰ã€è¿ç®—ç¬¦ï¼š
+1.ç®—æœ¯è¿ç®—ç¬¦
++     åŠ    SET var1=2+2;       4
+-     å‡   SET var2=3-2;       1
+*      ä¹˜   SET var3=3*2;       6
+/     é™¤   SET var4=10/3;      3.3333
+DIV   æ•´é™¤ SET var5=10 DIV 3; 3
+%     å–æ¨¡ SET var6=10%3 ;     1
+2.æ¯”è¾ƒè¿ç®—ç¬¦
+>            å¤§äº 1>2 False
+<            å°äº 2<1 False
+<=           å°äºç­‰äº 2<=2 True
+>=           å¤§äºç­‰äº 3>=2 True
+BETWEEN      åœ¨ä¸¤å€¼ä¹‹é—´ 5 BETWEEN 1 AND 10 True
+NOT BETWEEN ä¸åœ¨ä¸¤å€¼ä¹‹é—´ 5 NOT BETWEEN 1 AND 10 False
+IN           åœ¨é›†åˆä¸­ 5 IN (1,2,3,4) False
+NOT IN       ä¸åœ¨é›†åˆä¸­ 5 NOT IN (1,2,3,4) True
+=             ç­‰äº 2=3 False
+<>, !=       ä¸ç­‰äº 2<>3 False
+<=>          ä¸¥æ ¼æ¯”è¾ƒä¸¤ä¸ªNULLå€¼æ˜¯å¦ç›¸ç­‰ NULL<=>NULL True
+LIKE          ç®€å•æ¨¡å¼åŒ¹é… "Guy Harrison" LIKE "Guy%" True
+REGEXP       æ­£åˆ™å¼åŒ¹é… "Guy Harrison" REGEXP "[Gg]reg" False
+IS NULL      ä¸ºç©º 0 IS NULL False
+IS NOT NULL ä¸ä¸ºç©º 0 IS NOT NULL True
+3.é€»è¾‘è¿ç®—ç¬¦
+4.ä½è¿ç®—ç¬¦
+|   æˆ–
+&   ä¸
+<< å·¦ç§»ä½
+>> å³ç§»ä½
+~   é(å•ç›®è¿ç®—ï¼ŒæŒ‰ä½å–å)
+æ³¨é‡Šï¼š
+mysqlå­˜å‚¨è¿‡ç¨‹å¯ä½¿ç”¨ä¸¤ç§é£æ ¼çš„æ³¨é‡Š
+åŒæ¨ªæ ï¼š--
+è¯¥é£æ ¼ä¸€èˆ¬ç”¨äºå•è¡Œæ³¨é‡Š
+cé£æ ¼ï¼š/* æ³¨é‡Šå†…å®¹ */ ä¸€èˆ¬ç”¨äºå¤šè¡Œæ³¨é‡Š-------------------æµç¨‹æ§åˆ¶--------------------ä¸€ã€é¡ºåºç»“æ„
+äºŒã€åˆ†æ”¯ç»“æ„
+1.	IF è¯­æ³•
 IF expression THEN commands  
 2.	   [ELSEIF expression THEN commands]  
 3.	   [ELSE commands]  
 4.	   END IF
-5.	CASE Óï·¨
+5.	CASE è¯­æ³•
 6.	CASE  case_expression  
 7.	   WHEN when_expression THEN commands  
 8.	   WHEN when_expression THEN commands  
 9.	   ...  
 10.	   ELSE commands  
 11.	END CASE;  
-1.	Èı¡¢Ñ­»·½á¹¹
-forÑ­»·
-whileÑ­»· 
+1.	ä¸‰ã€å¾ªç¯ç»“æ„
+forå¾ªç¯
+whileå¾ªç¯ 
 1.WHILE expression DO  
 2.Statements  
 3.END WHILE  
-loopÑ­»·
-LOOPÓÃÀ´±ê¼ÇÑ­»·£»¶øLEAVE±íÊ¾Àë¿ªÑ­»·£¬ºÃ±È±à³ÌÀïÃæµÄbreakÒ»Ñù£»ITERATEÔò¼ÌĞøÑ­»·£¬ÀàĞÍÓë±à³ÌÀïÃæµÄcontinue¡£
-repeatÑ­»·
+loopå¾ªç¯
+LOOPç”¨æ¥æ ‡è®°å¾ªç¯ï¼›è€ŒLEAVEè¡¨ç¤ºç¦»å¼€å¾ªç¯ï¼Œå¥½æ¯”ç¼–ç¨‹é‡Œé¢çš„breakä¸€æ ·ï¼›ITERATEåˆ™ç»§ç»­å¾ªç¯ï¼Œç±»å‹ä¸ç¼–ç¨‹é‡Œé¢çš„continueã€‚
+repeatå¾ªç¯
 1.	REPEAT  
 2.	Statements;  
 3.	UNTIL expression  
 4.	END REPEAT  
 
-×¢£º
-Çø¿é¶¨Òå£¬³£ÓÃ
+æ³¨ï¼š
+åŒºå—å®šä¹‰ï¼Œå¸¸ç”¨
 begin
 ......
 end;
-Ò²¿ÉÒÔ¸øÇø¿éÆğ±ğÃû£¬Èç£º
+ä¹Ÿå¯ä»¥ç»™åŒºå—èµ·åˆ«åï¼Œå¦‚ï¼š
 lable:begin
 ...........
 end lable;
-¿ÉÒÔÓÃleave lable;Ìø³öÇø¿é£¬Ö´ĞĞÇø¿éÒÔºóµÄ´úÂë
-beginºÍendÈçÍ¬CÓïÑÔÖĞµÄ{ ºÍ }¡£
---------------------ÊäÈëºÍÊä³ö--------------------
-mysql´æ´¢¹ı³ÌµÄ²ÎÊıÓÃÔÚ´æ´¢¹ı³ÌµÄ¶¨Òå£¬¹²ÓĞÈıÖÖ²ÎÊıÀàĞÍ,IN,OUT,INOUT
-Create procedure|function([[IN |OUT |INOUT ] ²ÎÊıÃû Êı¾İÀàĞÎ...])
-IN ÊäÈë²ÎÊı
-±íÊ¾¸Ã²ÎÊıµÄÖµ±ØĞëÔÚµ÷ÓÃ´æ´¢¹ı³ÌÊ±Ö¸¶¨£¬ÔÚ´æ´¢¹ı³ÌÖĞĞŞ¸Ä¸Ã²ÎÊıµÄÖµ²»ÄÜ±»·µ»Ø£¬ÎªÄ¬ÈÏÖµ
-OUT Êä³ö²ÎÊı
-¸ÃÖµ¿ÉÔÚ´æ´¢¹ı³ÌÄÚ²¿±»¸Ä±ä£¬²¢¿É·µ»Ø
-INOUT ÊäÈëÊä³ö²ÎÊı
-µ÷ÓÃÊ±Ö¸¶¨£¬²¢ÇÒ¿É±»¸Ä±äºÍ·µ»Ø
-1¡¢ÓÎ±êµÄ×÷ÓÃ¼°ÊôĞÔ
-ÓÎ±êµÄ×÷ÓÃ¾ÍÊÇÓÃÓÚ¶Ô²éÑ¯Êı¾İ¿âËù·µ»ØµÄ¼ÇÂ¼½øĞĞ±éÀú£¬ÒÔ±ã½øĞĞÏàÓ¦µÄ²Ù×÷£»ÓÎ±êÓĞÏÂÃæÕâĞ©ÊôĞÔ£º
-    a¡¢ÓÎ±êÊÇÖ»¶ÁµÄ£¬Ò²¾ÍÊÇ²»ÄÜ¸üĞÂËü£»
-    b¡¢ÓÎ±êÊÇ²»ÄÜ¹ö¶¯µÄ£¬Ò²¾ÍÊÇÖ»ÄÜÔÚÒ»¸ö·½ÏòÉÏ½øĞĞ±éÀú£¬²»ÄÜÔÚ¼ÇÂ¼Ö®¼äËæÒâ½øÍË£¬²»ÄÜÌø¹ıÄ³Ğ©¼ÇÂ¼£»
-    c¡¢±ÜÃâÔÚÒÑ¾­´ò¿ªÓÎ±êµÄ±íÉÏ¸üĞÂÊı¾İ¡£
-2¡¢ÈçºÎÊ¹ÓÃÓÎ±ê
-Ê¹ÓÃÓÎ±êĞèÒª×ñÑ­ÏÂÃæ²½Öè£º
-     a¡¢Ê×ÏÈÓÃDECLAREÓï¾äÉùÃ÷Ò»¸öÓÎ±ê              
+å¯ä»¥ç”¨leave lable;è·³å‡ºåŒºå—ï¼Œæ‰§è¡ŒåŒºå—ä»¥åçš„ä»£ç 
+beginå’Œendå¦‚åŒCè¯­è¨€ä¸­çš„{ å’Œ }ã€‚
+--------------------è¾“å…¥å’Œè¾“å‡º--------------------
+mysqlå­˜å‚¨è¿‡ç¨‹çš„å‚æ•°ç”¨åœ¨å­˜å‚¨è¿‡ç¨‹çš„å®šä¹‰ï¼Œå…±æœ‰ä¸‰ç§å‚æ•°ç±»å‹,IN,OUT,INOUT
+Create procedure|function([[IN |OUT |INOUT ] å‚æ•°å æ•°æ®ç±»å½¢...])
+IN è¾“å…¥å‚æ•°
+è¡¨ç¤ºè¯¥å‚æ•°çš„å€¼å¿…é¡»åœ¨è°ƒç”¨å­˜å‚¨è¿‡ç¨‹æ—¶æŒ‡å®šï¼Œåœ¨å­˜å‚¨è¿‡ç¨‹ä¸­ä¿®æ”¹è¯¥å‚æ•°çš„å€¼ä¸èƒ½è¢«è¿”å›ï¼Œä¸ºé»˜è®¤å€¼
+OUT è¾“å‡ºå‚æ•°
+è¯¥å€¼å¯åœ¨å­˜å‚¨è¿‡ç¨‹å†…éƒ¨è¢«æ”¹å˜ï¼Œå¹¶å¯è¿”å›
+INOUT è¾“å…¥è¾“å‡ºå‚æ•°
+è°ƒç”¨æ—¶æŒ‡å®šï¼Œå¹¶ä¸”å¯è¢«æ”¹å˜å’Œè¿”å›
+1ã€æ¸¸æ ‡çš„ä½œç”¨åŠå±æ€§
+æ¸¸æ ‡çš„ä½œç”¨å°±æ˜¯ç”¨äºå¯¹æŸ¥è¯¢æ•°æ®åº“æ‰€è¿”å›çš„è®°å½•è¿›è¡Œéå†ï¼Œä»¥ä¾¿è¿›è¡Œç›¸åº”çš„æ“ä½œï¼›æ¸¸æ ‡æœ‰ä¸‹é¢è¿™äº›å±æ€§ï¼š
+    aã€æ¸¸æ ‡æ˜¯åªè¯»çš„ï¼Œä¹Ÿå°±æ˜¯ä¸èƒ½æ›´æ–°å®ƒï¼›
+    bã€æ¸¸æ ‡æ˜¯ä¸èƒ½æ»šåŠ¨çš„ï¼Œä¹Ÿå°±æ˜¯åªèƒ½åœ¨ä¸€ä¸ªæ–¹å‘ä¸Šè¿›è¡Œéå†ï¼Œä¸èƒ½åœ¨è®°å½•ä¹‹é—´éšæ„è¿›é€€ï¼Œä¸èƒ½è·³è¿‡æŸäº›è®°å½•ï¼›
+    cã€é¿å…åœ¨å·²ç»æ‰“å¼€æ¸¸æ ‡çš„è¡¨ä¸Šæ›´æ–°æ•°æ®ã€‚
+2ã€å¦‚ä½•ä½¿ç”¨æ¸¸æ ‡
+ä½¿ç”¨æ¸¸æ ‡éœ€è¦éµå¾ªä¸‹é¢æ­¥éª¤ï¼š
+     aã€é¦–å…ˆç”¨DECLAREè¯­å¥å£°æ˜ä¸€ä¸ªæ¸¸æ ‡              
 1.	DECLARE cursor_name CURSOR FOR SELECT_statement;  
-ÉÏÃæÕâÌõÓï¾ä¾Í¶Ô£¬ÎÒÃÇÖ´ĞĞµÄselectÓï¾ä·µ»ØµÄ¼ÇÂ¼Ö¸¶¨ÁËÒ»¸öÓÎ±ê   
+ä¸Šé¢è¿™æ¡è¯­å¥å°±å¯¹ï¼Œæˆ‘ä»¬æ‰§è¡Œçš„selectè¯­å¥è¿”å›çš„è®°å½•æŒ‡å®šäº†ä¸€ä¸ªæ¸¸æ ‡   
 
-  b¡¢Æä´ÎĞèÒªÊ¹ÓÃOPENÓï¾äÀ´´ò¿ªÉÏÃæÄã¶¨ÒåµÄÓÎ±ê
+  bã€å…¶æ¬¡éœ€è¦ä½¿ç”¨OPENè¯­å¥æ¥æ‰“å¼€ä¸Šé¢ä½ å®šä¹‰çš„æ¸¸æ ‡
 1.	OPEN cursor_name;  
-     c¡¢½ÓÏÂÀ´Äã¿ÉÒÔÓÃFETCHÓï¾äÀ´»ñµÃÏÂÒ»ĞĞÊı¾İ£¬²¢ÇÒÓÎ±êÒ²½«ÒÆ¶¯µ½¶ÔÓ¦µÄ¼ÇÂ¼ÉÏ(Õâ¸ö¾ÍÀàËÆjavaÀïÃæµÄÄÇ¸öiterator)¡£
+     cã€æ¥ä¸‹æ¥ä½ å¯ä»¥ç”¨FETCHè¯­å¥æ¥è·å¾—ä¸‹ä¸€è¡Œæ•°æ®ï¼Œå¹¶ä¸”æ¸¸æ ‡ä¹Ÿå°†ç§»åŠ¨åˆ°å¯¹åº”çš„è®°å½•ä¸Š(è¿™ä¸ªå°±ç±»ä¼¼javaé‡Œé¢çš„é‚£ä¸ªiterator)ã€‚
 1.	FETCH cursor_name INTO variable list;  
-     d¡¢È»ºó×îºóµ±ÎÒÃÇËùĞèÒª½øĞĞµÄ²Ù×÷¶¼½áÊøºóÎÒÃÇÒª°ÑÓÎ±êÊÍ·Åµô¡£
+     dã€ç„¶åæœ€åå½“æˆ‘ä»¬æ‰€éœ€è¦è¿›è¡Œçš„æ“ä½œéƒ½ç»“æŸåæˆ‘ä»¬è¦æŠŠæ¸¸æ ‡é‡Šæ”¾æ‰ã€‚
 1.	CLOSE cursor_name;  
-ÔÚÊ¹ÓÃÓÎ±êÊ±ĞèÒª×¢ÒâµÄÊÇ£¬Ê¹ÓÃ¶¨ÒåÒ»¸öÕë¶ÔNOT FOUNDµÄÌõ¼ş´¦Àíº¯Êı(condition handler)À´±ÜÃâ³öÏÖ¡°no data to fetch¡±ÕâÑùµÄ´íÎó£¬Ìõ¼ş´¦Àíº¯Êı¾ÍÊÇµ±Ä³ÖÖÌõ¼ş²úÉúÊ±ËùÖ´ĞĞµÄ´úÂë£¬ÕâÀïµ«ÎÒÃÇÓÎ±êÖ¸µ½¼ÇÂ¼µÄÄ©Î²Ê±£¬±ã´ïµ½NOT FOUNDÕâÑùÌõ¼ş
+åœ¨ä½¿ç”¨æ¸¸æ ‡æ—¶éœ€è¦æ³¨æ„çš„æ˜¯ï¼Œä½¿ç”¨å®šä¹‰ä¸€ä¸ªé’ˆå¯¹NOT FOUNDçš„æ¡ä»¶å¤„ç†å‡½æ•°(condition handler)æ¥é¿å…å‡ºç°â€œno data to fetchâ€è¿™æ ·çš„é”™è¯¯ï¼Œæ¡ä»¶å¤„ç†å‡½æ•°å°±æ˜¯å½“æŸç§æ¡ä»¶äº§ç”Ÿæ—¶æ‰€æ‰§è¡Œçš„ä»£ç ï¼Œè¿™é‡Œä½†æˆ‘ä»¬æ¸¸æ ‡æŒ‡åˆ°è®°å½•çš„æœ«å°¾æ—¶ï¼Œä¾¿è¾¾åˆ°NOT FOUNDè¿™æ ·æ¡ä»¶
 
-ÊÂ¼ş ÀàËÆÓÚlinuxµÄcrontab ¼Æ»®ÈÎÎñ¡£
-MysqlÊÂ¼şÑ§Ï°
-ÔÚÏµÍ³¹ÜÀí»òÕßÊı¾İ¿â¹ÜÀíÖĞ£¬¾­³£ÒªÖÜÆÚĞÔµÄÖ´ĞĞÄ³Ò»¸öÃüÁî»òÕßSQLÓï¾ä¡£¶ÔÓÚlinuxÏµÍ³ÊìÏ¤µÄÈË¶¼ÖªµÀlinuxµÄcron¼Æ»®ÈÎÎñ£¬ÄÜºÜ·½±ãµØÊµÏÖ¶¨ÆÚÔËĞĞÖ¸¶¨ÃüÁîµÄ¹¦ÄÜ¡£MysqlÔÚ5.1ÒÔºóÍÆ³öÁËÊÂ¼şµ÷¶ÈÆ÷(Event Scheduler)£¬ºÍlinuxµÄcron¹¦ÄÜÒ»Ñù£¬ÄÜ·½±ãµØÊµÏÖ mysqlÊı¾İ¿âµÄ¼Æ»®ÈÎÎñ£¬¶øÇÒÄÜ¾«È·µ½Ãë¡£Ê¹ÓÃÆğÀ´·Ç³£¼òµ¥ºÍ·½±ã¡£
-ÓÉÓÚ×î½üĞèÒªÓÃµ½ÊÂ¼şÕâ¸ö¹¦ÄÜ£¬Òò´ËÑ§Ï°ÁËÒ»ÏÂ£¬¸Ğ¾õ·Ç³£°ô£¬×Ü½áÒ»ÏÂ£¬·½±ãÒÔºóÊ¹ÓÃ£¬Ò²Ï£ÍûÄÜ¶ÔÆäËûµÄ³õÑ§ÕßÓĞ°ïÖú¡£
-Ò»¡¢    Èç¹û¿ªÆôÊÂ¼ş
-ÔÚÊ¹ÓÃÊÂ¼şÕâ¸ö¹¦ÄÜ£¬Ê×ÏÈÒª±£Ö¤ÄãµÄmysqlµÄ°æ±¾ÊÇ5.1ÒÔÉÏ£¬È»ºó»¹Òª²é¿´ÄãµÄmysql·şÎñÆ÷ÉÏµÄÊÂ¼şÊÇ·ñ¿ªÆô¡£
-²é¿´ÊÂ¼şÊÇ·ñ¿ªÆô£¬Ê¹ÓÃÈçÏÂÃüÁî²é¿´£º
+äº‹ä»¶ ç±»ä¼¼äºlinuxçš„crontab è®¡åˆ’ä»»åŠ¡ã€‚
+Mysqläº‹ä»¶å­¦ä¹ 
+åœ¨ç³»ç»Ÿç®¡ç†æˆ–è€…æ•°æ®åº“ç®¡ç†ä¸­ï¼Œç»å¸¸è¦å‘¨æœŸæ€§çš„æ‰§è¡ŒæŸä¸€ä¸ªå‘½ä»¤æˆ–è€…SQLè¯­å¥ã€‚å¯¹äºlinuxç³»ç»Ÿç†Ÿæ‚‰çš„äººéƒ½çŸ¥é“linuxçš„cronè®¡åˆ’ä»»åŠ¡ï¼Œèƒ½å¾ˆæ–¹ä¾¿åœ°å®ç°å®šæœŸè¿è¡ŒæŒ‡å®šå‘½ä»¤çš„åŠŸèƒ½ã€‚Mysqlåœ¨5.1ä»¥åæ¨å‡ºäº†äº‹ä»¶è°ƒåº¦å™¨(Event Scheduler)ï¼Œå’Œlinuxçš„cronåŠŸèƒ½ä¸€æ ·ï¼Œèƒ½æ–¹ä¾¿åœ°å®ç° mysqlæ•°æ®åº“çš„è®¡åˆ’ä»»åŠ¡ï¼Œè€Œä¸”èƒ½ç²¾ç¡®åˆ°ç§’ã€‚ä½¿ç”¨èµ·æ¥éå¸¸ç®€å•å’Œæ–¹ä¾¿ã€‚
+ç”±äºæœ€è¿‘éœ€è¦ç”¨åˆ°äº‹ä»¶è¿™ä¸ªåŠŸèƒ½ï¼Œå› æ­¤å­¦ä¹ äº†ä¸€ä¸‹ï¼Œæ„Ÿè§‰éå¸¸æ£’ï¼Œæ€»ç»“ä¸€ä¸‹ï¼Œæ–¹ä¾¿ä»¥åä½¿ç”¨ï¼Œä¹Ÿå¸Œæœ›èƒ½å¯¹å…¶ä»–çš„åˆå­¦è€…æœ‰å¸®åŠ©ã€‚
+ä¸€ã€    å¦‚æœå¼€å¯äº‹ä»¶
+åœ¨ä½¿ç”¨äº‹ä»¶è¿™ä¸ªåŠŸèƒ½ï¼Œé¦–å…ˆè¦ä¿è¯ä½ çš„mysqlçš„ç‰ˆæœ¬æ˜¯5.1ä»¥ä¸Šï¼Œç„¶åè¿˜è¦æŸ¥çœ‹ä½ çš„mysqlæœåŠ¡å™¨ä¸Šçš„äº‹ä»¶æ˜¯å¦å¼€å¯ã€‚
+æŸ¥çœ‹äº‹ä»¶æ˜¯å¦å¼€å¯ï¼Œä½¿ç”¨å¦‚ä¸‹å‘½ä»¤æŸ¥çœ‹ï¼š
 SHOW VARIABLES LIKE 'event_scheduler';
 SELECT @@event_scheduler;
 SHOW PROCESSLIST;
-Èç¹û¿´µ½event_schedulerÎªon»òÕßPROCESSLISTÖĞÏÔÊ¾ÓĞevent_schedulerµÄĞÅÏ¢ËµÃ÷¾ÍÒÑ¾­¿ªÆôÁËÊÂ¼ş¡£Èç¹ûÏÔÊ¾Îªoff»òÕßÔÚPROCESSLISTÖĞ²é¿´²»µ½event_schedulerµÄĞÅÏ¢£¬ÄÇÃ´¾ÍËµÃ÷ÊÂ¼şÃ»ÓĞ¿ªÆô£¬ÎÒÃÇĞèÒª¿ªÆôËü¡£
-¿ªÆômysqlµÄÊÂ¼ş£¬Í¨¹ıÈçÏÂÈıÖÖ·½Ê½¿ªÆô£º
-?  Í¨¹ı¶¯Ì¬²ÎÊıĞŞ¸Ä
+å¦‚æœçœ‹åˆ°event_schedulerä¸ºonæˆ–è€…PROCESSLISTä¸­æ˜¾ç¤ºæœ‰event_schedulerçš„ä¿¡æ¯è¯´æ˜å°±å·²ç»å¼€å¯äº†äº‹ä»¶ã€‚å¦‚æœæ˜¾ç¤ºä¸ºoffæˆ–è€…åœ¨PROCESSLISTä¸­æŸ¥çœ‹ä¸åˆ°event_schedulerçš„ä¿¡æ¯ï¼Œé‚£ä¹ˆå°±è¯´æ˜äº‹ä»¶æ²¡æœ‰å¼€å¯ï¼Œæˆ‘ä»¬éœ€è¦å¼€å¯å®ƒã€‚
+å¼€å¯mysqlçš„äº‹ä»¶ï¼Œé€šè¿‡å¦‚ä¸‹ä¸‰ç§æ–¹å¼å¼€å¯ï¼š
+?  é€šè¿‡åŠ¨æ€å‚æ•°ä¿®æ”¹
 SET GLOBAL event_scheduler = ON;
-¸ü¸ÄÍêÕâ¸ö²ÎÊı¾ÍÁ¢¿ÌÉúĞ§ÁË
-×¢Òâ£º»¹ÊÇÒªÔÚmy.cnfÖĞÌí¼Óevent_scheduler=ON¡£ÒòÎªÈç¹ûÃ»ÓĞÌí¼ÓµÄ»°£¬mysqlÖØÆôÊÂ¼şÓÖ»á»Øµ½Ô­À´µÄ×´Ì¬ÁË¡£
-?  ¸ü¸ÄÅäÖÃÎÄ¼şÈ»ºóÖØÆô
-ÔÚmy.cnfÖĞµÄ[mysqld]²¿·ÖÌí¼ÓÈçÏÂÄÚÈİ£¬È»ºóÖØÆômysql¡£
+æ›´æ”¹å®Œè¿™ä¸ªå‚æ•°å°±ç«‹åˆ»ç”Ÿæ•ˆäº†
+æ³¨æ„ï¼šè¿˜æ˜¯è¦åœ¨my.cnfä¸­æ·»åŠ event_scheduler=ONã€‚å› ä¸ºå¦‚æœæ²¡æœ‰æ·»åŠ çš„è¯ï¼Œmysqlé‡å¯äº‹ä»¶åˆä¼šå›åˆ°åŸæ¥çš„çŠ¶æ€äº†ã€‚
+?  æ›´æ”¹é…ç½®æ–‡ä»¶ç„¶åé‡å¯
+åœ¨my.cnfä¸­çš„[mysqld]éƒ¨åˆ†æ·»åŠ å¦‚ä¸‹å†…å®¹ï¼Œç„¶åé‡å¯mysqlã€‚
 event_scheduler=ON
-?  Í¨¹ıÖÆ¶¨ÊÂ¼ş²ÎÊıÆô¶¯
+?  é€šè¿‡åˆ¶å®šäº‹ä»¶å‚æ•°å¯åŠ¨
 mysqld ... --event_scheduler=ON
  
-¶ş¡¢    MysqlÊÂ¼şµÄÓï·¨¼ò½é
-1.        ´´½¨ÊÂ¼şµÄÓï·¨
+äºŒã€    Mysqläº‹ä»¶çš„è¯­æ³•ç®€ä»‹
+1.        åˆ›å»ºäº‹ä»¶çš„è¯­æ³•
 CREATE
  [DEFINER = { user | CURRENT_USER }]
 EVENT [IF NOT EXISTS] event_name
@@ -1751,13 +1751,13 @@ AT timestamp [+ INTERVAL interval] ...| EVERY interval
 interval:
 quantity {YEAR | QUARTER | MONTH | DAY | HOUR | MINUTE | WEEK | SECOND | YEAR_MONTH | DAY_HOUR |DAY_MINUTE |DAY_SECOND | HOUR_MINUTE |
 HOUR_SECOND | MINUTE_SECOND}
-²ÎÊıÏêÏ¸ËµÃ÷£º
-DEFINER: ¶¨ÒåÊÂ¼şÖ´ĞĞµÄÊ±ºò¼ì²éÈ¨ÏŞµÄÓÃ»§¡£
-ON SCHEDULE schedule: ¶¨ÒåÖ´ĞĞµÄÊ±¼äºÍÊ±¼ä¼ä¸ô¡£
-ON COMPLETION [NOT] PRESERVE: ¶¨ÒåÊÂ¼şÊÇÒ»´ÎÖ´ĞĞ»¹ÊÇÓÀ¾ÃÖ´ĞĞ£¬Ä¬ÈÏÎªÒ»´ÎÖ´ĞĞ£¬¼´NOT PRESERVE¡£
-ENABLE | DISABLE | DISABLE ON SLAVE: ¶¨ÒåÊÂ¼ş´´½¨ÒÔºóÊÇ¿ªÆô»¹ÊÇ¹Ø±Õ£¬ÒÔ¼°ÔÚ´ÓÉÏ¹Ø±Õ¡£Èç¹ûÊÇ´Ó·şÎñÆ÷×Ô¶¯Í¬²½Ö÷ÉÏµÄ´´½¨ÊÂ¼şµÄÓï¾äµÄ»°£¬»á×Ô¶¯¼ÓÉÏDISABLE ON SLAVE¡£
-COMMENT 'comment': ¶¨ÒåÊÂ¼şµÄ×¢ÊÍ¡£
-2.        ¸ü¸ÄÊÂ¼şµÄÓï·¨
+å‚æ•°è¯¦ç»†è¯´æ˜ï¼š
+DEFINER: å®šä¹‰äº‹ä»¶æ‰§è¡Œçš„æ—¶å€™æ£€æŸ¥æƒé™çš„ç”¨æˆ·ã€‚
+ON SCHEDULE schedule: å®šä¹‰æ‰§è¡Œçš„æ—¶é—´å’Œæ—¶é—´é—´éš”ã€‚
+ON COMPLETION [NOT] PRESERVE: å®šä¹‰äº‹ä»¶æ˜¯ä¸€æ¬¡æ‰§è¡Œè¿˜æ˜¯æ°¸ä¹…æ‰§è¡Œï¼Œé»˜è®¤ä¸ºä¸€æ¬¡æ‰§è¡Œï¼Œå³NOT PRESERVEã€‚
+ENABLE | DISABLE | DISABLE ON SLAVE: å®šä¹‰äº‹ä»¶åˆ›å»ºä»¥åæ˜¯å¼€å¯è¿˜æ˜¯å…³é—­ï¼Œä»¥åŠåœ¨ä»ä¸Šå…³é—­ã€‚å¦‚æœæ˜¯ä»æœåŠ¡å™¨è‡ªåŠ¨åŒæ­¥ä¸»ä¸Šçš„åˆ›å»ºäº‹ä»¶çš„è¯­å¥çš„è¯ï¼Œä¼šè‡ªåŠ¨åŠ ä¸ŠDISABLE ON SLAVEã€‚
+COMMENT 'comment': å®šä¹‰äº‹ä»¶çš„æ³¨é‡Šã€‚
+2.        æ›´æ”¹äº‹ä»¶çš„è¯­æ³•
 ALTER
     [DEFINER = { user | CURRENT_USER }]    EVENT event_name
     [ON SCHEDULE schedule]
@@ -1766,42 +1766,42 @@ ALTER
     [ENABLE | DISABLE | DISABLE ON SLAVE]
     [COMMENT 'comment']
     [DO event_body]
-3.        É¾³ıÊÂ¼şµÄÓï·¨
+3.        åˆ é™¤äº‹ä»¶çš„è¯­æ³•
 DROP EVENT [IF EXISTS] event_name
-Èı¡¢    MysqlÊÂ¼şÊµÕ½
-1.         ²âÊÔ»·¾³
-´´½¨Ò»¸öÓÃÓÚ²âÊÔµÄtest±í£º
+ä¸‰ã€    Mysqläº‹ä»¶å®æˆ˜
+1.         æµ‹è¯•ç¯å¢ƒ
+åˆ›å»ºä¸€ä¸ªç”¨äºæµ‹è¯•çš„testè¡¨ï¼š
 CREATE TABLE `test` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `t1` datetime DEFAULT NULL,
   `id2` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=utf8
-2.         ÊµÕ½1
-?  ´´½¨Ò»¸öÃ¿¸ô3ÃëÍùtest±íÖĞ²åÈëÒ»ÌõÊı¾İµÄÊÂ¼ş£¬´úÂëÈçÏÂ£º
+2.         å®æˆ˜1
+?  åˆ›å»ºä¸€ä¸ªæ¯éš”3ç§’å¾€testè¡¨ä¸­æ’å…¥ä¸€æ¡æ•°æ®çš„äº‹ä»¶ï¼Œä»£ç å¦‚ä¸‹ï¼š
 CREATE EVENT IF NOT EXISTS test ON SCHEDULE EVERY 3 SECOND
 ON COMPLETION PRESERVE
 DO INSERT INTO test(id,t1) VALUES('',NOW());
-?  ´´½¨Ò»¸ö10·ÖÖÓºóÇå¿Õtest±íÊı¾İµÄÊÂ¼ş
+?  åˆ›å»ºä¸€ä¸ª10åˆ†é’Ÿåæ¸…ç©ºtestè¡¨æ•°æ®çš„äº‹ä»¶
 CREATE EVENT IF NOT EXISTS test
 ON SCHEDULE
 AT CURRENT_TIMESTAMP + INTERVAL 1 MINUTE
 DO TRUNCATE TABLE test;
-?  ´´½¨Ò»¸öÔÚ2012-08-23 00:00:00Ê±¿ÌÇå¿Õtest±íÊı¾İµÄÊÂ¼ş£¬´úÂëÈçÏÂ£º
+?  åˆ›å»ºä¸€ä¸ªåœ¨2012-08-23 00:00:00æ—¶åˆ»æ¸…ç©ºtestè¡¨æ•°æ®çš„äº‹ä»¶ï¼Œä»£ç å¦‚ä¸‹ï¼š
 CREATE EVENT IF NOT EXISTS test
 ON SCHEDULE
 AT TIMESTAMP '2012-08-23 00:00:00'
 DO TRUNCATE TABLE test;
-?  ´´½¨Ò»¸ö´Ó2012Äê8ÔÂ22ÈÕ21µã45·Ö¿ªÊ¼µ½10·ÖÖÓºó½áÊø£¬ÔËĞĞÃ¿¸ô3ÃëÍùtest±íÖĞ²åÈëÒ»ÌõÊı¾İµÄÊÂ¼ş£¬´úÂëÈçÏÂ£º
+?  åˆ›å»ºä¸€ä¸ªä»2012å¹´8æœˆ22æ—¥21ç‚¹45åˆ†å¼€å§‹åˆ°10åˆ†é’Ÿåç»“æŸï¼Œè¿è¡Œæ¯éš”3ç§’å¾€testè¡¨ä¸­æ’å…¥ä¸€æ¡æ•°æ®çš„äº‹ä»¶ï¼Œä»£ç å¦‚ä¸‹ï¼š
 CREATE EVENT IF NOT EXISTS test ON SCHEDULE EVERY 3 SECOND
 STARTS '2012-08-22 21:49:00' 
 ENDS '2012-08-22 21:49:00'+ INTERVAL  10 MINUTE
 ON COMPLETION PRESERVE
 DO INSERT INTO test(id,t1) VALUES('',NOW());
  
-3.         ÊµÕ½2
-Í¨³£µÄÓ¦ÓÃ³¡¾°ÊÇÍ¨¹ıÊÂ¼şÀ´¶¨ÆÚµÄµ÷ÓÃ´æ´¢¹ı³Ì£¬ÏÂÃæÊÇÒ»¸ö¼òµ¥µÄÊ¾Àı£º
-´´½¨Ò»¸öÈÃtest±íµÄid2×Ö¶ÎÃ¿ĞĞ¼Ó»ùÊı2µÄ´æ´¢¹ı³Ì£¬´æ´¢¹ı³Ì´úÂëÈçÏÂ£º
+3.         å®æˆ˜2
+é€šå¸¸çš„åº”ç”¨åœºæ™¯æ˜¯é€šè¿‡äº‹ä»¶æ¥å®šæœŸçš„è°ƒç”¨å­˜å‚¨è¿‡ç¨‹ï¼Œä¸‹é¢æ˜¯ä¸€ä¸ªç®€å•çš„ç¤ºä¾‹ï¼š
+åˆ›å»ºä¸€ä¸ªè®©testè¡¨çš„id2å­—æ®µæ¯è¡ŒåŠ åŸºæ•°2çš„å­˜å‚¨è¿‡ç¨‹ï¼Œå­˜å‚¨è¿‡ç¨‹ä»£ç å¦‚ä¸‹ï¼š
 DROP PROCEDURE IF EXISTS test_add;
 DELIMITER //
 CREATE PROCEDURE test_add()
@@ -1822,74 +1822,74 @@ END REPEAT;
 CLOSE  datas;
 END
 //
-ÊÂ¼şÉèÖÃ2012-08-22 00:00:00Ê±¿Ì¿ªÊ¼ÔËĞĞ£¬Ã¿¸ô1µ÷ÓÃÒ»´Î´æ´¢¹ı³Ì£¬40Ììºó½áÊø£¬´úÂëÈçÏÂ£º
+äº‹ä»¶è®¾ç½®2012-08-22 00:00:00æ—¶åˆ»å¼€å§‹è¿è¡Œï¼Œæ¯éš”1è°ƒç”¨ä¸€æ¬¡å­˜å‚¨è¿‡ç¨‹ï¼Œ40å¤©åç»“æŸï¼Œä»£ç å¦‚ä¸‹ï¼š
 CREATE EVENT test ON SCHEDULE EVERY 1 DAY
 STARTS '2012-08-22 00:00:00'
 ENDS '2012-08-22 00:00:00'+INTERVAL 40 DAY
 ON COMPLETION 
 PRESERVE DO
 CALL test_add();
-innodb¹²Ïí±í¿Õ¼äÓë¶ÀÁ¢±í¿Õ¼ä
-   mysql±í¿Õ¼äÊÇÊ²Ã´¸ÅÄîÄØ£¿
-      ¿ªÆôÁËInnodbµÄinnodb_file_per_tableÕâ¸ö²ÎÊıÖ®ºó¡¾innodb_file_per_table = 1¡¿£¬Ò²¾ÍÊÇÆôÓÃInnoDBµÄ¶ÀÁ¢±í¿Õ¼äÄ£Ê½£¬±ãÓÚ¹ÜÀí¡£´ËÊ±£¬ÔÚĞÂ½¨µÄinnodb±íµÄÊı¾İ¿âÄ¿Â¼ÏÂ»á¶à³öÀ´Ò»¸ö.ibdÕâ¸öÎÄ¼ş¡£Õâ¸ö¾ÍÊÇ´ËÊ±µÄÊı¾İÎÄ¼şÁË¡£mysql»á°ÑÕâ¸öinnodb±íµÄÊı¾İ´æ·ÅÔÚÕâ¸öÎÄ¼şÖĞ¡£²¢ÇÒÃ¿¸öinnodb±í´ËÊ±¶¼»á¶ÔÓ¦ÕâÃ´Ò»¸öibdÎÄ¼ş¡£
-¿´¹Ù·½ÎÄµµ£º
+innodbå…±äº«è¡¨ç©ºé—´ä¸ç‹¬ç«‹è¡¨ç©ºé—´
+   mysqlè¡¨ç©ºé—´æ˜¯ä»€ä¹ˆæ¦‚å¿µå‘¢ï¼Ÿ
+      å¼€å¯äº†Innodbçš„innodb_file_per_tableè¿™ä¸ªå‚æ•°ä¹‹åã€innodb_file_per_table = 1ã€‘ï¼Œä¹Ÿå°±æ˜¯å¯ç”¨InnoDBçš„ç‹¬ç«‹è¡¨ç©ºé—´æ¨¡å¼ï¼Œä¾¿äºç®¡ç†ã€‚æ­¤æ—¶ï¼Œåœ¨æ–°å»ºçš„innodbè¡¨çš„æ•°æ®åº“ç›®å½•ä¸‹ä¼šå¤šå‡ºæ¥ä¸€ä¸ª.ibdè¿™ä¸ªæ–‡ä»¶ã€‚è¿™ä¸ªå°±æ˜¯æ­¤æ—¶çš„æ•°æ®æ–‡ä»¶äº†ã€‚mysqlä¼šæŠŠè¿™ä¸ªinnodbè¡¨çš„æ•°æ®å­˜æ”¾åœ¨è¿™ä¸ªæ–‡ä»¶ä¸­ã€‚å¹¶ä¸”æ¯ä¸ªinnodbè¡¨æ­¤æ—¶éƒ½ä¼šå¯¹åº”è¿™ä¹ˆä¸€ä¸ªibdæ–‡ä»¶ã€‚
+çœ‹å®˜æ–¹æ–‡æ¡£ï¼š
       If innodb_file_per_table is disabled (the default), InnoDB creates tables in the system tablespace. Ifinnodb_file_per_table is enabled, InnoDB creates each new table using its own .ibd file for storing data and indexes, rather than in the system tablespace. 
-      ÄÇÃ´ÕâÑù×öÓĞÊ²Ã´ºÃ´¦ÄØ£¿
-      ¿ÉÒÔÊµÏÖµ¥±íÔÚ²»Í¬µÄÊı¾İ¿âÖ®¼äÒÆ¶¯¡£¾ßÌåÔõÃ´ÒÆ¶¯ÄØ£¿¼ÙÉèÓĞÁ½¸öÊı¾İ¿â£¬Ò»¸ötest£¬Ò»¸ött¡£
-      InnoDB Ä¬ÈÏ»á½«ËùÓĞµÄÊı¾İ¿âInnoDBÒıÇæµÄ±íÊı¾İ´æ´¢ÔÚÒ»¸ö¹²Ïí¿Õ¼äÖĞ£ºibdata1£¬ÕâÑù¾Í¸Ğ¾õ²»Ë¬£¬ÔöÉ¾Êı¾İ¿âµÄÊ±ºò£¬ibdata1ÎÄ¼ş²»»á×Ô¶¯ÊÕËõ£¬µ¥¸öÊı¾İ¿âµÄ±¸·İÒ²½«³ÉÎªÎÊÌâ¡£Í¨³£Ö»ÄÜ½«Êı¾İÊ¹ÓÃmysqldump µ¼³ö£¬È»ºóÔÙµ¼Èë½â¾öÕâ¸öÎÊÌâ¡£¹²Ïí±í¿Õ¼äÔÚInsert²Ù×÷ÉÏÉÙÓĞÓÅÊÆ¡£ÆäËü¶¼Ã»¶ÀÁ¢±í¿Õ¼ä±íÏÖºÃ¡£µ±ÆôÓÃ¶ÀÁ¢±í¿Õ¼äÊ±£¬ÇëºÏÀíµ÷ÕûÒ» ÏÂinnodb_open_files µÄÖµ¡£
+      é‚£ä¹ˆè¿™æ ·åšæœ‰ä»€ä¹ˆå¥½å¤„å‘¢ï¼Ÿ
+      å¯ä»¥å®ç°å•è¡¨åœ¨ä¸åŒçš„æ•°æ®åº“ä¹‹é—´ç§»åŠ¨ã€‚å…·ä½“æ€ä¹ˆç§»åŠ¨å‘¢ï¼Ÿå‡è®¾æœ‰ä¸¤ä¸ªæ•°æ®åº“ï¼Œä¸€ä¸ªtestï¼Œä¸€ä¸ªttã€‚
+      InnoDB é»˜è®¤ä¼šå°†æ‰€æœ‰çš„æ•°æ®åº“InnoDBå¼•æ“çš„è¡¨æ•°æ®å­˜å‚¨åœ¨ä¸€ä¸ªå…±äº«ç©ºé—´ä¸­ï¼šibdata1ï¼Œè¿™æ ·å°±æ„Ÿè§‰ä¸çˆ½ï¼Œå¢åˆ æ•°æ®åº“çš„æ—¶å€™ï¼Œibdata1æ–‡ä»¶ä¸ä¼šè‡ªåŠ¨æ”¶ç¼©ï¼Œå•ä¸ªæ•°æ®åº“çš„å¤‡ä»½ä¹Ÿå°†æˆä¸ºé—®é¢˜ã€‚é€šå¸¸åªèƒ½å°†æ•°æ®ä½¿ç”¨mysqldump å¯¼å‡ºï¼Œç„¶åå†å¯¼å…¥è§£å†³è¿™ä¸ªé—®é¢˜ã€‚å…±äº«è¡¨ç©ºé—´åœ¨Insertæ“ä½œä¸Šå°‘æœ‰ä¼˜åŠ¿ã€‚å…¶å®ƒéƒ½æ²¡ç‹¬ç«‹è¡¨ç©ºé—´è¡¨ç°å¥½ã€‚å½“å¯ç”¨ç‹¬ç«‹è¡¨ç©ºé—´æ—¶ï¼Œè¯·åˆç†è°ƒæ•´ä¸€ ä¸‹innodb_open_files çš„å€¼ã€‚
 -------------------------------------------------------------------------------
-ĞèÒªËµÃ÷µÄÊÇ£º
-1¡¢ÉèÖÃÁË¶ÀÁ¢±í¿Õ¼äÖ®ºó£¬Èç¹û¸Ä³ÉÁË¹²Ïí±í¿Õ¼ä£¬ÄÇÃ´£¬´ËÊ±Èç¹ûÖ´ĞĞ±íµÄ²åÈë²Ù×÷£¬Êı¾İ»á´æ·ÅÔÚÄÄÀïÄØ£¿
-¶ÔÓÚÖ®Ç°ÒÑ¾­´æÔÚÁËµÄ±í£¬»¹ÊÇ´æ·ÅÔÚ¶ÀÁ¢±í¿Õ¼ä¡£¶ÔÓÚĞÂ½¨µÄ±í£¬¾Í»á´æ·ÅÔÚ¹²Ïí±í¿Õ¼äÁË¡£
-2¡¢Èç¹ûÒ»¿ªÊ¼ÓÃÁË¶ÀÁ¢±í¿Õ¼ä£¬ºóÀ´¸ÄÁËinnodb_file_per_table±äÁ¿µÄÖµ£¬¸Ä³É¶ÀÁ¢±í¿Õ¼äÁË£¬ÄÇÃ´Êı¾İÈçºÎ´æ´¢£¿
-¶ÔÓÚÒÑ¾­´æÔÚÁËµÄinnodbÒıÇæµÄ±íÀ´Ëµ£¬Êı¾İ»¹ÊÇ´æ·ÅÔÚ¹²Ïí±í¿Õ¼äµÄ£¬¶ø´ËÊ±Èç¹û´´½¨ÁËĞÂµÄ±í£¬ÄÇÃ´¾Í»áÔÚÊı¾İ¿âµÄÄ¿Â¼ÖĞ¶à³öÒ»¸ö.ibdµÄÎÄ¼şÓÃÓÚ´æ´¢Õâ¸öĞÂ±íµÄÊı¾İ¡£
-×Ü½áÉÏÃæµÄ1¡¢2£¬¾ÍÊÇ£ºÔ­À´µÄ»¹ÊÇ°´ÕÕÔ­À´µÄ·½Ê½´æ´¢¡£ĞÂµÄ±í°´ÕÕĞÂµÄ¹æÔòÀ´´æ´¢¡£
-µÚÒ»£¬¹²Ïí±í¿Õ¼äÊÇÓÀÔ¶´æÔÚµÄ£¬¼´Ê¹ÄãÉèÖÃÁËinnodb_file_per_table=1.ÒòÎªÓĞĞ©Êı¾İÓÀÔ¶ÊÇ·ÅÔÚ¹²Ïí±í¿Õ¼äÀïÃæµÄ£¬¾ßÌåÄÄĞ©È¥ÊÖ²áÀïÃæ²é¡£
-µÚ¶ş£¬Ö®Ç°Ã»ÉèÖÃ¶ÀÁ¢±í¿Õ¼äµÄ±í£¬¼´Ê¹ºóÃæÉèÎª¶ÀÁ¢±í¿Õ¼ä£¬µ«ÊÇÊı¾İÈÔÈ»´æÔÚ¹¦Ğ§±í¿Õ¼äÀïÃæ¡£¶øĞÂ´´½¨µÄ±íµÄÊı¾İµ±È»ÊÇ´æÔÚ¶ÀÁ¢±í¿Õ¼äÀïÃæ¡£
-µÚÈı£¬alter±íµÄÔ­ÀíÊµ¼ÊÉÏÊÇÏÈÉú³ÉÒ»¸öĞÂµÄ±í£¬È»ºóÉ¾³ıÔ­À´µÄ±í£¬È»ºó½«ĞÂµÄ±íÖØÃüÃûÎªÒÔÇ°µÄÄÇ¸ö±íÃû¡£Òò´Ë¾ÍÏàµ±ÓÚĞÂ´´½¨ÁË±íÒ»Ñù£¬ËùÒÔÊÇ´æÔÚ¶ÀÁ¢±í¿Õ¼äÀïÃæ¡£
-¹²Ïí±í¿Õ¼ä·½Ê½
-ÓÉÓÚÊÇÄ¬ÈÏµÄ·½Ê½£¬¾ÍÔİÇÒÀí½âÎªMysql¹Ù·½ÍÆ¼öµÄ·½Ê½¡£Ïà¶Ô¶øÑÔËùÓĞµÄÊı¾İ¶¼ÔÚÒ»¸ö£¨»ò¼¸¸ö£©ÎÄ¼şÖĞ£¬±È½ÏÀûÓÚ¹ÜÀí£¬¶øÇÒÔÚ²Ù×÷µÄÊ±ºòÖ»ĞèÒªopenÕâÒ»¸ö£¨»ò¼¸¸ö£©ÎÄ¼ş¼´¿É£¬Ïà¶ÔÀ´Ëµ´ú¼ÛºÜµÍ¡£
-µ«ÎÊÌâÊÇÔÚÊı¾İ´ïµ½ÒÔGÎªµ¥Î»À´¼ÆËãµÄÊ±ºòÓÅÁÓÄæ×ª¡£Ò»¸ö´óĞ¡¾ªÈËµÄÎÄ¼şºÜ²»ÀûÓÚ¹ÜÀí£¬¶øÇÒ¶ÔÓÚÒ»¸öÈç´Ë¾Ş´óµÄÎÄ¼şÀ´Ëµ£¬¶ÁĞ´ËüĞèÒªºÄ·ÑµÄ×ÊÔ´Ò»Ñù¾Ş´ó¡£¸ü¼ÓÁîÈË·Ñ½âµÄÊÇ£¬MySQL¾¹È»½«Ë÷ÒıºÍÊı¾İ±£´æÓÚÍ¬Ò»¸öÎÄ¼şÖĞ£¬Ë÷ÒıºÍÊı¾İÖ®¼äÉĞ´æÔÚ×ÊÔ´ÕùÓÃ£¬²»ÀûÓÚĞÔÄÜµÄÌáÉı¡£Äãµ±È»¿ÉÒÔÍ¨¹ıinnodb_data_file_pathµÄÅäÖÃ¹æ»®¶à¸ö±í¿Õ¼äÎÄ¼ş£¬µ«MySQLµÄÂß¼­ÊÇ¡°ÓÃÂúºóÔö¼Ó¡±£¬½ö½öÊÇÒ»¸öÎÄ¼şµÄ²ğ·Ö¶øÒÑ£¬²»ÄÜ´Ó¸ù±¾ÉÏ·ÖÀëÊı¾İºÍË÷Òı¡£
-Ö®Ç°Ôø¾­ÔâÓöµ½700GÒÔÉÏµÄ±í¿Õ¼äÎÄ¼ş£¬¶øÇÒ¸ü¼ÓÈÃÈËÓôÃÆµÄÊÇ¶ÔÓÚÈç´Ë´óµÄÎÄ¼ş»¹ÔÚÒÔÃ¿ÌìÊıGµÄÊıÁ¿Ôö¼Ó¡£ÓÉÓÚÎŞ·¨Í£»ú£¬¼´±ãÊÇ¿½±´Ò»ÏÂÒ²Òª»¨·Ñ²î²»¶àÒ»Ò¹£¬Ö»ÄÜÑÛÕöÕö¿´×ÅËü¼ÌĞøÔö´ó¶øºÁÎŞ±£ÊØ¿ÉĞĞµÄ°ì·¨¡£
-¶ÀÁ¢±í¿Õ¼ä·½Ê½
-Ïà¶Ô¶øÑÔ¶ÔÁ¢±í¿Õ¼äÃ¿¸ö±í¶¼ÓĞ¶ÀÁ¢µÄ¶à¸öÊı¾İÎÄ¼ş£¬¶øÇÒ×öµ½ÁËË÷ÒıºÍÊı¾İµÄ·ÖÀë¡£¶à¸öĞ¡ÎÄ¼şÖ®¼äºÜ·½±ãµÄÍê³É¿çÊı¾İ¿âÉõÖÁ¿çÓ²¼şµÄÊı¾İ¿½±´ºÍÇ¨ÒÆ¡£Ïà¶ÔÀ´ËµÁé»îĞÔºÜºÃ¡£
-ÕâÑù×öÍ¬Ñù´øÀ´ÁíÒ»¸ö·½ÃæµÄÎÊÌâ¡£µ±Êı¾İ¿âÖĞµÄ±íÊıÁ¿´ïµ½Ò»¶¨¼¶±ğÊ±£¬Ã¿´Î²Ù×÷ËùÉæ¼°µÄÎÄ¼ş¹ı¶à£¬Èç¹û°´ÕÕÄ¬ÈÏCentosµÄulimit -n = 1024µÄ»°£¬½ö½öÖ»ÄÜ±£Ö¤Í¬Ê±´ò¿ª256¸ö±íÒÔÄÚ£¬ÕâÔÚÏ°¹ßÉÏ¡°²ğ¿â²ğ±í¡±µÄMySQLÊı¾İ½á¹¹ÉÏºÜÄÑ´ïµ½ÒªÇó¡£ÉĞÇÒÕâÖÖÊı¾İÎÄ¼şµÄÀûÓÃÂÊ²»ËãºÜ¸ß£¬µ±´óÁ¿¡°²»¸ß¡±µÄÎÄ¼ş¼¯ÖĞÆğÀ´£¬ÀË·ÑµÄ¿Õ¼äÒ²ºÜ¾ªÈË£¬¸üºÎ¿ö×îºó¿ÉÄÜ³öÏÖµÄ×´¿ö²»ÊÇ¡°Ò»¶ÑK¼¶±ğµÄĞ¡ÎÄ¼ş¡±¶øÊÇ¡°Ò»¶ÑG¼¶±ğµÄ´óÎÄ¼ş¡±£¬ÓĞµãÊÊµÃÆä·´µÄÒâË¼¡£Äã×ÔÈ»¿ÉÒÔÁªÏëµ½·ÖÇø±í£¬ÓÖÊÇÒ»¸ö¡°½ö½ö×öÎÄ¼ş²ğ·Ö¶øÒÑ¡±£¬¶à¸ö·ÖÇøÎÄ¼şÈ±Ò»²»¿É¡£
-Ö®Ç°Í¬ÑùÓöµ½¹ıÕâ¸öÎÊÌâ£¬MySQLÁ¬½Ó´óµÄ×´¿öÏÂ´óÁ¿µÄtimeout£¬µ«Ö÷»ú¸ºÔØ»¹Ëã¿ÉÒÔ£¬²éÁËÒ»È¦²ÅÖªµÀÊÇopen filesÏŞÖÆµÄÎÊÌâ£¬ÏŞÖÆÒ»ĞŞ¸Ä£¬¸ºÔØ±äµÃ¾ªÈË£¬µ«Á¬½ÓÊıÈ´ÓÖÌáÉıµÄ²»¶à¡£
-×ÜÖ®£¬Á½ÖÖ·½·¨¸÷ÓĞËù³¤£¬²¿·Ö»¥²¹£¬µ«¶¼²»ÊÇ½â¾öÎÊÌâµÄÖÕ¼«·½°¸¡£ÆÚ´ıMySQLÄÜ¹»³öÏÖÕæÕıÒâÒåÉÏ±í¿Õ¼äµÄ¸ÅÄî£¬¸ü¼Ó×ÔÓÉµÄ¹æ»®Êı¾İÎÄ¼ş¡£
+éœ€è¦è¯´æ˜çš„æ˜¯ï¼š
+1ã€è®¾ç½®äº†ç‹¬ç«‹è¡¨ç©ºé—´ä¹‹åï¼Œå¦‚æœæ”¹æˆäº†å…±äº«è¡¨ç©ºé—´ï¼Œé‚£ä¹ˆï¼Œæ­¤æ—¶å¦‚æœæ‰§è¡Œè¡¨çš„æ’å…¥æ“ä½œï¼Œæ•°æ®ä¼šå­˜æ”¾åœ¨å“ªé‡Œå‘¢ï¼Ÿ
+å¯¹äºä¹‹å‰å·²ç»å­˜åœ¨äº†çš„è¡¨ï¼Œè¿˜æ˜¯å­˜æ”¾åœ¨ç‹¬ç«‹è¡¨ç©ºé—´ã€‚å¯¹äºæ–°å»ºçš„è¡¨ï¼Œå°±ä¼šå­˜æ”¾åœ¨å…±äº«è¡¨ç©ºé—´äº†ã€‚
+2ã€å¦‚æœä¸€å¼€å§‹ç”¨äº†ç‹¬ç«‹è¡¨ç©ºé—´ï¼Œåæ¥æ”¹äº†innodb_file_per_tableå˜é‡çš„å€¼ï¼Œæ”¹æˆç‹¬ç«‹è¡¨ç©ºé—´äº†ï¼Œé‚£ä¹ˆæ•°æ®å¦‚ä½•å­˜å‚¨ï¼Ÿ
+å¯¹äºå·²ç»å­˜åœ¨äº†çš„innodbå¼•æ“çš„è¡¨æ¥è¯´ï¼Œæ•°æ®è¿˜æ˜¯å­˜æ”¾åœ¨å…±äº«è¡¨ç©ºé—´çš„ï¼Œè€Œæ­¤æ—¶å¦‚æœåˆ›å»ºäº†æ–°çš„è¡¨ï¼Œé‚£ä¹ˆå°±ä¼šåœ¨æ•°æ®åº“çš„ç›®å½•ä¸­å¤šå‡ºä¸€ä¸ª.ibdçš„æ–‡ä»¶ç”¨äºå­˜å‚¨è¿™ä¸ªæ–°è¡¨çš„æ•°æ®ã€‚
+æ€»ç»“ä¸Šé¢çš„1ã€2ï¼Œå°±æ˜¯ï¼šåŸæ¥çš„è¿˜æ˜¯æŒ‰ç…§åŸæ¥çš„æ–¹å¼å­˜å‚¨ã€‚æ–°çš„è¡¨æŒ‰ç…§æ–°çš„è§„åˆ™æ¥å­˜å‚¨ã€‚
+ç¬¬ä¸€ï¼Œå…±äº«è¡¨ç©ºé—´æ˜¯æ°¸è¿œå­˜åœ¨çš„ï¼Œå³ä½¿ä½ è®¾ç½®äº†innodb_file_per_table=1.å› ä¸ºæœ‰äº›æ•°æ®æ°¸è¿œæ˜¯æ”¾åœ¨å…±äº«è¡¨ç©ºé—´é‡Œé¢çš„ï¼Œå…·ä½“å“ªäº›å»æ‰‹å†Œé‡Œé¢æŸ¥ã€‚
+ç¬¬äºŒï¼Œä¹‹å‰æ²¡è®¾ç½®ç‹¬ç«‹è¡¨ç©ºé—´çš„è¡¨ï¼Œå³ä½¿åé¢è®¾ä¸ºç‹¬ç«‹è¡¨ç©ºé—´ï¼Œä½†æ˜¯æ•°æ®ä»ç„¶å­˜åœ¨åŠŸæ•ˆè¡¨ç©ºé—´é‡Œé¢ã€‚è€Œæ–°åˆ›å»ºçš„è¡¨çš„æ•°æ®å½“ç„¶æ˜¯å­˜åœ¨ç‹¬ç«‹è¡¨ç©ºé—´é‡Œé¢ã€‚
+ç¬¬ä¸‰ï¼Œalterè¡¨çš„åŸç†å®é™…ä¸Šæ˜¯å…ˆç”Ÿæˆä¸€ä¸ªæ–°çš„è¡¨ï¼Œç„¶ååˆ é™¤åŸæ¥çš„è¡¨ï¼Œç„¶åå°†æ–°çš„è¡¨é‡å‘½åä¸ºä»¥å‰çš„é‚£ä¸ªè¡¨åã€‚å› æ­¤å°±ç›¸å½“äºæ–°åˆ›å»ºäº†è¡¨ä¸€æ ·ï¼Œæ‰€ä»¥æ˜¯å­˜åœ¨ç‹¬ç«‹è¡¨ç©ºé—´é‡Œé¢ã€‚
+å…±äº«è¡¨ç©ºé—´æ–¹å¼
+ç”±äºæ˜¯é»˜è®¤çš„æ–¹å¼ï¼Œå°±æš‚ä¸”ç†è§£ä¸ºMysqlå®˜æ–¹æ¨èçš„æ–¹å¼ã€‚ç›¸å¯¹è€Œè¨€æ‰€æœ‰çš„æ•°æ®éƒ½åœ¨ä¸€ä¸ªï¼ˆæˆ–å‡ ä¸ªï¼‰æ–‡ä»¶ä¸­ï¼Œæ¯”è¾ƒåˆ©äºç®¡ç†ï¼Œè€Œä¸”åœ¨æ“ä½œçš„æ—¶å€™åªéœ€è¦openè¿™ä¸€ä¸ªï¼ˆæˆ–å‡ ä¸ªï¼‰æ–‡ä»¶å³å¯ï¼Œç›¸å¯¹æ¥è¯´ä»£ä»·å¾ˆä½ã€‚
+ä½†é—®é¢˜æ˜¯åœ¨æ•°æ®è¾¾åˆ°ä»¥Gä¸ºå•ä½æ¥è®¡ç®—çš„æ—¶å€™ä¼˜åŠ£é€†è½¬ã€‚ä¸€ä¸ªå¤§å°æƒŠäººçš„æ–‡ä»¶å¾ˆä¸åˆ©äºç®¡ç†ï¼Œè€Œä¸”å¯¹äºä¸€ä¸ªå¦‚æ­¤å·¨å¤§çš„æ–‡ä»¶æ¥è¯´ï¼Œè¯»å†™å®ƒéœ€è¦è€—è´¹çš„èµ„æºä¸€æ ·å·¨å¤§ã€‚æ›´åŠ ä»¤äººè´¹è§£çš„æ˜¯ï¼ŒMySQLç«Ÿç„¶å°†ç´¢å¼•å’Œæ•°æ®ä¿å­˜äºåŒä¸€ä¸ªæ–‡ä»¶ä¸­ï¼Œç´¢å¼•å’Œæ•°æ®ä¹‹é—´å°šå­˜åœ¨èµ„æºäº‰ç”¨ï¼Œä¸åˆ©äºæ€§èƒ½çš„æå‡ã€‚ä½ å½“ç„¶å¯ä»¥é€šè¿‡innodb_data_file_pathçš„é…ç½®è§„åˆ’å¤šä¸ªè¡¨ç©ºé—´æ–‡ä»¶ï¼Œä½†MySQLçš„é€»è¾‘æ˜¯â€œç”¨æ»¡åå¢åŠ â€ï¼Œä»…ä»…æ˜¯ä¸€ä¸ªæ–‡ä»¶çš„æ‹†åˆ†è€Œå·²ï¼Œä¸èƒ½ä»æ ¹æœ¬ä¸Šåˆ†ç¦»æ•°æ®å’Œç´¢å¼•ã€‚
+ä¹‹å‰æ›¾ç»é­é‡åˆ°700Gä»¥ä¸Šçš„è¡¨ç©ºé—´æ–‡ä»¶ï¼Œè€Œä¸”æ›´åŠ è®©äººéƒé—·çš„æ˜¯å¯¹äºå¦‚æ­¤å¤§çš„æ–‡ä»¶è¿˜åœ¨ä»¥æ¯å¤©æ•°Gçš„æ•°é‡å¢åŠ ã€‚ç”±äºæ— æ³•åœæœºï¼Œå³ä¾¿æ˜¯æ‹·è´ä¸€ä¸‹ä¹Ÿè¦èŠ±è´¹å·®ä¸å¤šä¸€å¤œï¼Œåªèƒ½çœ¼çççœ‹ç€å®ƒç»§ç»­å¢å¤§è€Œæ¯«æ— ä¿å®ˆå¯è¡Œçš„åŠæ³•ã€‚
+ç‹¬ç«‹è¡¨ç©ºé—´æ–¹å¼
+ç›¸å¯¹è€Œè¨€å¯¹ç«‹è¡¨ç©ºé—´æ¯ä¸ªè¡¨éƒ½æœ‰ç‹¬ç«‹çš„å¤šä¸ªæ•°æ®æ–‡ä»¶ï¼Œè€Œä¸”åšåˆ°äº†ç´¢å¼•å’Œæ•°æ®çš„åˆ†ç¦»ã€‚å¤šä¸ªå°æ–‡ä»¶ä¹‹é—´å¾ˆæ–¹ä¾¿çš„å®Œæˆè·¨æ•°æ®åº“ç”šè‡³è·¨ç¡¬ä»¶çš„æ•°æ®æ‹·è´å’Œè¿ç§»ã€‚ç›¸å¯¹æ¥è¯´çµæ´»æ€§å¾ˆå¥½ã€‚
+è¿™æ ·åšåŒæ ·å¸¦æ¥å¦ä¸€ä¸ªæ–¹é¢çš„é—®é¢˜ã€‚å½“æ•°æ®åº“ä¸­çš„è¡¨æ•°é‡è¾¾åˆ°ä¸€å®šçº§åˆ«æ—¶ï¼Œæ¯æ¬¡æ“ä½œæ‰€æ¶‰åŠçš„æ–‡ä»¶è¿‡å¤šï¼Œå¦‚æœæŒ‰ç…§é»˜è®¤Centosçš„ulimit -n = 1024çš„è¯ï¼Œä»…ä»…åªèƒ½ä¿è¯åŒæ—¶æ‰“å¼€256ä¸ªè¡¨ä»¥å†…ï¼Œè¿™åœ¨ä¹ æƒ¯ä¸Šâ€œæ‹†åº“æ‹†è¡¨â€çš„MySQLæ•°æ®ç»“æ„ä¸Šå¾ˆéš¾è¾¾åˆ°è¦æ±‚ã€‚å°šä¸”è¿™ç§æ•°æ®æ–‡ä»¶çš„åˆ©ç”¨ç‡ä¸ç®—å¾ˆé«˜ï¼Œå½“å¤§é‡â€œä¸é«˜â€çš„æ–‡ä»¶é›†ä¸­èµ·æ¥ï¼Œæµªè´¹çš„ç©ºé—´ä¹Ÿå¾ˆæƒŠäººï¼Œæ›´ä½•å†µæœ€åå¯èƒ½å‡ºç°çš„çŠ¶å†µä¸æ˜¯â€œä¸€å †Kçº§åˆ«çš„å°æ–‡ä»¶â€è€Œæ˜¯â€œä¸€å †Gçº§åˆ«çš„å¤§æ–‡ä»¶â€ï¼Œæœ‰ç‚¹é€‚å¾—å…¶åçš„æ„æ€ã€‚ä½ è‡ªç„¶å¯ä»¥è”æƒ³åˆ°åˆ†åŒºè¡¨ï¼Œåˆæ˜¯ä¸€ä¸ªâ€œä»…ä»…åšæ–‡ä»¶æ‹†åˆ†è€Œå·²â€ï¼Œå¤šä¸ªåˆ†åŒºæ–‡ä»¶ç¼ºä¸€ä¸å¯ã€‚
+ä¹‹å‰åŒæ ·é‡åˆ°è¿‡è¿™ä¸ªé—®é¢˜ï¼ŒMySQLè¿æ¥å¤§çš„çŠ¶å†µä¸‹å¤§é‡çš„timeoutï¼Œä½†ä¸»æœºè´Ÿè½½è¿˜ç®—å¯ä»¥ï¼ŒæŸ¥äº†ä¸€åœˆæ‰çŸ¥é“æ˜¯open filesé™åˆ¶çš„é—®é¢˜ï¼Œé™åˆ¶ä¸€ä¿®æ”¹ï¼Œè´Ÿè½½å˜å¾—æƒŠäººï¼Œä½†è¿æ¥æ•°å´åˆæå‡çš„ä¸å¤šã€‚
+æ€»ä¹‹ï¼Œä¸¤ç§æ–¹æ³•å„æœ‰æ‰€é•¿ï¼Œéƒ¨åˆ†äº’è¡¥ï¼Œä½†éƒ½ä¸æ˜¯è§£å†³é—®é¢˜çš„ç»ˆææ–¹æ¡ˆã€‚æœŸå¾…MySQLèƒ½å¤Ÿå‡ºç°çœŸæ­£æ„ä¹‰ä¸Šè¡¨ç©ºé—´çš„æ¦‚å¿µï¼Œæ›´åŠ è‡ªç”±çš„è§„åˆ’æ•°æ®æ–‡ä»¶ã€‚
 
-Ò»¡¢       mysql·ÖÇø¼ò½é
-Êı¾İ¿â·ÖÇø
-Êı¾İ¿â·ÖÇøÊÇÒ»ÖÖÎïÀíÊı¾İ¿âÉè¼Æ¼¼Êõ¡£ËäÈ»·ÖÇø¼¼Êõ¿ÉÒÔÊµÏÖºÜ¶àĞ§¹û£¬µ«ÆäÖ÷ÒªÄ¿µÄÊÇÎªÁËÔÚÌØ¶¨µÄSQL²Ù×÷ÖĞ¼õÉÙÊı¾İ¶ÁĞ´µÄ×ÜÁ¿ÒÔËõ¼õsqlÓï¾äµÄÏìÓ¦Ê±¼ä£¬Í¬Ê±¶ÔÓÚÓ¦ÓÃÀ´Ëµ·ÖÇøÍêÈ«ÊÇÍ¸Ã÷µÄ¡£
-MYSQLµÄ·ÖÇøÖ÷ÒªÓĞÁ½ÖÖĞÎÊ½£ºË®Æ½·ÖÇøºÍ´¹Ö±·ÖÇø
+ä¸€ã€       mysqlåˆ†åŒºç®€ä»‹
+æ•°æ®åº“åˆ†åŒº
+æ•°æ®åº“åˆ†åŒºæ˜¯ä¸€ç§ç‰©ç†æ•°æ®åº“è®¾è®¡æŠ€æœ¯ã€‚è™½ç„¶åˆ†åŒºæŠ€æœ¯å¯ä»¥å®ç°å¾ˆå¤šæ•ˆæœï¼Œä½†å…¶ä¸»è¦ç›®çš„æ˜¯ä¸ºäº†åœ¨ç‰¹å®šçš„SQLæ“ä½œä¸­å‡å°‘æ•°æ®è¯»å†™çš„æ€»é‡ä»¥ç¼©å‡sqlè¯­å¥çš„å“åº”æ—¶é—´ï¼ŒåŒæ—¶å¯¹äºåº”ç”¨æ¥è¯´åˆ†åŒºå®Œå…¨æ˜¯é€æ˜çš„ã€‚
+MYSQLçš„åˆ†åŒºä¸»è¦æœ‰ä¸¤ç§å½¢å¼ï¼šæ°´å¹³åˆ†åŒºå’Œå‚ç›´åˆ†åŒº
  
-Ë®Æ½·ÖÇø£¨HorizontalPartitioning£©
-ÕâÖÖĞÎÊ½µÄ·ÖÇøÊÇ¶Ô¸ù¾İ±íµÄĞĞ½øĞĞ·ÖÇø£¬Í¨¹ıÕâÑùµÄ·½Ê½²»Í¬·Ö×éÀïÃæµÄÎïÀíÁĞ·Ö¸îµÄÊı¾İ¼¯µÃÒÔ×éºÏ£¬´Ó¶ø½øĞĞ¸öÌå·Ö¸î£¨µ¥·ÖÇø£©»ò¼¯Ìå·Ö¸î£¨1¸ö»ò¶à¸ö·ÖÇø£©¡£
-ËùÓĞÔÚ±íÖĞ¶¨ÒåµÄÁĞÔÚÃ¿¸öÊı¾İ¼¯ÖĞ¶¼ÄÜÕÒµ½£¬ËùÒÔ±íµÄÌØĞÔÒÀÈ»µÃÒÔ±£³Ö¡£Ë®Æ½·ÖÇøÒ»¶¨ÒªÍ¨¹ıÄ³¸öÊôĞÔÁĞÀ´·Ö¸î¡£³£¼ûµÄ±ÈÈçÄê·İ£¬ÈÕÆÚµÈ¡£
+æ°´å¹³åˆ†åŒºï¼ˆHorizontalPartitioningï¼‰
+è¿™ç§å½¢å¼çš„åˆ†åŒºæ˜¯å¯¹æ ¹æ®è¡¨çš„è¡Œè¿›è¡Œåˆ†åŒºï¼Œé€šè¿‡è¿™æ ·çš„æ–¹å¼ä¸åŒåˆ†ç»„é‡Œé¢çš„ç‰©ç†åˆ—åˆ†å‰²çš„æ•°æ®é›†å¾—ä»¥ç»„åˆï¼Œä»è€Œè¿›è¡Œä¸ªä½“åˆ†å‰²ï¼ˆå•åˆ†åŒºï¼‰æˆ–é›†ä½“åˆ†å‰²ï¼ˆ1ä¸ªæˆ–å¤šä¸ªåˆ†åŒºï¼‰ã€‚
+æ‰€æœ‰åœ¨è¡¨ä¸­å®šä¹‰çš„åˆ—åœ¨æ¯ä¸ªæ•°æ®é›†ä¸­éƒ½èƒ½æ‰¾åˆ°ï¼Œæ‰€ä»¥è¡¨çš„ç‰¹æ€§ä¾ç„¶å¾—ä»¥ä¿æŒã€‚æ°´å¹³åˆ†åŒºä¸€å®šè¦é€šè¿‡æŸä¸ªå±æ€§åˆ—æ¥åˆ†å‰²ã€‚å¸¸è§çš„æ¯”å¦‚å¹´ä»½ï¼Œæ—¥æœŸç­‰ã€‚
  
-´¹Ö±·ÖÇø£¨VerticalPartitioning£©
-ÕâÖÖ·ÖÇø·½Ê½Ò»°ãÀ´ËµÊÇÍ¨¹ı¶Ô±íµÄ´¹Ö±»®·ÖÀ´¼õÉÙÄ¿±ê±íµÄ¿í¶È£¬Ê¹Ä³Ğ©ÌØ¶¨µÄÁĞ±»»®·Öµ½ÌØ¶¨µÄ·ÖÇø£¬Ã¿¸ö·ÖÇø¶¼°üº¬ÁËÆäÖĞµÄÁĞËù¶ÔÓ¦ËùÓĞĞĞ¡£
-¿ÉÒÔÓÃ  showvariables like '%partition%';
-ÃüÁî²éÑ¯µ±Ç°µÄmysqlÊı¾İ¿â°æ±¾ÊÇ·ñÖ§³Ö·ÖÇø¡£
-·ÖÇøµÄ×÷ÓÃ£ºÊı¾İ¿âĞÔÄÜµÄÌáÉıºÍ¼ò»¯Êı¾İ¹ÜÀí
-ÔÚÉ¨Ãè²Ù×÷ÖĞ£¬mysqlÓÅ»¯Æ÷Ö»É¨Ãè±£»¤Êı¾İµÄÄÇ¸ö·ÖÇøÒÔ¼õÉÙÉ¨Ãè·¶Î§»ñµÃĞÔÄÜµÄÌá¸ß¡£
-·ÖÇø¼¼ÊõÊ¹µÃÊı¾İ¹ÜÀí±äµÃ¼òµ¥£¬É¾³ıÄ³¸ö·ÖÇø²»»á¶ÔÁíÍâµÄ·ÖÇøÔì³ÉÓ°Ïì£¬·ÖÇøÓĞÏµÍ³Ö±½Ó¹ÜÀí²»ÓÃÊÖ¹¤¸ÉÔ¤¡£
-mysql´Ó5.1°æ±¾¿ªÊ¼Ö§³Ö·ÖÇø¡£Ã¿¸ö·ÖÇøµÄÃû³ÆÊÇ²»Çø·Ö´óĞ¡Ğ´¡£Í¬¸ö±íÖĞµÄ·ÖÇø±íÃû³ÆÒªÎ¨Ò»¡£
-¶ş¡¢       mysql·ÖÇøÀàĞÍ
-¸ù¾İËùÊ¹ÓÃµÄ²»Í¬·ÖÇø¹æÔò¿ÉÒÔ·Ö³É¼¸´ó·ÖÇøÀàĞÍ¡£
-RANGE ·ÖÇø£º
-»ùÓÚÊôÓÚÒ»¸ö¸ø¶¨Á¬ĞøÇø¼äµÄÁĞÖµ£¬°Ñ¶àĞĞ·ÖÅä¸ø·ÖÇø¡£
-LIST ·ÖÇø£º
-ÀàËÆÓÚ°´RANGE·ÖÇø£¬Çø±ğÔÚÓÚLIST·ÖÇøÊÇ»ùÓÚÁĞÖµÆ¥ÅäÒ»¸öÀëÉ¢Öµ¼¯ºÏÖĞµÄÄ³¸öÖµÀ´½øĞĞÑ¡Ôñ¡£
-HASH·ÖÇø£º
-»ùÓÚÓÃ»§¶¨ÒåµÄ±í´ïÊ½µÄ·µ»ØÖµÀ´½øĞĞÑ¡ÔñµÄ·ÖÇø£¬¸Ã±í´ïÊ½Ê¹ÓÃ½«Òª²åÈëµ½±íÖĞµÄÕâĞ©ĞĞµÄÁĞÖµ½øĞĞ¼ÆËã¡£Õâ¸öº¯Êı¿ÉÒÔ°üº¬MySQLÖĞÓĞĞ§µÄ¡¢²úÉú·Ç¸ºÕûÊıÖµµÄÈÎºÎ±í´ïÊ½¡£
+å‚ç›´åˆ†åŒºï¼ˆVerticalPartitioningï¼‰
+è¿™ç§åˆ†åŒºæ–¹å¼ä¸€èˆ¬æ¥è¯´æ˜¯é€šè¿‡å¯¹è¡¨çš„å‚ç›´åˆ’åˆ†æ¥å‡å°‘ç›®æ ‡è¡¨çš„å®½åº¦ï¼Œä½¿æŸäº›ç‰¹å®šçš„åˆ—è¢«åˆ’åˆ†åˆ°ç‰¹å®šçš„åˆ†åŒºï¼Œæ¯ä¸ªåˆ†åŒºéƒ½åŒ…å«äº†å…¶ä¸­çš„åˆ—æ‰€å¯¹åº”æ‰€æœ‰è¡Œã€‚
+å¯ä»¥ç”¨  showvariables like '%partition%';
+å‘½ä»¤æŸ¥è¯¢å½“å‰çš„mysqlæ•°æ®åº“ç‰ˆæœ¬æ˜¯å¦æ”¯æŒåˆ†åŒºã€‚
+åˆ†åŒºçš„ä½œç”¨ï¼šæ•°æ®åº“æ€§èƒ½çš„æå‡å’Œç®€åŒ–æ•°æ®ç®¡ç†
+åœ¨æ‰«ææ“ä½œä¸­ï¼Œmysqlä¼˜åŒ–å™¨åªæ‰«æä¿æŠ¤æ•°æ®çš„é‚£ä¸ªåˆ†åŒºä»¥å‡å°‘æ‰«æèŒƒå›´è·å¾—æ€§èƒ½çš„æé«˜ã€‚
+åˆ†åŒºæŠ€æœ¯ä½¿å¾—æ•°æ®ç®¡ç†å˜å¾—ç®€å•ï¼Œåˆ é™¤æŸä¸ªåˆ†åŒºä¸ä¼šå¯¹å¦å¤–çš„åˆ†åŒºé€ æˆå½±å“ï¼Œåˆ†åŒºæœ‰ç³»ç»Ÿç›´æ¥ç®¡ç†ä¸ç”¨æ‰‹å·¥å¹²é¢„ã€‚
+mysqlä»5.1ç‰ˆæœ¬å¼€å§‹æ”¯æŒåˆ†åŒºã€‚æ¯ä¸ªåˆ†åŒºçš„åç§°æ˜¯ä¸åŒºåˆ†å¤§å°å†™ã€‚åŒä¸ªè¡¨ä¸­çš„åˆ†åŒºè¡¨åç§°è¦å”¯ä¸€ã€‚
+äºŒã€       mysqlåˆ†åŒºç±»å‹
+æ ¹æ®æ‰€ä½¿ç”¨çš„ä¸åŒåˆ†åŒºè§„åˆ™å¯ä»¥åˆ†æˆå‡ å¤§åˆ†åŒºç±»å‹ã€‚
+RANGE åˆ†åŒºï¼š
+åŸºäºå±äºä¸€ä¸ªç»™å®šè¿ç»­åŒºé—´çš„åˆ—å€¼ï¼ŒæŠŠå¤šè¡Œåˆ†é…ç»™åˆ†åŒºã€‚
+LIST åˆ†åŒºï¼š
+ç±»ä¼¼äºæŒ‰RANGEåˆ†åŒºï¼ŒåŒºåˆ«åœ¨äºLISTåˆ†åŒºæ˜¯åŸºäºåˆ—å€¼åŒ¹é…ä¸€ä¸ªç¦»æ•£å€¼é›†åˆä¸­çš„æŸä¸ªå€¼æ¥è¿›è¡Œé€‰æ‹©ã€‚
+HASHåˆ†åŒºï¼š
+åŸºäºç”¨æˆ·å®šä¹‰çš„è¡¨è¾¾å¼çš„è¿”å›å€¼æ¥è¿›è¡Œé€‰æ‹©çš„åˆ†åŒºï¼Œè¯¥è¡¨è¾¾å¼ä½¿ç”¨å°†è¦æ’å…¥åˆ°è¡¨ä¸­çš„è¿™äº›è¡Œçš„åˆ—å€¼è¿›è¡Œè®¡ç®—ã€‚è¿™ä¸ªå‡½æ•°å¯ä»¥åŒ…å«MySQLä¸­æœ‰æ•ˆçš„ã€äº§ç”Ÿéè´Ÿæ•´æ•°å€¼çš„ä»»ä½•è¡¨è¾¾å¼ã€‚
 KEY
-·ÖÇø£ºÀàËÆÓÚ°´HASH·ÖÇø£¬Çø±ğÔÚÓÚKEY·ÖÇøÖ»Ö§³Ö¼ÆËãÒ»ÁĞ»ò¶àÁĞ£¬ÇÒMySQL·şÎñÆ÷Ìá¹©Æä×ÔÉíµÄ¹şÏ£º¯Êı¡£±ØĞëÓĞÒ»ÁĞ»ò¶àÁĞ°üº¬ÕûÊıÖµ¡£
-¸´ºÏ·ÖÇø£º
-»ùÓÚRANGE/LIST ÀàĞÍµÄ·ÖÇø±íÖĞÃ¿¸ö·ÖÇøµÄÔÙ´Î·Ö¸î¡£×Ó·ÖÇø¿ÉÒÔÊÇ HASH/KEY µÈÀàĞÍ¡£
+åˆ†åŒºï¼šç±»ä¼¼äºæŒ‰HASHåˆ†åŒºï¼ŒåŒºåˆ«åœ¨äºKEYåˆ†åŒºåªæ”¯æŒè®¡ç®—ä¸€åˆ—æˆ–å¤šåˆ—ï¼Œä¸”MySQLæœåŠ¡å™¨æä¾›å…¶è‡ªèº«çš„å“ˆå¸Œå‡½æ•°ã€‚å¿…é¡»æœ‰ä¸€åˆ—æˆ–å¤šåˆ—åŒ…å«æ•´æ•°å€¼ã€‚
+å¤åˆåˆ†åŒºï¼š
+åŸºäºRANGE/LIST ç±»å‹çš„åˆ†åŒºè¡¨ä¸­æ¯ä¸ªåˆ†åŒºçš„å†æ¬¡åˆ†å‰²ã€‚å­åˆ†åŒºå¯ä»¥æ˜¯ HASH/KEY ç­‰ç±»å‹ã€‚
  
-Èı¡¢       mysql·ÖÇø±í³£ÓÃ²Ù×÷Ê¾Àı
-ÒÔ²¿ÃÅÔ±¹¤±íÎªÀı×Ó£º
-1)       ´´½¨range·ÖÇø
+ä¸‰ã€       mysqlåˆ†åŒºè¡¨å¸¸ç”¨æ“ä½œç¤ºä¾‹
+ä»¥éƒ¨é—¨å‘˜å·¥è¡¨ä¸ºä¾‹å­ï¼š
+1)       åˆ›å»ºrangeåˆ†åŒº
  
 create table emp
 (empno varchar(20) not null ,
@@ -1904,7 +1904,7 @@ partition p1 values less than (1000),
 partition p2 values less than (2000),
 partition p3 values less than maxvalue
 );
-ÒÔÔ±¹¤¹¤×ÊÎªÒÀ¾İ×ö·¶Î§·ÖÇø¡£
+ä»¥å‘˜å·¥å·¥èµ„ä¸ºä¾æ®åšèŒƒå›´åˆ†åŒºã€‚
  
 create table emp
 (empno varchar(20) not null ,
@@ -1919,9 +1919,9 @@ partition p1 values less than (1980),
 partition p2 values less than (1990),
 partition p3 values less than maxvalue
 );
-ÒÔyear(birthdate)±í´ïÊ½£¨¼ÆËãÔ±¹¤µÄ³öÉúÈÕÆÚ£©×÷Îª·¶Î§·ÖÇøÒÀ¾İ¡£ÕâÀï×îÖµµÃ×¢ÒâµÄÊÇ±í´ïÊ½±ØĞëÓĞ·µ»ØÖµ¡£
+ä»¥year(birthdate)è¡¨è¾¾å¼ï¼ˆè®¡ç®—å‘˜å·¥çš„å‡ºç”Ÿæ—¥æœŸï¼‰ä½œä¸ºèŒƒå›´åˆ†åŒºä¾æ®ã€‚è¿™é‡Œæœ€å€¼å¾—æ³¨æ„çš„æ˜¯è¡¨è¾¾å¼å¿…é¡»æœ‰è¿”å›å€¼ã€‚
  
-2)       ´´½¨list·ÖÇø
+2)       åˆ›å»ºliståˆ†åŒº
  
 create table emp
 (empno  varchar(20) not null ,
@@ -1936,10 +1936,10 @@ partition p1 values in  (10),
 partition p2 values in  (20),
 partition p3 values  in  (30)
 );
-ÒÔ²¿ÃÅ×÷Îª·ÖÇøÒÀ¾İ£¬Ã¿¸ö²¿ÃÅ×öÒ»·ÖÇø¡£
+ä»¥éƒ¨é—¨ä½œä¸ºåˆ†åŒºä¾æ®ï¼Œæ¯ä¸ªéƒ¨é—¨åšä¸€åˆ†åŒºã€‚
  
-3)       ´´½¨hash·ÖÇø
-HASH·ÖÇøÖ÷ÒªÓÃÀ´È·±£Êı¾İÔÚÔ¤ÏÈÈ·¶¨ÊıÄ¿µÄ·ÖÇøÖĞÆ½¾ù·Ö²¼¡£ÔÚRANGEºÍLIST·ÖÇøÖĞ£¬±ØĞëÃ÷È·Ö¸¶¨Ò»¸ö¸ø¶¨µÄÁĞÖµ»òÁĞÖµ¼¯ºÏÓ¦¸Ã±£´æÔÚÄÄ¸ö·ÖÇøÖĞ£»¶øÔÚHASH·ÖÇøÖĞ£¬MySQL ×Ô¶¯Íê³ÉÕâĞ©¹¤×÷£¬ÄãËùÒª×öµÄÖ»ÊÇ»ùÓÚ½«Òª±»¹şÏ£µÄÁĞÖµÖ¸¶¨Ò»¸öÁĞÖµ»ò±í´ïÊ½£¬ÒÔ¼°Ö¸¶¨±»·ÖÇøµÄ±í½«Òª±»·Ö¸î³ÉµÄ·ÖÇøÊıÁ¿¡£
+3)       åˆ›å»ºhashåˆ†åŒº
+HASHåˆ†åŒºä¸»è¦ç”¨æ¥ç¡®ä¿æ•°æ®åœ¨é¢„å…ˆç¡®å®šæ•°ç›®çš„åˆ†åŒºä¸­å¹³å‡åˆ†å¸ƒã€‚åœ¨RANGEå’ŒLISTåˆ†åŒºä¸­ï¼Œå¿…é¡»æ˜ç¡®æŒ‡å®šä¸€ä¸ªç»™å®šçš„åˆ—å€¼æˆ–åˆ—å€¼é›†åˆåº”è¯¥ä¿å­˜åœ¨å“ªä¸ªåˆ†åŒºä¸­ï¼›è€Œåœ¨HASHåˆ†åŒºä¸­ï¼ŒMySQL è‡ªåŠ¨å®Œæˆè¿™äº›å·¥ä½œï¼Œä½ æ‰€è¦åšçš„åªæ˜¯åŸºäºå°†è¦è¢«å“ˆå¸Œçš„åˆ—å€¼æŒ‡å®šä¸€ä¸ªåˆ—å€¼æˆ–è¡¨è¾¾å¼ï¼Œä»¥åŠæŒ‡å®šè¢«åˆ†åŒºçš„è¡¨å°†è¦è¢«åˆ†å‰²æˆçš„åˆ†åŒºæ•°é‡ã€‚
 create table emp
 (empno varchar(20) not null ,
 empname varchar(20),
@@ -1949,8 +1949,8 @@ salary int
 )
 partition by hash(year(birthdate))
 partitions 4;
-4)       ´´½¨key·ÖÇø
-°´ÕÕKEY½øĞĞ·ÖÇøÀàËÆÓÚ°´ÕÕHASH·ÖÇø£¬³ıÁËHASH·ÖÇøÊ¹ÓÃµÄÓÃ»§¶¨ÒåµÄ±í´ïÊ½£¬¶øKEY·ÖÇøµÄ¹şÏ£º¯ÊıÊÇÓÉMySQL ·şÎñÆ÷Ìá¹©£¬·şÎñÆ÷Ê¹ÓÃÆä×Ô¼ºÄÚ²¿µÄ¹şÏ£º¯Êı£¬ÕâĞ©º¯ÊıÊÇ»ùÓÚÓëPASSWORD()Ò»ÑùµÄÔËËã·¨Ôò¡£¡°CREATE TABLE ...PARTITION BY KEY¡±µÄÓï·¨¹æÔòÀàËÆÓÚ´´½¨Ò»¸öÍ¨¹ıHASH·ÖÇøµÄ±íµÄ¹æÔò¡£ËüÃÇÎ¨Ò»µÄÇø±ğÔÚÓÚÊ¹ÓÃµÄ¹Ø¼ü×ÖÊÇKEY¶ø²»ÊÇHASH£¬²¢ÇÒKEY·ÖÇøÖ»²ÉÓÃÒ»¸ö»ò¶à¸öÁĞÃûµÄÒ»¸öÁĞ±í¡£
+4)       åˆ›å»ºkeyåˆ†åŒº
+æŒ‰ç…§KEYè¿›è¡Œåˆ†åŒºç±»ä¼¼äºæŒ‰ç…§HASHåˆ†åŒºï¼Œé™¤äº†HASHåˆ†åŒºä½¿ç”¨çš„ç”¨æˆ·å®šä¹‰çš„è¡¨è¾¾å¼ï¼Œè€ŒKEYåˆ†åŒºçš„å“ˆå¸Œå‡½æ•°æ˜¯ç”±MySQL æœåŠ¡å™¨æä¾›ï¼ŒæœåŠ¡å™¨ä½¿ç”¨å…¶è‡ªå·±å†…éƒ¨çš„å“ˆå¸Œå‡½æ•°ï¼Œè¿™äº›å‡½æ•°æ˜¯åŸºäºä¸PASSWORD()ä¸€æ ·çš„è¿ç®—æ³•åˆ™ã€‚â€œCREATE TABLE ...PARTITION BY KEYâ€çš„è¯­æ³•è§„åˆ™ç±»ä¼¼äºåˆ›å»ºä¸€ä¸ªé€šè¿‡HASHåˆ†åŒºçš„è¡¨çš„è§„åˆ™ã€‚å®ƒä»¬å”¯ä¸€çš„åŒºåˆ«åœ¨äºä½¿ç”¨çš„å…³é”®å­—æ˜¯KEYè€Œä¸æ˜¯HASHï¼Œå¹¶ä¸”KEYåˆ†åŒºåªé‡‡ç”¨ä¸€ä¸ªæˆ–å¤šä¸ªåˆ—åçš„ä¸€ä¸ªåˆ—è¡¨ã€‚
 create table emp
 (empno varchar(20) not null ,
 empname varchar(20),
@@ -1962,9 +1962,9 @@ partition by key(birthdate)
 partitions 4;
  
  
-5)       ´´½¨¸´ºÏ·ÖÇø
+5)       åˆ›å»ºå¤åˆåˆ†åŒº
  
-range - hash(·¶Î§¹şÏ£)¸´ºÏ·ÖÇø
+range - hash(èŒƒå›´å“ˆå¸Œ)å¤åˆåˆ†åŒº
  
 create table emp
 (empno varchar(20) not null ,
@@ -1980,7 +1980,7 @@ subpartitions 3
 partition p1 values less than (2000),
 partition p2 values less than maxvalue
 );
-range- key¸´ºÏ·ÖÇø
+range- keyå¤åˆåˆ†åŒº
  
 create table emp
 (empno varchar(20) not null ,
@@ -1996,7 +1996,7 @@ subpartitions 3
 partition p1 values less than (2000),
 partition p2 values less than maxvalue
 );
-list - hash¸´ºÏ·ÖÇø
+list - hashå¤åˆåˆ†åŒº
 CREATE TABLE emp (
 empno varchar(20) NOT NULL,
 empname varchar(20) ,
@@ -2012,7 +2012,7 @@ PARTITION p1 VALUES in  (10),
 PARTITION p2 VALUES in  (20)
 )
 ;
-list - key ¸´ºÏ·ÖÇø
+list - key å¤åˆåˆ†åŒº
  
 CREATE TABLE empk (
 empno varchar(20) NOT NULL,
@@ -2029,75 +2029,75 @@ PARTITION p1 VALUES in  (10),
 PARTITION p2 VALUES in  (20)
 )
 ;
-6)       ·ÖÇø±íµÄ¹ÜÀí²Ù×÷
-É¾³ı·ÖÇø:
+6)       åˆ†åŒºè¡¨çš„ç®¡ç†æ“ä½œ
+åˆ é™¤åˆ†åŒº:
 alter table emp drop partition p1;
-²»¿ÉÒÔÉ¾³ıhash»òÕßkey·ÖÇø¡£
-Ò»´ÎĞÔÉ¾³ı¶à¸ö·ÖÇø£¬alter table emp drop partition p1,p2;
+ä¸å¯ä»¥åˆ é™¤hashæˆ–è€…keyåˆ†åŒºã€‚
+ä¸€æ¬¡æ€§åˆ é™¤å¤šä¸ªåˆ†åŒºï¼Œalter table emp drop partition p1,p2;
  
-Ôö¼Ó·ÖÇø:
+å¢åŠ åˆ†åŒº:
 alter table emp add partition (partition p3 values less than (4000));
 alter table empl add partition (partition p3 values in (40));
  
-·Ö½â·ÖÇø:
-Reorganizepartition¹Ø¼ü×Ö¿ÉÒÔ¶Ô±íµÄ²¿·Ö·ÖÇø»òÈ«²¿·ÖÇø½øĞĞĞŞ¸Ä£¬²¢ÇÒ²»»á¶ªÊ§Êı¾İ¡£·Ö½âÇ°ºó·ÖÇøµÄÕûÌå·¶Î§Ó¦¸ÃÒ»ÖÂ¡£
+åˆ†è§£åˆ†åŒº:
+Reorganizepartitionå…³é”®å­—å¯ä»¥å¯¹è¡¨çš„éƒ¨åˆ†åˆ†åŒºæˆ–å…¨éƒ¨åˆ†åŒºè¿›è¡Œä¿®æ”¹ï¼Œå¹¶ä¸”ä¸ä¼šä¸¢å¤±æ•°æ®ã€‚åˆ†è§£å‰ååˆ†åŒºçš„æ•´ä½“èŒƒå›´åº”è¯¥ä¸€è‡´ã€‚
 alter table te
 reorganize partition p1 into
 (
 partition p1 values less than (100),
 partition p3 values less than (1000)
-); ----²»»á¶ªÊ§Êı¾İ
+); ----ä¸ä¼šä¸¢å¤±æ•°æ®
  
-ºÏ²¢·ÖÇø:
-Merge·ÖÇø£º°Ñ2¸ö·ÖÇøºÏ²¢ÎªÒ»¸ö¡£
+åˆå¹¶åˆ†åŒº:
+Mergeåˆ†åŒºï¼šæŠŠ2ä¸ªåˆ†åŒºåˆå¹¶ä¸ºä¸€ä¸ªã€‚
 alter table te
 reorganize partition p1,p3 into
 (partition p1 values less than (1000));
-----²»»á¶ªÊ§Êı¾İ
+----ä¸ä¼šä¸¢å¤±æ•°æ®
  
-ÖØĞÂ¶¨Òåhash·ÖÇø±í:
+é‡æ–°å®šä¹‰hashåˆ†åŒºè¡¨:
 Alter table emp partition by hash(salary)partitions 7;
-----²»»á¶ªÊ§Êı¾İ
-ÖØĞÂ¶¨Òårange·ÖÇø±í:
+----ä¸ä¼šä¸¢å¤±æ•°æ®
+é‡æ–°å®šä¹‰rangeåˆ†åŒºè¡¨:
 Alter table emp partitionbyrange(salary)
 (
 partition p1 values less than (2000),
 partition p2 values less than (4000)
-); ----²»»á¶ªÊ§Êı¾İ
+); ----ä¸ä¼šä¸¢å¤±æ•°æ®
  
-É¾³ı±íµÄËùÓĞ·ÖÇø:
+åˆ é™¤è¡¨çš„æ‰€æœ‰åˆ†åŒº:
 
 
-Alter table emp removepartitioning;--²»»á¶ªÊ§Êı¾İ
+Alter table emp removepartitioning;--ä¸ä¼šä¸¢å¤±æ•°æ®
  
-ÖØ½¨·ÖÇø£º
-ÕâºÍÏÈÉ¾³ı±£´æÔÚ·ÖÇøÖĞµÄËùÓĞ¼ÇÂ¼£¬È»ºóÖØĞÂ²åÈëËüÃÇ£¬¾ßÓĞÍ¬ÑùµÄĞ§¹û¡£Ëü¿ÉÓÃÓÚÕûÀí·ÖÇøËéÆ¬¡£
+é‡å»ºåˆ†åŒºï¼š
+è¿™å’Œå…ˆåˆ é™¤ä¿å­˜åœ¨åˆ†åŒºä¸­çš„æ‰€æœ‰è®°å½•ï¼Œç„¶åé‡æ–°æ’å…¥å®ƒä»¬ï¼Œå…·æœ‰åŒæ ·çš„æ•ˆæœã€‚å®ƒå¯ç”¨äºæ•´ç†åˆ†åŒºç¢ç‰‡ã€‚
 ALTER TABLE emp rebuild partitionp1,p2;
  
-ÓÅ»¯·ÖÇø£º
-Èç¹û´Ó·ÖÇøÖĞÉ¾³ıÁË´óÁ¿µÄĞĞ£¬»òÕß¶ÔÒ»¸ö´øÓĞ¿É±ä³¤¶ÈµÄĞĞ£¨Ò²¾ÍÊÇËµ£¬ÓĞVARCHAR£¬BLOB£¬»òTEXTÀàĞÍµÄÁĞ£©×÷ÁËĞí¶àĞŞ¸Ä£¬¿ÉÒÔÊ¹ÓÃ¡°ALTER TABLE ... OPTIMIZE PARTITION¡±À´ÊÕ»ØÃ»ÓĞÊ¹ÓÃµÄ¿Õ¼ä£¬²¢ÕûÀí·ÖÇøÊı¾İÎÄ¼şµÄËéÆ¬¡£
+ä¼˜åŒ–åˆ†åŒºï¼š
+å¦‚æœä»åˆ†åŒºä¸­åˆ é™¤äº†å¤§é‡çš„è¡Œï¼Œæˆ–è€…å¯¹ä¸€ä¸ªå¸¦æœ‰å¯å˜é•¿åº¦çš„è¡Œï¼ˆä¹Ÿå°±æ˜¯è¯´ï¼Œæœ‰VARCHARï¼ŒBLOBï¼Œæˆ–TEXTç±»å‹çš„åˆ—ï¼‰ä½œäº†è®¸å¤šä¿®æ”¹ï¼Œå¯ä»¥ä½¿ç”¨â€œALTER TABLE ... OPTIMIZE PARTITIONâ€æ¥æ”¶å›æ²¡æœ‰ä½¿ç”¨çš„ç©ºé—´ï¼Œå¹¶æ•´ç†åˆ†åŒºæ•°æ®æ–‡ä»¶çš„ç¢ç‰‡ã€‚
 ALTER TABLE emp optimize partition p1,p2;
  
-·ÖÎö·ÖÇø£º
-¶ÁÈ¡²¢±£´æ·ÖÇøµÄ¼ü·Ö²¼¡£
+åˆ†æåˆ†åŒºï¼š
+è¯»å–å¹¶ä¿å­˜åˆ†åŒºçš„é”®åˆ†å¸ƒã€‚
 ALTER TABLE emp analyze partition p1,p2;
  
-ĞŞ²¹·ÖÇø£º
-ĞŞ²¹±»ÆÆ»µµÄ·ÖÇø¡£
+ä¿®è¡¥åˆ†åŒºï¼š
+ä¿®è¡¥è¢«ç ´åçš„åˆ†åŒºã€‚
 ALTER TABLE emp repair partition p1,p2;
  
-¼ì²é·ÖÇø£º
-¿ÉÒÔÊ¹ÓÃ¼¸ºõÓë¶Ô·Ç·ÖÇø±íÊ¹ÓÃCHECK TABLE ÏàÍ¬µÄ·½Ê½¼ì²é·ÖÇø¡£
+æ£€æŸ¥åˆ†åŒºï¼š
+å¯ä»¥ä½¿ç”¨å‡ ä¹ä¸å¯¹éåˆ†åŒºè¡¨ä½¿ç”¨CHECK TABLE ç›¸åŒçš„æ–¹å¼æ£€æŸ¥åˆ†åŒºã€‚
 ALTER TABLE emp CHECK partition p1,p2;
-Õâ¸öÃüÁî¿ÉÒÔ¸æËßÄã±íempµÄ·ÖÇøp1,p2ÖĞµÄÊı¾İ»òË÷ÒıÊÇ·ñÒÑ¾­±»ÆÆ»µ¡£Èç¹û·¢ÉúÁËÕâÖÖÇé¿ö£¬Ê¹ÓÃ¡°ALTER TABLE ... REPAIR PARTITION¡±À´ĞŞ²¹¸Ã·ÖÇø¡£
+è¿™ä¸ªå‘½ä»¤å¯ä»¥å‘Šè¯‰ä½ è¡¨empçš„åˆ†åŒºp1,p2ä¸­çš„æ•°æ®æˆ–ç´¢å¼•æ˜¯å¦å·²ç»è¢«ç ´åã€‚å¦‚æœå‘ç”Ÿäº†è¿™ç§æƒ…å†µï¼Œä½¿ç”¨â€œALTER TABLE ... REPAIR PARTITIONâ€æ¥ä¿®è¡¥è¯¥åˆ†åŒºã€‚
  
  
-¡¾mysql·ÖÇø±íµÄ¾ÖÏŞĞÔ¡¿
-1.      ÔÚ5.1°æ±¾ÖĞ·ÖÇø±í¶ÔÎ¨Ò»Ô¼ÊøÓĞÃ÷È·µÄ¹æ¶¨£¬Ã¿Ò»¸öÎ¨Ò»Ô¼Êø±ØĞë°üº¬ÔÚ·ÖÇø±íµÄ·ÖÇø¼ü£¨Ò²°üÀ¨Ö÷¼üÔ¼Êø£©¡£
+ã€mysqlåˆ†åŒºè¡¨çš„å±€é™æ€§ã€‘
+1.      åœ¨5.1ç‰ˆæœ¬ä¸­åˆ†åŒºè¡¨å¯¹å”¯ä¸€çº¦æŸæœ‰æ˜ç¡®çš„è§„å®šï¼Œæ¯ä¸€ä¸ªå”¯ä¸€çº¦æŸå¿…é¡»åŒ…å«åœ¨åˆ†åŒºè¡¨çš„åˆ†åŒºé”®ï¼ˆä¹ŸåŒ…æ‹¬ä¸»é”®çº¦æŸï¼‰ã€‚
  
 CREATE TABLE emptt (
 empno varchar(20) NOT NULL  ,
-empname varchar(20)£¬
+empname varchar(20)ï¼Œ
 deptno int,
 birthdate date NOT NULL,
 salary int ,
@@ -2108,42 +2108,42 @@ PARTITION BY range (salary)
 PARTITION p1 VALUES less than (100),
 PARTITION p2 VALUES less than (200)
 );
-ÕâÑùµÄÓï¾ä»á±¨´í¡£MySQL Database Error: A PRIMARY KEY must include allcolumns in the table's partitioning function£»
+è¿™æ ·çš„è¯­å¥ä¼šæŠ¥é”™ã€‚MySQL Database Error: A PRIMARY KEY must include allcolumns in the table's partitioning functionï¼›
 CREATE TABLE emptt (
 empno varchar(20) NOT NULL  ,
 empname varchar(20) ,
 deptno int(11),
 birthdate date NOT NULL,
 salary int(11) ,
-primary key (empno£¬salary)
+primary key (empnoï¼Œsalary)
 )
 PARTITION BY range (salary)
 (
 PARTITION p1 VALUES less than (100),
 PARTITION p2 VALUES less than (200)
 );
-ÔÚÖ÷¼üÖĞ¼ÓÈësalaryÁĞ¾ÍÕı³£¡£
+åœ¨ä¸»é”®ä¸­åŠ å…¥salaryåˆ—å°±æ­£å¸¸ã€‚
  
-2.      MySQL·ÖÇø´¦ÀíNULLÖµµÄ·½Ê½
-Èç¹û·ÖÇø¼üËùÔÚÁĞÃ»ÓĞnotnullÔ¼Êø¡£
-Èç¹ûÊÇrange·ÖÇø±í£¬ÄÇÃ´nullĞĞ½«±»±£´æÔÚ·¶Î§×îĞ¡µÄ·ÖÇø¡£
-Èç¹ûÊÇlist·ÖÇø±í£¬ÄÇÃ´nullĞĞ½«±»±£´æµ½listÎª0µÄ·ÖÇø¡£
-ÔÚ°´HASHºÍKEY·ÖÇøµÄÇé¿öÏÂ£¬ÈÎºÎ²úÉúNULLÖµµÄ±í´ïÊ½mysql¶¼ÊÓÍ¬ËüµÄ·µ»ØÖµÎª0¡£
-ÎªÁË±ÜÃâÕâÖÖÇé¿öµÄ²úÉú£¬½¨Òé·ÖÇø¼üÉèÖÃ³ÉNOT NULL¡£
+2.      MySQLåˆ†åŒºå¤„ç†NULLå€¼çš„æ–¹å¼
+å¦‚æœåˆ†åŒºé”®æ‰€åœ¨åˆ—æ²¡æœ‰notnullçº¦æŸã€‚
+å¦‚æœæ˜¯rangeåˆ†åŒºè¡¨ï¼Œé‚£ä¹ˆnullè¡Œå°†è¢«ä¿å­˜åœ¨èŒƒå›´æœ€å°çš„åˆ†åŒºã€‚
+å¦‚æœæ˜¯liståˆ†åŒºè¡¨ï¼Œé‚£ä¹ˆnullè¡Œå°†è¢«ä¿å­˜åˆ°listä¸º0çš„åˆ†åŒºã€‚
+åœ¨æŒ‰HASHå’ŒKEYåˆ†åŒºçš„æƒ…å†µä¸‹ï¼Œä»»ä½•äº§ç”ŸNULLå€¼çš„è¡¨è¾¾å¼mysqléƒ½è§†åŒå®ƒçš„è¿”å›å€¼ä¸º0ã€‚
+ä¸ºäº†é¿å…è¿™ç§æƒ…å†µçš„äº§ç”Ÿï¼Œå»ºè®®åˆ†åŒºé”®è®¾ç½®æˆNOT NULLã€‚
  
-3.      ·ÖÇø¼ü±ØĞëÊÇINTÀàĞÍ£¬»òÕßÍ¨¹ı±í´ïÊ½·µ»ØINTÀàĞÍ£¬¿ÉÒÔÎªNULL¡£Î¨Ò»µÄÀıÍâÊÇµ±·Ö
-ÇøÀàĞÍÎªKEY·ÖÇøµÄÊ±ºò£¬¿ÉÒÔÊ¹ÓÃÆäËûÀàĞÍµÄÁĞ×÷Îª·ÖÇø¼ü£¨ BLOB or TEXT ÁĞ³ıÍâ£©¡£
+3.      åˆ†åŒºé”®å¿…é¡»æ˜¯INTç±»å‹ï¼Œæˆ–è€…é€šè¿‡è¡¨è¾¾å¼è¿”å›INTç±»å‹ï¼Œå¯ä»¥ä¸ºNULLã€‚å”¯ä¸€çš„ä¾‹å¤–æ˜¯å½“åˆ†
+åŒºç±»å‹ä¸ºKEYåˆ†åŒºçš„æ—¶å€™ï¼Œå¯ä»¥ä½¿ç”¨å…¶ä»–ç±»å‹çš„åˆ—ä½œä¸ºåˆ†åŒºé”®ï¼ˆ BLOB or TEXT åˆ—é™¤å¤–ï¼‰ã€‚
  
-4.      ¶Ô·ÖÇø±íµÄ·ÖÇø¼ü´´½¨Ë÷Òı£¬ÄÇÃ´Õâ¸öË÷ÒıÒ²½«±»·ÖÇø,·ÖÇø¼üÃ»ÓĞÈ«¾ÖË÷ÒıÒ»Ëµ¡£
-5.      Ö»ÓĞRANGºÍLIST·ÖÇøÄÜ½øĞĞ×Ó·ÖÇø£¬HASHºÍKEY·ÖÇø²»ÄÜ½øĞĞ×Ó·ÖÇø¡£
-6.      ÁÙÊ±±í²»ÄÜ±»·ÖÇø¡£
+4.      å¯¹åˆ†åŒºè¡¨çš„åˆ†åŒºé”®åˆ›å»ºç´¢å¼•ï¼Œé‚£ä¹ˆè¿™ä¸ªç´¢å¼•ä¹Ÿå°†è¢«åˆ†åŒº,åˆ†åŒºé”®æ²¡æœ‰å…¨å±€ç´¢å¼•ä¸€è¯´ã€‚
+5.      åªæœ‰RANGå’ŒLISTåˆ†åŒºèƒ½è¿›è¡Œå­åˆ†åŒºï¼ŒHASHå’ŒKEYåˆ†åŒºä¸èƒ½è¿›è¡Œå­åˆ†åŒºã€‚
+6.      ä¸´æ—¶è¡¨ä¸èƒ½è¢«åˆ†åŒºã€‚
  
-ËÄ¡¢       »ñÈ¡mysql·ÖÇø±íĞÅÏ¢µÄ¼¸ÖÖ·½·¨
-1.     show create table ±íÃû
-¿ÉÒÔ²é¿´´´½¨·ÖÇø±íµÄcreateÓï¾ä 
+å››ã€       è·å–mysqlåˆ†åŒºè¡¨ä¿¡æ¯çš„å‡ ç§æ–¹æ³•
+1.     show create table è¡¨å
+å¯ä»¥æŸ¥çœ‹åˆ›å»ºåˆ†åŒºè¡¨çš„createè¯­å¥ 
 2.     show table status 
-¿ÉÒÔ²é¿´±íÊÇ²»ÊÇ·ÖÇø±í 
-3.     ²é¿´information_schema.partitions±í 
+å¯ä»¥æŸ¥çœ‹è¡¨æ˜¯ä¸æ˜¯åˆ†åŒºè¡¨ 
+3.     æŸ¥çœ‹information_schema.partitionsè¡¨ 
 select 
   partition_name part,  
   partition_expression expr,  
@@ -2152,12 +2152,12 @@ select
 from information_schema.partitions  where 
   table_schema = schema()  
   and table_name='test';  
-¿ÉÒÔ²é¿´±í¾ßÓĞÄÄ¼¸¸ö·ÖÇø¡¢·ÖÇøµÄ·½·¨¡¢·ÖÇøÖĞÊı¾İµÄ¼ÇÂ¼ÊıµÈĞÅÏ¢
-4.     explain partitions selectÓï¾ä
-Í¨¹ı´ËÓï¾äÀ´ÏÔÊ¾É¨ÃèÄÄĞ©·ÖÇø£¬¼°ËûÃÇÊÇÈçºÎÊ¹ÓÃµÄ.
+å¯ä»¥æŸ¥çœ‹è¡¨å…·æœ‰å“ªå‡ ä¸ªåˆ†åŒºã€åˆ†åŒºçš„æ–¹æ³•ã€åˆ†åŒºä¸­æ•°æ®çš„è®°å½•æ•°ç­‰ä¿¡æ¯
+4.     explain partitions selectè¯­å¥
+é€šè¿‡æ­¤è¯­å¥æ¥æ˜¾ç¤ºæ‰«æå“ªäº›åˆ†åŒºï¼ŒåŠä»–ä»¬æ˜¯å¦‚ä½•ä½¿ç”¨çš„.
  
-Îå¡¢       ·ÖÇø±íĞÔÄÜ±È½Ï
-1.     ´´½¨Á½ÕÅ±í: part_tab(·ÖÇø±í),no_part_tab(ÆÕÍ¨±í)
+äº”ã€       åˆ†åŒºè¡¨æ€§èƒ½æ¯”è¾ƒ
+1.     åˆ›å»ºä¸¤å¼ è¡¨: part_tab(åˆ†åŒºè¡¨),no_part_tab(æ™®é€šè¡¨)
 CREATE TABLE part_tab
 ( c1 int default NULL, c2 varchar(30) default NULL, c3 date not null)
 PARTITION BY RANGE(year(c3))
@@ -2174,9 +2174,9 @@ PARTITION p9 VALUES LESS THAN (2004) ,
 PARTITION p10VALUES LESS THAN (2010),
 PARTITION p11VALUES LESS THAN (MAXVALUE) );
 CREATE TABLE no_part_tab
-( c1 int defaultNULL, c2 varchar2(30) default NULL, c3 date not null)£»
+( c1 int defaultNULL, c2 varchar2(30) default NULL, c3 date not null)ï¼›
  
-2.     ÓÃ´æ´¢¹ı³Ì²åÈë800ÍòÌõÊı¾İ
+2.     ç”¨å­˜å‚¨è¿‡ç¨‹æ’å…¥800ä¸‡æ¡æ•°æ®
 CREATE PROCEDURE load_part_tab()
     begin
     declare v int default 0;
@@ -2188,8 +2188,8 @@ CREATE PROCEDURE load_part_tab()
     end while;
 end;
 insert into no_part_tab  select * frompart_tab;
-3.     ²âÊÔsqlĞÔÄÜ
-²éÑ¯·ÖÇø±í£º
+3.     æµ‹è¯•sqlæ€§èƒ½
+æŸ¥è¯¢åˆ†åŒºè¡¨ï¼š
 selectcount(*) from part_tab where c3 > date '1995-01-01'and c3 < date '1995-12-31';
 +----------+
 | count(*) |
@@ -2197,7 +2197,7 @@ selectcount(*) from part_tab where c3 > date '1995-01-01'and c3 < date '1995-12-
 |   795181 |
 +----------+
 1 row in set (2.62 sec)
-²éÑ¯ÆÕÍ¨±í£º
+æŸ¥è¯¢æ™®é€šè¡¨ï¼š
 selectcount(*) from part_tab where c3 > date '1995-01-01'and c3 < date '1995-12-31';
 +----------+
 | count(*) |
@@ -2205,9 +2205,9 @@ selectcount(*) from part_tab where c3 > date '1995-01-01'and c3 < date '1995-12-
 |   795181 |
 +----------+
 1 row in set (7.33 sec)
-·ÖÇø±íµÄÖ´ĞĞÊ±¼ä±ÈÆÕÍ¨±íÉÙ70%¡£
+åˆ†åŒºè¡¨çš„æ‰§è¡Œæ—¶é—´æ¯”æ™®é€šè¡¨å°‘70%ã€‚
  
-4.     Í¨¹ıexplainÓï¾äÀ´·ÖÎöÖ´ĞĞÇé¿ö
+4.     é€šè¿‡explainè¯­å¥æ¥åˆ†ææ‰§è¡Œæƒ…å†µ
 mysql>explain select count(*) from part_tab where c3 > date '1995-01-01'and c3 < date '1995-12-31';
 +----+-------------+----------+------+---------------+------+---------+------+---------+-------------+
 | id |select_type | table    | type |possible_keys | key  | key_len | ref  | rows   | Extra       |
@@ -2224,264 +2224,264 @@ mysql>explain select count(*) from no_part_tab where c3 > date '1995-01-01'and c
 +----+-------------+-------------+------+---------------+------+---------+------+---------+-------------+
 1 rowin set
 mysql >
-·ÖÇø±íÖ´ĞĞÉ¨ÃèÁË7980796ĞĞ£¬¶øÆÕÍ¨±íÔòÉ¨ÃèÁË8000206ĞĞ¡£
+åˆ†åŒºè¡¨æ‰§è¡Œæ‰«æäº†7980796è¡Œï¼Œè€Œæ™®é€šè¡¨åˆ™æ‰«æäº†8000206è¡Œã€‚
 
-²é¿´´æ´¢¹ı³Ì
+æŸ¥çœ‹å­˜å‚¨è¿‡ç¨‹
 SHOW PROCEDURE STATUS WHERE Db = 'game';
 show create procedure procedure_name;
-²é¿´ÊÂ¼ş
-SHOW EVENTS£»
+æŸ¥çœ‹äº‹ä»¶
+SHOW EVENTSï¼›
 SELECT `Event_name`,`Definer`,`Event_type`,`Execute_at`,`Interval_value`,`Interval_field`,`Starts`,`Ends`,`Status` FROM `INFORMATION_SCHEMA`.`EVENTS` WHERE `EVENT_SCHEMA` = 'game'; 
 
 
-mysqldump²ÎÊıÏêÏ¸ËµÃ÷
-Mysqldump²ÎÊı´óÈ«£¨²ÎÊıÀ´Ô´ÓÚmysql5.5.19Ô´Âë£©
+mysqldumpå‚æ•°è¯¦ç»†è¯´æ˜
+Mysqldumpå‚æ•°å¤§å…¨ï¼ˆå‚æ•°æ¥æºäºmysql5.5.19æºç ï¼‰
  
-²ÎÊı
-²ÎÊıËµÃ÷
+å‚æ•°
+å‚æ•°è¯´æ˜
 --all-databases  , -A
-µ¼³öÈ«²¿Êı¾İ¿â¡£
+å¯¼å‡ºå…¨éƒ¨æ•°æ®åº“ã€‚
 mysqldump  -uroot -p --all-databases
 --all-tablespaces  , -Y
-µ¼³öÈ«²¿±í¿Õ¼ä¡£
+å¯¼å‡ºå…¨éƒ¨è¡¨ç©ºé—´ã€‚
 mysqldump  -uroot -p --all-databases --all-tablespaces
 --no-tablespaces  , -y
-²»µ¼³öÈÎºÎ±í¿Õ¼äĞÅÏ¢¡£
+ä¸å¯¼å‡ºä»»ä½•è¡¨ç©ºé—´ä¿¡æ¯ã€‚
 mysqldump  -uroot -p --all-databases --no-tablespaces
 --add-drop-database
-Ã¿¸öÊı¾İ¿â´´½¨Ö®Ç°Ìí¼ÓdropÊı¾İ¿âÓï¾ä¡£
+æ¯ä¸ªæ•°æ®åº“åˆ›å»ºä¹‹å‰æ·»åŠ dropæ•°æ®åº“è¯­å¥ã€‚
 mysqldump  -uroot -p --all-databases --add-drop-database
 --add-drop-table
-Ã¿¸öÊı¾İ±í´´½¨Ö®Ç°Ìí¼ÓdropÊı¾İ±íÓï¾ä¡£(Ä¬ÈÏÎª´ò¿ª×´Ì¬£¬Ê¹ÓÃ--skip-add-drop-tableÈ¡ÏûÑ¡Ïî)
-mysqldump  -uroot -p --all-databases  (Ä¬ÈÏÌí¼ÓdropÓï¾ä)
-mysqldump  -uroot -p --all-databases ¨Cskip-add-drop-table  (È¡ÏûdropÓï¾ä)
+æ¯ä¸ªæ•°æ®è¡¨åˆ›å»ºä¹‹å‰æ·»åŠ dropæ•°æ®è¡¨è¯­å¥ã€‚(é»˜è®¤ä¸ºæ‰“å¼€çŠ¶æ€ï¼Œä½¿ç”¨--skip-add-drop-tableå–æ¶ˆé€‰é¡¹)
+mysqldump  -uroot -p --all-databases  (é»˜è®¤æ·»åŠ dropè¯­å¥)
+mysqldump  -uroot -p --all-databases Cskip-add-drop-table  (å–æ¶ˆdropè¯­å¥)
 --add-locks
-ÔÚÃ¿¸ö±íµ¼³öÖ®Ç°Ôö¼ÓLOCK TABLES²¢ÇÒÖ®ºóUNLOCK  TABLE¡£(Ä¬ÈÏÎª´ò¿ª×´Ì¬£¬Ê¹ÓÃ--skip-add-locksÈ¡ÏûÑ¡Ïî)
-mysqldump  -uroot -p --all-databases  (Ä¬ÈÏÌí¼ÓLOCKÓï¾ä)
-mysqldump  -uroot -p --all-databases ¨Cskip-add-locks   (È¡ÏûLOCKÓï¾ä)
+åœ¨æ¯ä¸ªè¡¨å¯¼å‡ºä¹‹å‰å¢åŠ LOCK TABLESå¹¶ä¸”ä¹‹åUNLOCK  TABLEã€‚(é»˜è®¤ä¸ºæ‰“å¼€çŠ¶æ€ï¼Œä½¿ç”¨--skip-add-lockså–æ¶ˆé€‰é¡¹)
+mysqldump  -uroot -p --all-databases  (é»˜è®¤æ·»åŠ LOCKè¯­å¥)
+mysqldump  -uroot -p --all-databases Cskip-add-locks   (å–æ¶ˆLOCKè¯­å¥)
 --allow-keywords
-ÔÊĞí´´½¨ÊÇ¹Ø¼ü´ÊµÄÁĞÃû×Ö¡£ÕâÓÉ±íÃûÇ°×ºÓÚÃ¿¸öÁĞÃû×öµ½¡£
+å…è®¸åˆ›å»ºæ˜¯å…³é”®è¯çš„åˆ—åå­—ã€‚è¿™ç”±è¡¨åå‰ç¼€äºæ¯ä¸ªåˆ—ååšåˆ°ã€‚
 mysqldump  -uroot -p --all-databases --allow-keywords
 --apply-slave-statements
-ÔÚ'CHANGE MASTER'Ç°Ìí¼Ó'STOP SLAVE'£¬²¢ÇÒÔÚµ¼³öµÄ×îºóÌí¼Ó'START SLAVE'¡£
+åœ¨'CHANGE MASTER'å‰æ·»åŠ 'STOP SLAVE'ï¼Œå¹¶ä¸”åœ¨å¯¼å‡ºçš„æœ€åæ·»åŠ 'START SLAVE'ã€‚
 mysqldump  -uroot -p --all-databases --apply-slave-statements
 --character-sets-dir
-×Ö·û¼¯ÎÄ¼şµÄÄ¿Â¼
+å­—ç¬¦é›†æ–‡ä»¶çš„ç›®å½•
 mysqldump  -uroot -p --all-databases  --character-sets-dir=/usr/local/mysql/share/mysql/charsets
 --comments
-¸½¼Ó×¢ÊÍĞÅÏ¢¡£Ä¬ÈÏÎª´ò¿ª£¬¿ÉÒÔÓÃ--skip-commentsÈ¡Ïû
-mysqldump  -uroot -p --all-databases  (Ä¬ÈÏ¼ÇÂ¼×¢ÊÍ)
-mysqldump  -uroot -p --all-databases --skip-comments   (È¡Ïû×¢ÊÍ)
+é™„åŠ æ³¨é‡Šä¿¡æ¯ã€‚é»˜è®¤ä¸ºæ‰“å¼€ï¼Œå¯ä»¥ç”¨--skip-commentså–æ¶ˆ
+mysqldump  -uroot -p --all-databases  (é»˜è®¤è®°å½•æ³¨é‡Š)
+mysqldump  -uroot -p --all-databases --skip-comments   (å–æ¶ˆæ³¨é‡Š)
 --compatible
-µ¼³öµÄÊı¾İ½«ºÍÆäËüÊı¾İ¿â»ò¾É°æ±¾µÄMySQL Ïà¼æÈİ¡£Öµ¿ÉÒÔÎªansi¡¢mysql323¡¢mysql40¡¢postgresql¡¢oracle¡¢mssql¡¢db2¡¢maxdb¡¢no_key_options¡¢no_tables_options¡¢no_field_optionsµÈ£¬
-ÒªÊ¹ÓÃ¼¸¸öÖµ£¬ÓÃ¶ººÅ½«ËüÃÇ¸ô¿ª¡£Ëü²¢²»±£Ö¤ÄÜÍêÈ«¼æÈİ£¬¶øÊÇ¾¡Á¿¼æÈİ¡£
+å¯¼å‡ºçš„æ•°æ®å°†å’Œå…¶å®ƒæ•°æ®åº“æˆ–æ—§ç‰ˆæœ¬çš„MySQL ç›¸å…¼å®¹ã€‚å€¼å¯ä»¥ä¸ºansiã€mysql323ã€mysql40ã€postgresqlã€oracleã€mssqlã€db2ã€maxdbã€no_key_optionsã€no_tables_optionsã€no_field_optionsç­‰ï¼Œ
+è¦ä½¿ç”¨å‡ ä¸ªå€¼ï¼Œç”¨é€—å·å°†å®ƒä»¬éš”å¼€ã€‚å®ƒå¹¶ä¸ä¿è¯èƒ½å®Œå…¨å…¼å®¹ï¼Œè€Œæ˜¯å°½é‡å…¼å®¹ã€‚
 mysqldump  -uroot -p --all-databases --compatible=ansi
 --compact
-µ¼³ö¸üÉÙµÄÊä³öĞÅÏ¢(ÓÃÓÚµ÷ÊÔ)¡£È¥µô×¢ÊÍºÍÍ·Î²µÈ½á¹¹¡£¿ÉÒÔÊ¹ÓÃÑ¡Ïî£º--skip-add-drop-table  --skip-add-locks --skip-comments --skip-disable-keys
+å¯¼å‡ºæ›´å°‘çš„è¾“å‡ºä¿¡æ¯(ç”¨äºè°ƒè¯•)ã€‚å»æ‰æ³¨é‡Šå’Œå¤´å°¾ç­‰ç»“æ„ã€‚å¯ä»¥ä½¿ç”¨é€‰é¡¹ï¼š--skip-add-drop-table  --skip-add-locks --skip-comments --skip-disable-keys
 mysqldump  -uroot -p --all-databases --compact
 --complete-insert,  -c
-Ê¹ÓÃÍêÕûµÄinsertÓï¾ä(°üº¬ÁĞÃû³Æ)¡£ÕâÃ´×öÄÜÌá¸ß²åÈëĞ§ÂÊ£¬µ«ÊÇ¿ÉÄÜ»áÊÜµ½max_allowed_packet²ÎÊıµÄÓ°Ïì¶øµ¼ÖÂ²åÈëÊ§°Ü¡£
+ä½¿ç”¨å®Œæ•´çš„insertè¯­å¥(åŒ…å«åˆ—åç§°)ã€‚è¿™ä¹ˆåšèƒ½æé«˜æ’å…¥æ•ˆç‡ï¼Œä½†æ˜¯å¯èƒ½ä¼šå—åˆ°max_allowed_packetå‚æ•°çš„å½±å“è€Œå¯¼è‡´æ’å…¥å¤±è´¥ã€‚
 mysqldump  -uroot -p --all-databases --complete-insert
 --compress, -C
-ÔÚ¿Í»§¶ËºÍ·şÎñÆ÷Ö®¼äÆôÓÃÑ¹Ëõ´«µİËùÓĞĞÅÏ¢
+åœ¨å®¢æˆ·ç«¯å’ŒæœåŠ¡å™¨ä¹‹é—´å¯ç”¨å‹ç¼©ä¼ é€’æ‰€æœ‰ä¿¡æ¯
 mysqldump  -uroot -p --all-databases --compress
 --create-options,  -a
-ÔÚCREATE TABLEÓï¾äÖĞ°üÀ¨ËùÓĞMySQLÌØĞÔÑ¡Ïî¡£(Ä¬ÈÏÎª´ò¿ª×´Ì¬)
+åœ¨CREATE TABLEè¯­å¥ä¸­åŒ…æ‹¬æ‰€æœ‰MySQLç‰¹æ€§é€‰é¡¹ã€‚(é»˜è®¤ä¸ºæ‰“å¼€çŠ¶æ€)
 mysqldump  -uroot -p --all-databases
 --databases,  -B
-µ¼³ö¼¸¸öÊı¾İ¿â¡£²ÎÊıºóÃæËùÓĞÃû×Ö²ÎÁ¿¶¼±»¿´×÷Êı¾İ¿âÃû¡£
+å¯¼å‡ºå‡ ä¸ªæ•°æ®åº“ã€‚å‚æ•°åé¢æ‰€æœ‰åå­—å‚é‡éƒ½è¢«çœ‹ä½œæ•°æ®åº“åã€‚
 mysqldump  -uroot -p --databases test mysql
 --debug
-Êä³ödebugĞÅÏ¢£¬ÓÃÓÚµ÷ÊÔ¡£Ä¬ÈÏÖµÎª£ºd:t:o,/tmp/mysqldump.trace
+è¾“å‡ºdebugä¿¡æ¯ï¼Œç”¨äºè°ƒè¯•ã€‚é»˜è®¤å€¼ä¸ºï¼šd:t:o,/tmp/mysqldump.trace
 mysqldump  -uroot -p --all-databases --debug
-mysqldump  -uroot -p --all-databases --debug=¡± d:t:o,/tmp/debug.trace¡±
+mysqldump  -uroot -p --all-databases --debug=â€ d:t:o,/tmp/debug.traceâ€
 --debug-check
-¼ì²éÄÚ´æºÍ´ò¿ªÎÄ¼şÊ¹ÓÃËµÃ÷²¢ÍË³ö¡£
+æ£€æŸ¥å†…å­˜å’Œæ‰“å¼€æ–‡ä»¶ä½¿ç”¨è¯´æ˜å¹¶é€€å‡ºã€‚
 mysqldump  -uroot -p --all-databases --debug-check
 --debug-info
-Êä³öµ÷ÊÔĞÅÏ¢²¢ÍË³ö
+è¾“å‡ºè°ƒè¯•ä¿¡æ¯å¹¶é€€å‡º
 mysqldump  -uroot -p --all-databases --debug-info
 --default-character-set
-ÉèÖÃÄ¬ÈÏ×Ö·û¼¯£¬Ä¬ÈÏÖµÎªutf8
+è®¾ç½®é»˜è®¤å­—ç¬¦é›†ï¼Œé»˜è®¤å€¼ä¸ºutf8
 mysqldump  -uroot -p --all-databases --default-character-set=latin1
 --delayed-insert
-²ÉÓÃÑÓÊ±²åÈë·½Ê½£¨INSERT DELAYED£©µ¼³öÊı¾İ
+é‡‡ç”¨å»¶æ—¶æ’å…¥æ–¹å¼ï¼ˆINSERT DELAYEDï¼‰å¯¼å‡ºæ•°æ®
 mysqldump  -uroot -p --all-databases --delayed-insert
 --delete-master-logs
-master±¸·İºóÉ¾³ıÈÕÖ¾. Õâ¸ö²ÎÊı½«×Ô¶¯¼¤»î--master-data¡£
+masterå¤‡ä»½ååˆ é™¤æ—¥å¿—. è¿™ä¸ªå‚æ•°å°†è‡ªåŠ¨æ¿€æ´»--master-dataã€‚
 mysqldump  -uroot -p --all-databases --delete-master-logs
 --disable-keys
-¶ÔÓÚÃ¿¸ö±í£¬ÓÃ/*!40000 ALTER TABLE tbl_name DISABLE KEYS */;ºÍ/*!40000 ALTER TABLE tbl_name ENABLE KEYS */;Óï¾äÒıÓÃINSERTÓï¾ä¡£ÕâÑù¿ÉÒÔ¸ü¿ìµØµ¼Èëdump³öÀ´µÄÎÄ¼ş£¬ÒòÎªËüÊÇÔÚ²åÈëËùÓĞĞĞºó´´½¨Ë÷ÒıµÄ¡£¸ÃÑ¡ÏîÖ»ÊÊºÏMyISAM±í£¬Ä¬ÈÏÎª´ò¿ª×´Ì¬¡£
+å¯¹äºæ¯ä¸ªè¡¨ï¼Œç”¨/*!40000 ALTER TABLE tbl_name DISABLE KEYS */;å’Œ/*!40000 ALTER TABLE tbl_name ENABLE KEYS */;è¯­å¥å¼•ç”¨INSERTè¯­å¥ã€‚è¿™æ ·å¯ä»¥æ›´å¿«åœ°å¯¼å…¥dumpå‡ºæ¥çš„æ–‡ä»¶ï¼Œå› ä¸ºå®ƒæ˜¯åœ¨æ’å…¥æ‰€æœ‰è¡Œååˆ›å»ºç´¢å¼•çš„ã€‚è¯¥é€‰é¡¹åªé€‚åˆMyISAMè¡¨ï¼Œé»˜è®¤ä¸ºæ‰“å¼€çŠ¶æ€ã€‚
 mysqldump  -uroot -p --all-databases 
 --dump-slave
-¸ÃÑ¡Ïî½«µ¼ÖÂÖ÷µÄbinlogÎ»ÖÃºÍÎÄ¼şÃû×·¼Óµ½µ¼³öÊı¾İµÄÎÄ¼şÖĞ¡£ÉèÖÃÎª1Ê±£¬½«»áÒÔCHANGE MASTERÃüÁîÊä³öµ½Êı¾İÎÄ¼ş£»ÉèÖÃÎª2Ê±£¬ÔÚÃüÁîÇ°Ôö¼ÓËµÃ÷ĞÅÏ¢¡£¸ÃÑ¡Ïî½«»á´ò¿ª--lock-all-tables£¬³ı·Ç--single-transaction±»Ö¸¶¨¡£¸ÃÑ¡Ïî»á×Ô¶¯¹Ø±Õ--lock-tablesÑ¡Ïî¡£Ä¬ÈÏÖµÎª0¡£
+è¯¥é€‰é¡¹å°†å¯¼è‡´ä¸»çš„binlogä½ç½®å’Œæ–‡ä»¶åè¿½åŠ åˆ°å¯¼å‡ºæ•°æ®çš„æ–‡ä»¶ä¸­ã€‚è®¾ç½®ä¸º1æ—¶ï¼Œå°†ä¼šä»¥CHANGE MASTERå‘½ä»¤è¾“å‡ºåˆ°æ•°æ®æ–‡ä»¶ï¼›è®¾ç½®ä¸º2æ—¶ï¼Œåœ¨å‘½ä»¤å‰å¢åŠ è¯´æ˜ä¿¡æ¯ã€‚è¯¥é€‰é¡¹å°†ä¼šæ‰“å¼€--lock-all-tablesï¼Œé™¤é--single-transactionè¢«æŒ‡å®šã€‚è¯¥é€‰é¡¹ä¼šè‡ªåŠ¨å…³é—­--lock-tablesé€‰é¡¹ã€‚é»˜è®¤å€¼ä¸º0ã€‚
 mysqldump  -uroot -p --all-databases --dump-slave=1
 mysqldump  -uroot -p --all-databases --dump-slave=2
 --events, -E
-µ¼³öÊÂ¼ş¡£
+å¯¼å‡ºäº‹ä»¶ã€‚
 mysqldump  -uroot -p --all-databases --events
 --extended-insert,  -e
-Ê¹ÓÃ¾ßÓĞ¶à¸öVALUESÁĞµÄINSERTÓï·¨¡£ÕâÑùÊ¹µ¼³öÎÄ¼ş¸üĞ¡£¬²¢¼ÓËÙµ¼ÈëÊ±µÄËÙ¶È¡£Ä¬ÈÏÎª´ò¿ª×´Ì¬£¬Ê¹ÓÃ--skip-extended-insertÈ¡ÏûÑ¡Ïî¡£
+ä½¿ç”¨å…·æœ‰å¤šä¸ªVALUESåˆ—çš„INSERTè¯­æ³•ã€‚è¿™æ ·ä½¿å¯¼å‡ºæ–‡ä»¶æ›´å°ï¼Œå¹¶åŠ é€Ÿå¯¼å…¥æ—¶çš„é€Ÿåº¦ã€‚é»˜è®¤ä¸ºæ‰“å¼€çŠ¶æ€ï¼Œä½¿ç”¨--skip-extended-insertå–æ¶ˆé€‰é¡¹ã€‚
 mysqldump  -uroot -p --all-databases
-mysqldump  -uroot -p --all-databases--skip-extended-insert   (È¡ÏûÑ¡Ïî)
+mysqldump  -uroot -p --all-databases--skip-extended-insert   (å–æ¶ˆé€‰é¡¹)
 --fields-terminated-by
-µ¼³öÎÄ¼şÖĞºöÂÔ¸ø¶¨×Ö¶Î¡£Óë--tabÑ¡ÏîÒ»ÆğÊ¹ÓÃ£¬²»ÄÜÓÃÓÚ--databasesºÍ--all-databasesÑ¡Ïî
-mysqldump  -uroot -p test test --tab=¡±/home/mysql¡± --fields-terminated-by=¡±#¡±
+å¯¼å‡ºæ–‡ä»¶ä¸­å¿½ç•¥ç»™å®šå­—æ®µã€‚ä¸--tabé€‰é¡¹ä¸€èµ·ä½¿ç”¨ï¼Œä¸èƒ½ç”¨äº--databaseså’Œ--all-databasesé€‰é¡¹
+mysqldump  -uroot -p test test --tab=â€/home/mysqlâ€ --fields-terminated-by=â€#â€
 --fields-enclosed-by
-Êä³öÎÄ¼şÖĞµÄ¸÷¸ö×Ö¶ÎÓÃ¸ø¶¨×Ö·û°ü¹ü¡£Óë--tabÑ¡ÏîÒ»ÆğÊ¹ÓÃ£¬²»ÄÜÓÃÓÚ--databasesºÍ--all-databasesÑ¡Ïî
-mysqldump  -uroot -p test test --tab=¡±/home/mysql¡± --fields-enclosed-by=¡±#¡±
+è¾“å‡ºæ–‡ä»¶ä¸­çš„å„ä¸ªå­—æ®µç”¨ç»™å®šå­—ç¬¦åŒ…è£¹ã€‚ä¸--tabé€‰é¡¹ä¸€èµ·ä½¿ç”¨ï¼Œä¸èƒ½ç”¨äº--databaseså’Œ--all-databasesé€‰é¡¹
+mysqldump  -uroot -p test test --tab=â€/home/mysqlâ€ --fields-enclosed-by=â€#â€
 --fields-optionally-enclosed-by
-Êä³öÎÄ¼şÖĞµÄ¸÷¸ö×Ö¶ÎÓÃ¸ø¶¨×Ö·ûÑ¡ÔñĞÔ°ü¹ü¡£Óë--tabÑ¡ÏîÒ»ÆğÊ¹ÓÃ£¬²»ÄÜÓÃÓÚ--databasesºÍ--all-databasesÑ¡Ïî
-mysqldump  -uroot -p test test --tab=¡±/home/mysql¡±  --fields-enclosed-by=¡±#¡± --fields-optionally-enclosed-by  =¡±#¡±
+è¾“å‡ºæ–‡ä»¶ä¸­çš„å„ä¸ªå­—æ®µç”¨ç»™å®šå­—ç¬¦é€‰æ‹©æ€§åŒ…è£¹ã€‚ä¸--tabé€‰é¡¹ä¸€èµ·ä½¿ç”¨ï¼Œä¸èƒ½ç”¨äº--databaseså’Œ--all-databasesé€‰é¡¹
+mysqldump  -uroot -p test test --tab=â€/home/mysqlâ€  --fields-enclosed-by=â€#â€ --fields-optionally-enclosed-by  =â€#â€
 --fields-escaped-by
-Êä³öÎÄ¼şÖĞµÄ¸÷¸ö×Ö¶ÎºöÂÔ¸ø¶¨×Ö·û¡£Óë--tabÑ¡ÏîÒ»ÆğÊ¹ÓÃ£¬²»ÄÜÓÃÓÚ--databasesºÍ--all-databasesÑ¡Ïî
-mysqldump  -uroot -p mysql user --tab=¡±/home/mysql¡± --fields-escaped-by=¡±#¡±
+è¾“å‡ºæ–‡ä»¶ä¸­çš„å„ä¸ªå­—æ®µå¿½ç•¥ç»™å®šå­—ç¬¦ã€‚ä¸--tabé€‰é¡¹ä¸€èµ·ä½¿ç”¨ï¼Œä¸èƒ½ç”¨äº--databaseså’Œ--all-databasesé€‰é¡¹
+mysqldump  -uroot -p mysql user --tab=â€/home/mysqlâ€ --fields-escaped-by=â€#â€
 --flush-logs
-¿ªÊ¼µ¼³öÖ®Ç°Ë¢ĞÂÈÕÖ¾¡£
-Çë×¢Òâ£º¼ÙÈçÒ»´Îµ¼³ö¶à¸öÊı¾İ¿â(Ê¹ÓÃÑ¡Ïî--databases»òÕß--all-databases)£¬½«»áÖğ¸öÊı¾İ¿âË¢ĞÂÈÕÖ¾¡£³ıÊ¹ÓÃ--lock-all-tables»òÕß--master-dataÍâ¡£ÔÚÕâÖÖÇé¿öÏÂ£¬ÈÕÖ¾½«»á±»Ë¢ĞÂÒ»´Î£¬ÏàÓ¦µÄËùÒÔ±íÍ¬Ê±±»Ëø¶¨¡£Òò´Ë£¬Èç¹û´òËãÍ¬Ê±µ¼³öºÍË¢ĞÂÈÕÖ¾Ó¦¸ÃÊ¹ÓÃ--lock-all-tables »òÕß--master-data ºÍ--flush-logs¡£
+å¼€å§‹å¯¼å‡ºä¹‹å‰åˆ·æ–°æ—¥å¿—ã€‚
+è¯·æ³¨æ„ï¼šå‡å¦‚ä¸€æ¬¡å¯¼å‡ºå¤šä¸ªæ•°æ®åº“(ä½¿ç”¨é€‰é¡¹--databasesæˆ–è€…--all-databases)ï¼Œå°†ä¼šé€ä¸ªæ•°æ®åº“åˆ·æ–°æ—¥å¿—ã€‚é™¤ä½¿ç”¨--lock-all-tablesæˆ–è€…--master-dataå¤–ã€‚åœ¨è¿™ç§æƒ…å†µä¸‹ï¼Œæ—¥å¿—å°†ä¼šè¢«åˆ·æ–°ä¸€æ¬¡ï¼Œç›¸åº”çš„æ‰€ä»¥è¡¨åŒæ—¶è¢«é”å®šã€‚å› æ­¤ï¼Œå¦‚æœæ‰“ç®—åŒæ—¶å¯¼å‡ºå’Œåˆ·æ–°æ—¥å¿—åº”è¯¥ä½¿ç”¨--lock-all-tables æˆ–è€…--master-data å’Œ--flush-logsã€‚
 mysqldump  -uroot -p --all-databases --flush-logs
 --flush-privileges
-ÔÚµ¼³ömysqlÊı¾İ¿âÖ®ºó£¬·¢³öÒ»ÌõFLUSH  PRIVILEGES Óï¾ä¡£ÎªÁËÕıÈ·»Ö¸´£¬¸ÃÑ¡ÏîÓ¦¸ÃÓÃÓÚµ¼³ömysqlÊı¾İ¿âºÍÒÀÀµmysqlÊı¾İ¿âÊı¾İµÄÈÎºÎÊ±ºò¡£
+åœ¨å¯¼å‡ºmysqlæ•°æ®åº“ä¹‹åï¼Œå‘å‡ºä¸€æ¡FLUSH  PRIVILEGES è¯­å¥ã€‚ä¸ºäº†æ­£ç¡®æ¢å¤ï¼Œè¯¥é€‰é¡¹åº”è¯¥ç”¨äºå¯¼å‡ºmysqlæ•°æ®åº“å’Œä¾èµ–mysqlæ•°æ®åº“æ•°æ®çš„ä»»ä½•æ—¶å€™ã€‚
 mysqldump  -uroot -p --all-databases --flush-privileges
 --force
-ÔÚµ¼³ö¹ı³ÌÖĞºöÂÔ³öÏÖµÄSQL´íÎó¡£
+åœ¨å¯¼å‡ºè¿‡ç¨‹ä¸­å¿½ç•¥å‡ºç°çš„SQLé”™è¯¯ã€‚
 mysqldump  -uroot -p --all-databases --force
 --help
-ÏÔÊ¾°ïÖúĞÅÏ¢²¢ÍË³ö¡£
+æ˜¾ç¤ºå¸®åŠ©ä¿¡æ¯å¹¶é€€å‡ºã€‚
 mysqldump  --help
 --hex-blob
-Ê¹ÓÃÊ®Áù½øÖÆ¸ñÊ½µ¼³ö¶ş½øÖÆ×Ö·û´®×Ö¶Î¡£Èç¹ûÓĞ¶ş½øÖÆÊı¾İ¾Í±ØĞëÊ¹ÓÃ¸ÃÑ¡Ïî¡£Ó°Ïìµ½µÄ×Ö¶ÎÀàĞÍÓĞBINARY¡¢VARBINARY¡¢BLOB¡£
+ä½¿ç”¨åå…­è¿›åˆ¶æ ¼å¼å¯¼å‡ºäºŒè¿›åˆ¶å­—ç¬¦ä¸²å­—æ®µã€‚å¦‚æœæœ‰äºŒè¿›åˆ¶æ•°æ®å°±å¿…é¡»ä½¿ç”¨è¯¥é€‰é¡¹ã€‚å½±å“åˆ°çš„å­—æ®µç±»å‹æœ‰BINARYã€VARBINARYã€BLOBã€‚
 mysqldump  -uroot -p --all-databases --hex-blob
 --host, -h
-ĞèÒªµ¼³öµÄÖ÷»úĞÅÏ¢
+éœ€è¦å¯¼å‡ºçš„ä¸»æœºä¿¡æ¯
 mysqldump  -uroot -p --host=localhost --all-databases
 --ignore-table
-²»µ¼³öÖ¸¶¨±í¡£Ö¸¶¨ºöÂÔ¶à¸ö±íÊ±£¬ĞèÒªÖØ¸´¶à´Î£¬Ã¿´ÎÒ»¸ö±í¡£Ã¿¸ö±í±ØĞëÍ¬Ê±Ö¸¶¨Êı¾İ¿âºÍ±íÃû¡£ÀıÈç£º--ignore-table=database.table1 --ignore-table=database.table2 ¡­¡­
+ä¸å¯¼å‡ºæŒ‡å®šè¡¨ã€‚æŒ‡å®šå¿½ç•¥å¤šä¸ªè¡¨æ—¶ï¼Œéœ€è¦é‡å¤å¤šæ¬¡ï¼Œæ¯æ¬¡ä¸€ä¸ªè¡¨ã€‚æ¯ä¸ªè¡¨å¿…é¡»åŒæ—¶æŒ‡å®šæ•°æ®åº“å’Œè¡¨åã€‚ä¾‹å¦‚ï¼š--ignore-table=database.table1 --ignore-table=database.table2 â€¦â€¦
 mysqldump  -uroot -p --host=localhost --all-databases --ignore-table=mysql.user
 --include-master-host-port
-ÔÚ--dump-slave²úÉúµÄ'CHANGE  MASTER TO..'Óï¾äÖĞÔö¼Ó'MASTER_HOST=<host>£¬MASTER_PORT=<port>'  
+åœ¨--dump-slaveäº§ç”Ÿçš„'CHANGE  MASTER TO..'è¯­å¥ä¸­å¢åŠ 'MASTER_HOST=<host>ï¼ŒMASTER_PORT=<port>'  
 mysqldump  -uroot -p --host=localhost --all-databases --include-master-host-port
 --insert-ignore
-ÔÚ²åÈëĞĞÊ±Ê¹ÓÃINSERT IGNOREÓï¾ä.
+åœ¨æ’å…¥è¡Œæ—¶ä½¿ç”¨INSERT IGNOREè¯­å¥.
 mysqldump  -uroot -p --host=localhost --all-databases --insert-ignore
 --lines-terminated-by
-Êä³öÎÄ¼şµÄÃ¿ĞĞÓÃ¸ø¶¨×Ö·û´®»®·Ö¡£Óë--tabÑ¡ÏîÒ»ÆğÊ¹ÓÃ£¬²»ÄÜÓÃÓÚ--databasesºÍ--all-databasesÑ¡Ïî¡£
-mysqldump  -uroot -p --host=localhost test test --tab=¡±/tmp/mysql¡±  --lines-terminated-by=¡±##¡±
+è¾“å‡ºæ–‡ä»¶çš„æ¯è¡Œç”¨ç»™å®šå­—ç¬¦ä¸²åˆ’åˆ†ã€‚ä¸--tabé€‰é¡¹ä¸€èµ·ä½¿ç”¨ï¼Œä¸èƒ½ç”¨äº--databaseså’Œ--all-databasesé€‰é¡¹ã€‚
+mysqldump  -uroot -p --host=localhost test test --tab=â€/tmp/mysqlâ€  --lines-terminated-by=â€##â€
 --lock-all-tables,  -x
-Ìá½»ÇëÇóËø¶¨ËùÓĞÊı¾İ¿âÖĞµÄËùÓĞ±í£¬ÒÔ±£Ö¤Êı¾İµÄÒ»ÖÂĞÔ¡£ÕâÊÇÒ»¸öÈ«¾Ö¶ÁËø£¬²¢ÇÒ×Ô¶¯¹Ø±Õ--single-transaction ºÍ--lock-tables Ñ¡Ïî¡£
+æäº¤è¯·æ±‚é”å®šæ‰€æœ‰æ•°æ®åº“ä¸­çš„æ‰€æœ‰è¡¨ï¼Œä»¥ä¿è¯æ•°æ®çš„ä¸€è‡´æ€§ã€‚è¿™æ˜¯ä¸€ä¸ªå…¨å±€è¯»é”ï¼Œå¹¶ä¸”è‡ªåŠ¨å…³é—­--single-transaction å’Œ--lock-tables é€‰é¡¹ã€‚
 mysqldump  -uroot -p --host=localhost --all-databases --lock-all-tables
 --lock-tables,  -l
-¿ªÊ¼µ¼³öÇ°£¬Ëø¶¨ËùÓĞ±í¡£ÓÃREAD  LOCALËø¶¨±íÒÔÔÊĞíMyISAM±í²¢ĞĞ²åÈë¡£¶ÔÓÚÖ§³ÖÊÂÎñµÄ±íÀıÈçInnoDBºÍBDB£¬--single-transactionÊÇÒ»¸ö¸üºÃµÄÑ¡Ôñ£¬ÒòÎªËü¸ù±¾²»ĞèÒªËø¶¨±í¡£
-Çë×¢Òâµ±µ¼³ö¶à¸öÊı¾İ¿âÊ±£¬--lock-tables·Ö±ğÎªÃ¿¸öÊı¾İ¿âËø¶¨±í¡£Òò´Ë£¬¸ÃÑ¡Ïî²»ÄÜ±£Ö¤µ¼³öÎÄ¼şÖĞµÄ±íÔÚÊı¾İ¿âÖ®¼äµÄÂß¼­Ò»ÖÂĞÔ¡£²»Í¬Êı¾İ¿â±íµÄµ¼³ö×´Ì¬¿ÉÒÔÍêÈ«²»Í¬¡£
+å¼€å§‹å¯¼å‡ºå‰ï¼Œé”å®šæ‰€æœ‰è¡¨ã€‚ç”¨READ  LOCALé”å®šè¡¨ä»¥å…è®¸MyISAMè¡¨å¹¶è¡Œæ’å…¥ã€‚å¯¹äºæ”¯æŒäº‹åŠ¡çš„è¡¨ä¾‹å¦‚InnoDBå’ŒBDBï¼Œ--single-transactionæ˜¯ä¸€ä¸ªæ›´å¥½çš„é€‰æ‹©ï¼Œå› ä¸ºå®ƒæ ¹æœ¬ä¸éœ€è¦é”å®šè¡¨ã€‚
+è¯·æ³¨æ„å½“å¯¼å‡ºå¤šä¸ªæ•°æ®åº“æ—¶ï¼Œ--lock-tablesåˆ†åˆ«ä¸ºæ¯ä¸ªæ•°æ®åº“é”å®šè¡¨ã€‚å› æ­¤ï¼Œè¯¥é€‰é¡¹ä¸èƒ½ä¿è¯å¯¼å‡ºæ–‡ä»¶ä¸­çš„è¡¨åœ¨æ•°æ®åº“ä¹‹é—´çš„é€»è¾‘ä¸€è‡´æ€§ã€‚ä¸åŒæ•°æ®åº“è¡¨çš„å¯¼å‡ºçŠ¶æ€å¯ä»¥å®Œå…¨ä¸åŒã€‚
 mysqldump  -uroot -p --host=localhost --all-databases --lock-tables
 --log-error
-¸½¼Ó¾¯¸æºÍ´íÎóĞÅÏ¢µ½¸ø¶¨ÎÄ¼ş
+é™„åŠ è­¦å‘Šå’Œé”™è¯¯ä¿¡æ¯åˆ°ç»™å®šæ–‡ä»¶
 mysqldump  -uroot -p --host=localhost --all-databases  --log-error=/tmp/mysqldump_error_log.err
 --master-data
-¸ÃÑ¡Ïî½«binlogµÄÎ»ÖÃºÍÎÄ¼şÃû×·¼Óµ½Êä³öÎÄ¼şÖĞ¡£Èç¹ûÎª1£¬½«»áÊä³öCHANGE MASTER ÃüÁî£»Èç¹ûÎª2£¬Êä³öµÄCHANGE  MASTERÃüÁîÇ°Ìí¼Ó×¢ÊÍĞÅÏ¢¡£¸ÃÑ¡Ïî½«´ò¿ª--lock-all-tables Ñ¡Ïî£¬³ı·Ç--single-transactionÒ²±»Ö¸¶¨£¨ÔÚÕâÖÖÇé¿öÏÂ£¬È«¾Ö¶ÁËøÔÚ¿ªÊ¼µ¼³öÊ±»ñµÃºÜ¶ÌµÄÊ±¼ä£»ÆäËûÄÚÈİ²Î¿¼ÏÂÃæµÄ--single-transactionÑ¡Ïî£©¡£¸ÃÑ¡Ïî×Ô¶¯¹Ø±Õ--lock-tablesÑ¡Ïî¡£
+è¯¥é€‰é¡¹å°†binlogçš„ä½ç½®å’Œæ–‡ä»¶åè¿½åŠ åˆ°è¾“å‡ºæ–‡ä»¶ä¸­ã€‚å¦‚æœä¸º1ï¼Œå°†ä¼šè¾“å‡ºCHANGE MASTER å‘½ä»¤ï¼›å¦‚æœä¸º2ï¼Œè¾“å‡ºçš„CHANGE  MASTERå‘½ä»¤å‰æ·»åŠ æ³¨é‡Šä¿¡æ¯ã€‚è¯¥é€‰é¡¹å°†æ‰“å¼€--lock-all-tables é€‰é¡¹ï¼Œé™¤é--single-transactionä¹Ÿè¢«æŒ‡å®šï¼ˆåœ¨è¿™ç§æƒ…å†µä¸‹ï¼Œå…¨å±€è¯»é”åœ¨å¼€å§‹å¯¼å‡ºæ—¶è·å¾—å¾ˆçŸ­çš„æ—¶é—´ï¼›å…¶ä»–å†…å®¹å‚è€ƒä¸‹é¢çš„--single-transactioné€‰é¡¹ï¼‰ã€‚è¯¥é€‰é¡¹è‡ªåŠ¨å…³é—­--lock-tablesé€‰é¡¹ã€‚
 mysqldump  -uroot -p --host=localhost --all-databases --master-data=1;
 mysqldump  -uroot -p --host=localhost --all-databases --master-data=2;
 --max_allowed_packet
-·şÎñÆ÷·¢ËÍºÍ½ÓÊÜµÄ×î´ó°ü³¤¶È¡£
+æœåŠ¡å™¨å‘é€å’Œæ¥å—çš„æœ€å¤§åŒ…é•¿åº¦ã€‚
 mysqldump  -uroot -p --host=localhost --all-databases --max_allowed_packet=10240
 --net_buffer_length
-TCP/IPºÍsocketÁ¬½ÓµÄ»º´æ´óĞ¡¡£
+TCP/IPå’Œsocketè¿æ¥çš„ç¼“å­˜å¤§å°ã€‚
 mysqldump  -uroot -p --host=localhost --all-databases --net_buffer_length=1024
 --no-autocommit
-Ê¹ÓÃautocommit/commit Óï¾ä°ü¹ü±í¡£
+ä½¿ç”¨autocommit/commit è¯­å¥åŒ…è£¹è¡¨ã€‚
 mysqldump  -uroot -p --host=localhost --all-databases --no-autocommit
 --no-create-db,  -n
-Ö»µ¼³öÊı¾İ£¬¶ø²»Ìí¼ÓCREATE DATABASE Óï¾ä¡£
+åªå¯¼å‡ºæ•°æ®ï¼Œè€Œä¸æ·»åŠ CREATE DATABASE è¯­å¥ã€‚
 mysqldump  -uroot -p --host=localhost --all-databases --no-create-db
 --no-create-info,  -t
-Ö»µ¼³öÊı¾İ£¬¶ø²»Ìí¼ÓCREATE TABLE Óï¾ä¡£
+åªå¯¼å‡ºæ•°æ®ï¼Œè€Œä¸æ·»åŠ CREATE TABLE è¯­å¥ã€‚
 mysqldump  -uroot -p --host=localhost --all-databases --no-create-info
 --no-data, -d
-²»µ¼³öÈÎºÎÊı¾İ£¬Ö»µ¼³öÊı¾İ¿â±í½á¹¹¡£
+ä¸å¯¼å‡ºä»»ä½•æ•°æ®ï¼Œåªå¯¼å‡ºæ•°æ®åº“è¡¨ç»“æ„ã€‚
 mysqldump  -uroot -p --host=localhost --all-databases --no-data
 --no-set-names,  -N
-µÈÍ¬ÓÚ--skip-set-charset
+ç­‰åŒäº--skip-set-charset
 mysqldump  -uroot -p --host=localhost --all-databases --no-set-names
 --opt
-µÈÍ¬ÓÚ--add-drop-table,  --add-locks, --create-options, --quick, --extended-insert, --lock-tables,  --set-charset, --disable-keys ¸ÃÑ¡ÏîÄ¬ÈÏ¿ªÆô,  ¿ÉÒÔÓÃ--skip-opt½ûÓÃ.
+ç­‰åŒäº--add-drop-table,  --add-locks, --create-options, --quick, --extended-insert, --lock-tables,  --set-charset, --disable-keys è¯¥é€‰é¡¹é»˜è®¤å¼€å¯,  å¯ä»¥ç”¨--skip-optç¦ç”¨.
 mysqldump  -uroot -p --host=localhost --all-databases --opt
 --order-by-primary
-Èç¹û´æÔÚÖ÷¼ü£¬»òÕßµÚÒ»¸öÎ¨Ò»¼ü£¬¶ÔÃ¿¸ö±íµÄ¼ÇÂ¼½øĞĞÅÅĞò¡£ÔÚµ¼³öMyISAM±íµ½InnoDB±íÊ±ÓĞĞ§£¬µ«»áÊ¹µÃµ¼³ö¹¤×÷»¨·ÑºÜ³¤Ê±¼ä¡£ 
+å¦‚æœå­˜åœ¨ä¸»é”®ï¼Œæˆ–è€…ç¬¬ä¸€ä¸ªå”¯ä¸€é”®ï¼Œå¯¹æ¯ä¸ªè¡¨çš„è®°å½•è¿›è¡Œæ’åºã€‚åœ¨å¯¼å‡ºMyISAMè¡¨åˆ°InnoDBè¡¨æ—¶æœ‰æ•ˆï¼Œä½†ä¼šä½¿å¾—å¯¼å‡ºå·¥ä½œèŠ±è´¹å¾ˆé•¿æ—¶é—´ã€‚ 
 mysqldump  -uroot -p --host=localhost --all-databases --order-by-primary
 --password, -p
-Á¬½ÓÊı¾İ¿âÃÜÂë
---pipe(windowsÏµÍ³¿ÉÓÃ)
-Ê¹ÓÃÃüÃû¹ÜµÀÁ¬½Ómysql
+è¿æ¥æ•°æ®åº“å¯†ç 
+--pipe(windowsç³»ç»Ÿå¯ç”¨)
+ä½¿ç”¨å‘½åç®¡é“è¿æ¥mysql
 mysqldump  -uroot -p --host=localhost --all-databases --pipe
 --port, -P
-Á¬½ÓÊı¾İ¿â¶Ë¿ÚºÅ
+è¿æ¥æ•°æ®åº“ç«¯å£å·
 --protocol
-Ê¹ÓÃµÄÁ¬½ÓĞ­Òé£¬°üÀ¨£ºtcp, socket, pipe, memory.
+ä½¿ç”¨çš„è¿æ¥åè®®ï¼ŒåŒ…æ‹¬ï¼štcp, socket, pipe, memory.
 mysqldump  -uroot -p --host=localhost --all-databases --protocol=tcp
 --quick, -q
-²»»º³å²éÑ¯£¬Ö±½Óµ¼³öµ½±ê×¼Êä³ö¡£Ä¬ÈÏÎª´ò¿ª×´Ì¬£¬Ê¹ÓÃ--skip-quickÈ¡Ïû¸ÃÑ¡Ïî¡£
+ä¸ç¼“å†²æŸ¥è¯¢ï¼Œç›´æ¥å¯¼å‡ºåˆ°æ ‡å‡†è¾“å‡ºã€‚é»˜è®¤ä¸ºæ‰“å¼€çŠ¶æ€ï¼Œä½¿ç”¨--skip-quickå–æ¶ˆè¯¥é€‰é¡¹ã€‚
 mysqldump  -uroot -p --host=localhost --all-databases 
 mysqldump  -uroot -p --host=localhost --all-databases --skip-quick
 --quote-names,-Q
-Ê¹ÓÃ£¨`£©ÒıÆğ±íºÍÁĞÃû¡£Ä¬ÈÏÎª´ò¿ª×´Ì¬£¬Ê¹ÓÃ--skip-quote-namesÈ¡Ïû¸ÃÑ¡Ïî¡£
+ä½¿ç”¨ï¼ˆ`ï¼‰å¼•èµ·è¡¨å’Œåˆ—åã€‚é»˜è®¤ä¸ºæ‰“å¼€çŠ¶æ€ï¼Œä½¿ç”¨--skip-quote-nameså–æ¶ˆè¯¥é€‰é¡¹ã€‚
 mysqldump  -uroot -p --host=localhost --all-databases
 mysqldump  -uroot -p --host=localhost --all-databases --skip-quote-names
 --replace
-Ê¹ÓÃREPLACE INTO È¡´úINSERT INTO.
+ä½¿ç”¨REPLACE INTO å–ä»£INSERT INTO.
 mysqldump  -uroot -p --host=localhost --all-databases --replace
 --result-file,  -r
-Ö±½ÓÊä³öµ½Ö¸¶¨ÎÄ¼şÖĞ¡£¸ÃÑ¡ÏîÓ¦¸ÃÓÃÔÚÊ¹ÓÃ»Ø³µ»»ĞĞ¶Ô£¨\\r\\n£©»»ĞĞµÄÏµÍ³ÉÏ£¨ÀıÈç£ºDOS£¬Windows£©¡£¸ÃÑ¡ÏîÈ·±£Ö»ÓĞÒ»ĞĞ±»Ê¹ÓÃ¡£
+ç›´æ¥è¾“å‡ºåˆ°æŒ‡å®šæ–‡ä»¶ä¸­ã€‚è¯¥é€‰é¡¹åº”è¯¥ç”¨åœ¨ä½¿ç”¨å›è½¦æ¢è¡Œå¯¹ï¼ˆ\\r\\nï¼‰æ¢è¡Œçš„ç³»ç»Ÿä¸Šï¼ˆä¾‹å¦‚ï¼šDOSï¼ŒWindowsï¼‰ã€‚è¯¥é€‰é¡¹ç¡®ä¿åªæœ‰ä¸€è¡Œè¢«ä½¿ç”¨ã€‚
 mysqldump  -uroot -p --host=localhost --all-databases --result-file=/tmp/mysqldump_result_file.txt
 --routines, -R
-µ¼³ö´æ´¢¹ı³ÌÒÔ¼°×Ô¶¨Òåº¯Êı¡£
+å¯¼å‡ºå­˜å‚¨è¿‡ç¨‹ä»¥åŠè‡ªå®šä¹‰å‡½æ•°ã€‚
 mysqldump  -uroot -p --host=localhost --all-databases --routines
 --set-charset
-Ìí¼Ó'SET NAMES  default_character_set'µ½Êä³öÎÄ¼ş¡£Ä¬ÈÏÎª´ò¿ª×´Ì¬£¬Ê¹ÓÃ--skip-set-charset¹Ø±ÕÑ¡Ïî¡£
+æ·»åŠ 'SET NAMES  default_character_set'åˆ°è¾“å‡ºæ–‡ä»¶ã€‚é»˜è®¤ä¸ºæ‰“å¼€çŠ¶æ€ï¼Œä½¿ç”¨--skip-set-charsetå…³é—­é€‰é¡¹ã€‚
 mysqldump  -uroot -p --host=localhost --all-databases 
 mysqldump  -uroot -p --host=localhost --all-databases --skip-set-charset
 --single-transaction
-¸ÃÑ¡ÏîÔÚµ¼³öÊı¾İÖ®Ç°Ìá½»Ò»¸öBEGIN SQLÓï¾ä£¬BEGIN ²»»á×èÈûÈÎºÎÓ¦ÓÃ³ÌĞòÇÒÄÜ±£Ö¤µ¼³öÊ±Êı¾İ¿âµÄÒ»ÖÂĞÔ×´Ì¬¡£ËüÖ»ÊÊÓÃÓÚ¶à°æ±¾´æ´¢ÒıÇæ£¬½öInnoDB¡£±¾Ñ¡ÏîºÍ--lock-tables Ñ¡ÏîÊÇ»¥³âµÄ£¬ÒòÎªLOCK  TABLES »áÊ¹ÈÎºÎ¹ÒÆğµÄÊÂÎñÒşº¬Ìá½»¡£ÒªÏëµ¼³ö´ó±íµÄ»°£¬Ó¦½áºÏÊ¹ÓÃ--quick Ñ¡Ïî¡£
+è¯¥é€‰é¡¹åœ¨å¯¼å‡ºæ•°æ®ä¹‹å‰æäº¤ä¸€ä¸ªBEGIN SQLè¯­å¥ï¼ŒBEGIN ä¸ä¼šé˜»å¡ä»»ä½•åº”ç”¨ç¨‹åºä¸”èƒ½ä¿è¯å¯¼å‡ºæ—¶æ•°æ®åº“çš„ä¸€è‡´æ€§çŠ¶æ€ã€‚å®ƒåªé€‚ç”¨äºå¤šç‰ˆæœ¬å­˜å‚¨å¼•æ“ï¼Œä»…InnoDBã€‚æœ¬é€‰é¡¹å’Œ--lock-tables é€‰é¡¹æ˜¯äº’æ–¥çš„ï¼Œå› ä¸ºLOCK  TABLES ä¼šä½¿ä»»ä½•æŒ‚èµ·çš„äº‹åŠ¡éšå«æäº¤ã€‚è¦æƒ³å¯¼å‡ºå¤§è¡¨çš„è¯ï¼Œåº”ç»“åˆä½¿ç”¨--quick é€‰é¡¹ã€‚
 mysqldump  -uroot -p --host=localhost --all-databases --single-transaction
 --dump-date
-½«µ¼³öÊ±¼äÌí¼Óµ½Êä³öÎÄ¼şÖĞ¡£Ä¬ÈÏÎª´ò¿ª×´Ì¬£¬Ê¹ÓÃ--skip-dump-date¹Ø±ÕÑ¡Ïî¡£
+å°†å¯¼å‡ºæ—¶é—´æ·»åŠ åˆ°è¾“å‡ºæ–‡ä»¶ä¸­ã€‚é»˜è®¤ä¸ºæ‰“å¼€çŠ¶æ€ï¼Œä½¿ç”¨--skip-dump-dateå…³é—­é€‰é¡¹ã€‚
 mysqldump  -uroot -p --host=localhost --all-databases
 mysqldump  -uroot -p --host=localhost --all-databases --skip-dump-date
 --skip-opt
-½ûÓÃ¨CoptÑ¡Ïî.
+ç¦ç”¨Copté€‰é¡¹.
 mysqldump  -uroot -p --host=localhost --all-databases --skip-opt
 --socket,-S
-Ö¸¶¨Á¬½ÓmysqlµÄsocketÎÄ¼şÎ»ÖÃ£¬Ä¬ÈÏÂ·¾¶/tmp/mysql.sock
+æŒ‡å®šè¿æ¥mysqlçš„socketæ–‡ä»¶ä½ç½®ï¼Œé»˜è®¤è·¯å¾„/tmp/mysql.sock
 mysqldump  -uroot -p --host=localhost --all-databases --socket=/tmp/mysqld.sock
 --tab,-T
-ÎªÃ¿¸ö±íÔÚ¸ø¶¨Â·¾¶´´½¨tab·Ö¸îµÄÎÄ±¾ÎÄ¼ş¡£×¢Òâ£º½ö½öÓÃÓÚmysqldumpºÍmysqld·şÎñÆ÷ÔËĞĞÔÚÏàÍ¬»úÆ÷ÉÏ¡£
+ä¸ºæ¯ä¸ªè¡¨åœ¨ç»™å®šè·¯å¾„åˆ›å»ºtabåˆ†å‰²çš„æ–‡æœ¬æ–‡ä»¶ã€‚æ³¨æ„ï¼šä»…ä»…ç”¨äºmysqldumpå’ŒmysqldæœåŠ¡å™¨è¿è¡Œåœ¨ç›¸åŒæœºå™¨ä¸Šã€‚
 mysqldump  -uroot -p --host=localhost test test --tab="/home/mysql"
 --tables
-¸²¸Ç--databases (-B)²ÎÊı£¬Ö¸¶¨ĞèÒªµ¼³öµÄ±íÃû¡£
+è¦†ç›–--databases (-B)å‚æ•°ï¼ŒæŒ‡å®šéœ€è¦å¯¼å‡ºçš„è¡¨åã€‚
 mysqldump  -uroot -p --host=localhost --databases test --tables test
 --triggers
-µ¼³ö´¥·¢Æ÷¡£¸ÃÑ¡ÏîÄ¬ÈÏÆôÓÃ£¬ÓÃ--skip-triggers½ûÓÃËü¡£
+å¯¼å‡ºè§¦å‘å™¨ã€‚è¯¥é€‰é¡¹é»˜è®¤å¯ç”¨ï¼Œç”¨--skip-triggersç¦ç”¨å®ƒã€‚
 mysqldump  -uroot -p --host=localhost --all-databases --triggers
 --tz-utc
-ÔÚµ¼³ö¶¥²¿ÉèÖÃÊ±ÇøTIME_ZONE='+00:00' £¬ÒÔ±£Ö¤ÔÚ²»Í¬Ê±Çøµ¼³öµÄTIMESTAMP Êı¾İ»òÕßÊı¾İ±»ÒÆ¶¯ÆäËûÊ±ÇøÊ±µÄÕıÈ·ĞÔ¡£
+åœ¨å¯¼å‡ºé¡¶éƒ¨è®¾ç½®æ—¶åŒºTIME_ZONE='+00:00' ï¼Œä»¥ä¿è¯åœ¨ä¸åŒæ—¶åŒºå¯¼å‡ºçš„TIMESTAMP æ•°æ®æˆ–è€…æ•°æ®è¢«ç§»åŠ¨å…¶ä»–æ—¶åŒºæ—¶çš„æ­£ç¡®æ€§ã€‚
 mysqldump  -uroot -p --host=localhost --all-databases --tz-utc
 --user, -u
-Ö¸¶¨Á¬½ÓµÄÓÃ»§Ãû¡£
+æŒ‡å®šè¿æ¥çš„ç”¨æˆ·åã€‚
 --verbose, --v
-Êä³ö¶àÖÖÆ½Ì¨ĞÅÏ¢¡£
+è¾“å‡ºå¤šç§å¹³å°ä¿¡æ¯ã€‚
 --version, -V
-Êä³ömysqldump°æ±¾ĞÅÏ¢²¢ÍË³ö
+è¾“å‡ºmysqldumpç‰ˆæœ¬ä¿¡æ¯å¹¶é€€å‡º
 --where, -w
-Ö»×ª´¢¸ø¶¨µÄWHEREÌõ¼şÑ¡ÔñµÄ¼ÇÂ¼¡£Çë×¢ÒâÈç¹ûÌõ¼ş°üº¬ÃüÁî½âÊÍ·û×¨ÓÃ¿Õ¸ñ»ò×Ö·û£¬Ò»¶¨Òª½«Ìõ¼şÒıÓÃÆğÀ´¡£
-mysqldump  -uroot -p --host=localhost --all-databases --where=¡± user=¡¯root¡¯¡±
+åªè½¬å‚¨ç»™å®šçš„WHEREæ¡ä»¶é€‰æ‹©çš„è®°å½•ã€‚è¯·æ³¨æ„å¦‚æœæ¡ä»¶åŒ…å«å‘½ä»¤è§£é‡Šç¬¦ä¸“ç”¨ç©ºæ ¼æˆ–å­—ç¬¦ï¼Œä¸€å®šè¦å°†æ¡ä»¶å¼•ç”¨èµ·æ¥ã€‚
+mysqldump  -uroot -p --host=localhost --all-databases --where=â€ user=â€™rootâ€™â€
 --xml, -X
-µ¼³öXML¸ñÊ½.
+å¯¼å‡ºXMLæ ¼å¼.
 mysqldump  -uroot -p --host=localhost --all-databases --xml
 --plugin_dir
-¿Í»§¶Ë²å¼şµÄÄ¿Â¼£¬ÓÃÓÚ¼æÈİ²»Í¬µÄ²å¼ş°æ±¾¡£
-mysqldump  -uroot -p --host=localhost --all-databases --plugin_dir=¡±/usr/local/lib/plugin¡±
+å®¢æˆ·ç«¯æ’ä»¶çš„ç›®å½•ï¼Œç”¨äºå…¼å®¹ä¸åŒçš„æ’ä»¶ç‰ˆæœ¬ã€‚
+mysqldump  -uroot -p --host=localhost --all-databases --plugin_dir=â€/usr/local/lib/pluginâ€
 --default_auth
-¿Í»§¶Ë²å¼şÄ¬ÈÏÊ¹ÓÃÈ¨ÏŞ¡£
-mysqldump  -uroot -p --host=localhost --all-databases --default-auth=¡±/usr/local/lib/plugin/<PLUGIN>¡±
+å®¢æˆ·ç«¯æ’ä»¶é»˜è®¤ä½¿ç”¨æƒé™ã€‚
+mysqldump  -uroot -p --host=localhost --all-databases --default-auth=â€/usr/local/lib/plugin/<PLUGIN>â€
 
 
 
@@ -2499,64 +2499,64 @@ echo "$sss"
 date
 
 skip-name-resolve
-ÔÚmysql¿Í»§¶ËµÇÂ½mysql·şÎñÆ÷µÄµÇÂ¼ËÙ¶ÈÌ«ÂıµÄ½â¾ö·½°¸Ò»ÆªÎÄÕÂÖĞ£¬ÎÒ½éÉÜÁËÈçºÎÍ¨¹ıÔÚmy.iniÎÄ¼ş(linuxÏÂÊÇmy.cnfÎÄ¼ş)ÖĞÌí¼Ó"SKIP-NAME-RESOLVE"µÄ²ÎÊıÉèÖÃ£¬Ê¹µÃ¿Í»§¶ËÔÚµÇÂ¼·şÎñÆ÷µÄÊ±ºò²»Í¨¹ıÖ÷»ú½âÎöÕâÒ»¹Ø£¬Ö±½ÓµÇÂ½µÄ·½·¨£¬ÒÔ´ËÀ´Ìá¸ßµÇÂ¼ËÙ¶È¡£
-     ÕâÀïÒª½éÉÜÒ»ÏÂÕâÖÖ·½·¨µÄ¸ºÃæ×÷ÓÃ£¬ÒÔ¼°²»ºÏÀíµÄÊ±»úÊ¹ÓÃÕâÖÖ·½·¨»áÒı·¢µÄ²»¿É·¢ÏÖµÄ´íÎó¡£
-     Ê×ÏÈ£¬»Ø¹ËÒ»ÏÂÔÚmy.iniÎÄ¼şÖĞÌí¼Ó"SKIP-NAME-RESOLVE"²ÎÊıÀ´Ìá¸ß·ÃÎÊËÙ¶ÈµÄÔ­Àí£º
-     ÔÚÃ»ÓĞÉèÖÃ¸Ã²ÎÊıµÄÊ±ºò£¬¿Í»§¶ËÔÚµÇÂ½ÇëÇó·¢³öºó£¬·şÎñÆ÷Òª½âÎöÇëÇóÕßÊÇË­£¬¾­¹ı½âÎö£¬·¢ÏÖµÇÂ¼ÕßÊÇ´ÓÁíÍâµÄµçÄÔµÇÂ¼µÄ£¬Ò²¾ÍÊÇËµ²»ÊÇ·şÎñÆ÷±¾»ú£¬ÄÇÃ´£¬·şÎñÆ÷»áµ½mysql.user±íÖĞÈ¥²éÕÒÊÇ·ñÓĞÕâ¸öÓÃ»§£¬¼ÙÉè·şÎñÆ÷IPÊÇ192.168.0.1£¬¶ø¿Í»§»úµÄIPÊÇ192.168.0.2£»ÄÇÃ´²éÑ¯µÄË³ĞòÊÇÏÈÕÒ'root'@'192.168.0.2'Õâ¸öuserÊÇ·ñ´æÔÚ£¬Èô´æÔÚ£¬ÔòÆ¥ÅäÕâ¸öÓÃ»§µÇÂ½£¬²¢¼ÓÔØÈ¨ÏŞÁĞ±í¡£ÈôÃ»ÓĞ¸ÃÓÃ»§£¬Ôò²éÕÒ'root'@'%'Õâ¸öÓÃ»§ÊÇ·ñ´æÔÚ£¬Èô´æÔÚ£¬Ôò¼ÓÔØÈ¨ÏŞÁĞ±í¡£·ñÔò£¬µÇÂ¼Ê§°Ü¡£
-    ÔÚÉèÖÃÁËSKIP-NAME-RESOLVE²ÎÊıºó£¬¿Í»§¶ËµÄµÇÂ¼ÇëÇóµÄ½âÎöÊ½Í¬ÉÏÃæÒ»ÑùµÄ£¬µ«ÊÇÔÚ·şÎñÆ÷±¾»úµÄ½âÎö¹ı³ÌÈ´·¢ÉúÁË¸Ä±ä£º·şÎñÆ÷»á°ÑÔÚ±¾»úµÇÂ¼µÄÓÃ»§×Ô¶¯½âÎöÎª'root'@'127.0.0.1'£»¶ø²»ÊÇ'root'@'localhost'£»ÕâÑùÒ»À´¾Í»µÁË£¬ÒòÎªÎÒÃÇÔÚ·şÎñÆ÷ÉÏµÇÂ¼ÊÇÎªÁË½øĞĞÒ»Ğ©Î¬»¤²Ù×÷£¬µ«ÊÇÏÔÈ»£¬'root'@'127.0.0.1'Õâ¸öÓÃ»§ÊÇ±»Ä¬ÈÏÎª'root'@'%'Õâ¸öÓÃ»§µÄ£¬Õâ¸öÓÃ»§»¹Ã»ÓĞ×ã¹»µÃÈ¨ÏŞÈ¥Ö´ĞĞÒ»Ğ©³¬¼¶¹ÜÀíÔ±'root'@'localhost'²ÅÄÜÖ´ĞĞµÄ´ó×÷¡£ÒòÎªÎ´·ÖÅäÈ¨ÏŞ¡£
-    ËùÒÔ½áÂÛÊÇ£º¼ÓÈëÄãÔÚ·şÎñÆ÷±¾»úÉÏµÇÂ¼mysql·şÎñÆ÷µÄ»°£¬ÒªÃ´ÏÈÈ¡ÏûSKIP-NAME-RESOLVEµÄ²ÎÊıÉèÖÃ£¬ÖØĞÂÆô¶¯·şÎñÆ÷ÔÙµÇÂ½£¬ÉèÖÃÍê³Éºó£¬ÔÙÉèÖÃÉÏ¸Ã²ÎÊı£»ÒªÃ´¾Í¸ø'root'@'127.0.0.1'·ÖÅä³¬¼¶¹ÜÀíÔ±È¨ÏŞ£¬µ«ÕâÃ´×öÏÔÈ»ÊÇ²»Ã÷ÖÇµÄ£¬ÒòÎªÈÎºÎÈËÔÚÈÎºÎ»úÆ÷ÉÏ¶¼¿ÉÒÔÓÃÕâ¸öÓÃ»§Ö´ĞĞ¹ÜÀíÔ±²Ù×÷£¬Ç°ÌáÊÇÖªµÀÁËÃÜÂë¡£
-    ÎÒÓĞÒ»´ÎÔÚmysql·şÎñÆ÷ÉÏÖ´ĞĞÊı¾İ¿â´´½¨½Å±¾£¬²¢Í¬Ê±´´½¨±í¡¢´¥·¢Æ÷¡¢´æ´¢¹ı³ÌµÈ¡£½á¹û£¬×ÜÊÇÊ§°Ü£¬¾­¹ıÁËÒ»ÉÏÎçµÄÕÛÌÚ£¬×îºó·¢ÏÖÊ±Õâ¸ö²ÎÊıÔì³ÉÎÒÒÔ'root'@'127.0.0.1'Õâ¸öÓÃ»§µÇÂ½ÁË·şÎñÆ÷£¬Õâ¸öÓÃ»§Ã»ÓĞ´´½¨´¥·¢Æ÷µÄÈ¨ÏŞ¡£ºóÀ´£¬È¡ÏûÁËSKIP-NAME-RESOLVE²ÎÊıºó£¬Ö´ĞĞ³É¹¦£¬ÔÙ°Ñ¸Ã²ÎÊıÉèÖÃ»ØÈ¥¡£ÖØÆô¡£OK¡£
-    ËùÒÔ£¬ÔÚÉèÖÃÕâ¸ö²ÎÊıµÄÊ±ºòÒ»¶¨Òª×¢ÒâÊ±»ú£ºÏÈÓÃ³¬¼¶¹ÜÀíÔ±½«ËùÓĞµÄÓÃ»§´´½¨ºÃ£¬ÔÙ½«È¨ÏŞ·ÖÅäºÃÖ®ºó£¬²ÅÉèÖÃÕâ¸ö²ÎÊıÉúĞ§¡£
+åœ¨mysqlå®¢æˆ·ç«¯ç™»é™†mysqlæœåŠ¡å™¨çš„ç™»å½•é€Ÿåº¦å¤ªæ…¢çš„è§£å†³æ–¹æ¡ˆä¸€ç¯‡æ–‡ç« ä¸­ï¼Œæˆ‘ä»‹ç»äº†å¦‚ä½•é€šè¿‡åœ¨my.iniæ–‡ä»¶(linuxä¸‹æ˜¯my.cnfæ–‡ä»¶)ä¸­æ·»åŠ "SKIP-NAME-RESOLVE"çš„å‚æ•°è®¾ç½®ï¼Œä½¿å¾—å®¢æˆ·ç«¯åœ¨ç™»å½•æœåŠ¡å™¨çš„æ—¶å€™ä¸é€šè¿‡ä¸»æœºè§£æè¿™ä¸€å…³ï¼Œç›´æ¥ç™»é™†çš„æ–¹æ³•ï¼Œä»¥æ­¤æ¥æé«˜ç™»å½•é€Ÿåº¦ã€‚
+     è¿™é‡Œè¦ä»‹ç»ä¸€ä¸‹è¿™ç§æ–¹æ³•çš„è´Ÿé¢ä½œç”¨ï¼Œä»¥åŠä¸åˆç†çš„æ—¶æœºä½¿ç”¨è¿™ç§æ–¹æ³•ä¼šå¼•å‘çš„ä¸å¯å‘ç°çš„é”™è¯¯ã€‚
+     é¦–å…ˆï¼Œå›é¡¾ä¸€ä¸‹åœ¨my.iniæ–‡ä»¶ä¸­æ·»åŠ "SKIP-NAME-RESOLVE"å‚æ•°æ¥æé«˜è®¿é—®é€Ÿåº¦çš„åŸç†ï¼š
+     åœ¨æ²¡æœ‰è®¾ç½®è¯¥å‚æ•°çš„æ—¶å€™ï¼Œå®¢æˆ·ç«¯åœ¨ç™»é™†è¯·æ±‚å‘å‡ºåï¼ŒæœåŠ¡å™¨è¦è§£æè¯·æ±‚è€…æ˜¯è°ï¼Œç»è¿‡è§£æï¼Œå‘ç°ç™»å½•è€…æ˜¯ä»å¦å¤–çš„ç”µè„‘ç™»å½•çš„ï¼Œä¹Ÿå°±æ˜¯è¯´ä¸æ˜¯æœåŠ¡å™¨æœ¬æœºï¼Œé‚£ä¹ˆï¼ŒæœåŠ¡å™¨ä¼šåˆ°mysql.userè¡¨ä¸­å»æŸ¥æ‰¾æ˜¯å¦æœ‰è¿™ä¸ªç”¨æˆ·ï¼Œå‡è®¾æœåŠ¡å™¨IPæ˜¯192.168.0.1ï¼Œè€Œå®¢æˆ·æœºçš„IPæ˜¯192.168.0.2ï¼›é‚£ä¹ˆæŸ¥è¯¢çš„é¡ºåºæ˜¯å…ˆæ‰¾'root'@'192.168.0.2'è¿™ä¸ªuseræ˜¯å¦å­˜åœ¨ï¼Œè‹¥å­˜åœ¨ï¼Œåˆ™åŒ¹é…è¿™ä¸ªç”¨æˆ·ç™»é™†ï¼Œå¹¶åŠ è½½æƒé™åˆ—è¡¨ã€‚è‹¥æ²¡æœ‰è¯¥ç”¨æˆ·ï¼Œåˆ™æŸ¥æ‰¾'root'@'%'è¿™ä¸ªç”¨æˆ·æ˜¯å¦å­˜åœ¨ï¼Œè‹¥å­˜åœ¨ï¼Œåˆ™åŠ è½½æƒé™åˆ—è¡¨ã€‚å¦åˆ™ï¼Œç™»å½•å¤±è´¥ã€‚
+    åœ¨è®¾ç½®äº†SKIP-NAME-RESOLVEå‚æ•°åï¼Œå®¢æˆ·ç«¯çš„ç™»å½•è¯·æ±‚çš„è§£æå¼åŒä¸Šé¢ä¸€æ ·çš„ï¼Œä½†æ˜¯åœ¨æœåŠ¡å™¨æœ¬æœºçš„è§£æè¿‡ç¨‹å´å‘ç”Ÿäº†æ”¹å˜ï¼šæœåŠ¡å™¨ä¼šæŠŠåœ¨æœ¬æœºç™»å½•çš„ç”¨æˆ·è‡ªåŠ¨è§£æä¸º'root'@'127.0.0.1'ï¼›è€Œä¸æ˜¯'root'@'localhost'ï¼›è¿™æ ·ä¸€æ¥å°±åäº†ï¼Œå› ä¸ºæˆ‘ä»¬åœ¨æœåŠ¡å™¨ä¸Šç™»å½•æ˜¯ä¸ºäº†è¿›è¡Œä¸€äº›ç»´æŠ¤æ“ä½œï¼Œä½†æ˜¯æ˜¾ç„¶ï¼Œ'root'@'127.0.0.1'è¿™ä¸ªç”¨æˆ·æ˜¯è¢«é»˜è®¤ä¸º'root'@'%'è¿™ä¸ªç”¨æˆ·çš„ï¼Œè¿™ä¸ªç”¨æˆ·è¿˜æ²¡æœ‰è¶³å¤Ÿå¾—æƒé™å»æ‰§è¡Œä¸€äº›è¶…çº§ç®¡ç†å‘˜'root'@'localhost'æ‰èƒ½æ‰§è¡Œçš„å¤§ä½œã€‚å› ä¸ºæœªåˆ†é…æƒé™ã€‚
+    æ‰€ä»¥ç»“è®ºæ˜¯ï¼šåŠ å…¥ä½ åœ¨æœåŠ¡å™¨æœ¬æœºä¸Šç™»å½•mysqlæœåŠ¡å™¨çš„è¯ï¼Œè¦ä¹ˆå…ˆå–æ¶ˆSKIP-NAME-RESOLVEçš„å‚æ•°è®¾ç½®ï¼Œé‡æ–°å¯åŠ¨æœåŠ¡å™¨å†ç™»é™†ï¼Œè®¾ç½®å®Œæˆåï¼Œå†è®¾ç½®ä¸Šè¯¥å‚æ•°ï¼›è¦ä¹ˆå°±ç»™'root'@'127.0.0.1'åˆ†é…è¶…çº§ç®¡ç†å‘˜æƒé™ï¼Œä½†è¿™ä¹ˆåšæ˜¾ç„¶æ˜¯ä¸æ˜æ™ºçš„ï¼Œå› ä¸ºä»»ä½•äººåœ¨ä»»ä½•æœºå™¨ä¸Šéƒ½å¯ä»¥ç”¨è¿™ä¸ªç”¨æˆ·æ‰§è¡Œç®¡ç†å‘˜æ“ä½œï¼Œå‰ææ˜¯çŸ¥é“äº†å¯†ç ã€‚
+    æˆ‘æœ‰ä¸€æ¬¡åœ¨mysqlæœåŠ¡å™¨ä¸Šæ‰§è¡Œæ•°æ®åº“åˆ›å»ºè„šæœ¬ï¼Œå¹¶åŒæ—¶åˆ›å»ºè¡¨ã€è§¦å‘å™¨ã€å­˜å‚¨è¿‡ç¨‹ç­‰ã€‚ç»“æœï¼Œæ€»æ˜¯å¤±è´¥ï¼Œç»è¿‡äº†ä¸€ä¸Šåˆçš„æŠ˜è…¾ï¼Œæœ€åå‘ç°æ—¶è¿™ä¸ªå‚æ•°é€ æˆæˆ‘ä»¥'root'@'127.0.0.1'è¿™ä¸ªç”¨æˆ·ç™»é™†äº†æœåŠ¡å™¨ï¼Œè¿™ä¸ªç”¨æˆ·æ²¡æœ‰åˆ›å»ºè§¦å‘å™¨çš„æƒé™ã€‚åæ¥ï¼Œå–æ¶ˆäº†SKIP-NAME-RESOLVEå‚æ•°åï¼Œæ‰§è¡ŒæˆåŠŸï¼Œå†æŠŠè¯¥å‚æ•°è®¾ç½®å›å»ã€‚é‡å¯ã€‚OKã€‚
+    æ‰€ä»¥ï¼Œåœ¨è®¾ç½®è¿™ä¸ªå‚æ•°çš„æ—¶å€™ä¸€å®šè¦æ³¨æ„æ—¶æœºï¼šå…ˆç”¨è¶…çº§ç®¡ç†å‘˜å°†æ‰€æœ‰çš„ç”¨æˆ·åˆ›å»ºå¥½ï¼Œå†å°†æƒé™åˆ†é…å¥½ä¹‹åï¼Œæ‰è®¾ç½®è¿™ä¸ªå‚æ•°ç”Ÿæ•ˆã€‚
 
-ÉèÖÃ¸ôÀë¼¶±ğ
+è®¾ç½®éš”ç¦»çº§åˆ«
 set session transaction isolation level read commited;
-É¾³ıbinlogÈÕÖ¾
-purge binary|master logs to 'mysql-bin.000123' ²»É¾³ımysql-bin.000123 Ö»É¾³ıÖ®Ç°µÄ¡£
+åˆ é™¤binlogæ—¥å¿—
+purge binary|master logs to 'mysql-bin.000123' ä¸åˆ é™¤mysql-bin.000123 åªåˆ é™¤ä¹‹å‰çš„ã€‚
 purge binary|master logs before '2013-01-01 00:00:00'
-¸ü¸Ä±íµÄÒıÇæ
+æ›´æ”¹è¡¨çš„å¼•æ“
 start transaction;
 create table innodb_table like myisam_table;
 alter table innodb_table engine=Innodb;
 alter table innodb_table disable keys;
 insert into innodb_table select * from myisam_table where id between x and y;
 alter table innodb_table enable keys;
-´´½¨Ò»ÕÅÏàÍ¬½á¹¹µÄ¿Õ±í£¬²¢½øĞĞËùĞèÒªµÄĞŞ¸Ä
-flush tables with read lock ¹Ø±ÕËùÓĞÕıÔÚÊ¹ÓÃµÄ±í£¬²¢½ûÖ¹ÈÎºÎ±í´ò¿ª¡£
-½»»».frmÎÄ¼ş
-unlock tables ÊÍ·ÅËø¡£
+åˆ›å»ºä¸€å¼ ç›¸åŒç»“æ„çš„ç©ºè¡¨ï¼Œå¹¶è¿›è¡Œæ‰€éœ€è¦çš„ä¿®æ”¹
+flush tables with read lock å…³é—­æ‰€æœ‰æ­£åœ¨ä½¿ç”¨çš„è¡¨ï¼Œå¹¶ç¦æ­¢ä»»ä½•è¡¨æ‰“å¼€ã€‚
+äº¤æ¢.frmæ–‡ä»¶
+unlock tables é‡Šæ”¾é”ã€‚
 
-½Ï¸ßÆµÂÊÃ¿ÃëÖ´ĞĞÒ»´Îshow global status Õï¶Ï·şÎñÆ÷ÉÏ³ÌĞòÍ»È»±äÂı£¬ÓÖÍ»È»±äºÃµÄÎÊÌâ
+è¾ƒé«˜é¢‘ç‡æ¯ç§’æ‰§è¡Œä¸€æ¬¡show global status è¯Šæ–­æœåŠ¡å™¨ä¸Šç¨‹åºçªç„¶å˜æ…¢ï¼Œåˆçªç„¶å˜å¥½çš„é—®é¢˜
 1,mysqladmin -uroot -p -S /tmp/mysql.sock ext -i1 |awk '/Queries/{q=$4-qp;qp=$4} /Threads_connected/{tc=$4} /Threads_running/{printf "%5d %5d %5d\n", q, tc, $4}'
 2,awk '/^# Time:/{print $3, $4, c;c=0}/^# User/{c++}' ice-slow.log
 $3 Query_time $5 Lock_time
 awk '/Lock_time/ && ( $3>1 || $5>1) {print;getline;print;getline;print}' 20131226_slow.log     ($3 Query_time $5 Lock_time)
 3,mysql -uroot -p -S /tmp/mysql.sock -e 'show processlist \G' | grep State: |sort |uniq -c |sort -rn
-Õï¶Ï´¥·¢Æ÷
-mysql -e 'show processlist\G' |grep -c "sate: freeing items" ³¬¹ı5Ãë
+è¯Šæ–­è§¦å‘å™¨
+mysql -e 'show processlist\G' |grep -c "sate: freeing items" è¶…è¿‡5ç§’
 
 ${file_name%/*}
 ${file_name#/*}
 ${file_name:0:5}
 ${file_name}_good
-#ÊÇÈ¥µô×ó±ß(ÔÚ¼øÅÌÉÏ#ÔÚ$Ö®×ó±ß) 
-%ÊÇÈ¥µôÓÒ±ß(ÔÚ¼øÅÌÉÏ%ÔÚ$Ö®ÓÒ±ß) 
-µ¥Ò»·ûºÅÊÇ×îĞ¡Æ¥Åä©rÁ½¸ö·ûºÅÊÇ×î´óÆ¥Åä¡£
+#æ˜¯å»æ‰å·¦è¾¹(åœ¨é‰´ç›˜ä¸Š#åœ¨$ä¹‹å·¦è¾¹) 
+%æ˜¯å»æ‰å³è¾¹(åœ¨é‰´ç›˜ä¸Š%åœ¨$ä¹‹å³è¾¹) 
+å•ä¸€ç¬¦å·æ˜¯æœ€å°åŒ¹é…rä¸¤ä¸ªç¬¦å·æ˜¯æœ€å¤§åŒ¹é…ã€‚
 
-¿¼ÂÇÏÂÃæµÄÓï¾ä£¬ÆäÖĞkey1ÊÇÓĞË÷ÒıµÄÁĞ£¬nonkeyÃ»ÓĞË÷Òı£º
+è€ƒè™‘ä¸‹é¢çš„è¯­å¥ï¼Œå…¶ä¸­key1æ˜¯æœ‰ç´¢å¼•çš„åˆ—ï¼Œnonkeyæ²¡æœ‰ç´¢å¼•ï¼š
 select * from t1 where
  (key1 < 'abc' and (key1 like 'abcde%' or key1 like '%b')) or 
  (key 1 < 'bar' and nonkey = 4 ) or
  (key < 'uux' and key1 > 'z' );
-ÓÅ»¯Îª
+ä¼˜åŒ–ä¸º
 select * from t1 where key1 < 'bar'
 
 select * from a,b left join c on (c.key=a.key) left join d on (d.key=a.key) where b.key=d.key;
-ÓÅ»¯Îª
+ä¼˜åŒ–ä¸º
 select * from b,a left join c on (c.key=a.key) left join d on (d.key=a.key) where b.key=d.key;
 
-linux ÃüÁî
-ps aux--sort=-%cpu | grep -m 11 -v `whoami` ÕÒ³ö×îÕ¼ÓÃÊ±¼äµÄÇ°Ê®¸ö³ÌĞò
-du -kx | egrep -v "\./.+/" | sort -n        ËÑÑ°×î´óµÄÄ¿Â¼¡£
+linux å‘½ä»¤
+ps aux--sort=-%cpu | grep -m 11 -v `whoami` æ‰¾å‡ºæœ€å ç”¨æ—¶é—´çš„å‰åä¸ªç¨‹åº
+du -kx | egrep -v "\./.+/" | sort -n        æœå¯»æœ€å¤§çš„ç›®å½•ã€‚
 
 find / -perm -1000 -type d 2>/dev/null
 find / -perm -g=s -type f 2>/dev/null
@@ -2571,36 +2571,36 @@ find / (-perm -o+x -perm -o+x ) -type d 2>/dev/null
 find / -x dev -type d (-perm -0002 -a ! -perm -1000) -print
 find /dir -x dev (-nouser -o -nogroup) -print 
 
-linuxÏÂsvn¿Í»§¶ËÃüÁî
-svn import . url  Èç¹ûÊÇµÚÒ»´ÎÌá½»ÎÄ¼ş£¬ºÜ¿ÉÄÜ»á³öÏÖ¡°svn£º'.'²»ÊÇ¹¤×÷¸±±¾¡±£¬¼´µ±Ç°Ä¿Â¼²»ÊÇ¹¤×÷¸±±¾£¬Õâ¸öÊ±ºòĞèÒªÓÃµ½import£º
-svn checkout svn://192.168.0.202/qipai/develop/code/game/php/require requireÄ¿Â¼
-µÈÓÚsvn co svn://192.168.0.202/qipai/develop/code/game/php/require  /home/www/requireÄ¿Â¼
-svn co svn://192.168.0.202/qipai/develop/code/game/php/htdocs/Portal  /home/www/html/Portal Ä¿Â¼
-svn co svn://192.168.0.202/qipai/develop/code/game/php/htdocs/Mobile  /home/www/html/Mobile Ä¿Â¼
+linuxä¸‹svnå®¢æˆ·ç«¯å‘½ä»¤
+svn import . url  å¦‚æœæ˜¯ç¬¬ä¸€æ¬¡æäº¤æ–‡ä»¶ï¼Œå¾ˆå¯èƒ½ä¼šå‡ºç°â€œsvnï¼š'.'ä¸æ˜¯å·¥ä½œå‰¯æœ¬â€ï¼Œå³å½“å‰ç›®å½•ä¸æ˜¯å·¥ä½œå‰¯æœ¬ï¼Œè¿™ä¸ªæ—¶å€™éœ€è¦ç”¨åˆ°importï¼š
+svn checkout svn://192.168.0.202/qipai/develop/code/game/php/require requireç›®å½•
+ç­‰äºsvn co svn://192.168.0.202/qipai/develop/code/game/php/require  /home/www/requireç›®å½•
+svn co svn://192.168.0.202/qipai/develop/code/game/php/htdocs/Portal  /home/www/html/Portal ç›®å½•
+svn co svn://192.168.0.202/qipai/develop/code/game/php/htdocs/Mobile  /home/www/html/Mobile ç›®å½•
 
-svn log ¸üĞÂÄÚÈİ.txt                       #ÎÄ¼şµÄÈÕÖ¾ĞÅÏ¢
-svn diff -r11885:11815 ¸üĞÂÄÚÈİ.txt        #±È¶ÔÁ½¸öÎÄ¼ş
-svn update -r 11815 ¸üĞÂÄÚÈİ.txt           #»Ø¹öµ½11815°æ±¾
-svn info ¸üĞÂÄÚÈİ.txt                      #¸üĞÂÄÚÈİ.txt µÄÏêÏ¸svnĞÅÏ¢ 
-svn list .                                 #µÈÍ¬ÓÚ shellÏÂµÄls .
-svn revert ¸üĞÂÄÚÈİ.txt                    #½«¹¤×÷¸±±¾ÎÄ¼ş»Ö¸´µ½Ô­Ê¼°æ±¾¡£(»Ö¸´´ó²¿·ÖµÄ±¾µØĞŞ¸Ä£©
-svn status -v ¸üĞÂÄÚÈİ.txt                 #²é¿´svn×´Ì¬
-svn cat -r 11885 ¸üĞÂÄÚÈİ.txt              #²é¿´11885¸üĞÂÄÚÈİ.txtµÄÄÚÈİ
-svn resolved --accept working PATH         #ÒÆ³ı¹¤×÷¸±±¾µÄÄ¿Â¼»òÎÄ¼şµÄ³åÍ»×´Ì¬,ÈÃPATH¿ÉÒÔ±»Ìá½»
-svn cleanup                                #µİ¹éÇåÀí¹¤×÷¸±±¾£¬É¾³ıËø£¬¼ÌĞøÎ´Íê³É²Ù×÷£¬µÈµÈ
-svn move (mv, rename) SRC... DST           #ÔÚ¹¤×÷¸±±¾»ò°æ±¾¿âÖĞÒÆ¶¯»ò¸ÄÃûÎÄ¼ş»òÄ¿Â¼¡£ ÓÃ·¨: move SRC... DST
-svn import . url                           #½«Î´ÄÉÈë°æ±¾¿ØÖÆµÄÎÄ¼ş»òÄ¿Â¼Ê÷Ìá½»µ½°æ±¾¿â¡£ ÓÃ·¨: import [PATH] URL
-svn add ./¸üĞÂÄÚÈİ.txt                     #°ÑÎÄ¼şºÍÄ¿Â¼ÄÉÈë°æ±¾¿ØÖÆ£¬Í¨¹ıµ÷¶È¼Óµ½°æ±¾¿â¡£ËüÃÇ»áÔÚÏÂÒ»´ÎÌá½»Ê±¼ÓÈë¡£ÓÃ·¨: add Â·¾¶...
-svn blame ¸üĞÂÄÚÈİ.txt 11815               #Êä³öÖ¸¶¨ÎÄ¼ş»òURLµÄ×·ËİÄÚÈİ£¬°üº¬°æ±¾ºÍ×÷ÕßĞÅÏ¢¡£ ÓÃ·¨: blame Ä¿±ê[@°æ±¾]...
-svn changelist                             #ñîºÏ(»ò½âñî)ÎÄ¼şÓëĞŞ¸ÄÁĞ±í CLNAME¡£Ê¹ÓÃ: 1. changelist CLNAME TARGET...  2. changelist --remove TARGET...
-svn switch svn://192.168.0.202/qipai/version/1.1.900/product/web/all/require  ½«¾ÉµÄµØÖ·¸Ä³ÉÕâ¸ö
-svn switch --relocate Ô­À´µØÖ·£¬ĞÂµÄµØÖ·
+svn log æ›´æ–°å†…å®¹.txt                       #æ–‡ä»¶çš„æ—¥å¿—ä¿¡æ¯
+svn diff -r11885:11815 æ›´æ–°å†…å®¹.txt        #æ¯”å¯¹ä¸¤ä¸ªæ–‡ä»¶
+svn update -r 11815 æ›´æ–°å†…å®¹.txt           #å›æ»šåˆ°11815ç‰ˆæœ¬
+svn info æ›´æ–°å†…å®¹.txt                      #æ›´æ–°å†…å®¹.txt çš„è¯¦ç»†svnä¿¡æ¯ 
+svn list .                                 #ç­‰åŒäº shellä¸‹çš„ls .
+svn revert æ›´æ–°å†…å®¹.txt                    #å°†å·¥ä½œå‰¯æœ¬æ–‡ä»¶æ¢å¤åˆ°åŸå§‹ç‰ˆæœ¬ã€‚(æ¢å¤å¤§éƒ¨åˆ†çš„æœ¬åœ°ä¿®æ”¹ï¼‰
+svn status -v æ›´æ–°å†…å®¹.txt                 #æŸ¥çœ‹svnçŠ¶æ€
+svn cat -r 11885 æ›´æ–°å†…å®¹.txt              #æŸ¥çœ‹11885æ›´æ–°å†…å®¹.txtçš„å†…å®¹
+svn resolved --accept working PATH         #ç§»é™¤å·¥ä½œå‰¯æœ¬çš„ç›®å½•æˆ–æ–‡ä»¶çš„å†²çªçŠ¶æ€,è®©PATHå¯ä»¥è¢«æäº¤
+svn cleanup                                #é€’å½’æ¸…ç†å·¥ä½œå‰¯æœ¬ï¼Œåˆ é™¤é”ï¼Œç»§ç»­æœªå®Œæˆæ“ä½œï¼Œç­‰ç­‰
+svn move (mv, rename) SRC... DST           #åœ¨å·¥ä½œå‰¯æœ¬æˆ–ç‰ˆæœ¬åº“ä¸­ç§»åŠ¨æˆ–æ”¹åæ–‡ä»¶æˆ–ç›®å½•ã€‚ ç”¨æ³•: move SRC... DST
+svn import . url                           #å°†æœªçº³å…¥ç‰ˆæœ¬æ§åˆ¶çš„æ–‡ä»¶æˆ–ç›®å½•æ ‘æäº¤åˆ°ç‰ˆæœ¬åº“ã€‚ ç”¨æ³•: import [PATH] URL
+svn add ./æ›´æ–°å†…å®¹.txt                     #æŠŠæ–‡ä»¶å’Œç›®å½•çº³å…¥ç‰ˆæœ¬æ§åˆ¶ï¼Œé€šè¿‡è°ƒåº¦åŠ åˆ°ç‰ˆæœ¬åº“ã€‚å®ƒä»¬ä¼šåœ¨ä¸‹ä¸€æ¬¡æäº¤æ—¶åŠ å…¥ã€‚ç”¨æ³•: add è·¯å¾„...
+svn blame æ›´æ–°å†…å®¹.txt 11815               #è¾“å‡ºæŒ‡å®šæ–‡ä»¶æˆ–URLçš„è¿½æº¯å†…å®¹ï¼ŒåŒ…å«ç‰ˆæœ¬å’Œä½œè€…ä¿¡æ¯ã€‚ ç”¨æ³•: blame ç›®æ ‡[@ç‰ˆæœ¬]...
+svn changelist                             #è€¦åˆ(æˆ–è§£è€¦)æ–‡ä»¶ä¸ä¿®æ”¹åˆ—è¡¨ CLNAMEã€‚ä½¿ç”¨: 1. changelist CLNAME TARGET...  2. changelist --remove TARGET...
+svn switch svn://192.168.0.202/qipai/version/1.1.900/product/web/all/require  å°†æ—§çš„åœ°å€æ”¹æˆè¿™ä¸ª
+svn switch --relocate åŸæ¥åœ°å€ï¼Œæ–°çš„åœ°å€
 
 
 key_buffer_size = 4G
 hot_cache.key_buffer_size = 2G
 cold_cache.key_buffer_size = 2G
-init_file=/path/to/data-directory/mysqld_init.sql   mysqlÔ¤ÈÈ
+init_file=/path/to/data-directory/mysqld_init.sql   mysqlé¢„çƒ­
 
 cat mysqld_init.sql 
 CACHE INDEX a.t1, a.t2, b.t3 IN hot_cache
@@ -2629,9 +2629,9 @@ mysql> select state,sum(duration) as total_R,
     -> group by state
     -> order by total_R DESC;
 
-mysqladmin  -S /var/tmp/mysql_3306.sock ext -i1 | awk '/Queries/{q=$4-qp;qp=$4} /Threads_connected/{tc=$4} /Threads_running/{printf "%5d %5d %5d\n",q,tc,$4}' ·şÎñÆ÷¼¶±ğÅ¼¶ûÍ£¶Ù¼ì²â½Å±¾¡£¹Û²ìÊÇ·ñÓĞ¼â´Ì
-awk '/^# Time:/ {print $3,$4,c;c=0}/^# User/{c++}' slow.log   slow.logÀïÃ¿¸öÊ±¼ä¶ÎÖ´ĞĞµÄÓï¾äÊı¡£
-mysql  -e 'show processlist\G' |grep State |sort |uniq -c |sort -rn    ¹Û²ìÊÇ·ñÓĞ´óÁ¿Ïß³Ì´¦ÓÚ²»Õı³£µÄ×´Ì¬
+mysqladmin  -S /var/tmp/mysql_3306.sock ext -i1 | awk '/Queries/{q=$4-qp;qp=$4} /Threads_connected/{tc=$4} /Threads_running/{printf "%5d %5d %5d\n",q,tc,$4}' æœåŠ¡å™¨çº§åˆ«å¶å°”åœé¡¿æ£€æµ‹è„šæœ¬ã€‚è§‚å¯Ÿæ˜¯å¦æœ‰å°–åˆº
+awk '/^# Time:/ {print $3,$4,c;c=0}/^# User/{c++}' slow.log   slow.logé‡Œæ¯ä¸ªæ—¶é—´æ®µæ‰§è¡Œçš„è¯­å¥æ•°ã€‚
+mysql  -e 'show processlist\G' |grep State |sort |uniq -c |sort -rn    è§‚å¯Ÿæ˜¯å¦æœ‰å¤§é‡çº¿ç¨‹å¤„äºä¸æ­£å¸¸çš„çŠ¶æ€
 
 mysql> select left(now(),14);
 +----------------+
@@ -2661,14 +2661,14 @@ Drop table if exists my_summary_new, my_summary_old;
 Create table my_summary_new like my_summary;
 Rename table my_summary To my_summary_old, my_summary_new TO my_summary;
 
-mysql Îï»¯ÊÓÍ¼
+mysql ç‰©åŒ–è§†å›¾
 
-ALTER TABLE film MODIFY COLUMN rental_duration TINYINT(3) SET NOT NULL  default 5; SHOW STATUSÏÔÊ¾Õâ¸öÓï¾ä×öÁË1000´Î¶ÁºÍ1000´Î²åÈë²Ù×÷¡£
-ALTER TABLE film ALTER COLUMN rental_duration SET default 5; Õâ¸öÓï¾ä»áÖ±½ÓĞŞ¸Ä.frmÎÄ¼ş£¬¶ø²»Éæ¼°±íÊı¾İ¡£
+ALTER TABLE film MODIFY COLUMN rental_duration TINYINT(3) SET NOT NULL  default 5; SHOW STATUSæ˜¾ç¤ºè¿™ä¸ªè¯­å¥åšäº†1000æ¬¡è¯»å’Œ1000æ¬¡æ’å…¥æ“ä½œã€‚
+ALTER TABLE film ALTER COLUMN rental_duration SET default 5; è¿™ä¸ªè¯­å¥ä¼šç›´æ¥ä¿®æ”¹.frmæ–‡ä»¶ï¼Œè€Œä¸æ¶‰åŠè¡¨æ•°æ®ã€‚
 
-ALTER TABLE ÔÊĞíÈıÖÖ²Ù×÷ MODIFY COLUMN, ALTER COLUMN, CHANGE COLUMN¡£ÕâÈıÖÖ²Ù×÷¶¼ÊÇ²»Ò»ÑùµÄ
+ALTER TABLE å…è®¸ä¸‰ç§æ“ä½œ MODIFY COLUMN, ALTER COLUMN, CHANGE COLUMNã€‚è¿™ä¸‰ç§æ“ä½œéƒ½æ˜¯ä¸ä¸€æ ·çš„
 
-Ö»ĞŞ¸Ä.frmÎÄ¼ş¡£
+åªä¿®æ”¹.frmæ–‡ä»¶ã€‚
 create table film_new like film;
 alter table film_new modify column rating enum('G','PG','PG-13','R','NC-17','PG-14') DEFAULT 'G';
 flush tables with read lock;
@@ -2677,35 +2677,35 @@ unlock tables;
 show columns from film like 'rating'\G
 drop table film_new;
 
-¿ìËÙ´´½¨MYISAMË÷Òı
+å¿«é€Ÿåˆ›å»ºMYISAMç´¢å¼•
 alter table test disable keys;
 
-¿é¼¶±ğÔªÊı¾İ
+å—çº§åˆ«å…ƒæ•°æ®
 
-Ç°×ºË÷Òı¼°Ñ¡Ôñ
+å‰ç¼€ç´¢å¼•åŠé€‰æ‹©
 select  count(distinct left(column,3))/count(*) AS sel3,
 	count(distinct left(column,4))/count(*) AS sel4,
 	count(distinct left(column,5))/count(*) AS sel5,
 	count(distinct left(column,6))/count(*) AS sel6,
 	count(distinct left(column,7))/count(*) AS sel7
-from table;							²é¿´»ùÊı²Î¿¼ÖµÎª£º0.031
+from table;							æŸ¥çœ‹åŸºæ•°å‚è€ƒå€¼ä¸ºï¼š0.031
 
-select count(*) AS cnt, left(column,4) AS pref from table group by pref order by cnt DESC ; ·Ö²¼ÊÇ·ñ¾ùÔÈ
-ALTER TABLE table ADD KEY (column(7));                          Ìí¼ÓÇ°×ºË÷Òı
+select count(*) AS cnt, left(column,4) AS pref from table group by pref order by cnt DESC ; åˆ†å¸ƒæ˜¯å¦å‡åŒ€
+ALTER TABLE table ADD KEY (column(7));                          æ·»åŠ å‰ç¼€ç´¢å¼•
 
-Ë÷ÒıÈıÔ­Ôò£º
+ç´¢å¼•ä¸‰åŸåˆ™ï¼š
 
-1.µ¥ĞĞ·ÃÎÊºÜÂı
-2.°´Ë³Ğò·ÃÎÊ·¶Î§Êı¾İºÜ¿ì¡£
-3.Ë÷Òı¸²¸Ç²éÑ¯ÊÇºÜ¿ìµÄ¡£
+1.å•è¡Œè®¿é—®å¾ˆæ…¢
+2.æŒ‰é¡ºåºè®¿é—®èŒƒå›´æ•°æ®å¾ˆå¿«ã€‚
+3.ç´¢å¼•è¦†ç›–æŸ¥è¯¢æ˜¯å¾ˆå¿«çš„ã€‚
 
-Ë÷ÒıÈıĞÇÏµÍ³
-´ó´ó¼õÉÙÁË·şÎñÆ÷ĞèÒªÉ¨ÃèµÄÊı¾İÁ¿
-¿ÉÒÔ°ïÖú·şÎñÆ÷±ÜÃâÅÅĞòºÍÁÙÊ±±í
-Ë÷Òı¿ÉÒÔ½«Ëæ»úI/0±äÎªË³ĞòI/0
-¶ÔÓ¦Ìõ¼şµÄÊıÁ¿Ô½Ğ¡£¬Ë÷ÒıÔ½·ÅÔÚÇ°Ãæ¡£
+ç´¢å¼•ä¸‰æ˜Ÿç³»ç»Ÿ
+å¤§å¤§å‡å°‘äº†æœåŠ¡å™¨éœ€è¦æ‰«æçš„æ•°æ®é‡
+å¯ä»¥å¸®åŠ©æœåŠ¡å™¨é¿å…æ’åºå’Œä¸´æ—¶è¡¨
+ç´¢å¼•å¯ä»¥å°†éšæœºI/0å˜ä¸ºé¡ºåºI/0
+å¯¹åº”æ¡ä»¶çš„æ•°é‡è¶Šå°ï¼Œç´¢å¼•è¶Šæ”¾åœ¨å‰é¢ã€‚
 
-Õë¶ÔÄ³¸öÊı¾İ¿âÖ´ĞĞoptimize table²Ù×÷£º
+é’ˆå¯¹æŸä¸ªæ•°æ®åº“æ‰§è¡Œoptimize tableæ“ä½œï¼š
 Drop procedure if exists optimize_tables;
 delimiter //
 create procedure optimize_tables(game varchar(64))
@@ -2730,37 +2730,37 @@ begin
     END //
     DELIMITER ;
 
-key_buffer_size		ÉèÖÃÕâ¸ö±äÁ¿¿ÉÒÔÒ»´ÎĞÔÎª¼ü»º³åÇø·ÖÅäËùÖ¸¶¨µÄ¿Õ¼ä£¬È»¶ø²¢·ÇÕæÕıÁ¢¿Ì·ÖÅä£¬ÓÃµ½Ê±²Å·ÖÅä¡£
-table_cache_size	ÉèÖÃÕâ¸ö±äÁ¿²»»áÁ¢¼´ÉúĞ§£¬»áÑÓ³Ùµ½ÏÂ´ÎÓĞÏß³Ì´ò¿ª±í²ÅÓĞĞ§¹û¡£Èç¹ûÖµ±È»º´æÖĞµÄ±íÊıĞ¡£¬mysql½«´Ó»º´æÖĞÉ¾³ı²»³£Ê¹ÓÃµÄ±í
-thread_cache_size	ÉèÖÃÕâ¸ö±íÀï²»»áÁ¢¼´ÉúĞ§£¬½«ÔÚÏÂ´ÎÓĞÁ¬½Ó±»¹Ø±ÕÊ±²úÉúĞ§¹û¡£Èç¹ûÃ»ÓĞ¿Õ¼äÀ´»º´æÏß³Ì£¬½«Ïú»Ù¸ÄÏß³Ì¡£
-query_cache_size	Æô¶¯µÄÊ±ºò£¬Ò»´ÎĞÔ·ÖÅä²¢³õÊ¼»¯Õâ¿éÄÚ´æ£¬Èç¹ûĞŞ¸Ä¸Ã±äÁ¿£¬½«Á¢¿ÌÉ¾³ıËùÓĞ»º´æµÄ²éÑ¯£¬ÖØĞÂ·ÖÅä»º´æ£¬²¢ÖØĞÂ³õÊ¼»¯ÄÚ´æ¡£
-read_buffer_size	Ö»»áÔÚÓĞ²éÑ¯ĞèÒªÊ¹ÓÃÊ±²ÅÎª¸Ã»º´æ·ÖÅäÄÚ´æ¡£²¢ÇÒ»áÒ»´ÎĞÔ·ÖÅä¸Ã²ÎÊıÖ¸¶¨´óĞ¡µÄÈ«²¿ÄÚ´æ¡£
-read_rnd_buffer_size	Ö»»áÔÚÓĞ²éÑ¯ĞèÒªÊ¹ÓÃÊ±²ÅÎª¸Ã»º´æ·ÖÅäÄÚ´æ¡£²¢ÇÒ»áÒ»´ÎĞÔ·ÖÅäĞèÒªÊ¹ÓÃµÄÄÚ´æ
-sort_buffer_size	Ö»»áÔÚÓĞ²éÑ¯ĞèÒª×öÅÅĞò²Ù×÷Ê±²Å»áÎª¸Ã»º´æ·ÖÅäÄÚ´æ¡£È»¶øÒ»µ©ĞèÒªÅÅĞò£¬¾Í»áÁ¢¿Ì·ÖÅä¸Ã²ÎÊıÖ¸¶¨´óĞ¡µÄÈ«²¿ÄÚ´æ¡£
+key_buffer_size		è®¾ç½®è¿™ä¸ªå˜é‡å¯ä»¥ä¸€æ¬¡æ€§ä¸ºé”®ç¼“å†²åŒºåˆ†é…æ‰€æŒ‡å®šçš„ç©ºé—´ï¼Œç„¶è€Œå¹¶éçœŸæ­£ç«‹åˆ»åˆ†é…ï¼Œç”¨åˆ°æ—¶æ‰åˆ†é…ã€‚
+table_cache_size	è®¾ç½®è¿™ä¸ªå˜é‡ä¸ä¼šç«‹å³ç”Ÿæ•ˆï¼Œä¼šå»¶è¿Ÿåˆ°ä¸‹æ¬¡æœ‰çº¿ç¨‹æ‰“å¼€è¡¨æ‰æœ‰æ•ˆæœã€‚å¦‚æœå€¼æ¯”ç¼“å­˜ä¸­çš„è¡¨æ•°å°ï¼Œmysqlå°†ä»ç¼“å­˜ä¸­åˆ é™¤ä¸å¸¸ä½¿ç”¨çš„è¡¨
+thread_cache_size	è®¾ç½®è¿™ä¸ªè¡¨é‡Œä¸ä¼šç«‹å³ç”Ÿæ•ˆï¼Œå°†åœ¨ä¸‹æ¬¡æœ‰è¿æ¥è¢«å…³é—­æ—¶äº§ç”Ÿæ•ˆæœã€‚å¦‚æœæ²¡æœ‰ç©ºé—´æ¥ç¼“å­˜çº¿ç¨‹ï¼Œå°†é”€æ¯æ”¹çº¿ç¨‹ã€‚
+query_cache_size	å¯åŠ¨çš„æ—¶å€™ï¼Œä¸€æ¬¡æ€§åˆ†é…å¹¶åˆå§‹åŒ–è¿™å—å†…å­˜ï¼Œå¦‚æœä¿®æ”¹è¯¥å˜é‡ï¼Œå°†ç«‹åˆ»åˆ é™¤æ‰€æœ‰ç¼“å­˜çš„æŸ¥è¯¢ï¼Œé‡æ–°åˆ†é…ç¼“å­˜ï¼Œå¹¶é‡æ–°åˆå§‹åŒ–å†…å­˜ã€‚
+read_buffer_size	åªä¼šåœ¨æœ‰æŸ¥è¯¢éœ€è¦ä½¿ç”¨æ—¶æ‰ä¸ºè¯¥ç¼“å­˜åˆ†é…å†…å­˜ã€‚å¹¶ä¸”ä¼šä¸€æ¬¡æ€§åˆ†é…è¯¥å‚æ•°æŒ‡å®šå¤§å°çš„å…¨éƒ¨å†…å­˜ã€‚
+read_rnd_buffer_size	åªä¼šåœ¨æœ‰æŸ¥è¯¢éœ€è¦ä½¿ç”¨æ—¶æ‰ä¸ºè¯¥ç¼“å­˜åˆ†é…å†…å­˜ã€‚å¹¶ä¸”ä¼šä¸€æ¬¡æ€§åˆ†é…éœ€è¦ä½¿ç”¨çš„å†…å­˜
+sort_buffer_size	åªä¼šåœ¨æœ‰æŸ¥è¯¢éœ€è¦åšæ’åºæ“ä½œæ—¶æ‰ä¼šä¸ºè¯¥ç¼“å­˜åˆ†é…å†…å­˜ã€‚ç„¶è€Œä¸€æ—¦éœ€è¦æ’åºï¼Œå°±ä¼šç«‹åˆ»åˆ†é…è¯¥å‚æ•°æŒ‡å®šå¤§å°çš„å…¨éƒ¨å†…å­˜ã€‚
 
-mysqladmin extended-status -ri60 Ã¿¸ô60SÀ´²é¿´×´Ì¬±äÁ¿µÄÔöÁ¿±ä»¯
+mysqladmin extended-status -ri60 æ¯éš”60Sæ¥æŸ¥çœ‹çŠ¶æ€å˜é‡çš„å¢é‡å˜åŒ–
 
-¹Ø±Õinnodb_stats_on_metadata±ÜÃâºÄÊ±µÄ±íÍ³¼ÆĞÅÏ¢Ë¢ĞÂ
-´ò¿ªinnodb_use_sys_stats_table³Ö¾Ã»¯´æ´¢ĞÅÏ¢µ½´ÅÅÌ£¬½â¾öÔ¤ÈÈÊ±¼ä³¤£¬»¨·Ñ¸ü¶àµÄÊ±¼äµÈ´ıIOµÄÎÊÌâ
+å…³é—­innodb_stats_on_metadataé¿å…è€—æ—¶çš„è¡¨ç»Ÿè®¡ä¿¡æ¯åˆ·æ–°
+æ‰“å¼€innodb_use_sys_stats_tableæŒä¹…åŒ–å­˜å‚¨ä¿¡æ¯åˆ°ç£ç›˜ï¼Œè§£å†³é¢„çƒ­æ—¶é—´é•¿ï¼ŒèŠ±è´¹æ›´å¤šçš„æ—¶é—´ç­‰å¾…IOçš„é—®é¢˜
 
-innodb_log_file_size,innodb_log_file_in_groupÁ½¸ö²ÎÊı¿ØÖÆÕûÌåµÄÈÕÖ¾ÎÄ¼ş´óĞ¡£¬¶ÔĞ´ĞÔÄÜ·Ç³£ÖØÒª¡£
-innodb-log_buffer_size¿ØÖÆÈÕÖ¾»º³åÇø´óĞ¡¡£
-innodb_flush_log_at_trx_commit ¿ØÖÆÈÕÖ¾»º³åË¢ĞÂµÄÆµ·±³Ì¶È£¨0£¬×î²»°²È«£¬1£¬×î°²È«£¬2³ı·Ç·şÎñÆ÷¹ÒÁË£¬»òÕß¶Ïµç£¬²»È»Ò²°²È«¡££©
+innodb_log_file_size,innodb_log_file_in_groupä¸¤ä¸ªå‚æ•°æ§åˆ¶æ•´ä½“çš„æ—¥å¿—æ–‡ä»¶å¤§å°ï¼Œå¯¹å†™æ€§èƒ½éå¸¸é‡è¦ã€‚
+innodb-log_buffer_sizeæ§åˆ¶æ—¥å¿—ç¼“å†²åŒºå¤§å°ã€‚
+innodb_flush_log_at_trx_commit æ§åˆ¶æ—¥å¿—ç¼“å†²åˆ·æ–°çš„é¢‘ç¹ç¨‹åº¦ï¼ˆ0ï¼Œæœ€ä¸å®‰å…¨ï¼Œ1ï¼Œæœ€å®‰å…¨ï¼Œ2é™¤éæœåŠ¡å™¨æŒ‚äº†ï¼Œæˆ–è€…æ–­ç”µï¼Œä¸ç„¶ä¹Ÿå®‰å…¨ã€‚ï¼‰
 
-show innodb statusµÄÊä³öÖĞlog²¿·ÖÀ´¼à¿ØinnodbµÄÈÕÖ¾ºÍÈÕÖ¾»º³åÇøµÄI/OĞÔÄÜ£¬Í¨¹ı¹Û²ìinnodb_os_log_written×´Ì¬±äÁ¿À´²é¿´innodb¶ÔÈÕÖ¾ÎÄ¼şĞ´ÁË¶àÉÙÊı¾İ¡£¿ÉÒÔ²é¿´10~100m¼ä¸ôµÄÊı×Ö£¬¼ÇÂ¼·åÖµ£¬Èç¹û·åÖµÎª100kb/s£¬ÄÇÃ´100*60*60/1024MµÄÈÕÖ¾¼ÇÂ¼¾Í×ã¹»ÁË£¬´ó¸ÅÈİÄÉÒ»¸öĞ¡Ê±¡£
+show innodb statusçš„è¾“å‡ºä¸­logéƒ¨åˆ†æ¥ç›‘æ§innodbçš„æ—¥å¿—å’Œæ—¥å¿—ç¼“å†²åŒºçš„I/Oæ€§èƒ½ï¼Œé€šè¿‡è§‚å¯Ÿinnodb_os_log_writtençŠ¶æ€å˜é‡æ¥æŸ¥çœ‹innodbå¯¹æ—¥å¿—æ–‡ä»¶å†™äº†å¤šå°‘æ•°æ®ã€‚å¯ä»¥æŸ¥çœ‹10~100mé—´éš”çš„æ•°å­—ï¼Œè®°å½•å³°å€¼ï¼Œå¦‚æœå³°å€¼ä¸º100kb/sï¼Œé‚£ä¹ˆ100*60*60/1024Mçš„æ—¥å¿—è®°å½•å°±è¶³å¤Ÿäº†ï¼Œå¤§æ¦‚å®¹çº³ä¸€ä¸ªå°æ—¶ã€‚
 
-###innodb ²¢·¢ÅäÖÃ
+###innodb å¹¶å‘é…ç½®
 show engine innodb status\G
 
 Buffer pool size   655359
 Free buffers       1
 Database pages     643639
 Old database pages 237
-²éÑ¯ÄÚ´æÓĞÑ¹Á¦ ÒòÎªÃ»ÓĞfree buffersÁË
+æŸ¥è¯¢å†…å­˜æœ‰å‹åŠ› å› ä¸ºæ²¡æœ‰free buffersäº†
 
 srv_master_thread loops: 1151794 1_second, 1151791 sleeps, 115168 10_second, 129 background, 129 flush
 srv_master_thread log flush and writes: 1165278
-1_second,´ÎÊıÓësleeps½üºõÏàµÈ£¬Óë10_second 10:1 ±íÊ¾Ñ¹Á¦²»ÊÇºÜ´ó¡£
+1_second,æ¬¡æ•°ä¸sleepsè¿‘ä¹ç›¸ç­‰ï¼Œä¸10_second 10:1 è¡¨ç¤ºå‹åŠ›ä¸æ˜¯å¾ˆå¤§ã€‚
 
 show global status like 'innodb_dblwr%'; 
 +----------------------------+----------+
@@ -2769,11 +2769,11 @@ show global status like 'innodb_dblwr%';
 | Innodb_dblwr_pages_written | 75493960 |
 | Innodb_dblwr_writes        | 661062   |
 +----------------------------+----------+
-Ğ´ÁË75493960Ò³£¬µ«ÊÇÊµ¼ÊĞ´ÁË661062´Î£¬±ÈÊıÎª114:1£¬Ô¶´óÓÚ64:1ËµÃ÷ÓĞĞ´µÄÑ¹Á¦
+å†™äº†75493960é¡µï¼Œä½†æ˜¯å®é™…å†™äº†661062æ¬¡ï¼Œæ¯”æ•°ä¸º114:1ï¼Œè¿œå¤§äº64:1è¯´æ˜æœ‰å†™çš„å‹åŠ›
 
-innodb_thread_concurrency ²¢·¢Öµ<=cpuÊıÁ¿*´ÅÅÌÊıÁ¿*2  ÓĞÊ±ºòĞèÒª¹Ø±ÕÓĞÊ±ºòĞèÒª¿ªÆô£¬¿´Çé¿ö¶ø¶¨¡£
+innodb_thread_concurrency å¹¶å‘å€¼<=cpuæ•°é‡*ç£ç›˜æ•°é‡*2  æœ‰æ—¶å€™éœ€è¦å…³é—­æœ‰æ—¶å€™éœ€è¦å¼€å¯ï¼Œçœ‹æƒ…å†µè€Œå®šã€‚
 
-###innodb ×îÖØÒªµÄÁ½¸öÅäÖÃ
+###innodb æœ€é‡è¦çš„ä¸¤ä¸ªé…ç½®
 innodb_buffer_pool_size
 innodb_log_file_size
 
@@ -2781,4 +2781,8 @@ innodb_log_file_size
 iptables -t nat -A PREROUTING -p tcp  -m tcp --dport 13000 -j DNAT --to-destination   192.168.53.9:3306
 iptables -t nat -A POSTROUTING -p tcp -m tcp --dport 3306 -j SNAT --to-source 192.168.53.9
 
-set ff=unix  windowsÏÂµÄÎÄ¼ş±àÂë×ªÎªunix
+set ff=unix  windowsä¸‹çš„æ–‡ä»¶ç¼–ç è½¬ä¸ºunix
+dos2unix CPIS
+ä½¿linuxæ”¯æŒwindowsçš„ä¸­æ–‡
+iconv -c -f gb2312 -t utf-8 CPIS.txt > CPIS.utf-8.txt
+
